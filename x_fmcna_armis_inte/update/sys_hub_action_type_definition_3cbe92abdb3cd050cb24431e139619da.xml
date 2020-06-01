@@ -13,7 +13,7 @@
         <ih_action>true</ih_action>
         <internal_name>update_access_token</internal_name>
         <label_cache>[{"name":"{{step[08e9976c-9b64-4ef5-a8c3-9a101f44ccc6].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].variable}}","label":"step➛Extract from JSON➛variable","type":"step","ref":""},{"name":"{{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_code}}","label":"step➛Extract from JSON➛access_token","type":"step","ref":""},{"name":"{{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}","label":"step➛Extract from JSON➛expiration","type":"step","ref":""},{"name":"{{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration_str}}","label":"step➛Extract from JSON➛expiration_str","type":"step","ref":""},{"name":"{{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration_converted}}","label":"step➛Extract from JSON➛expiration_converted","type":"step","ref":""},{"name":"{{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}","label":"step➛Extract from JSON➛access_token","type":"step","ref":""},{"name":"{{step[1daf4784-0a07-4a09-8101-c36c723a63f2].record}}","label":"step➛Look Up Record step➛Record","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>87cdb1bbdbb49450cb24431e13961970</latest_snapshot>
+        <latest_snapshot>bc539307db4d1410fdfe182813961952</latest_snapshot>
         <master_snapshot>bb7c6aabdbfcd050cb24431e1396198d</master_snapshot>
         <name>UTIL_Update Access Token</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>3cbe92abdb3cd050cb24431e139619da</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>UTIL_Update Access Token</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -34,8 +34,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_3cbe92abdb3cd050cb24431e139619da</sys_update_name>
-        <sys_updated_by>3217472</sys_updated_by>
-        <sys_updated_on>2020-05-29 19:58:33</sys_updated_on>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 23:17:30</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -62,7 +62,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Expiration</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -72,7 +72,7 @@
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>05e903afdb341450cb24431e13961960</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -80,7 +80,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:26</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=05e903afdb341450cb24431e13961960"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -91,10 +91,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>c1e903afdb341450cb24431e13961965</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:37:31</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:15</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=05e903afdb341450cb24431e13961960"/>
@@ -104,11 +104,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>8de903afdb341450cb24431e13961964</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:26</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Expiration_UTCStr^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^coalesce_fields=key</value>
+        <value>key=token_expiration^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^value_datetime=0^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -620,7 +620,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Token</label>
         <order>4</order>
         <outputs/>
         <section/>
@@ -630,7 +630,7 @@
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>89e903afdb341450cb24431e13961972</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -638,7 +638,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:16</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=89e903afdb341450cb24431e13961972"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -649,10 +649,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>09e903afdb341450cb24431e13961976</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:37:31</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:16</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=89e903afdb341450cb24431e13961972"/>
@@ -662,11 +662,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>c1e903afdb341450cb24431e13961976</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:16</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Token^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
+        <value>key=token^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -775,7 +775,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Expiration</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -785,7 +785,7 @@
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>05e903afdb341450cb24431e13961960</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -793,7 +793,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:26</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=05e903afdb341450cb24431e13961960"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -804,10 +804,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>c1e903afdb341450cb24431e13961965</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:37:31</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:15</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=05e903afdb341450cb24431e13961960"/>
@@ -817,11 +817,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>8de903afdb341450cb24431e13961964</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:26</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Expiration_UTCStr^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^coalesce_fields=key</value>
+        <value>key=token_expiration^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^value_datetime=0^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -1333,7 +1333,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Token</label>
         <order>4</order>
         <outputs/>
         <section/>
@@ -1343,7 +1343,7 @@
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>89e903afdb341450cb24431e13961972</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1351,7 +1351,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:16</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=89e903afdb341450cb24431e13961972"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1362,10 +1362,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>09e903afdb341450cb24431e13961976</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:37:31</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:16</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=89e903afdb341450cb24431e13961972"/>
@@ -1375,11 +1375,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:37:31</sys_created_on>
         <sys_id>c1e903afdb341450cb24431e13961976</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:44:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:16</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Token^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
+        <value>key=token^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -1423,16 +1423,16 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="UTIL_Update Access Token">3cbe92abdb3cd050cb24431e139619da</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"608ceaabdbfcd050cb24431e139619a9","name":"plan"}}</plan>
-        <snapshot>87cdb1bbdbb49450cb24431e13961970</snapshot>
+        <snapshot>bc539307db4d1410fdfe182813961952</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-21 23:29:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>608ceaabdbfcd050cb24431e139619a9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 14:43:37</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:31</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>package_private</access>
@@ -1494,7 +1494,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Token</label>
         <order>4</order>
         <outputs/>
         <section/>
@@ -1504,7 +1504,7 @@
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>789c47e3db741450cb24431e1396195b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1512,7 +1512,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=789c47e3db741450cb24431e1396195b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1523,10 +1523,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>f49c47e3db741450cb24431e1396195f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=789c47e3db741450cb24431e1396195b"/>
@@ -1536,11 +1536,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>b09c47e3db741450cb24431e1396195f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Token^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
+        <value>key=token^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -1562,7 +1562,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Expiration</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -1572,7 +1572,7 @@
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7c9c47e3db741450cb24431e13961956</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1580,7 +1580,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:29</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7c9c47e3db741450cb24431e13961956"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1591,10 +1591,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>f89c47e3db741450cb24431e1396195a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=7c9c47e3db741450cb24431e13961956"/>
@@ -1604,11 +1604,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>b49c47e3db741450cb24431e1396195a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:29</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Expiration_UTCStr^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^coalesce_fields=key</value>
+        <value>key=token_expiration^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^value_datetime=0^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -2207,7 +2207,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Token</label>
         <order>4</order>
         <outputs/>
         <section/>
@@ -2217,7 +2217,7 @@
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>789c47e3db741450cb24431e1396195b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2225,7 +2225,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=789c47e3db741450cb24431e1396195b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2236,10 +2236,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>f49c47e3db741450cb24431e1396195f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=789c47e3db741450cb24431e1396195b"/>
@@ -2249,11 +2249,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>b09c47e3db741450cb24431e1396195f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Token^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
+        <value>key=token^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].access_token}}^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -2275,7 +2275,7 @@
         <icon/>
         <inputs/>
         <inputs/>
-        <label>Create or Update Record step</label>
+        <label>Store Expiration</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -2285,7 +2285,7 @@
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7c9c47e3db741450cb24431e13961956</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2293,7 +2293,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:29</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7c9c47e3db741450cb24431e13961956"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2304,10 +2304,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>f89c47e3db741450cb24431e1396195a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 23:15:19</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=7c9c47e3db741450cb24431e13961956"/>
@@ -2317,11 +2317,11 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-22 01:49:14</sys_created_on>
         <sys_id>b49c47e3db741450cb24431e1396195a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-22 01:49:14</sys_updated_on>
+        <sys_updated_on>2020-06-01 23:17:29</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_8f5c107a53a3230034c6ddeeff7b129d</table>
-        <value>key=OAuth_Expiration_UTCStr^value={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^coalesce_fields=key</value>
+        <value>key=token_expiration^value_string={{step[2c0a5d22-481c-44bc-8a3f-631b40d5ca60].expiration}}^value_datetime=0^coalesce_fields=key</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>

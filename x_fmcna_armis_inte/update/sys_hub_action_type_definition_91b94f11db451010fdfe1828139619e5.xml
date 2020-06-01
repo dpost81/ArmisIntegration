@@ -13,20 +13,20 @@
         <ih_action>false</ih_action>
         <internal_name>push_getpushparams</internal_name>
         <label_cache>[{"name":"{{step[dbb11fd1-294b-4a2c-8cb7-6d1493bbac44].record.value}}","label":"step➛push_num_records➛Armis Integration Configuration Record➛Value","type":"step","ref":""},{"name":"{{step[2ccbc084-43a3-464a-ab21-be7b707b7023].record.value}}","label":"step➛push_start_num➛Armis Integration Configuration Record➛Value","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>bf2b8bd1db451010fdfe1828139619fc</latest_snapshot>
+        <latest_snapshot>dbc43d47dbcdd010fdfe182813961975</latest_snapshot>
         <master_snapshot>003bcbd1db451010fdfe182813961934</master_snapshot>
         <name>PUSH_GetPushParams</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <state>draft</state>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-27 12:06:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>91b94f11db451010fdfe1828139619e5</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>PUSH_GetPushParams</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -34,8 +34,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_91b94f11db451010fdfe1828139619e5</sys_update_name>
-        <sys_updated_by>3217472</sys_updated_by>
-        <sys_updated_on>2020-05-29 19:58:22</sys_updated_on>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 16:24:30</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -809,16 +809,16 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="PUSH_GetPushParams">91b94f11db451010fdfe1828139619e5</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"643bcbd1db451010fdfe1828139619c1","name":"plan"}}</plan>
-        <snapshot>bf2b8bd1db451010fdfe1828139619fc</snapshot>
+        <snapshot>dbc43d47dbcdd010fdfe182813961975</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-27 12:12:35</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>643bcbd1db451010fdfe1828139619c1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 12:12:35</sys_updated_on>
+        <sys_updated_on>2020-06-01 16:24:31</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -831,10 +831,11 @@
         <copied_from_name/>
         <description>Get the start/stop push parameters for the SNow-&gt;Armis push from the config table.</description>
         <internal_name>push_getpushparams</internal_name>
-        <label_cache>[]</label_cache>
+        <label_cache>[{"name":"{{step[dbb11fd1-294b-4a2c-8cb7-6d1493bbac44].record.value}}","label":"step➛push_num_records➛Armis Integration Configuration Record➛Value","type":"step","ref":""},{"name":"{{step[2ccbc084-43a3-464a-ab21-be7b707b7023].record.value}}","label":"step➛push_start_num➛Armis Integration Configuration Record➛Value","type":"step","ref":""}]</label_cache>
         <master>true</master>
         <name>PUSH_GetPushParams</name>
         <natlang/>
+        <outputs/>
         <outputs/>
         <parent_action display_value="PUSH_GetPushParams">91b94f11db451010fdfe1828139619e5</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
@@ -843,7 +844,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>003bcbd1db451010fdfe182813961934</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -852,7 +853,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 12:12:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 16:24:30</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -885,6 +886,31 @@
         <value/>
         <variable display_value="">c03bcbd1db451010fdfe18281396194e</variable>
     </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=003bcbd1db451010fdfe182813961934"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>push_num_records</field>
+        <id>003bcbd1db451010fdfe182813961934</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-05-27 12:12:33</sys_created_on>
+        <sys_id>483bcbd1db451010fdfe18281396195c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 16:24:30</sys_updated_on>
+        <table>var__m_sys_hub_action_output_003bcbd1db451010fdfe182813961934</table>
+        <value>{{step[dbb11fd1-294b-4a2c-8cb7-6d1493bbac44].record.value}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>push_start_num</field>
+        <id>003bcbd1db451010fdfe182813961934</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-05-27 12:12:33</sys_created_on>
+        <sys_id>0c3bcbd1db451010fdfe18281396195c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 16:24:30</sys_updated_on>
+        <table>var__m_sys_hub_action_output_003bcbd1db451010fdfe182813961934</table>
+        <value>{{step[2ccbc084-43a3-464a-ab21-be7b707b7023].record.value}}</value>
+    </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=003bcbd1db451010fdfe182813961934^sys_idNOT IN083bcbd1db451010fdfe182813961935,083bcbd1db451010fdfe182813961941,883bcbd1db451010fdfe18281396193b"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="PUSH_GetPushParams">003bcbd1db451010fdfe182813961934</action>
@@ -1142,17 +1168,17 @@
     </sys_hub_action_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=c03bcbd1db451010fdfe18281396194e^sys_idNOT IN0c3bcbd1db451010fdfe18281396195b"/>
     <sys_hub_input_scripts action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <input_name>push_start_num</input_name>
         <instance>c03bcbd1db451010fdfe18281396194e</instance>
         <referenced_table>sys_hub_action_output</referenced_table>
-        <script>{"push_start_num":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn parseInt(fd_data._2__push_start_num.record.value,10)"}}</script>
+        <script>{"push_start_num":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__push_start_num.record.value"}}</script>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-27 12:12:33</sys_created_on>
         <sys_id>0c3bcbd1db451010fdfe18281396195b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 12:12:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 16:24:30</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -1241,17 +1267,17 @@
     </sys_hub_action_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=c03bcbd1db451010fdfe182813961954^sys_idNOT IN003bcbd1db451010fdfe18281396195c"/>
     <sys_hub_input_scripts action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <input_name>push_num_records</input_name>
         <instance>c03bcbd1db451010fdfe182813961954</instance>
         <referenced_table>sys_hub_action_output</referenced_table>
-        <script>{"push_num_records":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn parseInt(fd_data._3__push_num_records.record.value,10)"}}</script>
+        <script>{"push_num_records":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._3__push_num_records.record.value"}}</script>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-27 12:12:33</sys_created_on>
         <sys_id>003bcbd1db451010fdfe18281396195c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 12:12:33</sys_updated_on>
+        <sys_updated_on>2020-06-01 16:24:30</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>

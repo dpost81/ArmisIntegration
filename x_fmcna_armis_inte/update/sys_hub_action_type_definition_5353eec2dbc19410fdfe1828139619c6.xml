@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>util_initializebulkoperation</internal_name>
         <label_cache>[]</label_cache>
-        <latest_snapshot>c7f7bacadb859410fdfe1828139619d4</latest_snapshot>
+        <latest_snapshot>03ae8b03db0d1410fdfe1828139619b4</latest_snapshot>
         <master_snapshot>75842e46dbc19410fdfe182813961948</master_snapshot>
         <name>UTIL_InitializeBulkOperation</name>
         <natlang/>
@@ -25,7 +25,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>5353eec2dbc19410fdfe1828139619c6</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>UTIL_InitializeBulkOperation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -33,8 +33,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_5353eec2dbc19410fdfe1828139619c6</sys_update_name>
-        <sys_updated_by>3217472</sys_updated_by>
-        <sys_updated_on>2020-05-29 19:58:26</sys_updated_on>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -47,7 +47,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize diagnostic i</label>
+        <label>Initialize run start time</label>
         <order>1</order>
         <outputs/>
         <section/>
@@ -57,7 +57,7 @@
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5b646a46dbc19410fdfe18281396193e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -65,7 +65,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5b646a46dbc19410fdfe18281396193e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -76,10 +76,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>17646a46dbc19410fdfe182813961944</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>key=diagnostic_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
+        <value>key=bulk_run_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -90,12 +90,26 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>eb646a46dbc19410fdfe182813961944</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5b646a46dbc19410fdfe18281396193e^sys_idNOT IN9f6d874fdbc91410fdfe1828139619d8"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>5b646a46dbc19410fdfe18281396193e</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn new GlideDateTime();","savedValue":""}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:51:42</sys_created_on>
+        <sys_id>9f6d874fdbc91410fdfe1828139619d8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:52:46</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
         <cid>b8092a70-1a9c-4c21-955f-7b0b0759ae6e</cid>
@@ -103,7 +117,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize start_time to -1</label>
+        <label>Initialize i</label>
         <order>2</order>
         <outputs/>
         <section/>
@@ -113,7 +127,7 @@
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6f646a46dbc19410fdfe182813961945</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -121,7 +135,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6f646a46dbc19410fdfe182813961945"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -132,10 +146,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>2f646a46dbc19410fdfe182813961956</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -146,10 +160,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>6b646a46dbc19410fdfe182813961956</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>key=diagnostic_bulk_run_time_start^value=-1^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
+        <value>key=bulk_i^value_int=0^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_hub_input_scripts action="delete_multiple" query="instance=6f646a46dbc19410fdfe182813961945^sys_idNOT INa7646a46dbc19410fdfe182813961955"/>
@@ -158,13 +172,13 @@
         <input_name>fields</input_name>
         <instance>6f646a46dbc19410fdfe182813961945</instance>
         <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn new GlideDateTime().toString();","savedValue":""},"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
+        <script>{"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>a7646a46dbc19410fdfe182813961955</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
@@ -173,7 +187,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize cache i</label>
+        <label>Initialize records start time</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -183,7 +197,7 @@
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ab646a46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -191,7 +205,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:02</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ab646a46dbc19410fdfe182813961957"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -202,10 +216,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>2b646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:02</sys_updated_on>
-        <value>key=cache_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
+        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -216,12 +230,26 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>eb646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ab646a46dbc19410fdfe182813961957^sys_idNOT IN32adcf4fdbc91410fdfe18281396194e"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>ab646a46dbc19410fdfe182813961957</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:52:46</sys_created_on>
+        <sys_id>32adcf4fdbc91410fdfe18281396194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:52:46</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_step_instance action="delete_multiple" query="action=5353eec2dbc19410fdfe1828139619c6^sys_idNOT IN5b646a46dbc19410fdfe18281396193e,6f646a46dbc19410fdfe182813961945,ab646a46dbc19410fdfe182813961957"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
@@ -230,7 +258,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize diagnostic i</label>
+        <label>Initialize run start time</label>
         <order>1</order>
         <outputs/>
         <section/>
@@ -240,7 +268,7 @@
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5b646a46dbc19410fdfe18281396193e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -248,7 +276,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5b646a46dbc19410fdfe18281396193e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -259,10 +287,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>17646a46dbc19410fdfe182813961944</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>key=diagnostic_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
+        <value>key=bulk_run_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -273,12 +301,26 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>eb646a46dbc19410fdfe182813961944</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5b646a46dbc19410fdfe18281396193e^sys_idNOT IN9f6d874fdbc91410fdfe1828139619d8"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>5b646a46dbc19410fdfe18281396193e</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn new GlideDateTime();","savedValue":""}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:51:42</sys_created_on>
+        <sys_id>9f6d874fdbc91410fdfe1828139619d8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:52:46</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
         <cid>b8092a70-1a9c-4c21-955f-7b0b0759ae6e</cid>
@@ -286,7 +328,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize start_time to -1</label>
+        <label>Initialize i</label>
         <order>2</order>
         <outputs/>
         <section/>
@@ -296,7 +338,7 @@
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6f646a46dbc19410fdfe182813961945</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -304,7 +346,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6f646a46dbc19410fdfe182813961945"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -315,10 +357,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>2f646a46dbc19410fdfe182813961956</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -329,10 +371,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>6b646a46dbc19410fdfe182813961956</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>key=diagnostic_bulk_run_time_start^value=-1^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
+        <value>key=bulk_i^value_int=0^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_hub_input_scripts action="delete_multiple" query="instance=6f646a46dbc19410fdfe182813961945^sys_idNOT INa7646a46dbc19410fdfe182813961955"/>
@@ -341,13 +383,13 @@
         <input_name>fields</input_name>
         <instance>6f646a46dbc19410fdfe182813961945</instance>
         <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn new GlideDateTime().toString();","savedValue":""},"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
+        <script>{"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>a7646a46dbc19410fdfe182813961955</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
@@ -356,7 +398,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize cache i</label>
+        <label>Initialize records start time</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -366,7 +408,7 @@
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ab646a46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -374,7 +416,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:02</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ab646a46dbc19410fdfe182813961957"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -385,10 +427,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>2b646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:02</sys_updated_on>
-        <value>key=cache_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
+        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -399,26 +441,40 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:18:39</sys_created_on>
         <sys_id>eb646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:18:39</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ab646a46dbc19410fdfe182813961957^sys_idNOT IN32adcf4fdbc91410fdfe18281396194e"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>ab646a46dbc19410fdfe182813961957</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:52:46</sys_created_on>
+        <sys_id>32adcf4fdbc91410fdfe18281396194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:52:46</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_action_plan action="delete_multiple" query="action_id=5353eec2dbc19410fdfe1828139619c6^sys_idNOT IN8a842e46dbc19410fdfe182813961993"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="UTIL_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"8a842e46dbc19410fdfe182813961993","name":"plan"}}</plan>
-        <snapshot>c7f7bacadb859410fdfe1828139619d4</snapshot>
+        <snapshot>03ae8b03db0d1410fdfe1828139619b4</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:06</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>8a842e46dbc19410fdfe182813961993</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:07</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:09</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -465,7 +521,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize cache i</label>
+        <label>Initialize records start time</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -475,7 +531,7 @@
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>31842e46dbc19410fdfe182813961954</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -483,7 +539,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:06</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=31842e46dbc19410fdfe182813961954"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -494,10 +550,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>71842e46dbc19410fdfe182813961958</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -508,12 +564,26 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>bd842e46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:06</sys_updated_on>
-        <value>key=cache_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
+        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=31842e46dbc19410fdfe182813961954^sys_idNOT INc61e4f8fdbc91410fdfe1828139619ea"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>31842e46dbc19410fdfe182813961954</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:54:37</sys_created_on>
+        <sys_id>c61e4f8fdbc91410fdfe1828139619ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
         <cid>4891897b-2c13-4278-80e2-9135530e9fea</cid>
@@ -521,7 +591,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize diagnostic i</label>
+        <label>Initialize run start time</label>
         <order>1</order>
         <outputs/>
         <section/>
@@ -531,7 +601,7 @@
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7d842e46dbc19410fdfe182813961949</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -539,7 +609,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7d842e46dbc19410fdfe182813961949"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -550,10 +620,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>31842e46dbc19410fdfe18281396194e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -564,12 +634,26 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>7d842e46dbc19410fdfe18281396194d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>key=diagnostic_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
+        <value>key=bulk_run_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7d842e46dbc19410fdfe182813961949^sys_idNOT IN021e4f8fdbc91410fdfe1828139619e0"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>7d842e46dbc19410fdfe182813961949</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn new GlideDateTime();","savedValue":""}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:54:37</sys_created_on>
+        <sys_id>021e4f8fdbc91410fdfe1828139619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
         <cid>b8092a70-1a9c-4c21-955f-7b0b0759ae6e</cid>
@@ -577,7 +661,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize start_time to -1</label>
+        <label>Initialize i</label>
         <order>2</order>
         <outputs/>
         <section/>
@@ -587,7 +671,7 @@
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bd842e46dbc19410fdfe18281396194e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -595,7 +679,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=bd842e46dbc19410fdfe18281396194e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -606,10 +690,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>b1842e46dbc19410fdfe182813961953</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -620,10 +704,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>fd842e46dbc19410fdfe182813961952</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>key=diagnostic_bulk_run_time_start^value=-1^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
+        <value>key=bulk_i^value_int=0^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_hub_input_scripts action="delete_multiple" query="instance=bd842e46dbc19410fdfe18281396194e^sys_idNOT IN31842e46dbc19410fdfe182813961952"/>
@@ -632,13 +716,13 @@
         <input_name>fields</input_name>
         <instance>bd842e46dbc19410fdfe18281396194e</instance>
         <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn new GlideDateTime().toString();","savedValue":""},"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
+        <script>{"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>31842e46dbc19410fdfe182813961952</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_step_instance action="delete_multiple" query="action=75842e46dbc19410fdfe182813961948^sys_idNOT IN31842e46dbc19410fdfe182813961954,7d842e46dbc19410fdfe182813961949,bd842e46dbc19410fdfe18281396194e"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
@@ -648,7 +732,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize cache i</label>
+        <label>Initialize records start time</label>
         <order>3</order>
         <outputs/>
         <section/>
@@ -658,7 +742,7 @@
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>31842e46dbc19410fdfe182813961954</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -666,7 +750,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:06</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=31842e46dbc19410fdfe182813961954"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -677,10 +761,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>71842e46dbc19410fdfe182813961958</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -691,12 +775,26 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>bd842e46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 18:44:06</sys_updated_on>
-        <value>key=cache_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
+        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=31842e46dbc19410fdfe182813961954^sys_idNOT INc61e4f8fdbc91410fdfe1828139619ea"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>31842e46dbc19410fdfe182813961954</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:54:37</sys_created_on>
+        <sys_id>c61e4f8fdbc91410fdfe1828139619ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
         <cid>4891897b-2c13-4278-80e2-9135530e9fea</cid>
@@ -704,7 +802,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize diagnostic i</label>
+        <label>Initialize run start time</label>
         <order>1</order>
         <outputs/>
         <section/>
@@ -714,7 +812,7 @@
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7d842e46dbc19410fdfe182813961949</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -722,7 +820,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7d842e46dbc19410fdfe182813961949"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -733,10 +831,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>31842e46dbc19410fdfe18281396194e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -747,12 +845,26 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>7d842e46dbc19410fdfe18281396194d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>key=diagnostic_bulk_run_i^value=0^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
+        <value>key=bulk_run_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7d842e46dbc19410fdfe182813961949^sys_idNOT IN021e4f8fdbc91410fdfe1828139619e0"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>fields</input_name>
+        <instance>7d842e46dbc19410fdfe182813961949</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn new GlideDateTime();","savedValue":""}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-01 22:54:37</sys_created_on>
+        <sys_id>021e4f8fdbc91410fdfe1828139619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UTIL_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
         <cid>b8092a70-1a9c-4c21-955f-7b0b0759ae6e</cid>
@@ -760,7 +872,7 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>Initialize start_time to -1</label>
+        <label>Initialize i</label>
         <order>2</order>
         <outputs/>
         <section/>
@@ -770,7 +882,7 @@
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bd842e46dbc19410fdfe18281396194e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -778,7 +890,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=bd842e46dbc19410fdfe18281396194e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -789,10 +901,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>b1842e46dbc19410fdfe182813961953</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_configuration</value>
+        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_integration_cache</value>
         <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -803,10 +915,10 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>fd842e46dbc19410fdfe182813961952</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
-        <value>key=diagnostic_bulk_run_time_start^value=-1^coalesce_fields=key</value>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
+        <value>key=bulk_i^value_int=0^coalesce_fields=key</value>
         <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
     </sys_variable_value>
     <sys_hub_input_scripts action="delete_multiple" query="instance=bd842e46dbc19410fdfe18281396194e^sys_idNOT IN31842e46dbc19410fdfe182813961952"/>
@@ -815,12 +927,12 @@
         <input_name>fields</input_name>
         <instance>bd842e46dbc19410fdfe18281396194e</instance>
         <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn new GlideDateTime().toString();","savedValue":""},"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
+        <script>{"key":{"scriptActive":false,"savedValue":"diagnostic_bulk_run_time_start"}}</script>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:05</sys_created_on>
         <sys_id>31842e46dbc19410fdfe182813961952</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:19:05</sys_updated_on>
+        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_input_scripts>
 </record_update>
