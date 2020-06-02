@@ -13,9 +13,9 @@
         <ih_action>false</ih_action>
         <internal_name>pickbestmacaddress</internal_name>
         <label_cache>[{"name":"{{action.computer_reference}}","label":"action➛computer_reference","type":"action","ref":""},{"name":"{{action.computer_reference.ip_address}}","label":"action➛computer_reference➛IP Address","type":"action","ref":""},{"name":"{{action.computer_reference.mac_address}}","label":"action➛computer_reference➛MAC Address","type":"action","ref":""},{"name":"{{step[532ace94-f258-4078-b244-bda47acd2fe7].variable}}","label":"step➛debug➛variable","type":"step","ref":""},{"name":"{{step[532ace94-f258-4078-b244-bda47acd2fe7].computer_reference}}","label":"step➛debug➛computer_reference","type":"step","ref":""},{"name":"{{step[6bb71439-23fa-4ff4-b1b4-f5dc348c3368].records}}","label":"step➛Look Up Records step➛Network Adapter records","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].macs}}","label":"step➛Script step➛macs","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].notes}}","label":"step➛Script step➛notes","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].ips}}","label":"step➛Script step➛ips","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].adapter_names}}","label":"step➛Script step➛adapter_names","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].weights}}","label":"step➛Script step➛weights","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].best_mac}}","label":"step➛Script step➛best_mac","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].mac_found}}","label":"step➛Script step➛mac_found","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>99f1bc61db415010fdfe18281396196b</latest_snapshot>
+        <latest_snapshot>64d8c1d31b8950107e280d43cd4bcb7b</latest_snapshot>
         <master_snapshot>9ddec701db899810fdfe18281396197f</master_snapshot>
-        <name>UTIL_PickBestMacAddress</name>
+        <name>LINK_PickBestMacAddress</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -26,16 +26,16 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>fa9427bfdb34d450cb24431e13961966</sys_id>
-        <sys_mod_count>27</sys_mod_count>
-        <sys_name>UTIL_PickBestMacAddress</sys_name>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>LINK_PickBestMacAddress</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_fa9427bfdb34d450cb24431e13961966</sys_update_name>
-        <sys_updated_by>3217472</sys_updated_by>
-        <sys_updated_on>2020-05-29 19:58:32</sys_updated_on>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-02 07:50:52</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -81,7 +81,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=fa9427bfdb34d450cb24431e13961966^sys_idNOT IN3e05fbffdbf4d450cb24431e139619d1,fe057fb3db38d450cb24431e1396198b"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
+        <action display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
         <cid>6bb71439-23fa-4ff4-b1b4-f5dc348c3368</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -149,7 +149,7 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
+        <action display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
         <cid>67210225-2fbc-4fc7-a8ba-3eecc6a84daf</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -572,7 +572,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=d07b9d55-5b58-4914-a48f-7e4e89dc73ad,co_type_name=FD0b057fb3c338d450dadd732ede1ee6bc,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
+        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=6762b4f0-cf63-4fa9-96a9-7310e632f69c,co_type_name=FD0b057fb3c338d450dadd732ede1ee6bc,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -631,7 +631,7 @@
         <sys_created_on>2020-05-22 23:24:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>03057fb3db38d450cb24431e139619d3</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -639,7 +639,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:32</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -655,7 +655,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=6aa64055-4e25-42db-af58-92da83bec05a,co_type_name=FD8f057fb34c38d450f6740fa0db76f4b8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
+        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=9f2f7591-db90-4365-b489-5079fd9a7a80,co_type_name=FD8f057fb34c38d450f6740fa0db76f4b8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -714,7 +714,7 @@
         <sys_created_on>2020-05-22 23:24:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0f057fb3db38d450cb24431e139619c5</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -722,7 +722,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:32</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -738,7 +738,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=e4106c77-6468-4deb-977d-27c216f75981,co_type_name=FDcb057fb39f38d45058b5a649b28592ba,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
+        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=f59acf98-c676-4918-8697-29a0d2c2154c,co_type_name=FDcb057fb39f38d45058b5a649b28592ba,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -797,7 +797,7 @@
         <sys_created_on>2020-05-22 23:24:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>87057fb3db38d450cb24431e139619cc</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -805,7 +805,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:32</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -904,7 +904,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=b508cfd7-b124-4061-ad75-0f7317c1d3e6,co_type_name=FD0b057fb3f838d4507c23ff860d40a1aa,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
+        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=3f7f556e-ffbe-4bd7-bf2b-99e5be32f755,co_type_name=FD0b057fb3f838d4507c23ff860d40a1aa,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -963,7 +963,7 @@
         <sys_created_on>2020-05-22 23:24:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8b057fb3db38d450cb24431e139619be</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -971,7 +971,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:31</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1106,7 +1106,7 @@
         <label>computer_reference</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</model>
+        <model display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</model>
         <model_id>fa9427bfdb34d450cb24431e13961966</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_fa9427bfdb34d450cb24431e13961966</name>
@@ -1192,7 +1192,7 @@
         <label>mac_found</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</model>
+        <model display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</model>
         <model_id>fa9427bfdb34d450cb24431e13961966</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_fa9427bfdb34d450cb24431e13961966</name>
@@ -1277,7 +1277,7 @@
         <label>best_mac</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</model>
+        <model display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</model>
         <model_id>fa9427bfdb34d450cb24431e13961966</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_fa9427bfdb34d450cb24431e13961966</name>
@@ -1323,7 +1323,7 @@
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=fa9427bfdb34d450cb24431e13961966^sys_idNOT IN3e05fbffdbf4d450cb24431e139619d1,fe057fb3db38d450cb24431e1396198b"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
+        <action display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
         <cid>6bb71439-23fa-4ff4-b1b4-f5dc348c3368</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -1391,7 +1391,7 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
+        <action display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action>
         <cid>67210225-2fbc-4fc7-a8ba-3eecc6a84daf</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1814,7 +1814,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=d07b9d55-5b58-4914-a48f-7e4e89dc73ad,co_type_name=FD0b057fb3c338d450dadd732ede1ee6bc,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
+        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=6762b4f0-cf63-4fa9-96a9-7310e632f69c,co_type_name=FD0b057fb3c338d450dadd732ede1ee6bc,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1873,7 +1873,7 @@
         <sys_created_on>2020-05-22 23:24:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>03057fb3db38d450cb24431e139619d3</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1881,7 +1881,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:32</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1897,7 +1897,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=6aa64055-4e25-42db-af58-92da83bec05a,co_type_name=FD8f057fb34c38d450f6740fa0db76f4b8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
+        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=9f2f7591-db90-4365-b489-5079fd9a7a80,co_type_name=FD8f057fb34c38d450f6740fa0db76f4b8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1956,7 +1956,7 @@
         <sys_created_on>2020-05-22 23:24:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0f057fb3db38d450cb24431e139619c5</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1964,7 +1964,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:32</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1980,7 +1980,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=e4106c77-6468-4deb-977d-27c216f75981,co_type_name=FDcb057fb39f38d45058b5a649b28592ba,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
+        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=f59acf98-c676-4918-8697-29a0d2c2154c,co_type_name=FDcb057fb39f38d45058b5a649b28592ba,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2039,7 +2039,7 @@
         <sys_created_on>2020-05-22 23:24:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>87057fb3db38d450cb24431e139619cc</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2047,7 +2047,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:32</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2146,7 +2146,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=b508cfd7-b124-4061-ad75-0f7317c1d3e6,co_type_name=FD0b057fb3f838d4507c23ff860d40a1aa,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
+        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=3f7f556e-ffbe-4bd7-bf2b-99e5be32f755,co_type_name=FD0b057fb3f838d4507c23ff860d40a1aa,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2205,7 +2205,7 @@
         <sys_created_on>2020-05-22 23:24:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8b057fb3db38d450cb24431e139619be</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2213,7 +2213,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:31</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2323,12 +2323,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>40b52b73db74d450cb24431e13961995</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>computer_reference</sys_name>
+        <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_fa9427bfdb34d450cb24431e13961966_computer_reference_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-05-22 22:17:26</sys_updated_on>
         <url/>
@@ -2349,12 +2349,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3fce4701db899810fdfe18281396197d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>best_mac</sys_name>
+        <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_fa9427bfdb34d450cb24431e13961966_best_mac_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-05-26 17:49:53</sys_updated_on>
         <url/>
@@ -2374,12 +2374,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c1cbe0e5db015010fdfe1828139619ea</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>mac_found</sys_name>
+        <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_fa9427bfdb34d450cb24431e13961966_mac_found_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-05-27 19:14:31</sys_updated_on>
         <url/>
@@ -2387,18 +2387,18 @@
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=fa9427bfdb34d450cb24431e13961966^sys_idNOT IN86de0b01db899810fdfe1828139619c1"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action_id>
+        <action_id display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"86de0b01db899810fdfe1828139619c1","name":"plan"}}</plan>
-        <snapshot>99f1bc61db415010fdfe18281396196b</snapshot>
+        <snapshot>64d8c1d31b8950107e280d43cd4bcb7b</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-26 17:50:03</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>86de0b01db899810fdfe1828139619c1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:38</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:53</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2413,18 +2413,18 @@
         <internal_name>pickbestmacaddress</internal_name>
         <label_cache>[{"name":"{{action.computer_reference}}","label":"action➛computer_reference","type":"action","ref":""},{"name":"{{action.computer_reference.ip_address}}","label":"action➛computer_reference➛IP Address","type":"action","ref":""},{"name":"{{action.computer_reference.mac_address}}","label":"action➛computer_reference➛MAC Address","type":"action","ref":""},{"name":"{{step[532ace94-f258-4078-b244-bda47acd2fe7].variable}}","label":"step➛debug➛variable","type":"step","ref":""},{"name":"{{step[532ace94-f258-4078-b244-bda47acd2fe7].computer_reference}}","label":"step➛debug➛computer_reference","type":"step","ref":""},{"name":"{{step[6bb71439-23fa-4ff4-b1b4-f5dc348c3368].records}}","label":"step➛Look Up Records step➛Network Adapter records","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].macs}}","label":"step➛Script step➛macs","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].notes}}","label":"step➛Script step➛notes","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].ips}}","label":"step➛Script step➛ips","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].adapter_names}}","label":"step➛Script step➛adapter_names","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].weights}}","label":"step➛Script step➛weights","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].best_mac}}","label":"step➛Script step➛best_mac","type":"step","ref":""},{"name":"{{step[67210225-2fbc-4fc7-a8ba-3eecc6a84daf].mac_found}}","label":"step➛Script step➛mac_found","type":"step","ref":""}]</label_cache>
         <master>true</master>
-        <name>UTIL_PickBestMacAddress</name>
+        <name>LINK_PickBestMacAddress</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="UTIL_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</parent_action>
+        <parent_action display_value="LINK_PickBestMacAddress">fa9427bfdb34d450cb24431e13961966</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-26 17:49:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>9ddec701db899810fdfe18281396197f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2433,7 +2433,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:14:49</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:50</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -2479,7 +2479,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=9ddec701db899810fdfe18281396197f^sys_idNOT IN99dec701db899810fdfe1828139619a1,d5dec701db899810fdfe1828139619a7"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
+        <action display_value="LINK_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
         <cid>6bb71439-23fa-4ff4-b1b4-f5dc348c3368</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -2547,7 +2547,7 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
+        <action display_value="LINK_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
         <cid>67210225-2fbc-4fc7-a8ba-3eecc6a84daf</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -2970,7 +2970,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=6aa64055-4e25-42db-af58-92da83bec05a,co_type_name=FDcef1fc61d1415010bd84eb21bf455276,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
+        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=9f2f7591-db90-4365-b489-5079fd9a7a80,co_type_name=FD89d805d32189501059c8a5670b4a0e22,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -3029,7 +3029,7 @@
         <sys_created_on>2020-05-26 17:50:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2ddec701db899810fdfe1828139619f0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3037,7 +3037,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:36</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3053,7 +3053,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=b508cfd7-b124-4061-ad75-0f7317c1d3e6,co_type_name=FD02f1fc61974150100112e49bb78ce275,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
+        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=3f7f556e-ffbe-4bd7-bf2b-99e5be32f755,co_type_name=FDc9d805d3aa8950106d5074e33e115d20,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -3112,7 +3112,7 @@
         <sys_created_on>2020-05-26 17:50:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6ddec701db899810fdfe1828139619e9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3120,7 +3120,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:36</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3136,7 +3136,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=d07b9d55-5b58-4914-a48f-7e4e89dc73ad,co_type_name=FD4af1fc613a415010d0fe39011225c77a,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
+        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=6762b4f0-cf63-4fa9-96a9-7310e632f69c,co_type_name=FD05d805d395895010bfc47825c42ea226,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -3195,7 +3195,7 @@
         <sys_created_on>2020-05-26 17:50:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a1de0b01db899810fdfe18281396190a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3203,7 +3203,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:37</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3302,7 +3302,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=e4106c77-6468-4deb-977d-27c216f75981,co_type_name=FD0ef1fc618e41501079989c5f66907678,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
+        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=f59acf98-c676-4918-8697-29a0d2c2154c,co_type_name=FDc5d805d3a4895010698e51bc97d59324,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -3361,7 +3361,7 @@
         <sys_created_on>2020-05-26 17:50:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e9de0b01db899810fdfe182813961903</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3369,7 +3369,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:36</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3504,7 +3504,7 @@
         <label>computer_reference</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="UTIL_PickBestMacAddress">9ddec701db899810fdfe18281396197f</model>
+        <model display_value="LINK_PickBestMacAddress">9ddec701db899810fdfe18281396197f</model>
         <model_id>9ddec701db899810fdfe18281396197f</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_9ddec701db899810fdfe18281396197f</name>
@@ -3590,7 +3590,7 @@
         <label>best_mac</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_PickBestMacAddress">9ddec701db899810fdfe18281396197f</model>
+        <model display_value="LINK_PickBestMacAddress">9ddec701db899810fdfe18281396197f</model>
         <model_id>9ddec701db899810fdfe18281396197f</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_9ddec701db899810fdfe18281396197f</name>
@@ -3675,7 +3675,7 @@
         <label>mac_found</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UTIL_PickBestMacAddress">9ddec701db899810fdfe18281396197f</model>
+        <model display_value="LINK_PickBestMacAddress">9ddec701db899810fdfe18281396197f</model>
         <model_id>9ddec701db899810fdfe18281396197f</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_9ddec701db899810fdfe18281396197f</name>
@@ -3721,7 +3721,7 @@
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=9ddec701db899810fdfe18281396197f^sys_idNOT IN99dec701db899810fdfe1828139619a1,d5dec701db899810fdfe1828139619a7"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
+        <action display_value="LINK_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
         <cid>6bb71439-23fa-4ff4-b1b4-f5dc348c3368</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -3789,7 +3789,7 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
+        <action display_value="LINK_PickBestMacAddress">9ddec701db899810fdfe18281396197f</action>
         <cid>67210225-2fbc-4fc7-a8ba-3eecc6a84daf</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -4212,7 +4212,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=6aa64055-4e25-42db-af58-92da83bec05a,co_type_name=FDcef1fc61d1415010bd84eb21bf455276,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
+        <attributes>child_label=ips_child0,child_name=ips_child0,child_type=string,child_type_label=String,child_uiUniqueId=9f2f7591-db90-4365-b489-5079fd9a7a80,co_type_name=FD89d805d32189501059c8a5670b4a0e22,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=450969f3-fc77-4abe-9b34-81453b7c599e</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -4271,7 +4271,7 @@
         <sys_created_on>2020-05-26 17:50:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2ddec701db899810fdfe1828139619f0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -4279,7 +4279,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:36</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4295,7 +4295,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=b508cfd7-b124-4061-ad75-0f7317c1d3e6,co_type_name=FD02f1fc61974150100112e49bb78ce275,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
+        <attributes>child_label=macs_child0,child_name=macs_child0,child_type=string,child_type_label=String,child_uiUniqueId=3f7f556e-ffbe-4bd7-bf2b-99e5be32f755,co_type_name=FDc9d805d3aa8950106d5074e33e115d20,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=1c94ca08-cf36-4b41-8087-0d3a156b0ba7</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -4354,7 +4354,7 @@
         <sys_created_on>2020-05-26 17:50:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6ddec701db899810fdfe1828139619e9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -4362,7 +4362,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:36</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4378,7 +4378,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=d07b9d55-5b58-4914-a48f-7e4e89dc73ad,co_type_name=FD4af1fc613a415010d0fe39011225c77a,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
+        <attributes>child_label=weights_child0,child_name=weights_child0,child_type=integer,child_type_label=Integer,child_uiUniqueId=6762b4f0-cf63-4fa9-96a9-7310e632f69c,co_type_name=FD05d805d395895010bfc47825c42ea226,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.integer,uiTypeLabel=Array.Integer,uiUniqueId=104e1954-398e-4715-b522-cc7ccad5cc98</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -4437,7 +4437,7 @@
         <sys_created_on>2020-05-26 17:50:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a1de0b01db899810fdfe18281396190a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -4445,7 +4445,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:37</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4544,7 +4544,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=e4106c77-6468-4deb-977d-27c216f75981,co_type_name=FD0ef1fc618e41501079989c5f66907678,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
+        <attributes>child_label=adapter_names_child0,child_name=adapter_names_child0,child_type=string,child_type_label=String,child_uiUniqueId=f59acf98-c676-4918-8697-29a0d2c2154c,co_type_name=FDc5d805d3a4895010698e51bc97d59324,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=15b9dcb9-153b-496e-950b-be79a7d9c76a</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -4603,7 +4603,7 @@
         <sys_created_on>2020-05-26 17:50:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e9de0b01db899810fdfe182813961903</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -4611,7 +4611,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:41:36</sys_updated_on>
+        <sys_updated_on>2020-06-02 07:50:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4721,12 +4721,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>51dec701db899810fdfe18281396199f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>computer_reference</sys_name>
+        <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_9ddec701db899810fdfe18281396197f_computer_reference_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-05-26 17:49:59</sys_updated_on>
         <url/>
@@ -4747,12 +4747,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f5dbe4e5db015010fdfe1828139619ce</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>mac_found</sys_name>
+        <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_9ddec701db899810fdfe18281396197f_mac_found_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-05-27 19:14:50</sys_updated_on>
         <url/>
@@ -4772,12 +4772,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f5de0b01db899810fdfe18281396193c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>best_mac</sys_name>
+        <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_9ddec701db899810fdfe18281396197f_best_mac_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-05-26 17:50:01</sys_updated_on>
         <url/>

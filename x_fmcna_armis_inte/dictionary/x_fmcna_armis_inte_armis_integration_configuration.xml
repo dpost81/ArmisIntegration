@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" type="collection">
+    <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" sizeclass="4" type="collection">
         <element choice="1" label="Key" mandatory="true" max_length="64" name="key" type="choice">
             <choice>
+                <element inactive_on_update="false" label="armis_import_universal_tag" value="armis_import_universal_tag"/>
                 <element inactive_on_update="false" label="push_data_to_armis" value="push_data_to_armis"/>
                 <element inactive_on_update="false" label="push_num_records" value="push_num_records"/>
                 <element inactive_on_update="false" label="push_start_num" value="push_start_num"/>
