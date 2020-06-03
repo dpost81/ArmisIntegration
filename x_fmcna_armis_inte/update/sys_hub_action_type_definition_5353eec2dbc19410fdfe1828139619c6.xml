@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>util_initializebulkoperation</internal_name>
         <label_cache>[]</label_cache>
-        <latest_snapshot>96b8cd931b8950107e280d43cd4bcb46</latest_snapshot>
+        <latest_snapshot>1b35af2fdbc110106688fef8689619d5</latest_snapshot>
         <master_snapshot>75842e46dbc19410fdfe182813961948</master_snapshot>
         <name>BULK_InitializeBulkOperation</name>
         <natlang/>
@@ -25,7 +25,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>5353eec2dbc19410fdfe1828139619c6</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>BULK_InitializeBulkOperation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -34,12 +34,12 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_5353eec2dbc19410fdfe1828139619c6</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-02 07:50:23</sys_updated_on>
+        <sys_updated_on>2020-06-03 13:52:43</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
     <sys_variable_value action="delete_multiple" query="document_key=5353eec2dbc19410fdfe1828139619c6"/>
-    <sys_hub_step_instance action="delete_multiple" query="action=5353eec2dbc19410fdfe1828139619c6^sys_idNOT IN5b646a46dbc19410fdfe18281396193e,6f646a46dbc19410fdfe182813961945,ab646a46dbc19410fdfe182813961957"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=5353eec2dbc19410fdfe1828139619c6^sys_idNOT IN5b646a46dbc19410fdfe18281396193e,6f646a46dbc19410fdfe182813961945"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="BULK_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
         <cid>4891897b-2c13-4278-80e2-9135530e9fea</cid>
@@ -180,77 +180,7 @@
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
     </sys_hub_input_scripts>
-    <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="BULK_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
-        <cid>48496bfb-e15c-42b3-acfd-775fb015b2ce</cid>
-        <extended_inputs/>
-        <extended_outputs/>
-        <icon/>
-        <inputs/>
-        <label>Initialize records start time</label>
-        <order>3</order>
-        <outputs/>
-        <section/>
-        <step_type display_value="Create or Update Record">8f5c107a53a3230034c6ddeeff7b129d</step_type>
-        <sys_class_name>sys_hub_step_instance</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:18:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>ab646a46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
-    </sys_hub_step_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=ab646a46dbc19410fdfe182813961957"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>ab646a46dbc19410fdfe182813961957</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:18:39</sys_created_on>
-        <sys_id>2b646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
-        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
-        <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>ab646a46dbc19410fdfe182813961957</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:18:39</sys_created_on>
-        <sys_id>eb646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_cache</value>
-        <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
-    </sys_variable_value>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=ab646a46dbc19410fdfe182813961957^sys_idNOT IN32adcf4fdbc91410fdfe18281396194e"/>
-    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <input_name>fields</input_name>
-        <instance>ab646a46dbc19410fdfe182813961957</instance>
-        <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-01 22:52:46</sys_created_on>
-        <sys_id>32adcf4fdbc91410fdfe18281396194e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:52:46</sys_updated_on>
-    </sys_hub_input_scripts>
-    <sys_hub_step_instance action="delete_multiple" query="action=5353eec2dbc19410fdfe1828139619c6^sys_idNOT IN5b646a46dbc19410fdfe18281396193e,6f646a46dbc19410fdfe182813961945,ab646a46dbc19410fdfe182813961957"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=5353eec2dbc19410fdfe1828139619c6^sys_idNOT IN5b646a46dbc19410fdfe18281396193e,6f646a46dbc19410fdfe182813961945"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="BULK_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
         <cid>4891897b-2c13-4278-80e2-9135530e9fea</cid>
@@ -390,91 +320,21 @@
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
-    </sys_hub_input_scripts>
-    <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="BULK_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action>
-        <cid>48496bfb-e15c-42b3-acfd-775fb015b2ce</cid>
-        <extended_inputs/>
-        <extended_outputs/>
-        <icon/>
-        <inputs/>
-        <label>Initialize records start time</label>
-        <order>3</order>
-        <outputs/>
-        <section/>
-        <step_type display_value="Create or Update Record">8f5c107a53a3230034c6ddeeff7b129d</step_type>
-        <sys_class_name>sys_hub_step_instance</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:18:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>ab646a46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
-    </sys_hub_step_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=ab646a46dbc19410fdfe182813961957"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>ab646a46dbc19410fdfe182813961957</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:18:39</sys_created_on>
-        <sys_id>2b646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:07</sys_updated_on>
-        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
-        <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>ab646a46dbc19410fdfe182813961957</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:18:39</sys_created_on>
-        <sys_id>eb646a46dbc19410fdfe18281396195b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:51:42</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_cache</value>
-        <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
-    </sys_variable_value>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=ab646a46dbc19410fdfe182813961957^sys_idNOT IN32adcf4fdbc91410fdfe18281396194e"/>
-    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <input_name>fields</input_name>
-        <instance>ab646a46dbc19410fdfe182813961957</instance>
-        <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-01 22:52:46</sys_created_on>
-        <sys_id>32adcf4fdbc91410fdfe18281396194e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:52:46</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_action_plan action="delete_multiple" query="action_id=5353eec2dbc19410fdfe1828139619c6^sys_idNOT IN8a842e46dbc19410fdfe182813961993"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="BULK_InitializeBulkOperation">5353eec2dbc19410fdfe1828139619c6</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"8a842e46dbc19410fdfe182813961993","name":"plan"}}</plan>
-        <snapshot>96b8cd931b8950107e280d43cd4bcb46</snapshot>
+        <snapshot>1b35af2fdbc110106688fef8689619d5</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-29 17:19:06</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>8a842e46dbc19410fdfe182813961993</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-02 07:50:24</sys_updated_on>
+        <sys_updated_on>2020-06-03 13:52:44</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -513,77 +373,7 @@
         <type/>
     </sys_hub_action_type_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=75842e46dbc19410fdfe182813961948"/>
-    <sys_hub_step_instance action="delete_multiple" query="action=75842e46dbc19410fdfe182813961948^sys_idNOT IN31842e46dbc19410fdfe182813961954,7d842e46dbc19410fdfe182813961949,bd842e46dbc19410fdfe18281396194e"/>
-    <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="BULK_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
-        <cid>48496bfb-e15c-42b3-acfd-775fb015b2ce</cid>
-        <extended_inputs/>
-        <extended_outputs/>
-        <icon/>
-        <inputs/>
-        <label>Initialize records start time</label>
-        <order>3</order>
-        <outputs/>
-        <section/>
-        <step_type display_value="Create or Update Record">8f5c107a53a3230034c6ddeeff7b129d</step_type>
-        <sys_class_name>sys_hub_step_instance</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:19:05</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>31842e46dbc19410fdfe182813961954</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
-    </sys_hub_step_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=31842e46dbc19410fdfe182813961954"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>31842e46dbc19410fdfe182813961954</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:19:05</sys_created_on>
-        <sys_id>71842e46dbc19410fdfe182813961958</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_cache</value>
-        <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>31842e46dbc19410fdfe182813961954</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:19:05</sys_created_on>
-        <sys_id>bd842e46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
-        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
-        <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
-    </sys_variable_value>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=31842e46dbc19410fdfe182813961954^sys_idNOT INc61e4f8fdbc91410fdfe1828139619ea"/>
-    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <input_name>fields</input_name>
-        <instance>31842e46dbc19410fdfe182813961954</instance>
-        <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-01 22:54:37</sys_created_on>
-        <sys_id>c61e4f8fdbc91410fdfe1828139619ea</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
-    </sys_hub_input_scripts>
+    <sys_hub_step_instance action="delete_multiple" query="action=75842e46dbc19410fdfe182813961948^sys_idNOT IN7d842e46dbc19410fdfe182813961949,bd842e46dbc19410fdfe18281396194e"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="BULK_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
         <cid>4891897b-2c13-4278-80e2-9135530e9fea</cid>
@@ -724,77 +514,7 @@
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
     </sys_hub_input_scripts>
-    <sys_hub_step_instance action="delete_multiple" query="action=75842e46dbc19410fdfe182813961948^sys_idNOT IN31842e46dbc19410fdfe182813961954,7d842e46dbc19410fdfe182813961949,bd842e46dbc19410fdfe18281396194e"/>
-    <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="BULK_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
-        <cid>48496bfb-e15c-42b3-acfd-775fb015b2ce</cid>
-        <extended_inputs/>
-        <extended_outputs/>
-        <icon/>
-        <inputs/>
-        <label>Initialize records start time</label>
-        <order>3</order>
-        <outputs/>
-        <section/>
-        <step_type display_value="Create or Update Record">8f5c107a53a3230034c6ddeeff7b129d</step_type>
-        <sys_class_name>sys_hub_step_instance</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:19:05</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>31842e46dbc19410fdfe182813961954</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
-    </sys_hub_step_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=31842e46dbc19410fdfe182813961954"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>31842e46dbc19410fdfe182813961954</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:19:05</sys_created_on>
-        <sys_id>71842e46dbc19410fdfe182813961958</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
-        <value>x_fmcna_armis_inte_armis_integration_cache</value>
-        <variable display_value="">728c907a53a3230034c6ddeeff7b12e9</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>31842e46dbc19410fdfe182813961954</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-29 17:19:05</sys_created_on>
-        <sys_id>bd842e46dbc19410fdfe182813961957</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:57:08</sys_updated_on>
-        <value>key=bulk_records_start_time^value_datetime=fd-scripted^coalesce_fields=key</value>
-        <variable display_value="">5eac547a53a3230034c6ddeeff7b12c7</variable>
-    </sys_variable_value>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=31842e46dbc19410fdfe182813961954^sys_idNOT INc61e4f8fdbc91410fdfe1828139619ea"/>
-    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <input_name>fields</input_name>
-        <instance>31842e46dbc19410fdfe182813961954</instance>
-        <referenced_table>sys_hub_step_instance</referenced_table>
-        <script>{"value_datetime":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn 0;","savedValue":"0"}}</script>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-01 22:54:37</sys_created_on>
-        <sys_id>c61e4f8fdbc91410fdfe1828139619ea</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-01 22:54:37</sys_updated_on>
-    </sys_hub_input_scripts>
+    <sys_hub_step_instance action="delete_multiple" query="action=75842e46dbc19410fdfe182813961948^sys_idNOT IN7d842e46dbc19410fdfe182813961949,bd842e46dbc19410fdfe18281396194e"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="BULK_InitializeBulkOperation">75842e46dbc19410fdfe182813961948</action>
         <cid>4891897b-2c13-4278-80e2-9135530e9fea</cid>
