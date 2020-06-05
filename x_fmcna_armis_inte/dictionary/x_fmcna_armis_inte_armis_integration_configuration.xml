@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" sizeclass="4" type="collection">
+    <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" sizeclass="7" type="collection">
         <element choice="1" label="Key" mandatory="true" max_length="64" name="key" type="choice">
             <choice>
+                <element inactive_on_update="false" label="api_secret" value="api_secret"/>
                 <element inactive_on_update="false" label="armis_import_universal_tag" value="armis_import_universal_tag"/>
                 <element inactive_on_update="false" label="bulk_batch_buffer_seconds" value="bulk_batch_buffer_seconds"/>
                 <element inactive_on_update="false" label="bulk_batch_time_seconds" value="bulk_batch_time_seconds"/>
@@ -9,6 +10,7 @@
                 <element inactive_on_update="false" label="push_data_to_armis" value="push_data_to_armis"/>
                 <element inactive_on_update="false" label="push_num_records" value="push_num_records"/>
                 <element inactive_on_update="false" label="push_start_num" value="push_start_num"/>
+                <element inactive_on_update="false" label="virtual_adapter_mac_count_threshold" value="virtual_adapter_mac_count_threshold"/>
             </choice>
         </element>
         <element label="Notes" max_length="10000" name="notes" type="string"/>
