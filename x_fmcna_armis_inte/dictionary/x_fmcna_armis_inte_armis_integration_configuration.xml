@@ -2,18 +2,15 @@
     <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" sizeclass="7" type="collection">
         <element choice="1" label="Key" mandatory="true" max_length="64" name="key" type="choice">
             <choice>
-                <element inactive_on_update="false" label="api_secret" value="api_secret"/>
-                <element inactive_on_update="false" label="armis_import_universal_tag" value="armis_import_universal_tag"/>
-                <element inactive_on_update="false" label="bulk_batch_buffer_seconds" value="bulk_batch_buffer_seconds"/>
-                <element inactive_on_update="false" label="bulk_batch_time_seconds" value="bulk_batch_time_seconds"/>
-                <element inactive_on_update="false" label="kill_main_bulk" value="kill_main_bulk"/>
-                <element inactive_on_update="false" label="push_data_to_armis" value="push_data_to_armis"/>
-                <element inactive_on_update="false" label="push_num_records" value="push_num_records"/>
-                <element inactive_on_update="false" label="push_start_num" value="push_start_num"/>
-                <element inactive_on_update="false" label="virtual_adapter_mac_count_threshold" value="virtual_adapter_mac_count_threshold"/>
+                <element hint="Get this from Armis -&gt; Integrations -&gt; API. Needs to be a separate secret for each instance, because refreshing the token revokes the last one." inactive_on_update="false" label="api_secret" value="api_secret"/>
+                <element hint="This tag is attached to every export/update to Armis." inactive_on_update="false" label="armis_import_universal_tag" value="armis_import_universal_tag"/>
+                <element hint="Maximum number of records pulled from query." inactive_on_update="false" label="getd_max_records" value="getd_max_records"/>
+                <element hint="Start number for REST query for GETD. Iterates each time the query is run." inactive_on_update="false" label="getd_record_i" value="getd_record_i"/>
+                <element hint="Set to string &quot;TRUE&quot; to allow data to push to Armis (live), set to &quot;FALSE&quot; otherwise." inactive_on_update="false" label="push_data_to_armis" value="push_data_to_armis"/>
+                <element hint="This is the % of time (max value 1) that queue processing will occur. Every minute, processing will occur until this % of a minute has elapsed. For example, if set to 50%, then every minute it will do 30 seconds of processing and then stop." inactive_on_update="false" label="runtime_percent" value="runtime_percent"/>
+                <element hint="This is the number of occurrences of a MAC that can exist within the entire CMDB before this integration assumes that it's a &quot;virtual MAC&quot;. Virtual MACs are ineligible for linking to Armis." inactive_on_update="false" label="virtual_adapter_mac_count_threshold" value="virtual_adapter_mac_count_threshold"/>
             </choice>
         </element>
-        <element label="Notes" max_length="10000" name="notes" type="string"/>
         <element label="value" max_length="256" name="value" type="string"/>
     </element>
 </database>
