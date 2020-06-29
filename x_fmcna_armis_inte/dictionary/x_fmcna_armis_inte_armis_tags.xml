@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Tags" max_length="40" name="x_fmcna_armis_inte_armis_tags" sizeclass="143049" type="collection">
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Armis Device ID" max_length="32" name="armis_device_id" reference="x_fmcna_armis_inte_armis_device_table" type="reference"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="1" label="tag" max_length="40" name="tag" type="choice">
+    <element label="Armis Tags" max_length="40" name="x_fmcna_armis_inte_armis_tags" sizeclass="0" type="collection">
+        <element label="Armis Device ID" max_length="32" name="armis_device_id" reference="x_fmcna_armis_inte_armis_device_table" type="reference"/>
+        <element choice="1" label="tag" max_length="40" name="tag" type="choice">
             <choice>
                 <element inactive_on_update="false" label="SSID=MedPod" value="SSID=MedPod"/>
             </choice>
         </element>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Tag string" max_length="128" name="tag_string" type="string"/>
+        <element label="Tag string" max_length="128" name="tag_string" type="string"/>
         <index name="index">
             <element name="armis_device_id"/>
         </index>

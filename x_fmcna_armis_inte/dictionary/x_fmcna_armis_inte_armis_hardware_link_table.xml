@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis Hardware Link Table" max_length="40" name="x_fmcna_armis_inte_armis_hardware_link_table" sizeclass="0" type="collection">
+        <element label="Armis Device ID" max_length="40" name="armis_device_id" type="integer"/>
+        <element label="Link MAC" max_length="20" name="link_mac" type="string"/>
+        <element label="SNow Hardware ID" max_length="32" name="snow_hardware_id" reference="cmdb_ci_hardware" type="reference"/>
+        <index name="index">
+            <element name="snow_hardware_id"/>
+        </index>
+    </element>
+</database>

@@ -12,8 +12,8 @@
         <description>Returns whether to keep processing the queue</description>
         <ih_action>false</ih_action>
         <internal_name>queue_dowekeepprocessingitems</internal_name>
-        <label_cache>[{"name":"{{action.queue_count}}","label":"action➛queue_count","type":"action","ref":""},{"name":"{{action.queue_start_time}}","label":"action➛queue_start_time","type":"action","ref":""},{"name":"{{action.queue_processing_percent}}","label":"action➛queue_processing_percent","type":"action","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].keep_processing}}","label":"step➛Script step➛keep_processing","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].debug_elapsed_time}}","label":"step➛Script step➛debug_elapsed_time","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>b976b3841b2510104be764e8bc4bcb71</latest_snapshot>
+        <label_cache>[{"name":"{{action.queue_count}}","label":"action➛queue_count","type":"action","ref":""},{"name":"{{action.queue_start_time}}","label":"action➛queue_start_time","type":"action","ref":""},{"name":"{{action.queue_processing_percent}}","label":"action➛queue_processing_percent","type":"action","ref":""},{"name":"{{action.queue_start_numeric}}","label":"action➛queue_start_numeric","type":"action","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].keep_processing}}","label":"step➛Script step➛keep_processing","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].debug_elapsed_time}}","label":"step➛Script step➛debug_elapsed_time","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>e066d3031be9d0104be764e8bc4bcb66</latest_snapshot>
         <master_snapshot>32f5f7441b2510104be764e8bc4bcb5a</master_snapshot>
         <name>QUEUE_CheckElapsedTime</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>d19ee7c81be110104be764e8bc4bcb8a</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>QUEUE_CheckElapsedTime</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_d19ee7c81be110104be764e8bc4bcb8a</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:41</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -86,7 +86,7 @@
         <sys_created_on>2020-06-17 14:38:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cdf5b7441b2510104be764e8bc4bcb17</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -94,7 +94,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cdf5b7441b2510104be764e8bc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -105,25 +105,24 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-17 14:38:23</sys_created_on>
         <sys_id>59f5b7441b2510104be764e8bc4bcb58</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:08</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   //We loop every 1 minute, or 60000 milliseconds. queue_percent is a string where "50" -&gt; "50%", e.g. 50% of 1 minute is 30000 milliseconds
-  //GlideDuration() initializes by milliseconds.
+  //We want to know at what point do we time out
   var queue_percent_scalar = parseInt(inputs.queue_percent) / 100
+  var start_milliseconds = parseInt(inputs.queue_start_numeric)
   var milliseconds_to_run = 60000 * queue_percent_scalar
-  var queue_duration = new GlideDuration(milliseconds_to_run)
+  var timeout_at = start_milliseconds + milliseconds_to_run
 
   //Elapsed time is a GlideDuration() object
-  var start_time = new GlideDateTime(inputs.queue_start_time)
-  var elapsed_time = GlideDateTime.subtract(start_time,new GlideDateTime())
-
-  //outputs.debug_elapsed_time = "" + queue_duration + " " + elapsed_time + " " + milliseconds_to_run + " " + queue_percent_scalar
+  var now = new GlideDateTime()
+  var now_milliseconds = now.getNumericValue()
 
   //Final condition: elapsed_time has exceeded the allowed queue_duration
-  if (elapsed_time &gt; queue_duration) { outputs.keep_processing = false }
+  if (now_milliseconds &gt; timeout_at) { outputs.keep_processing = false }
   else { outputs.keep_processing = true }
 })(inputs, outputs);
 </value>
@@ -181,6 +180,18 @@
         <value>{{action.queue_processing_percent}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>queue_start_numeric</field>
+        <id>cdf5b7441b2510104be764e8bc4bcb17</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-26 20:02:08</sys_created_on>
+        <sys_id>935693031be9d0104be764e8bc4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-26 20:02:08</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cdf5b7441b2510104be764e8bc4bcb17</table>
+        <value>{{action.queue_start_numeric}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>queue_start_time</field>
         <id>cdf5b7441b2510104be764e8bc4bcb17</id>
         <sys_created_by>3244578</sys_created_by>
@@ -204,7 +215,7 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=cdf5b7441b2510104be764e8bc4bcb17^sys_idNOT IN01f5b7441b2510104be764e8bc4bcb25,81f5b7441b2510104be764e8bc4bcb1c"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=cdf5b7441b2510104be764e8bc4bcb17^sys_idNOT IN01f5b7441b2510104be764e8bc4bcb25,075693031be9d0104be764e8bc4bcb40"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -316,7 +327,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -348,9 +359,9 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:23</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>81f5b7441b2510104be764e8bc4bcb1c</sys_id>
+        <sys_id>075693031be9d0104be764e8bc4bcb40</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -359,7 +370,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:38:23</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -455,7 +466,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=d19ee7c81be110104be764e8bc4bcb8a^sys_idNOT IN49f5b7441b2510104be764e8bc4bcb10,81f573041b2510104be764e8bc4bcb01"/>
+    <sys_hub_action_input action="delete_multiple" query="model=d19ee7c81be110104be764e8bc4bcb8a^sys_idNOT IN49f5b7441b2510104be764e8bc4bcb10,ba5693031be9d0104be764e8bc4bcb1b"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -500,7 +511,7 @@
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_d19ee7c81be110104be764e8bc4bcb8a</name>
         <next_element/>
-        <order>2</order>
+        <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -519,7 +530,7 @@
         <sys_created_on>2020-06-17 14:38:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>49f5b7441b2510104be764e8bc4bcb10</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -527,7 +538,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -543,7 +554,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date_time,uiTypeLabel=Date/Time,uiUniqueId=c8da8313-774f-4807-a813-258b54bfb630</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=c8da8313-774f-4807-a813-258b54bfb630</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -567,15 +578,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
         <hint/>
-        <internal_type display_value="">glide_date_time</internal_type>
-        <label>queue_start_time</label>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>queue_start_numeric</label>
         <mandatory>true</mandatory>
         <max_length>40</max_length>
         <model display_value="QUEUE_CheckElapsedTime">d19ee7c81be110104be764e8bc4bcb8a</model>
@@ -583,7 +594,7 @@
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_d19ee7c81be110104be764e8bc4bcb8a</name>
         <next_element/>
-        <order>1</order>
+        <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -599,10 +610,10 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:22</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>81f573041b2510104be764e8bc4bcb01</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>ba5693031be9d0104be764e8bc4bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -610,7 +621,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:39:49</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -727,7 +738,7 @@
         <sys_created_on>2020-06-17 14:38:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cdf5b7441b2510104be764e8bc4bcb17</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -735,7 +746,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cdf5b7441b2510104be764e8bc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -746,25 +757,24 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-17 14:38:23</sys_created_on>
         <sys_id>59f5b7441b2510104be764e8bc4bcb58</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:08</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   //We loop every 1 minute, or 60000 milliseconds. queue_percent is a string where "50" -&gt; "50%", e.g. 50% of 1 minute is 30000 milliseconds
-  //GlideDuration() initializes by milliseconds.
+  //We want to know at what point do we time out
   var queue_percent_scalar = parseInt(inputs.queue_percent) / 100
+  var start_milliseconds = parseInt(inputs.queue_start_numeric)
   var milliseconds_to_run = 60000 * queue_percent_scalar
-  var queue_duration = new GlideDuration(milliseconds_to_run)
+  var timeout_at = start_milliseconds + milliseconds_to_run
 
   //Elapsed time is a GlideDuration() object
-  var start_time = new GlideDateTime(inputs.queue_start_time)
-  var elapsed_time = GlideDateTime.subtract(start_time,new GlideDateTime())
-
-  //outputs.debug_elapsed_time = "" + queue_duration + " " + elapsed_time + " " + milliseconds_to_run + " " + queue_percent_scalar
+  var now = new GlideDateTime()
+  var now_milliseconds = now.getNumericValue()
 
   //Final condition: elapsed_time has exceeded the allowed queue_duration
-  if (elapsed_time &gt; queue_duration) { outputs.keep_processing = false }
+  if (now_milliseconds &gt; timeout_at) { outputs.keep_processing = false }
   else { outputs.keep_processing = true }
 })(inputs, outputs);
 </value>
@@ -822,6 +832,18 @@
         <value>{{action.queue_processing_percent}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>queue_start_numeric</field>
+        <id>cdf5b7441b2510104be764e8bc4bcb17</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-26 20:02:08</sys_created_on>
+        <sys_id>935693031be9d0104be764e8bc4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-26 20:02:08</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cdf5b7441b2510104be764e8bc4bcb17</table>
+        <value>{{action.queue_start_numeric}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>queue_start_time</field>
         <id>cdf5b7441b2510104be764e8bc4bcb17</id>
         <sys_created_by>3244578</sys_created_by>
@@ -845,7 +867,7 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=cdf5b7441b2510104be764e8bc4bcb17^sys_idNOT IN01f5b7441b2510104be764e8bc4bcb25,81f5b7441b2510104be764e8bc4bcb1c"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=cdf5b7441b2510104be764e8bc4bcb17^sys_idNOT IN01f5b7441b2510104be764e8bc4bcb25,075693031be9d0104be764e8bc4bcb40"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -957,7 +979,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -989,9 +1011,9 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:23</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>81f5b7441b2510104be764e8bc4bcb1c</sys_id>
+        <sys_id>075693031be9d0104be764e8bc4bcb40</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -1000,7 +1022,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:38:23</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1096,20 +1118,20 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_d19ee7c81be110104be764e8bc4bcb8a^sys_idNOT IN81f5b7441b2510104be764e8bc4bcb0f,81f5b7441b2510104be764e8bc4bcb15"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_d19ee7c81be110104be764e8bc4bcb8a^sys_idNOT IN325693031be9d0104be764e8bc4bcb21,81f5b7441b2510104be764e8bc4bcb15"/>
     <sys_documentation action="INSERT_OR_UPDATE">
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <help/>
         <hint/>
-        <label>queue_start_time</label>
+        <label>queue_start_numeric</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_d19ee7c81be110104be764e8bc4bcb8a</name>
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:22</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>81f5b7441b2510104be764e8bc4bcb0f</sys_id>
+        <sys_id>325693031be9d0104be764e8bc4bcb21</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -1118,7 +1140,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:38:22</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:06</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1177,16 +1199,16 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="QUEUE_CheckElapsedTime">d19ee7c81be110104be764e8bc4bcb8a</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"1bf53b441b2510104be764e8bc4bcb11","name":"plan"}}</plan>
-        <snapshot>b976b3841b2510104be764e8bc4bcb71</snapshot>
+        <snapshot>e066d3031be9d0104be764e8bc4bcb66</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-17 14:38:32</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>1bf53b441b2510104be764e8bc4bcb11</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:41</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1199,7 +1221,7 @@
         <copied_from_name/>
         <description>Returns whether to keep processing the queue</description>
         <internal_name>queue_dowekeepprocessingitems</internal_name>
-        <label_cache>[{"name":"{{action.queue_count}}","label":"action➛queue_count","type":"action","ref":""},{"name":"{{action.queue_start_time}}","label":"action➛queue_start_time","type":"action","ref":""},{"name":"{{action.queue_processing_percent}}","label":"action➛queue_processing_percent","type":"action","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].keep_processing}}","label":"step➛Script step➛keep_processing","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].debug_elapsed_time}}","label":"step➛Script step➛debug_elapsed_time","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.queue_count}}","label":"action➛queue_count","type":"action","ref":""},{"name":"{{action.queue_start_time}}","label":"action➛queue_start_time","type":"action","ref":""},{"name":"{{action.queue_processing_percent}}","label":"action➛queue_processing_percent","type":"action","ref":""},{"name":"{{action.queue_start_numeric}}","label":"action➛queue_start_numeric","type":"action","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].keep_processing}}","label":"step➛Script step➛keep_processing","type":"step","ref":""},{"name":"{{step[14dad86d-6e6b-436a-85b2-058ef7951f7c].debug_elapsed_time}}","label":"step➛Script step➛debug_elapsed_time","type":"step","ref":""}]</label_cache>
         <master>true</master>
         <name>QUEUE_CheckElapsedTime</name>
         <natlang/>
@@ -1212,7 +1234,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>32f5f7441b2510104be764e8bc4bcb5a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1221,7 +1243,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:38</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:15</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1272,7 +1294,7 @@
         <sys_created_on>2020-06-17 14:38:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>72f5f7441b2510104be764e8bc4bcb7b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1280,7 +1302,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:41</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=72f5f7441b2510104be764e8bc4bcb7b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1291,25 +1313,24 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-17 14:38:30</sys_created_on>
         <sys_id>8bf5f7441b2510104be764e8bc4bcb99</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:41</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   //We loop every 1 minute, or 60000 milliseconds. queue_percent is a string where "50" -&gt; "50%", e.g. 50% of 1 minute is 30000 milliseconds
-  //GlideDuration() initializes by milliseconds.
+  //We want to know at what point do we time out
   var queue_percent_scalar = parseInt(inputs.queue_percent) / 100
+  var start_milliseconds = parseInt(inputs.queue_start_numeric)
   var milliseconds_to_run = 60000 * queue_percent_scalar
-  var queue_duration = new GlideDuration(milliseconds_to_run)
+  var timeout_at = start_milliseconds + milliseconds_to_run
 
   //Elapsed time is a GlideDuration() object
-  var start_time = new GlideDateTime(inputs.queue_start_time)
-  var elapsed_time = GlideDateTime.subtract(start_time,new GlideDateTime())
-
-  //outputs.debug_elapsed_time = "" + queue_duration + " " + elapsed_time + " " + milliseconds_to_run + " " + queue_percent_scalar
+  var now = new GlideDateTime()
+  var now_milliseconds = now.getNumericValue()
 
   //Final condition: elapsed_time has exceeded the allowed queue_duration
-  if (elapsed_time &gt; queue_duration) { outputs.keep_processing = false }
+  if (now_milliseconds &gt; timeout_at) { outputs.keep_processing = false }
   else { outputs.keep_processing = true }
 })(inputs, outputs);
 </value>
@@ -1367,6 +1388,18 @@
         <value>{{action.queue_processing_percent}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>queue_start_numeric</field>
+        <id>72f5f7441b2510104be764e8bc4bcb7b</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-26 20:02:17</sys_created_on>
+        <sys_id>596617031be9d0104be764e8bc4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_72f5f7441b2510104be764e8bc4bcb7b</table>
+        <value>{{action.queue_start_numeric}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>queue_start_time</field>
         <id>72f5f7441b2510104be764e8bc4bcb7b</id>
         <sys_created_by>3244578</sys_created_by>
@@ -1390,7 +1423,7 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=72f5f7441b2510104be764e8bc4bcb7b^sys_idNOT INbef5f7441b2510104be764e8bc4bcb7d,fef5f7441b2510104be764e8bc4bcb89"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=72f5f7441b2510104be764e8bc4bcb7b^sys_idNOT IN0d6617031be9d0104be764e8bc4bcb15,fef5f7441b2510104be764e8bc4bcb89"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1419,7 +1452,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -1427,7 +1460,7 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>queue_start_time</label>
+        <label>queue_start_numeric</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Script step">72f5f7441b2510104be764e8bc4bcb7b</model>
@@ -1451,9 +1484,9 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:30</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>bef5f7441b2510104be764e8bc4bcb7d</sys_id>
+        <sys_id>0d6617031be9d0104be764e8bc4bcb15</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -1462,7 +1495,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:38:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1641,12 +1674,12 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=32f5f7441b2510104be764e8bc4bcb5a^sys_idNOT IN32f5f7441b2510104be764e8bc4bcb6e,bef5f7441b2510104be764e8bc4bcb73"/>
+    <sys_hub_action_input action="delete_multiple" query="model=32f5f7441b2510104be764e8bc4bcb5a^sys_idNOT IN7066d3031be9d0104be764e8bc4bcbc9,bef5f7441b2510104be764e8bc4bcb73"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date_time,uiTypeLabel=Date/Time,uiUniqueId=c8da8313-774f-4807-a813-258b54bfb630</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=c8da8313-774f-4807-a813-258b54bfb630</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1670,15 +1703,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
         <hint/>
-        <internal_type display_value="">glide_date_time</internal_type>
-        <label>queue_start_time</label>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>queue_start_numeric</label>
         <mandatory>true</mandatory>
         <max_length>40</max_length>
         <model display_value="QUEUE_CheckElapsedTime">32f5f7441b2510104be764e8bc4bcb5a</model>
@@ -1686,7 +1719,7 @@
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_32f5f7441b2510104be764e8bc4bcb5a</name>
         <next_element/>
-        <order>1</order>
+        <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -1702,10 +1735,10 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:29</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>32f5f7441b2510104be764e8bc4bcb6e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>7066d3031be9d0104be764e8bc4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1713,7 +1746,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:38</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1769,7 +1802,7 @@
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_32f5f7441b2510104be764e8bc4bcb5a</name>
         <next_element/>
-        <order>2</order>
+        <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -1788,7 +1821,7 @@
         <sys_created_on>2020-06-17 14:38:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bef5f7441b2510104be764e8bc4bcb73</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1796,7 +1829,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:38</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1913,7 +1946,7 @@
         <sys_created_on>2020-06-17 14:38:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>72f5f7441b2510104be764e8bc4bcb7b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1921,7 +1954,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:41</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=72f5f7441b2510104be764e8bc4bcb7b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1932,25 +1965,24 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-17 14:38:30</sys_created_on>
         <sys_id>8bf5f7441b2510104be764e8bc4bcb99</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:40:41</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   //We loop every 1 minute, or 60000 milliseconds. queue_percent is a string where "50" -&gt; "50%", e.g. 50% of 1 minute is 30000 milliseconds
-  //GlideDuration() initializes by milliseconds.
+  //We want to know at what point do we time out
   var queue_percent_scalar = parseInt(inputs.queue_percent) / 100
+  var start_milliseconds = parseInt(inputs.queue_start_numeric)
   var milliseconds_to_run = 60000 * queue_percent_scalar
-  var queue_duration = new GlideDuration(milliseconds_to_run)
+  var timeout_at = start_milliseconds + milliseconds_to_run
 
   //Elapsed time is a GlideDuration() object
-  var start_time = new GlideDateTime(inputs.queue_start_time)
-  var elapsed_time = GlideDateTime.subtract(start_time,new GlideDateTime())
-
-  //outputs.debug_elapsed_time = "" + queue_duration + " " + elapsed_time + " " + milliseconds_to_run + " " + queue_percent_scalar
+  var now = new GlideDateTime()
+  var now_milliseconds = now.getNumericValue()
 
   //Final condition: elapsed_time has exceeded the allowed queue_duration
-  if (elapsed_time &gt; queue_duration) { outputs.keep_processing = false }
+  if (now_milliseconds &gt; timeout_at) { outputs.keep_processing = false }
   else { outputs.keep_processing = true }
 })(inputs, outputs);
 </value>
@@ -2008,6 +2040,18 @@
         <value>{{action.queue_processing_percent}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>queue_start_numeric</field>
+        <id>72f5f7441b2510104be764e8bc4bcb7b</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-26 20:02:17</sys_created_on>
+        <sys_id>596617031be9d0104be764e8bc4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-26 20:02:17</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_72f5f7441b2510104be764e8bc4bcb7b</table>
+        <value>{{action.queue_start_numeric}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>queue_start_time</field>
         <id>72f5f7441b2510104be764e8bc4bcb7b</id>
         <sys_created_by>3244578</sys_created_by>
@@ -2031,7 +2075,7 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=72f5f7441b2510104be764e8bc4bcb7b^sys_idNOT INbef5f7441b2510104be764e8bc4bcb7d,fef5f7441b2510104be764e8bc4bcb89"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=72f5f7441b2510104be764e8bc4bcb7b^sys_idNOT IN0d6617031be9d0104be764e8bc4bcb15,fef5f7441b2510104be764e8bc4bcb89"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2060,7 +2104,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -2068,7 +2112,7 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>queue_start_time</label>
+        <label>queue_start_numeric</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Script step">72f5f7441b2510104be764e8bc4bcb7b</model>
@@ -2092,9 +2136,9 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:30</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>bef5f7441b2510104be764e8bc4bcb7d</sys_id>
+        <sys_id>0d6617031be9d0104be764e8bc4bcb15</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -2103,7 +2147,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:38:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2282,7 +2326,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_32f5f7441b2510104be764e8bc4bcb5a^sys_idNOT IN76f5f7441b2510104be764e8bc4bcb78,f6f5f7441b2510104be764e8bc4bcb72"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_32f5f7441b2510104be764e8bc4bcb5a^sys_idNOT IN76f5f7441b2510104be764e8bc4bcb78,bc66d3031be9d0104be764e8bc4bcbcd"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>queue_processing_percent</element>
         <help/>
@@ -2309,18 +2353,18 @@
         <url_target/>
     </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
-        <element>queue_start_time</element>
+        <element>queue_start_numeric</element>
         <help/>
         <hint/>
-        <label>queue_start_time</label>
+        <label>queue_start_numeric</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_32f5f7441b2510104be764e8bc4bcb5a</name>
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-06-17 14:38:30</sys_created_on>
+        <sys_created_on>2020-06-26 20:02:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>f6f5f7441b2510104be764e8bc4bcb72</sys_id>
+        <sys_id>bc66d3031be9d0104be764e8bc4bcbcd</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -2329,7 +2373,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-17 14:38:30</sys_updated_on>
+        <sys_updated_on>2020-06-26 20:02:15</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>

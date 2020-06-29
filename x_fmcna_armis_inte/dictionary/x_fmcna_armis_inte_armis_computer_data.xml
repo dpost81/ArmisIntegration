@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Computer Data" max_length="40" name="x_fmcna_armis_inte_armis_computer_data" sizeclass="7904" type="collection">
+    <element label="Armis Computer Data" max_length="40" name="x_fmcna_armis_inte_armis_computer_data" type="collection">
         <element label="API query body" max_length="2000" name="api_query_body" type="string"/>
         <element label="Armis Device ID" max_length="40" name="armis_device_id" type="integer"/>
         <element label="Armis MAC Address" max_length="20" name="armis_mac_address" type="string"/>
@@ -13,8 +13,5 @@
                 <element inactive_on_update="false" label="ServiceNow" value="ServiceNow"/>
             </choice>
         </element>
-        <index name="index">
-            <element name="computer"/>
-        </index>
     </element>
 </database>
