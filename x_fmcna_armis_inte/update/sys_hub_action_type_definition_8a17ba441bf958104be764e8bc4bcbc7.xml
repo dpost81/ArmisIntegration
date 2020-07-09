@@ -13,9 +13,9 @@
         <ih_action>true</ih_action>
         <internal_name>util_rest_post_devicepropertiesbulk</internal_name>
         <label_cache>[{"name":"{{action.access_token}}","label":"action➛access_token","type":"action","ref":""},{"name":"{{action.mac_string}}","label":"action➛mac_string","type":"action","ref":""},{"name":"{{action.rest_query}}","label":"action➛REST Query","type":"action","ref":""},{"name":"{{action.search_aql}}","label":"action➛json_string","type":"action","ref":""},{"name":"{{action.json_string}}","label":"action➛json_string","type":"action","ref":""},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":""},{"name":"{{step[c4414792-2f2a-452a-9472-a11ed1e6cd4d].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[c4414792-2f2a-452a-9472-a11ed1e6cd4d].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[26307f2e-c436-4e42-a28b-ff771badb4a3].payload}}","label":"step➛Payload Builder step➛Payload","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>ee35c7481b3d58104be764e8bc4bcba4</latest_snapshot>
+        <latest_snapshot>d17731431b3d54104be764e8bc4bcb85</latest_snapshot>
         <master_snapshot>595772841bf958104be764e8bc4bcb71</master_snapshot>
-        <name>UTIL_REST_POST_DevicePropertiesBulk</name>
+        <name>PROP_JSONtoREST</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -26,8 +26,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>8a17ba441bf958104be764e8bc4bcbc7</sys_id>
-        <sys_mod_count>38</sys_mod_count>
-        <sys_name>UTIL_REST_POST_DevicePropertiesBulk</sys_name>
+        <sys_mod_count>43</sys_mod_count>
+        <sys_name>PROP_JSONtoREST</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_8a17ba441bf958104be764e8bc4bcbc7</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-29 21:21:14</sys_updated_on>
+        <sys_updated_on>2020-07-08 23:23:13</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -81,7 +81,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=8a17ba441bf958104be764e8bc4bcbc7^sys_idNOT IN8a17ba441bf958104be764e8bc4bcbda"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</action>
+        <action display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</action>
         <cid>c4414792-2f2a-452a-9472-a11ed1e6cd4d</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -502,7 +502,7 @@
         <label>body</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</model>
+        <model display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</model>
         <model_id>8a17ba441bf958104be764e8bc4bcbc7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_8a17ba441bf958104be764e8bc4bcbc7</name>
@@ -585,7 +585,7 @@
         <label>access_token</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</model>
+        <model display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</model>
         <model_id>8a17ba441bf958104be764e8bc4bcbc7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_8a17ba441bf958104be764e8bc4bcbc7</name>
@@ -671,7 +671,7 @@
         <label>response_body</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</model>
+        <model display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</model>
         <model_id>8a17ba441bf958104be764e8bc4bcbc7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_8a17ba441bf958104be764e8bc4bcbc7</name>
@@ -695,7 +695,7 @@
         <sys_created_on>2020-06-29 20:19:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5617ba441bf958104be764e8bc4bcbf2</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -703,7 +703,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-29 21:21:11</sys_updated_on>
+        <sys_updated_on>2020-07-08 23:23:10</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -756,7 +756,7 @@
         <label>status</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</model>
+        <model display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</model>
         <model_id>8a17ba441bf958104be764e8bc4bcbc7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_8a17ba441bf958104be764e8bc4bcbc7</name>
@@ -780,7 +780,7 @@
         <sys_created_on>2020-06-29 20:19:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5a17ba441bf958104be764e8bc4bcbeb</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -788,7 +788,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-29 21:21:11</sys_updated_on>
+        <sys_updated_on>2020-07-08 23:23:10</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -802,7 +802,7 @@
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=8a17ba441bf958104be764e8bc4bcbc7^sys_idNOT IN8a17ba441bf958104be764e8bc4bcbda"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</action>
+        <action display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</action>
         <cid>c4414792-2f2a-452a-9472-a11ed1e6cd4d</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -1287,18 +1287,18 @@
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=8a17ba441bf958104be764e8bc4bcbc7^sys_idNOT INf957b2841bf958104be764e8bc4bcb34"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</action_id>
+        <action_id display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f957b2841bf958104be764e8bc4bcb34","name":"plan"}}</plan>
-        <snapshot>ee35c7481b3d58104be764e8bc4bcba4</snapshot>
+        <snapshot>d17731431b3d54104be764e8bc4bcb85</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-29 20:20:32</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>f957b2841bf958104be764e8bc4bcb34</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-29 21:21:15</sys_updated_on>
+        <sys_updated_on>2020-07-08 23:23:14</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1313,18 +1313,18 @@
         <internal_name>util_rest_post_devicepropertiesbulk</internal_name>
         <label_cache>[{"name":"{{action.access_token}}","label":"action➛access_token","type":"action","ref":""},{"name":"{{action.mac_string}}","label":"action➛mac_string","type":"action","ref":""},{"name":"{{action.rest_query}}","label":"action➛REST Query","type":"action","ref":""},{"name":"{{action.search_aql}}","label":"action➛json_string","type":"action","ref":""},{"name":"{{action.json_string}}","label":"action➛json_string","type":"action","ref":""},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":""},{"name":"{{step[c4414792-2f2a-452a-9472-a11ed1e6cd4d].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[c4414792-2f2a-452a-9472-a11ed1e6cd4d].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[26307f2e-c436-4e42-a28b-ff771badb4a3].payload}}","label":"step➛Payload Builder step➛Payload","type":"step","ref":""}]</label_cache>
         <master>true</master>
-        <name>UTIL_REST_POST_DevicePropertiesBulk</name>
+        <name>PROP_JSONtoREST</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="UTIL_REST_POST_DevicePropertiesBulk">8a17ba441bf958104be764e8bc4bcbc7</parent_action>
+        <parent_action display_value="PROP_JSONtoREST">8a17ba441bf958104be764e8bc4bcbc7</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-29 20:20:29</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>595772841bf958104be764e8bc4bcb71</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1333,7 +1333,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-29 20:50:33</sys_updated_on>
+        <sys_updated_on>2020-07-08 23:23:12</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1379,7 +1379,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=595772841bf958104be764e8bc4bcb71^sys_idNOT IN915772841bf958104be764e8bc4bcb8d"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_REST_POST_DevicePropertiesBulk">595772841bf958104be764e8bc4bcb71</action>
+        <action display_value="PROP_JSONtoREST">595772841bf958104be764e8bc4bcb71</action>
         <cid>c4414792-2f2a-452a-9472-a11ed1e6cd4d</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -1800,7 +1800,7 @@
         <label>body</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">595772841bf958104be764e8bc4bcb71</model>
+        <model display_value="PROP_JSONtoREST">595772841bf958104be764e8bc4bcb71</model>
         <model_id>595772841bf958104be764e8bc4bcb71</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_595772841bf958104be764e8bc4bcb71</name>
@@ -1883,7 +1883,7 @@
         <label>access_token</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">595772841bf958104be764e8bc4bcb71</model>
+        <model display_value="PROP_JSONtoREST">595772841bf958104be764e8bc4bcb71</model>
         <model_id>595772841bf958104be764e8bc4bcb71</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_595772841bf958104be764e8bc4bcb71</name>
@@ -1969,7 +1969,7 @@
         <label>response_body</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">595772841bf958104be764e8bc4bcb71</model>
+        <model display_value="PROP_JSONtoREST">595772841bf958104be764e8bc4bcb71</model>
         <model_id>595772841bf958104be764e8bc4bcb71</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_595772841bf958104be764e8bc4bcb71</name>
@@ -1993,7 +1993,7 @@
         <sys_created_on>2020-06-29 20:20:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>215772841bf958104be764e8bc4bcbb1</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2001,7 +2001,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-29 21:21:14</sys_updated_on>
+        <sys_updated_on>2020-07-08 23:23:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2054,7 +2054,7 @@
         <label>status</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UTIL_REST_POST_DevicePropertiesBulk">595772841bf958104be764e8bc4bcb71</model>
+        <model display_value="PROP_JSONtoREST">595772841bf958104be764e8bc4bcb71</model>
         <model_id>595772841bf958104be764e8bc4bcb71</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_595772841bf958104be764e8bc4bcb71</name>
@@ -2078,7 +2078,7 @@
         <sys_created_on>2020-06-29 20:20:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a55772841bf958104be764e8bc4bcbaa</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2086,7 +2086,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-29 21:21:13</sys_updated_on>
+        <sys_updated_on>2020-07-08 23:23:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2100,7 +2100,7 @@
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=595772841bf958104be764e8bc4bcb71^sys_idNOT IN915772841bf958104be764e8bc4bcb8d"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_REST_POST_DevicePropertiesBulk">595772841bf958104be764e8bc4bcb71</action>
+        <action display_value="PROP_JSONtoREST">595772841bf958104be764e8bc4bcb71</action>
         <cid>c4414792-2f2a-452a-9472-a11ed1e6cd4d</cid>
         <extended_inputs/>
         <extended_outputs/>

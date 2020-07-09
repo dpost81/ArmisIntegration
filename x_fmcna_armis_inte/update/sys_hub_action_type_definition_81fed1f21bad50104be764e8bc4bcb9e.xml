@@ -13,9 +13,9 @@
         <ih_action>false</ih_action>
         <internal_name>queue_pmfa_pullmacfromarmis</internal_name>
         <label_cache>[{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":"u_cmdb_ci_computers_from_armis"},{"name":"{{action.records}}","label":"action➛records","type":"action","ref":"u_cmdb_ci_computers_from_armis"},{"name":"{{step[70de88ba-60f7-43b1-8fd7-056ac8604d68].variable}}","label":"step➛Extract MACs➛variable","type":"step","ref":""},{"name":"{{step[70de88ba-60f7-43b1-8fd7-056ac8604d68].mac_string}}","label":"step➛Extract MACs➛mac_string","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>7c3229f61bad50104be764e8bc4bcbfc</latest_snapshot>
+        <latest_snapshot>d7b1f08f1bf154104be764e8bc4bcb16</latest_snapshot>
         <master_snapshot>29e02d761bad50104be764e8bc4bcb7c</master_snapshot>
-        <name>QUEUE_PMFA_ExtractMACs</name>
+        <name>PMFA_ExtractMACs</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -26,8 +26,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>81fed1f21bad50104be764e8bc4bcb9e</sys_id>
-        <sys_mod_count>20</sys_mod_count>
-        <sys_name>QUEUE_PMFA_ExtractMACs</sys_name>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>PMFA_ExtractMACs</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_81fed1f21bad50104be764e8bc4bcb9e</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:09</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:35</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -55,7 +55,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=81fed1f21bad50104be764e8bc4bcb9e^sys_idNOT INe8e069f21bad50104be764e8bc4bcb5f"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="QUEUE_PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</action>
+        <action display_value="PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</action>
         <cid>70de88ba-60f7-43b1-8fd7-056ac8604d68</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -72,7 +72,7 @@
         <sys_created_on>2020-06-25 16:50:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e8e069f21bad50104be764e8bc4bcb5f</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -80,7 +80,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:07</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:33</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e8e069f21bad50104be764e8bc4bcb5f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -105,13 +105,13 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-25 16:50:24</sys_created_on>
         <sys_id>b8e0e9761bad50104be764e8bc4bcbb0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:07</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:33</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   var macs = ""
-
+  
 //We have at least 1 record, definitely.
 while(inputs.records.next())
 {
@@ -370,7 +370,7 @@ while(inputs.records.next())
         <label>records</label>
         <mandatory>false</mandatory>
         <max_length>1024</max_length>
-        <model display_value="QUEUE_PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</model>
+        <model display_value="PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</model>
         <model_id>81fed1f21bad50104be764e8bc4bcb9e</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_81fed1f21bad50104be764e8bc4bcb9e</name>
@@ -456,7 +456,7 @@ while(inputs.records.next())
         <label>mac_string</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="QUEUE_PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</model>
+        <model display_value="PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</model>
         <model_id>81fed1f21bad50104be764e8bc4bcb9e</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_81fed1f21bad50104be764e8bc4bcb9e</name>
@@ -502,7 +502,7 @@ while(inputs.records.next())
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=81fed1f21bad50104be764e8bc4bcb9e^sys_idNOT INe8e069f21bad50104be764e8bc4bcb5f"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="QUEUE_PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</action>
+        <action display_value="PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</action>
         <cid>70de88ba-60f7-43b1-8fd7-056ac8604d68</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -519,7 +519,7 @@ while(inputs.records.next())
         <sys_created_on>2020-06-25 16:50:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e8e069f21bad50104be764e8bc4bcb5f</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -527,7 +527,7 @@ while(inputs.records.next())
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:07</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:33</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e8e069f21bad50104be764e8bc4bcb5f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -552,13 +552,13 @@ while(inputs.records.next())
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-25 16:50:24</sys_created_on>
         <sys_id>b8e0e9761bad50104be764e8bc4bcbb0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:07</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:33</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   var macs = ""
-
+  
 //We have at least 1 record, definitely.
 while(inputs.records.next())
 {
@@ -831,18 +831,18 @@ while(inputs.records.next())
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=81fed1f21bad50104be764e8bc4bcb9e^sys_idNOT INb9e02d761bad50104be764e8bc4bcbd2"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="QUEUE_PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</action_id>
+        <action_id display_value="PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"b9e02d761bad50104be764e8bc4bcbd2","name":"plan"}}</plan>
-        <snapshot>7c3229f61bad50104be764e8bc4bcbfc</snapshot>
+        <snapshot>d7b1f08f1bf154104be764e8bc4bcb16</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-25 16:50:28</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>b9e02d761bad50104be764e8bc4bcbd2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:10</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:36</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -857,18 +857,18 @@ while(inputs.records.next())
         <internal_name>queue_pmfa_extractmacs</internal_name>
         <label_cache>[{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":"u_cmdb_ci_computers_from_armis"},{"name":"{{action.records}}","label":"action➛records","type":"action","ref":"u_cmdb_ci_computers_from_armis"},{"name":"{{step[70de88ba-60f7-43b1-8fd7-056ac8604d68].variable}}","label":"step➛Extract MACs➛variable","type":"step","ref":""},{"name":"{{step[70de88ba-60f7-43b1-8fd7-056ac8604d68].mac_string}}","label":"step➛Extract MACs➛mac_string","type":"step","ref":""}]</label_cache>
         <master>true</master>
-        <name>QUEUE_PMFA_ExtractMACs</name>
+        <name>PMFA_ExtractMACs</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="QUEUE_PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</parent_action>
+        <parent_action display_value="PMFA_ExtractMACs">81fed1f21bad50104be764e8bc4bcb9e</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-25 16:50:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>29e02d761bad50104be764e8bc4bcb7c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -877,7 +877,7 @@ while(inputs.records.next())
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:50:27</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:35</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -897,7 +897,7 @@ while(inputs.records.next())
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=29e02d761bad50104be764e8bc4bcb7c^sys_idNOT IN2de02d761bad50104be764e8bc4bcb84"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="QUEUE_PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</action>
+        <action display_value="PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</action>
         <cid>70de88ba-60f7-43b1-8fd7-056ac8604d68</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -914,7 +914,7 @@ while(inputs.records.next())
         <sys_created_on>2020-06-25 16:50:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2de02d761bad50104be764e8bc4bcb84</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -922,7 +922,7 @@ while(inputs.records.next())
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:09</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:35</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2de02d761bad50104be764e8bc4bcb84"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -933,13 +933,13 @@ while(inputs.records.next())
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-25 16:50:27</sys_created_on>
         <sys_id>29e02d761bad50104be764e8bc4bcb90</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:09</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:35</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   var macs = ""
-
+  
 //We have at least 1 record, definitely.
 while(inputs.records.next())
 {
@@ -1212,7 +1212,7 @@ while(inputs.records.next())
         <label>records</label>
         <mandatory>false</mandatory>
         <max_length>1024</max_length>
-        <model display_value="QUEUE_PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</model>
+        <model display_value="PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</model>
         <model_id>29e02d761bad50104be764e8bc4bcb7c</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_29e02d761bad50104be764e8bc4bcb7c</name>
@@ -1298,7 +1298,7 @@ while(inputs.records.next())
         <label>mac_string</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="QUEUE_PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</model>
+        <model display_value="PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</model>
         <model_id>29e02d761bad50104be764e8bc4bcb7c</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_29e02d761bad50104be764e8bc4bcb7c</name>
@@ -1344,7 +1344,7 @@ while(inputs.records.next())
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=29e02d761bad50104be764e8bc4bcb7c^sys_idNOT IN2de02d761bad50104be764e8bc4bcb84"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="QUEUE_PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</action>
+        <action display_value="PMFA_ExtractMACs">29e02d761bad50104be764e8bc4bcb7c</action>
         <cid>70de88ba-60f7-43b1-8fd7-056ac8604d68</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1361,7 +1361,7 @@ while(inputs.records.next())
         <sys_created_on>2020-06-25 16:50:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2de02d761bad50104be764e8bc4bcb84</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1369,7 +1369,7 @@ while(inputs.records.next())
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:09</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:35</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2de02d761bad50104be764e8bc4bcb84"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1380,13 +1380,13 @@ while(inputs.records.next())
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-25 16:50:27</sys_created_on>
         <sys_id>29e02d761bad50104be764e8bc4bcb90</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-25 16:56:09</sys_updated_on>
+        <sys_updated_on>2020-07-08 18:18:35</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   var macs = ""
-
+  
 //We have at least 1 record, definitely.
 while(inputs.records.next())
 {

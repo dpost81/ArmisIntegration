@@ -39,6 +39,24 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>key</element>
+            <hint>This defines the end of the "cooldown period" during which updates cannot be sent to Armis. The cooldown period is used to prevent loopback responses from Armis from re-uploading and causing an infinite loop.</hint>
+            <inactive>false</inactive>
+            <label>cooldown_end_seconds</label>
+            <language>en</language>
+            <name>x_fmcna_armis_inte_armis_integration_configuration</name>
+            <sequence/>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-09 00:17:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b6034e4f1bfd54104be764e8bc4bcba0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-09 00:17:07</sys_updated_on>
+            <value>cooldown_end_seconds</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>key</element>
             <hint>Maximum number of records pulled from query.</hint>
             <inactive>false</inactive>
             <label>getd_max_records</label>
@@ -75,20 +93,38 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>key</element>
-            <hint>Set to string "TRUE" to allow data to push to Armis (live), set to "FALSE" otherwise.</hint>
+            <hint>This defines the beginning of the "grace period" during which updates can be sent to Armis before the cooldown period. The cooldown period is used to prevent loopback responses from Armis from re-uploading and causing an infinite loop.</hint>
             <inactive>false</inactive>
-            <label>push_data_to_armis</label>
+            <label>grace_period_cooldown_seconds</label>
             <language>en</language>
             <name>x_fmcna_armis_inte_armis_integration_configuration</name>
             <sequence/>
             <sys_created_by>3244578</sys_created_by>
-            <sys_created_on>2020-06-01 16:19:16</sys_created_on>
+            <sys_created_on>2020-07-09 00:13:43</sys_created_on>
             <sys_domain>global</sys_domain>
-            <sys_id>88937983dbcdd010fdfe1828139619ea</sys_id>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_id>51c2028f1bfd54104be764e8bc4bcb5c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>3244578</sys_updated_by>
-            <sys_updated_on>2020-06-12 19:24:08</sys_updated_on>
-            <value>push_data_to_armis</value>
+            <sys_updated_on>2020-07-09 00:13:43</sys_updated_on>
+            <value>grace_period_cooldown_seconds</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>max_main_queue_executions</label>
+            <language>en</language>
+            <name>x_fmcna_armis_inte_armis_integration_configuration</name>
+            <sequence/>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-07 16:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b7be0be61b3d5c504ca7edf9bc4bcb58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-07 16:28:21</sys_updated_on>
+            <value>max_main_queue_executions</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
