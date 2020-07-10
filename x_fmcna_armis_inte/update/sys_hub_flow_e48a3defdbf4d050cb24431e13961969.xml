@@ -6,13 +6,13 @@
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build>glide-orlando-12-11-2019__patch3-04-22-2020</compiler_build>
+        <compiler_build>glide-orlando-12-11-2019__patch4-05-20-2020</compiler_build>
         <copied_from/>
         <copied_from_name/>
         <description>Checks a computer against Armis to figure out what the computer's MAC is on Armis (if applicable), or if not, establish the applicable MAC in the table.</description>
         <internal_name>armis_get_access_token</internal_name>
         <label_cache>[{"name":"7e78d3a1-b869-4877-b046-393d6bf2bd7d.Table","label":"4➛Armis Computer Data Table","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e78d3a1-b869-4877-b046-393d6bf2bd7d.Record","label":"4➛Armis Computer Data Record","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e1b39182-8ed2-4e5b-a88c-76c6e74ea290.table_name","label":"4.2.3.2➛Armis Computer Data Table","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e1b39182-8ed2-4e5b-a88c-76c6e74ea290.record","label":"4.2.3.2➛Armis Computer Data Record","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.allow_write_to_armis","label":"Input➛allow_write_to_armis","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"70a6f82c-c278-4352-a83f-ce40d83334fc","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.computer","label":"Input➛computer","reference":"cmdb_ci_computer","reference_display":"Computer","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"937f69d4-86a2-4154-9260-acf71bd463c5","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"e72f4825-78ba-4cb2-996b-55ef1ee80053.csv","label":"5.1➛csv_text","reference_display":"csv_text","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d656e6c9-b535-4394-9d16-24a694ba1663"}},{"name":"4c5cf65e-b304-450e-bede-a2ecec3240bb.best_mac","label":"3.4.1➛best_mac","reference_display":"best_mac","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a6b019b5-1d3d-413d-b16c-1302edbba27e"}},{"name":"e221ebfe-90a7-45c9-a2eb-f245722f8227.device_id","label":"3.1➛device_id","reference_display":"device_id","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"44707245-f734-4371-98c5-523e28efd10c"}},{"name":"e221ebfe-90a7-45c9-a2eb-f245722f8227.mac","label":"3.1➛mac","reference_display":"mac","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0aef58a0-b539-4368-9c31-3e73e0f5f5e7"}},{"name":"e221ebfe-90a7-45c9-a2eb-f245722f8227.link_success","label":"3.1➛link_success","reference_display":"link_success","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8572795e-29e1-4cf9-a71d-92d6536bf66c"}},{"name":"18819d2b-ba50-4dbb-9906-a42c9c54f32b.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"18819d2b-ba50-4dbb-9906-a42c9c54f32b.Table","label":"2➛Armis Computer Data Table","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"18819d2b-ba50-4dbb-9906-a42c9c54f32b.Records","label":"2➛Armis Computer Data Records","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e5133580-a3a1-48d2-95c5-b289fb67d89d.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e5133580-a3a1-48d2-95c5-b289fb67d89d.Record","label":"2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"425cd3a7-3339-4d39-9ff3-fb9fe72cd89e.Table","label":"3.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"425cd3a7-3339-4d39-9ff3-fb9fe72cd89e.Record","label":"3.1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ff95b1a7-7752-4c02-b637-fb6e1b6d8816.variable","label":"2.1➛access_token","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"3a2e7787-b3b7-4a73-af2c-47a4b0e1a17c"}},{"name":"053c4e3d-c9f3-4713-a159-7ed8431bea96.Record","label":"1➛Armis OAuth Record","reference":"x_fmcna_armis_inte_armis_oauth","reference_display":"label","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"053c4e3d-c9f3-4713-a159-7ed8431bea96.Table","label":"1➛Armis OAuth Table","reference":"x_fmcna_armis_inte_armis_oauth","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"053c4e3d-c9f3-4713-a159-7ed8431bea96.Record.expiration","label":"1➛Armis OAuth Record➛Expiration","reference":"","reference_display":"Expiration","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_fmcna_armis_inte_armis_oauth","column_name":"expiration"},{"name":"52284225-1a6b-42c0-afb6-cf38b59f59ee.current_datetime","label":"1➛Current DateTime","reference_display":"Current DateTime","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"56e54119-d07d-41a9-a99e-ebadb57937bc"}},{"name":"82767ce3-6c04-4ad6-b568-9861650c474f.current_datetime","label":"1.1➛Current DateTime","reference_display":"Current DateTime","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"56e54119-d07d-41a9-a99e-ebadb57937bc"}},{"name":"22d223b4-68eb-4c52-8763-ab70f2ac49ce.current_datetime","label":"2.1➛Current DateTime","reference_display":"Current DateTime","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"56e54119-d07d-41a9-a99e-ebadb57937bc"}},{"name":"956cf7e4-a0d5-40d4-97a0-e1332d5be1a7.current_datetime","label":"1➛Current DateTime","reference_display":"Current DateTime","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_date_time","uiUniqueId":"56e54119-d07d-41a9-a99e-ebadb57937bc"}},{"name":"5ffb68f7-d21c-4552-bbdf-ccd259498b24.is_expired","label":"1➛Is Expired","reference_display":"Is Expired","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"276f7d38-4ace-4842-8beb-ec9578890f28"}},{"name":"632b606f-7fc9-481a-af23-2701543b34c0.output","label":"1➛access_token","reference_display":"access_token","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"fed54dcd-2beb-462d-ae30-edc05056ef2f"}},{"name":"e2ec9fd0-680a-4011-a3ac-c2c132129eb3.Record","label":"3➛Armis Computer Data Record","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e2ec9fd0-680a-4011-a3ac-c2c132129eb3.Table","label":"3➛Armis Computer Data Table","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e2ec9fd0-680a-4011-a3ac-c2c132129eb3.Record.armis_mac_address","label":"3➛Armis Computer Data Record➛Armis MAC Address","reference":"","reference_display":"Armis MAC Address","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_armis_computer_data","column_name":"armis_mac_address"},{"name":"e2ec9fd0-680a-4011-a3ac-c2c132129eb3.Record.armis_device_id","label":"3➛Armis Computer Data Record➛Armis Device ID","reference":"","reference_display":"Armis Device ID","type":"integer","base_type":"integer","parent_table_name":"x_fmcna_armis_inte_armis_computer_data","column_name":"armis_device_id"},{"name":"4c5cf65e-b304-450e-bede-a2ecec3240bb.mac_found","label":"3.4.1➛mac_found","reference_display":"mac_found","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"665af443-03ff-4d47-9866-5a3aa63d8f4b"}},{"name":"18f528e5-f241-43bc-958a-a788bd015477.status_code","label":"5.2➛status_code","reference_display":"status_code","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"515b5bb8-3619-427a-82db-15a0db26f937"}},{"name":"18f528e5-f241-43bc-958a-a788bd015477.response_body","label":"5.2➛response_body","reference_display":"response_body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"479d2b1c-abb9-48fa-808b-d0e3282bd37f"}},{"name":"d26b1b08-27ea-41d1-90a7-b3361eabd4d5.record","label":"5.3.2➛Armis Computer Data Record","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d26b1b08-27ea-41d1-90a7-b3361eabd4d5.table_name","label":"5.3.2➛Armis Computer Data Table","reference":"x_fmcna_armis_inte_armis_computer_data","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c8d2aaa7-aa72-4507-93ca-b63aca468d13.status_code","label":"5.3.1➛status_code","reference_display":"status_code","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ef9f84c3-a5d8-4ade-8925-f692b3759527"}},{"name":"c8d2aaa7-aa72-4507-93ca-b63aca468d13.response_body","label":"5.3.1➛response_body","reference_display":"response_body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d1a95447-bfb5-41d8-a6d4-773a29b8d2d5"}},{"name":"c8d2aaa7-aa72-4507-93ca-b63aca468d13.found_mac","label":"5.3.1➛found_mac","reference_display":"found_mac","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"51f9a3e3-39d5-4aec-bbbb-66a565c033e1"}},{"name":"c8d2aaa7-aa72-4507-93ca-b63aca468d13.id","label":"5.3.1➛id","reference_display":"id","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ce3803ee-7990-442b-9800-f8f8d703f82d"}},{"name":"c8d2aaa7-aa72-4507-93ca-b63aca468d13.variable","label":"5.3.1➛armis_data","reference_display":"armis_data","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"7907b828-c853-4dbe-9b92-4749d0af3688"}},{"name":"subflow.force_relink","label":"Input➛force_relink","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"7a44fa6d-a1a5-423e-96dd-6f03d8ed84fd"}},{"name":"e221ebfe-90a7-45c9-a2eb-f245722f8227.api_query_performed","label":"3.1➛api_query_performed","reference_display":"api_query_performed","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f27e16ed-56cc-408d-aadd-c16c66468713"}},{"name":"b28a7ab7-e961-45f9-a7a9-2d5f3b43fcdf.record","label":"3.4.2.1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b28a7ab7-e961-45f9-a7a9-2d5f3b43fcdf.table_name","label":"3.4.2.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b28a7ab7-e961-45f9-a7a9-2d5f3b43fcdf.status","label":"3.4.2.1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b28a7ab7-e961-45f9-a7a9-2d5f3b43fcdf.error_message","label":"3.4.2.1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a4519e41-faf7-45bd-9ac2-674f99cd5cae.Records","label":"3.2➛MAC Linking Cache Records","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a4519e41-faf7-45bd-9ac2-674f99cd5cae.Table","label":"3.2➛MAC Linking Cache Table","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a4519e41-faf7-45bd-9ac2-674f99cd5cae.Count","label":"3.2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"227affd2-ef08-450e-93b4-c2e1fa2cead2.item","label":"3.3.1➛MAC Linking Cache Record","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"778add03-e718-465e-be51-5cb3ff2ebe3f.status_code","label":"3.3.1.1➛status_code","reference_display":"status_code","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ef9f84c3-a5d8-4ade-8925-f692b3759527"}},{"name":"778add03-e718-465e-be51-5cb3ff2ebe3f.response_body","label":"3.3.1.1➛response_body","reference_display":"response_body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d1a95447-bfb5-41d8-a6d4-773a29b8d2d5"}},{"name":"778add03-e718-465e-be51-5cb3ff2ebe3f.found_mac","label":"3.3.1.1➛found_mac","reference_display":"found_mac","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"51f9a3e3-39d5-4aec-bbbb-66a565c033e1"}},{"name":"778add03-e718-465e-be51-5cb3ff2ebe3f.id","label":"3.3.1.1➛id","reference_display":"id","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ce3803ee-7990-442b-9800-f8f8d703f82d"}},{"name":"778add03-e718-465e-be51-5cb3ff2ebe3f.variable","label":"3.3.1.1➛armis_data","reference_display":"armis_data","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"7907b828-c853-4dbe-9b92-4749d0af3688"}},{"name":"227affd2-ef08-450e-93b4-c2e1fa2cead2.item.mac_address","label":"3.3.1➛MAC Linking Cache Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_mac_linking_cache","column_name":"mac_address"},{"name":"5a7227c1-e283-4cac-a8ec-5bb1b6cfed47.Record","label":"3.4.1➛MAC Linking Cache Record","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5a7227c1-e283-4cac-a8ec-5bb1b6cfed47.Table","label":"3.4.1➛MAC Linking Cache Table","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5a7227c1-e283-4cac-a8ec-5bb1b6cfed47.Record.mac_address","label":"3.4.1➛MAC Linking Cache Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_mac_linking_cache","column_name":"mac_address"}]</label_cache>
-        <latest_snapshot>7b3b24a5db015010fdfe1828139619b4</latest_snapshot>
+        <latest_snapshot>35514f1b1bb1d4104ca7edf9bc4bcbd9</latest_snapshot>
         <master_snapshot>7b3b24a5db015010fdfe1828139619b4</master_snapshot>
         <name>(OLD) LINK_Establish MAC Record if needed</name>
         <natlang/>
@@ -107,7 +107,7 @@
         <sys_created_on>2020-06-05 03:13:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0116ef401b99d4107e280d43cd4bcb20</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -115,7 +115,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>73b20764-db40-4982-b0a7-aa95dbfc2a1a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0116ef401b99d4107e280d43cd4bcb20"/>
@@ -304,7 +304,7 @@
         <sys_created_on>2020-05-27 19:05:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>319960e1db015010fdfe18281396191d</sys_id>
-        <sys_mod_count>116</sys_mod_count>
+        <sys_mod_count>118</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -312,7 +312,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>18819d2b-ba50-4dbb-9906-a42c9c54f32b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=319960e1db015010fdfe18281396191d"/>
@@ -371,7 +371,7 @@
         <sys_created_on>2020-06-05 03:13:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3416af401b99d4107e280d43cd4bcbb8</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -379,7 +379,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>778add03-e718-465e-be51-5cb3ff2ebe3f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3416af401b99d4107e280d43cd4bcbb8"/>
@@ -498,7 +498,7 @@
         <sys_created_on>2020-06-05 03:13:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4516ef401b99d4107e280d43cd4bcb0e</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -506,7 +506,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>5a7227c1-e283-4cac-a8ec-5bb1b6cfed47</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4516ef401b99d4107e280d43cd4bcb0e"/>
@@ -714,7 +714,6 @@
         <display_text/>
         <flow display_value="(OLD) LINK_Establish MAC Record if needed">e48a3defdbf4d050cb24431e13961969</flow>
         <inputs/>
-        <inputs/>
         <order>3.1</order>
         <parent_ui_id>13ea609f-e098-4743-9199-735a43cb4ec2</parent_ui_id>
         <subflow display_value="LINK_EvaluateDeviceMACs">a36adb73dbf0d450cb24431e139619e9</subflow>
@@ -735,19 +734,6 @@
         <ui_id>e221ebfe-90a7-45c9-a2eb-f245722f8227</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=759960e1db015010fdfe182813961920"/>
-    <sys_element_mapping action="delete_multiple" query="id=759960e1db015010fdfe182813961920"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>computer</field>
-        <id>759960e1db015010fdfe182813961920</id>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-27 19:05:00</sys_created_on>
-        <sys_id>f99960e1db015010fdfe182813961921</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:05:00</sys_updated_on>
-        <table>var__m_sys_hub_flow_input_a36adb73dbf0d450cb24431e139619e9</table>
-        <value>{{subflow.computer}}</value>
-    </sys_element_mapping>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -764,7 +750,7 @@
         <sys_created_on>2020-06-05 03:13:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8116af401b99d4107e280d43cd4bcbd5</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -772,7 +758,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>a3bd6c9e-74f7-4238-9e16-7a65c72c6808</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8116af401b99d4107e280d43cd4bcbd5"/>
@@ -900,7 +886,7 @@
         <sys_created_on>2020-06-05 03:13:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b416af401b99d4107e280d43cd4bcbb1</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -908,7 +894,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>a4519e41-faf7-45bd-9ac2-674f99cd5cae</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b416af401b99d4107e280d43cd4bcbb1"/>
@@ -1585,7 +1571,7 @@
         <sys_created_on>2020-06-05 03:13:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0116ef401b99d4107e280d43cd4bcb20</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1593,7 +1579,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>73b20764-db40-4982-b0a7-aa95dbfc2a1a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0116ef401b99d4107e280d43cd4bcb20"/>
@@ -1638,7 +1624,7 @@
         <sys_created_on>2020-05-27 19:05:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>319960e1db015010fdfe18281396191d</sys_id>
-        <sys_mod_count>116</sys_mod_count>
+        <sys_mod_count>118</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1646,7 +1632,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>18819d2b-ba50-4dbb-9906-a42c9c54f32b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=319960e1db015010fdfe18281396191d"/>
@@ -1705,7 +1691,7 @@
         <sys_created_on>2020-06-05 03:13:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3416af401b99d4107e280d43cd4bcbb8</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1713,7 +1699,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>778add03-e718-465e-be51-5cb3ff2ebe3f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3416af401b99d4107e280d43cd4bcbb8"/>
@@ -1758,7 +1744,7 @@
         <sys_created_on>2020-06-05 03:13:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4516ef401b99d4107e280d43cd4bcb0e</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1766,7 +1752,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>5a7227c1-e283-4cac-a8ec-5bb1b6cfed47</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4516ef401b99d4107e280d43cd4bcb0e"/>
@@ -1877,7 +1863,7 @@
         <sys_created_on>2020-06-05 03:13:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8116af401b99d4107e280d43cd4bcbd5</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1885,7 +1871,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>a3bd6c9e-74f7-4238-9e16-7a65c72c6808</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8116af401b99d4107e280d43cd4bcbd5"/>
@@ -1954,7 +1940,7 @@
         <sys_created_on>2020-06-05 03:13:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b416af401b99d4107e280d43cd4bcbb1</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1962,7 +1948,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-02 14:20:43</sys_updated_on>
+        <sys_updated_on>2020-07-09 23:24:35</sys_updated_on>
         <ui_id>a4519e41-faf7-45bd-9ac2-674f99cd5cae</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b416af401b99d4107e280d43cd4bcbb1"/>
@@ -2063,7 +2049,6 @@
         <display_text/>
         <flow display_value="(OLD) LINK_Establish MAC Record if needed">e48a3defdbf4d050cb24431e13961969</flow>
         <inputs/>
-        <inputs/>
         <order>3.1</order>
         <parent_ui_id>13ea609f-e098-4743-9199-735a43cb4ec2</parent_ui_id>
         <subflow display_value="LINK_EvaluateDeviceMACs">a36adb73dbf0d450cb24431e139619e9</subflow>
@@ -2084,19 +2069,6 @@
         <ui_id>e221ebfe-90a7-45c9-a2eb-f245722f8227</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=759960e1db015010fdfe182813961920"/>
-    <sys_element_mapping action="delete_multiple" query="id=759960e1db015010fdfe182813961920"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>computer</field>
-        <id>759960e1db015010fdfe182813961920</id>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-27 19:05:00</sys_created_on>
-        <sys_id>f99960e1db015010fdfe182813961921</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:05:00</sys_updated_on>
-        <table>var__m_sys_hub_flow_input_a36adb73dbf0d450cb24431e139619e9</table>
-        <value>{{subflow.computer}}</value>
-    </sys_element_mapping>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
@@ -2847,9 +2819,9 @@
     </sys_documentation>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=e48a3defdbf4d050cb24431e13961969^sys_idNOT IN2c4b64a5db015010fdfe1828139619ed"/>
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>com.snc.process_flow.engine.ProcessPlan@157fa92</plan>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"2c4b64a5db015010fdfe1828139619ed","name":"plan"}}</plan>
         <plan_id display_value="(OLD) LINK_Establish MAC Record if needed">e48a3defdbf4d050cb24431e13961969</plan_id>
-        <snapshot>7b3b24a5db015010fdfe1828139619b4</snapshot>
+        <snapshot>35514f1b1bb1d4104ca7edf9bc4bcbd9</snapshot>
         <sys_class_name>sys_flow_subflow_plan</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-05-27 19:12:17</sys_created_on>
@@ -3318,7 +3290,6 @@
         <display_text/>
         <flow display_value="(OLD) LINK_Establish MAC Record if needed">7b3b24a5db015010fdfe1828139619b4</flow>
         <inputs/>
-        <inputs/>
         <order>3.1</order>
         <parent_ui_id>13ea609f-e098-4743-9199-735a43cb4ec2</parent_ui_id>
         <subflow display_value="LINK_EvaluateDeviceMACs">a36adb73dbf0d450cb24431e139619e9</subflow>
@@ -3339,19 +3310,6 @@
         <ui_id>e221ebfe-90a7-45c9-a2eb-f245722f8227</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=404b64a5db015010fdfe182813961965"/>
-    <sys_element_mapping action="delete_multiple" query="id=404b64a5db015010fdfe182813961965"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>computer</field>
-        <id>404b64a5db015010fdfe182813961965</id>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-27 19:12:16</sys_created_on>
-        <sys_id>084b64a5db015010fdfe182813961966</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:12:16</sys_updated_on>
-        <table>var__m_sys_hub_flow_input_a36adb73dbf0d450cb24431e139619e9</table>
-        <value>{{subflow.computer}}</value>
-    </sys_element_mapping>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -4928,7 +4886,6 @@
         <display_text/>
         <flow display_value="(OLD) LINK_Establish MAC Record if needed">7b3b24a5db015010fdfe1828139619b4</flow>
         <inputs/>
-        <inputs/>
         <order>3.1</order>
         <parent_ui_id>13ea609f-e098-4743-9199-735a43cb4ec2</parent_ui_id>
         <subflow display_value="LINK_EvaluateDeviceMACs">a36adb73dbf0d450cb24431e139619e9</subflow>
@@ -4949,19 +4906,6 @@
         <ui_id>e221ebfe-90a7-45c9-a2eb-f245722f8227</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=404b64a5db015010fdfe182813961965"/>
-    <sys_element_mapping action="delete_multiple" query="id=404b64a5db015010fdfe182813961965"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>computer</field>
-        <id>404b64a5db015010fdfe182813961965</id>
-        <sys_created_by>3244578</sys_created_by>
-        <sys_created_on>2020-05-27 19:12:16</sys_created_on>
-        <sys_id>084b64a5db015010fdfe182813961966</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-05-27 19:12:16</sys_updated_on>
-        <table>var__m_sys_hub_flow_input_a36adb73dbf0d450cb24431e139619e9</table>
-        <value>{{subflow.computer}}</value>
-    </sys_element_mapping>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
