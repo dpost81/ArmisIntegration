@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" sizeclass="8" type="collection">
+    <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" sizeclass="7" type="collection">
         <element choice="1" label="Key" mandatory="true" max_length="64" name="key" type="choice">
             <choice>
                 <element hint="Get this from Armis -&gt; Integrations -&gt; API. Needs to be a separate secret for each instance, because refreshing the token revokes the last one." inactive_on_update="false" label="api_secret" value="api_secret"/>
@@ -10,7 +10,7 @@
                 <element hint="This defines the beginning of the &quot;grace period&quot; during which updates can be sent to Armis before the cooldown period. The cooldown period is used to prevent loopback responses from Armis from re-uploading and causing an infinite loop." inactive_on_update="false" label="grace_period_cooldown_seconds" value="grace_period_cooldown_seconds"/>
                 <element inactive_on_update="false" label="max_main_queue_executions" value="max_main_queue_executions"/>
                 <element hint="This is the % of time (max value 1) that queue processing will occur. Every minute, processing will occur until this % of a minute has elapsed. For example, if set to 50%, then every minute it will do 30 seconds of processing and then stop." inactive_on_update="false" label="runtime_percent" value="runtime_percent"/>
-                <element hint="This is the number of occurrences of a MAC that can exist within the entire CMDB before this integration assumes that it's a &quot;virtual MAC&quot;. Virtual MACs are ineligible for linking to Armis." inactive_on_update="false" label="virtual_adapter_mac_count_threshold" value="virtual_adapter_mac_count_threshold"/>
+                <element hint="This is the number of occurrences of a MAC that can exist within the entire CMDB before this integration assumes that it's a &quot;virtual MAC&quot;. Virtual MACs are ineligible for linking to Armis." inactive_on_update="false" label="vmac_threshold" value="vmac_threshold"/>
             </choice>
         </element>
         <element label="value" max_length="256" name="value" type="string"/>

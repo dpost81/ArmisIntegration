@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>prop_buildjsonfromoperationrecords</internal_name>
         <label_cache>[{"name":"{{action.records}}","label":"action➛records","type":"action","ref":""},{"name":"{{action._}}","label":"action➛","type":"action","ref":""},{"name":"{{action.num_records}}","label":"action➛num_records","type":"action","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].json}}","label":"step➛Script step➛json","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].csv}}","label":"step➛Script step➛json","type":"step","ref":""},{"name":"{{step[8e5a5bb6-9a9b-45bb-ac20-c1dc0b97603c].records}}","label":"step➛Look Up Records step➛Armis Operation Queue records","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].operation_sys_ids}}","label":"step➛Script step➛operation_sys_ids","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].operation_count}}","label":"step➛Script step➛operation_count","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>ea5b318b1b7d54104be764e8bc4bcb2f</latest_snapshot>
+        <latest_snapshot>498e22241bca90104be764e8bc4bcbd0</latest_snapshot>
         <master_snapshot>eeb3f14b1bb954104be764e8bc4bcb1d</master_snapshot>
         <name>PROP_BuildJSONFromOperationRecords</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>a5afa1431bb954104be764e8bc4bcbb8</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>PROP_BuildJSONFromOperationRecords</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a5afa1431bb954104be764e8bc4bcbb8</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:14</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -282,7 +282,7 @@
         <sys_created_on>2020-07-08 22:49:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e9afa1431bb954104be764e8bc4bcbc6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -290,7 +290,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:23</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:36</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e9afa1431bb954104be764e8bc4bcbc6"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -301,9 +301,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-08 22:49:05</sys_created_on>
         <sys_id>79afa1431bb954104be764e8bc4bcbe8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:23</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:36</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var json_stack = []
   outputs.operation_sys_ids = [];
@@ -331,11 +331,15 @@
     this_json.upsert.description = args.property_name
     this_json.upsert.deviceId = parseInt(args.device_id)
     this_json.upsert.type = args.property_name
+    var val = args.property_value
     this_json.upsert.value = args.property_value
 
     //Push this object onto the json stack
-    json_stack.push(this_json)
-
+    if(val != null)
+    {
+      json_stack.push(this_json)
+    }
+    
     //retrieve the operation sys ID, so that it can be closed later by the flow.
     outputs.operation_sys_ids.push(inputs.records.getValue("sys_id"));
   }
@@ -487,7 +491,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=d422e764-9cbf-4d98-bed0-a27b6930e91b,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=f8c62d97-31c6-4111-b4dd-3fb6e294c5fb,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -546,7 +550,7 @@
         <sys_created_on>2020-07-08 22:49:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7dafa1431bb954104be764e8bc4bcbd9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -554,7 +558,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:10</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -821,7 +825,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=759c53c3-e5a1-4993-bd2c-306b9f28674f,co_type_name=FD22a8ea520db91010189e81d8d6bac3a8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
+        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=9f0d414c-0cb2-4e7a-83c9-f71aff448c25,co_type_name=FD22a8ea520db91010189e81d8d6bac3a8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -882,7 +886,7 @@
         <sys_created_on>2020-07-08 22:49:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7dafe1431bb954104be764e8bc4bcb0d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -890,7 +894,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:10</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1251,7 +1255,7 @@
         <sys_created_on>2020-07-08 22:49:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e9afa1431bb954104be764e8bc4bcbc6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1259,7 +1263,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:23</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:36</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e9afa1431bb954104be764e8bc4bcbc6"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1270,9 +1274,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-08 22:49:05</sys_created_on>
         <sys_id>79afa1431bb954104be764e8bc4bcbe8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:23</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:36</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var json_stack = []
   outputs.operation_sys_ids = [];
@@ -1300,11 +1304,15 @@
     this_json.upsert.description = args.property_name
     this_json.upsert.deviceId = parseInt(args.device_id)
     this_json.upsert.type = args.property_name
+    var val = args.property_value
     this_json.upsert.value = args.property_value
 
     //Push this object onto the json stack
-    json_stack.push(this_json)
-
+    if(val != null)
+    {
+      json_stack.push(this_json)
+    }
+    
     //retrieve the operation sys ID, so that it can be closed later by the flow.
     outputs.operation_sys_ids.push(inputs.records.getValue("sys_id"));
   }
@@ -1456,7 +1464,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=d422e764-9cbf-4d98-bed0-a27b6930e91b,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=f8c62d97-31c6-4111-b4dd-3fb6e294c5fb,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1515,7 +1523,7 @@
         <sys_created_on>2020-07-08 22:49:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7dafa1431bb954104be764e8bc4bcbd9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1523,7 +1531,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:10</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1807,16 +1815,16 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="PROP_BuildJSONFromOperationRecords">a5afa1431bb954104be764e8bc4bcbb8</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"83b3f14b1bb954104be764e8bc4bcbbc","name":"plan"}}</plan>
-        <snapshot>ea5b318b1b7d54104be764e8bc4bcb2f</snapshot>
+        <snapshot>498e22241bca90104be764e8bc4bcbd0</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-08 23:06:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>83b3f14b1bb954104be764e8bc4bcbbc</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:15</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:40</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2086,7 +2094,7 @@
         <sys_created_on>2020-07-08 23:06:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>eab3f14b1bb954104be764e8bc4bcb26</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2094,7 +2102,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:27</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=eab3f14b1bb954104be764e8bc4bcb26"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2105,9 +2113,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-08 23:06:53</sys_created_on>
         <sys_id>22b3f14b1bb954104be764e8bc4bcb46</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:27</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var json_stack = []
   outputs.operation_sys_ids = [];
@@ -2135,11 +2143,15 @@
     this_json.upsert.description = args.property_name
     this_json.upsert.deviceId = parseInt(args.device_id)
     this_json.upsert.type = args.property_name
+    var val = args.property_value
     this_json.upsert.value = args.property_value
 
     //Push this object onto the json stack
-    json_stack.push(this_json)
-
+    if(val != null)
+    {
+      json_stack.push(this_json)
+    }
+    
     //retrieve the operation sys ID, so that it can be closed later by the flow.
     outputs.operation_sys_ids.push(inputs.records.getValue("sys_id"));
   }
@@ -2374,7 +2386,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=d422e764-9cbf-4d98-bed0-a27b6930e91b,co_type_name=FD0b5b318b457d5410df1a4c8ff310e9a1,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=f8c62d97-31c6-4111-b4dd-3fb6e294c5fb,co_type_name=FDe58e62242fca9010e932c4bb6ab49037,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2433,7 +2445,7 @@
         <sys_created_on>2020-07-08 23:06:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2ab3f14b1bb954104be764e8bc4bcb31</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2441,7 +2453,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:14</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2625,7 +2637,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=759c53c3-e5a1-4993-bd2c-306b9f28674f,co_type_name=FD4b5b318bd37d541064b30ba3e7b6baef,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
+        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=9f0d414c-0cb2-4e7a-83c9-f71aff448c25,co_type_name=FDa18e62249dca90100818d4efadf94446,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2686,7 +2698,7 @@
         <sys_created_on>2020-07-08 23:06:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>26b3f14b1bb954104be764e8bc4bcb4b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2694,7 +2706,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:14</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3055,7 +3067,7 @@
         <sys_created_on>2020-07-08 23:06:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>eab3f14b1bb954104be764e8bc4bcb26</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3063,7 +3075,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:27</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=eab3f14b1bb954104be764e8bc4bcb26"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3074,9 +3086,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-08 23:06:53</sys_created_on>
         <sys_id>22b3f14b1bb954104be764e8bc4bcb46</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:09:27</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var json_stack = []
   outputs.operation_sys_ids = [];
@@ -3104,11 +3116,15 @@
     this_json.upsert.description = args.property_name
     this_json.upsert.deviceId = parseInt(args.device_id)
     this_json.upsert.type = args.property_name
+    var val = args.property_value
     this_json.upsert.value = args.property_value
 
     //Push this object onto the json stack
-    json_stack.push(this_json)
-
+    if(val != null)
+    {
+      json_stack.push(this_json)
+    }
+    
     //retrieve the operation sys ID, so that it can be closed later by the flow.
     outputs.operation_sys_ids.push(inputs.records.getValue("sys_id"));
   }
@@ -3343,7 +3359,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=d422e764-9cbf-4d98-bed0-a27b6930e91b,co_type_name=FD0b5b318b457d5410df1a4c8ff310e9a1,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=f8c62d97-31c6-4111-b4dd-3fb6e294c5fb,co_type_name=FDe58e62242fca9010e932c4bb6ab49037,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -3402,7 +3418,7 @@
         <sys_created_on>2020-07-08 23:06:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2ab3f14b1bb954104be764e8bc4bcb31</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3410,7 +3426,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-08 23:40:14</sys_updated_on>
+        <sys_updated_on>2020-07-13 19:14:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
