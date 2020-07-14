@@ -12,7 +12,7 @@
         <description>This checks the matching MACs against the Armis device table to see whether we have an available computer that matches. If we do, return the entry that matches.</description>
         <internal_name>link_linkevalmacstoarmistable</internal_name>
         <label_cache>[{"name":"subflow.evaluated_macs","label":"Input➛evaluated_macs","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"records","base_type":"records","column_name":"","attributes":{"uiType":"records","uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"77843319-5e8b-4169-86b4-cbaf1f4257e3","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"a419636c-d082-49a2-8478-78cf8f220b2b.item","label":"1.2.1➛Armis Device Table Record","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"c381f0df-4466-43f8-b83d-de2579a53dfb.item.mac_address","label":"1➛MAC Linking Cache Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_mac_linking_cache","column_name":"mac_address"},{"name":"85a9a9bf-816e-4ec9-9f38-d6dabfb29a45.Count","label":"1.1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"85a9a9bf-816e-4ec9-9f38-d6dabfb29a45.Table","label":"1.1➛Armis Device Table Table","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"85a9a9bf-816e-4ec9-9f38-d6dabfb29a45.Records","label":"1.1➛Armis Device Table Records","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c381f0df-4466-43f8-b83d-de2579a53dfb.item","label":"1➛MAC Linking Cache Record","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"d7219567-7978-4a8d-9195-de69c25e0ebe.Records","label":"1➛MAC Linking Cache Records","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d7219567-7978-4a8d-9195-de69c25e0ebe.Table","label":"1➛MAC Linking Cache Table","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d7219567-7978-4a8d-9195-de69c25e0ebe.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.computer","label":"Input➛computer","reference":"cmdb_ci_computer","reference_display":"Computer","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"6549e875-2dc2-45f6-8783-b358d0874298"}},{"name":"subflow.computer.name","label":"Input➛computer➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"name"},{"name":"37c29570-b4ec-4ee6-8c14-3d0c1acdc757.Records","label":"1.3.1➛Records","reference_display":"Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"37c29570-b4ec-4ee6-8c14-3d0c1acdc757.Table","label":"1.3.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"37c29570-b4ec-4ee6-8c14-3d0c1acdc757.Count","label":"1.3.1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1c26ac06-5e87-4108-958a-b01d00649a46.item","label":"2➛MAC Linking Cache Record","reference":"x_fmcna_armis_inte_mac_linking_cache","reference_display":"MAC Linking Cache","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"df758b5b-9098-414c-8a2e-be9e58ccddbc.Records","label":"2.1➛Armis Device Table Records","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"df758b5b-9098-414c-8a2e-be9e58ccddbc.Table","label":"2.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"df758b5b-9098-414c-8a2e-be9e58ccddbc.Count","label":"2.1➛Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1c26ac06-5e87-4108-958a-b01d00649a46.item.mac_address","label":"2➛MAC Linking Cache Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_mac_linking_cache","column_name":"mac_address"},{"name":"7fc343dd-3948-47a8-b4c8-424ed933d9fa.item","label":"2.2.1➛Armis Device Table Record","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
-        <latest_snapshot>7c567e871b7594104be764e8bc4bcb1d</latest_snapshot>
+        <latest_snapshot>72d2dcc1db4e5810d2c2af6d13961952</latest_snapshot>
         <master_snapshot>f7285b201b7590104be764e8bc4bcba1</master_snapshot>
         <name>LINK_LinkEvalMacsToArmisTable</name>
         <natlang/>
@@ -275,7 +275,7 @@
         <sys_created_on>2020-07-08 15:31:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>358b84c71b3154104be764e8bc4bcb0d</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -283,7 +283,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 03:57:54</sys_updated_on>
+        <sys_updated_on>2020-07-14 21:11:33</sys_updated_on>
         <ui_id>df758b5b-9098-414c-8a2e-be9e58ccddbc</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=358b84c71b3154104be764e8bc4bcb0d"/>
@@ -368,7 +368,7 @@
         <sys_created_on>2020-07-01 12:00:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>571897201b7590104be764e8bc4bcb8b</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -376,7 +376,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 03:57:54</sys_updated_on>
+        <sys_updated_on>2020-07-14 21:11:33</sys_updated_on>
         <ui_id>85a9a9bf-816e-4ec9-9f38-d6dabfb29a45</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=571897201b7590104be764e8bc4bcb8b"/>
@@ -1149,7 +1149,7 @@
         <sys_created_on>2020-07-08 15:31:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>358b84c71b3154104be764e8bc4bcb0d</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1157,7 +1157,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 03:57:54</sys_updated_on>
+        <sys_updated_on>2020-07-14 21:11:33</sys_updated_on>
         <ui_id>df758b5b-9098-414c-8a2e-be9e58ccddbc</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=358b84c71b3154104be764e8bc4bcb0d"/>
@@ -1242,7 +1242,7 @@
         <sys_created_on>2020-07-01 12:00:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>571897201b7590104be764e8bc4bcb8b</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1250,7 +1250,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 03:57:54</sys_updated_on>
+        <sys_updated_on>2020-07-14 21:11:33</sys_updated_on>
         <ui_id>85a9a9bf-816e-4ec9-9f38-d6dabfb29a45</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=571897201b7590104be764e8bc4bcb8b"/>
@@ -1885,12 +1885,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>427a5be01b7590104be764e8bc4bcb90</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>evaluated_macs</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_83eeab0f1b2dd0104be764e8bc4bcb82_evaluated_macs_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-01 12:10:58</sys_updated_on>
         <url/>
@@ -1910,12 +1910,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>aff2f7031b6dd0104be764e8bc4bcb6e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>computer</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_83eeab0f1b2dd0104be764e8bc4bcb82_computer_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-06-26 22:07:14</sys_updated_on>
         <url/>
@@ -1936,12 +1936,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0f1897201b7590104be764e8bc4bcb70</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>matched_armis _device</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_83eeab0f1b2dd0104be764e8bc4bcb82_output_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-01 12:00:39</sys_updated_on>
         <url/>
@@ -1961,12 +1961,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6b9b97641b7590104be764e8bc4bcbf8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>found_eligible_match</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_83eeab0f1b2dd0104be764e8bc4bcb82_found_eligible_match_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-01 12:15:59</sys_updated_on>
         <url/>
@@ -1976,7 +1976,7 @@
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"d4389b201b7590104be764e8bc4bcb7e","name":"plan"}}</plan>
         <plan_id display_value="LINK_LinkEvalMacsToArmisTable">83eeab0f1b2dd0104be764e8bc4bcb82</plan_id>
-        <snapshot>7c567e871b7594104be764e8bc4bcb1d</snapshot>
+        <snapshot>72d2dcc1db4e5810d2c2af6d13961952</snapshot>
         <sys_class_name>sys_flow_subflow_plan</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-01 12:01:00</sys_created_on>
@@ -3877,12 +3877,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7baa13241b7590104be764e8bc4bcb31</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>evaluated_macs</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_f7285b201b7590104be764e8bc4bcba1_evaluated_macs_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-01 12:11:54</sys_updated_on>
         <url/>
@@ -3902,12 +3902,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bf285b201b7590104be764e8bc4bcbc3</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>computer</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_f7285b201b7590104be764e8bc4bcba1_computer_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-01 12:00:58</sys_updated_on>
         <url/>
@@ -3928,12 +3928,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>eaab5b641b7590104be764e8bc4bcb3b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>found_eligible_match</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_f7285b201b7590104be764e8bc4bcba1_found_eligible_match_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-01 12:16:11</sys_updated_on>
         <url/>
@@ -3953,12 +3953,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f7285b201b7590104be764e8bc4bcbf9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>matched_armis _device</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_f7285b201b7590104be764e8bc4bcba1_output_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-01 12:00:59</sys_updated_on>
         <url/>

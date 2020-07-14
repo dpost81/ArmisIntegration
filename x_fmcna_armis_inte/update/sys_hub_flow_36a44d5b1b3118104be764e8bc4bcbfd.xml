@@ -12,7 +12,7 @@
         <description>Queues a computer object for a push to Armis. If no device is known, leave as 0. (In theory you can always leave as 0 but may as well send the device ID if there is one.)</description>
         <internal_name>apps_queueallsoftwareinstances</internal_name>
         <label_cache>[{"name":"1c29471d-fc6d-406d-9a71-e7e0be3cf429.armis_device_id","label":"1➛armis_device_id","reference_display":"armis_device_id","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1260192d-f8b5-42df-91bb-8df5d572eeeb"}},{"name":"1c29471d-fc6d-406d-9a71-e7e0be3cf429.properties","label":"1➛properties","reference_display":"properties","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1698f195-1c13-402c-98f5-78e321b1347e"}},{"name":"1c29471d-fc6d-406d-9a71-e7e0be3cf429.key_attributes","label":"1➛key_attributes","reference_display":"key_attributes","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ab1a007e-9978-41f3-9d47-b007c73ddbd2"}},{"name":"1c29471d-fc6d-406d-9a71-e7e0be3cf429.apps","label":"1➛apps","reference_display":"apps","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"05e5c23b-b875-46f1-8bf8-f39ae5cf27a6"}},{"name":"subflow.operation.arguments","label":"Input➛operation➛Arguments","reference":"","reference_display":"Arguments","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_armis_operation_queue","column_name":"arguments"},{"name":"fdfb5ee5-bfd2-43c0-aac5-7d7150f5cb6c.device","label":"1➛device","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0d693f1b-b2f2-4591-ad96-5979e3a9a841"}},{"name":"fdfb5ee5-bfd2-43c0-aac5-7d7150f5cb6c.properties","label":"1➛properties","reference_display":"properties","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0d800bc4-d7b2-4e07-8689-6e07754ac06f"}},{"name":"fdfb5ee5-bfd2-43c0-aac5-7d7150f5cb6c.key_attributes","label":"1➛key_attributes","reference_display":"key_attributes","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ff4c41e6-f397-4e12-824f-08db8e4709d4"}},{"name":"fdfb5ee5-bfd2-43c0-aac5-7d7150f5cb6c.apps","label":"1➛apps","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cc29f0bb-0d0b-4e19-a109-22af586d9541"}},{"name":"subflow.delay_seconds","label":"Input➛delay_seconds","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"24a2cf30-36b4-4f30-b35d-45a15f5bd49c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.computer.ip_address","label":"Input➛computer➛IP Address","reference":"","reference_display":"IP Address","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"ip_address"},{"name":"e8bd8c45-1684-4d86-bd6c-7c877bf4b22c.csv_line","label":"2➛csv_line","reference_display":"csv_line","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"dd2cc080-30bf-4fb4-9e17-a2b6b79286ef"}},{"name":"subflow.mac_address","label":"Input➛mac_address","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ff8c291a-5f7a-45b7-ba49-275947d3fb9c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.computer.name","label":"Input➛computer➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"name"},{"name":"subflow.priority","label":"Input➛priority","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5b611c0c-1c44-405d-a46c-28a918b05437","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.computer.category","label":"Input➛computer➛Category","reference":"","reference_display":"Category","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"category"},{"name":"subflow.armis_device_id","label":"Input➛armis_device_id","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"08b8e4b3-fe1c-45c0-b3a2-5b13febe9c30","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.computer.model_id.name","label":"Input➛computer➛Model ID➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_model","column_name":"name"},{"name":"subflow.computer.os","label":"Input➛computer➛Operating System","reference":"","reference_display":"Operating System","type":"choice","base_type":"choice","parent_table_name":"cmdb_ci_computer","column_name":"os"},{"name":"subflow.computer.os_version","label":"Input➛computer➛OS Version","reference":"","reference_display":"OS Version","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"os_version"},{"name":"subflow.computer.u_users","label":"Input➛computer➛Users","reference":"","reference_display":"Users","type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":"cmdb_ci_computer","column_name":"u_users"},{"name":"cdf6b16c-bf2a-4ccd-a8b7-2681150623d0.config_value","label":"1➛config_value","reference_display":"config_value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f48f87a9-eb14-40ff-87ee-05fc9335fce8"}},{"name":"fdfb5ee5-bfd2-43c0-aac5-7d7150f5cb6c.device_id","label":"1➛device_id","reference_display":"device_id","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0d693f1b-b2f2-4591-ad96-5979e3a9a841"}}]</label_cache>
-        <latest_snapshot>350e6ce71bbddc104be764e8bc4bcb8f</latest_snapshot>
+        <latest_snapshot>56035085db4e5810d2c2af6d13961945</latest_snapshot>
         <master_snapshot>9256d9931bf1d0104ca7edf9bc4bcb5d</master_snapshot>
         <name>QUEUE_ExplodeBackgroundUpdate</name>
         <natlang/>
@@ -228,7 +228,7 @@
         <sys_created_on>2020-07-10 07:13:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6fbc6caf1b3ddc104be764e8bc4bcbc3</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -236,7 +236,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-10 07:19:24</sys_updated_on>
+        <sys_updated_on>2020-07-14 21:12:21</sys_updated_on>
         <ui_id>1c29471d-fc6d-406d-9a71-e7e0be3cf429</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6fbc6caf1b3ddc104be764e8bc4bcbc3"/>
@@ -373,7 +373,7 @@
         <sys_created_on>2020-07-10 07:13:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6fbc6caf1b3ddc104be764e8bc4bcbc3</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -381,7 +381,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-10 07:19:24</sys_updated_on>
+        <sys_updated_on>2020-07-14 21:12:21</sys_updated_on>
         <ui_id>1c29471d-fc6d-406d-9a71-e7e0be3cf429</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6fbc6caf1b3ddc104be764e8bc4bcbc3"/>
@@ -583,12 +583,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e63695931bf1d0104ca7edf9bc4bcb22</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>operation</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_36a44d5b1b3118104be764e8bc4bcbfd_operation_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-09 15:36:28</sys_updated_on>
         <url/>
@@ -598,7 +598,7 @@
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"ee56d9931bf1d0104ca7edf9bc4bcbc4","name":"plan"}}</plan>
         <plan_id display_value="QUEUE_ExplodeBackgroundUpdate">36a44d5b1b3118104be764e8bc4bcbfd</plan_id>
-        <snapshot>350e6ce71bbddc104be764e8bc4bcb8f</snapshot>
+        <snapshot>56035085db4e5810d2c2af6d13961945</snapshot>
         <sys_class_name>sys_flow_subflow_plan</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-09 15:37:01</sys_created_on>
@@ -1197,12 +1197,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2a56d9931bf1d0104ca7edf9bc4bcb67</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>operation</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_9256d9931bf1d0104ca7edf9bc4bcb5d_operation_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-09 15:37:01</sys_updated_on>
         <url/>

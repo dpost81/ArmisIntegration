@@ -12,7 +12,7 @@
         <description>Uploads X properties to Armis via the API. (Just takes a batch of properties from the queue)</description>
         <internal_name>queue_ssc_uploadproperties</internal_name>
         <label_cache>[{"name":"f01d472b-f959-410e-a9e1-919a1c08002e.operation_sys_id","label":"8➛operation_sys_id","reference_display":"operation_sys_id","type":"GUID","base_type":"GUID","attributes":{"uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"GUID","uiUniqueId":"b17cf7a7-4ae8-4cfe-abf7-2e655b2414f3"}},{"name":"subflow.armis_device","label":"Input➛armis_device","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f1f5c80a-aac0-4d15-bc51-c5f7285e34d9","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"41ba2c76-b877-4ef8-a045-d519912bd719.location_name","label":"8➛location_name","reference_display":"location_name","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"fc4e15bb-10fe-40f2-a124-c3294d85355f"}},{"name":"8fadd88a-ba94-4058-a833-0d6c69c211ac.Count","label":"7➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8fadd88a-ba94-4058-a833-0d6c69c211ac.Table","label":"7➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8fadd88a-ba94-4058-a833-0d6c69c211ac.Records","label":"7➛Records","reference_display":"Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.armis_device.linked_snow_computer.support_group","label":"Input➛armis_device➛Linked SNOW Computer➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_computer","column_name":"support_group"},{"name":"207956fd-d435-46a7-89f2-88708adf099f.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"207956fd-d435-46a7-89f2-88708adf099f.Table","label":"1➛Armis Property Upload Queue Table","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"207956fd-d435-46a7-89f2-88708adf099f.Records","label":"1➛Armis Property Upload Queue Records","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"20e9ce4b-4b08-4f7c-8767-e0317fd6cff9.Records","label":"1➛Armis Property Upload Queue Records","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"20e9ce4b-4b08-4f7c-8767-e0317fd6cff9.Table","label":"1➛Armis Property Upload Queue Table","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"20e9ce4b-4b08-4f7c-8767-e0317fd6cff9.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"958de19a-cbb3-4ebc-9701-c87d91e6ee77.json_properties","label":"2➛json_properties","reference_display":"json_properties","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"f3bc4164-1259-4fa5-b15f-9a7780a094d1"}},{"name":"6d940ba5-9652-4da9-8070-7d22added798.status","label":"3➛status","reference_display":"status","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"67d51531-21f8-4459-8b1d-4039e777e037"}},{"name":"6d940ba5-9652-4da9-8070-7d22added798.response_body","label":"3➛response_body","reference_display":"response_body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b29470b2-e61a-4729-8b5f-077ddcf5a266"}},{"name":"2faa9ed7-dab9-4e32-9f05-c33595db5227.output","label":"3➛access_token","reference_display":"access_token","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"fed54dcd-2beb-462d-ae30-edc05056ef2f"}},{"name":"a381c900-ccdc-49fe-aea5-c30f5772d38f.item","label":"3.1➛label Record","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"subflow.records","label":"Input➛records","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"records","base_type":"records","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"afd8bb20-e5bd-4263-97f6-c5087e9dacca","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"59cefae2-9865-41d7-a3cd-2203fd83d565.Records","label":"2➛x_fmcna_armis_inte_armis_property_upload_queue Records","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59cefae2-9865-41d7-a3cd-2203fd83d565.Table","label":"2➛x_fmcna_armis_inte_armis_property_upload_queue Table","reference":"x_fmcna_armis_inte_armis_property_upload_queue","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59cefae2-9865-41d7-a3cd-2203fd83d565.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.armis_device.linked_snow_computer","label":"Input➛armis_device➛Linked SNOW Computer","reference":"cmdb_ci_computer","reference_display":"Computer","type":"reference","base_type":"reference","parent_table_name":"x_fmcna_armis_inte_armis_device_table","column_name":"linked_snow_computer"},{"name":"subflow.armis_device.linked_snow_computer.location","label":"Input➛armis_device➛Linked SNOW Computer➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_computer","column_name":"location"},{"name":"subflow.armis_device.armis_device_id","label":"Input➛armis_device➛Armis Device ID","reference":"","reference_display":"Armis Device ID","type":"integer","base_type":"integer","parent_table_name":"x_fmcna_armis_inte_armis_device_table","column_name":"armis_device_id"},{"name":"subflow.armis_device.linked_snow_computer.serial_number","label":"Input➛armis_device➛Linked SNOW Computer➛Serial number","reference":"","reference_display":"Serial number","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"serial_number"},{"name":"subflow.priority","label":"Input➛priority","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f9e2a4dc-ab55-4b1a-8d00-99b368e2ccc3","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.delay_seconds","label":"Input➛delay_seconds","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"22a2ca22-2c37-4278-8102-af1ea346d2c0","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.armis_device.linked_snow_computer.dns_domain","label":"Input➛armis_device➛Linked SNOW Computer➛DNS Domain","reference":"","reference_display":"DNS Domain","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"dns_domain"},{"name":"subflow.armis_device.linked_snow_computer.discovery_source","label":"Input➛armis_device➛Linked SNOW Computer➛Discovery source","reference":"","reference_display":"Discovery source","type":"choice","base_type":"choice","parent_table_name":"cmdb_ci_computer","column_name":"discovery_source"},{"name":"subflow.armis_device.linked_snow_computer.os_domain","label":"Input➛armis_device➛Linked SNOW Computer➛OS Domain","reference":"","reference_display":"OS Domain","type":"string","base_type":"string","parent_table_name":"cmdb_ci_computer","column_name":"os_domain"},{"name":"subflow.armis_device.linked_snow_computer.operational_status","label":"Input➛armis_device➛Linked SNOW Computer➛Operational status","reference":"","reference_display":"Operational status","type":"choice","base_type":"choice","parent_table_name":"cmdb_ci_computer","column_name":"operational_status"},{"name":"subflow.armis_device.linked_snow_computer.support_group.name","label":"Input➛armis_device➛Linked SNOW Computer➛Support group➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user_group","column_name":"name"},{"name":"subflow.armis_device.site_location","label":"Input➛armis_device➛Site Location","reference":"","reference_display":"Site Location","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_armis_device_table","column_name":"site_location"},{"name":"subflow.armis_device.linked_snow_computer.location.name","label":"Input➛armis_device➛Linked SNOW Computer➛Location➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"name"}]</label_cache>
-        <latest_snapshot>850bfddf1bb558104be764e8bc4bcbb5</latest_snapshot>
+        <latest_snapshot>af1310c5db4e5810d2c2af6d13961900</latest_snapshot>
         <master_snapshot>ebfd03441b7d58104be764e8bc4bcb6c</master_snapshot>
         <name>PROP_QueueAllProperties</name>
         <natlang/>
@@ -2209,12 +2209,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>659511871bf554104be764e8bc4bcbb3</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>delay_seconds</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_cf2fe2c81bb958104be764e8bc4bcb0c_delay_seconds_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 20:55:11</sys_updated_on>
         <url/>
@@ -2234,12 +2234,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>699511871bf554104be764e8bc4bcba8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>armis_device</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_cf2fe2c81bb958104be764e8bc4bcb0c_armis_device_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 20:55:11</sys_updated_on>
         <url/>
@@ -2259,12 +2259,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ed9511871bf554104be764e8bc4bcbad</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>priority</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_cf2fe2c81bb958104be764e8bc4bcb0c_priority_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 20:55:11</sys_updated_on>
         <url/>
@@ -2274,7 +2274,7 @@
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"3ffd03441b7d58104be764e8bc4bcbaf","name":"plan"}}</plan>
         <plan_id display_value="PROP_QueueAllProperties">cf2fe2c81bb958104be764e8bc4bcb0c</plan_id>
-        <snapshot>850bfddf1bb558104be764e8bc4bcbb5</snapshot>
+        <snapshot>af1310c5db4e5810d2c2af6d13961900</snapshot>
         <sys_class_name>sys_flow_subflow_plan</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-29 21:59:31</sys_created_on>
@@ -4499,12 +4499,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>aa9591871bf554104be764e8bc4bcb09</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>priority</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ebfd03441b7d58104be764e8bc4bcb6c_priority_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 20:55:16</sys_updated_on>
         <url/>
@@ -4524,12 +4524,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ae9551871bf554104be764e8bc4bcbf7</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>armis_device</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ebfd03441b7d58104be764e8bc4bcb6c_armis_device_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 20:55:15</sys_updated_on>
         <url/>
@@ -4549,12 +4549,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ee9591871bf554104be764e8bc4bcb1e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>delay_seconds</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ebfd03441b7d58104be764e8bc4bcb6c_delay_seconds_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 20:55:16</sys_updated_on>
         <url/>
