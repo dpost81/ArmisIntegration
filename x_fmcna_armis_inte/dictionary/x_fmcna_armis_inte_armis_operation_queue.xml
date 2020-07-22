@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Operation Queue" max_length="40" name="x_fmcna_armis_inte_armis_operation_queue" sizeclass="2921" type="collection">
+    <element label="Armis Operation Queue" max_length="40" name="x_fmcna_armis_inte_armis_operation_queue" sizeclass="528" type="collection">
         <element label="Arguments" max_length="400" name="arguments" type="string"/>
         <element label="Completed At" max_length="40" name="completed_at" type="glide_date_time"/>
         <element choice="1" label="Operation" max_length="40" name="operation" type="choice">
@@ -17,6 +17,7 @@
             </choice>
         </element>
         <element label="Priority" max_length="40" name="priority" type="integer"/>
+        <element label="Property Name" max_length="40" name="property_name" type="string"/>
         <element label="Queued At" max_length="40" name="queued_at" type="glide_date_time"/>
         <element label="Report" max_length="100" name="report" type="string"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis Op - Key Attribute" max_length="40" name="x_fmcna_armis_inte_armis_op_key_attribute" sizeclass="0" type="collection">
+        <element label="Armis Device ID" max_length="40" name="armis_device_id" type="integer"/>
+        <element label="Armis MAC" max_length="20" name="armis_mac" type="string"/>
+        <element choice="1" label="Attribute" max_length="40" name="attribute" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="NAME" sequence="1" value="NAME"/>
+                <element inactive_on_update="false" label="IP" sequence="2" value="IP"/>
+                <element inactive_on_update="false" label="CATEGORY" sequence="3" value="CATEGORY"/>
+                <element inactive_on_update="false" label="MODEL" sequence="4" value="MODEL"/>
+                <element inactive_on_update="false" label="OS" sequence="5" value="OS"/>
+                <element inactive_on_update="false" label="OS_VERSION" sequence="6" value="OS_VERSION"/>
+                <element inactive_on_update="false" label="TYPE" sequence="7" value="TYPE"/>
+                <element inactive_on_update="false" label="USER" sequence="8" value="USER"/>
+                <element inactive_on_update="false" label="LAST_SEEN" sequence="9" value="LAST_SEEN"/>
+                <element inactive_on_update="false" label="TAG" sequence="10" value="TAG"/>
+            </choice>
+        </element>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="COMPLETE" value="COMPLETE"/>
+                <element inactive_on_update="false" label="PENDING" value="PENDING"/>
+                <element inactive_on_update="false" label="PROCESSING" value="PROCESSING"/>
+            </choice>
+        </element>
+        <element label="Value" max_length="100" name="value" type="string"/>
+    </element>
+</database>

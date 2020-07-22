@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="hasLabels=true" label="Armis Device Table" max_length="40" name="x_fmcna_armis_inte_armis_device_table" sizeclass="90" type="collection">
+    <element attributes="hasLabels=true" label="Armis Device Table" max_length="40" name="x_fmcna_armis_inte_armis_device_table" sizeclass="598676" type="collection">
         <element label="Access switch" max_length="64" name="access_switch" type="string"/>
         <element display="true" label="Armis Device ID" mandatory="true" max_length="40" name="armis_device_id" type="integer"/>
         <element label="Armis Risk Level" max_length="40" name="armis_risk_level" type="integer"/>
-        <element label="Category" max_length="64" name="category" type="string"/>
+        <element label="Armis Tags" max_length="400" name="armis_tags" type="string"/>
+        <element choice="1" label="Category" max_length="40" name="category" type="string">
+            <choice>
+                <element inactive_on_update="false" label="test" value="test"/>
+            </choice>
+        </element>
         <element label="First seen" max_length="40" name="first_seen" type="glide_date_time"/>
         <element label="IP Address" max_length="45" name="ip_address" type="string"/>
         <element label="Last seen" max_length="40" name="last_seen" type="glide_date_time"/>
@@ -18,6 +23,7 @@
         <element label="Sensor Type" max_length="64" name="sensor_type" type="string"/>
         <element label="Site Name" max_length="64" name="site" type="string"/>
         <element label="Site Location" max_length="64" name="site_location" type="string"/>
+        <element label="Tags" max_length="400" name="tags" type="string"/>
         <element label="Type" max_length="64" name="type" type="string"/>
         <element label="User" max_length="64" name="user" type="string"/>
         <element label="Visibility" max_length="20" name="visibility" type="string"/>

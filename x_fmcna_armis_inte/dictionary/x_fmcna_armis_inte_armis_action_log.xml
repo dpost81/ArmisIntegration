@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis Action Log" max_length="40" name="x_fmcna_armis_inte_armis_action_log" sizeclass="400" type="collection">
+        <element choice="1" label="Action Type" max_length="40" name="action_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="GETD_GetBulkArmisData" value="GETD_GetBulkArmisData"/>
+                <element inactive_on_update="false" label="TEST" value="TEST"/>
+            </choice>
+        </element>
+        <element label="API time" max_length="40" name="api_time" type="integer"/>
+        <element label="Debug String" max_length="2000" name="debug_string" type="string"/>
+        <element display="true" label="Execution ID" max_length="16" name="execution_id" type="string"/>
+        <element label="Heavy Processing Time" max_length="40" name="heavy_processing_time" type="integer"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;return current.total_time - (current.api_time + current.heavy_processing_time);&#13;&#10;&#13;&#10;})(current);" label="Other Time" max_length="40" name="other_time" type="integer" virtual="true"/>
+        <element label="Report" max_length="200" name="report" type="string"/>
+        <element label="Total Time" max_length="40" name="total_time" type="integer"/>
+    </element>
+</database>
