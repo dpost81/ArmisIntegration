@@ -12,22 +12,22 @@
         <description/>
         <ih_action>false</ih_action>
         <internal_name>debug_sandbox</internal_name>
-        <label_cache>[{"name":"{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].variable}}","label":"step➛LIBRARY/SANDBOX➛variable","type":"step","ref":""},{"name":"{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].debug}}","label":"step➛LIBRARY/SANDBOX➛debug","type":"step","ref":""}]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
-        <name>(v2.1) DEBUG_SandboxAndLibrary</name>
+        <label_cache>[{"name":"{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].variable}}","label":"step➛LIBRARY➛variable","type":"step","ref":""},{"name":"{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].debug}}","label":"step➛LIBRARY➛debug","type":"step","ref":""},{"name":"{{step[40adef71-a211-4cd4-bade-800daa7b380c].variable}}","label":"step➛CURRENT MINIFIED➛variable","type":"step","ref":""},{"name":"{{step[40adef71-a211-4cd4-bade-800daa7b380c].debug}}","label":"step➛CURRENT MINIFIED➛debug","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>d50ef1bf1b0ed8104ca7edf9bc4bcbd4</latest_snapshot>
+        <master_snapshot>a50e35bf1b0ed8104ca7edf9bc4bcb12</master_snapshot>
+        <name>FUNCTION_LIBRARY (v2.1)</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <state>draft</state>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 23:05:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>148627ba1bc294104ca7edf9bc4bcbaf</sys_id>
-        <sys_mod_count>16</sys_mod_count>
-        <sys_name>(v2.1) DEBUG_SandboxAndLibrary</sys_name>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>FUNCTION_LIBRARY (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_148627ba1bc294104ca7edf9bc4bcbaf</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-22 15:56:17</sys_updated_on>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -53,15 +53,246 @@
         <table>var__m_sys_hub_action_output_148627ba1bc294104ca7edf9bc4bcbaf</table>
         <value>{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].debug}}</value>
     </sys_element_mapping>
-    <sys_hub_step_instance action="delete_multiple" query="action=148627ba1bc294104ca7edf9bc4bcbaf^sys_idNOT IN73076f361bc294104ca7edf9bc4bcb6a"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=148627ba1bc294104ca7edf9bc4bcbaf^sys_idNOT IN050ef1bf1b0ed8104ca7edf9bc4bcb8f,1d02d56b1bca50104be764e8bc4bcb18,73076f361bc294104ca7edf9bc4bcb6a"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="(v2.1) DEBUG_SandboxAndLibrary">148627ba1bc294104ca7edf9bc4bcbaf</action>
+        <action display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</action>
+        <cid>76ba4dfd-1b50-48a2-8604-a87006f3ca28</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>DEBUG AND TESTING FUNCTIONS</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:02:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>050ef1bf1b0ed8104ca7edf9bc4bcb8f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=050ef1bf1b0ed8104ca7edf9bc4bcb8f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>050ef1bf1b0ed8104ca7edf9bc4bcb8f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:02:58</sys_created_on>
+        <sys_id>850ef1bf1b0ed8104ca7edf9bc4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>050ef1bf1b0ed8104ca7edf9bc4bcb8f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:02:58</sys_created_on>
+        <sys_id>8d0ef1bf1b0ed8104ca7edf9bc4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
+        <value>//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+// ***********************************
+// *** DEBUG AND TESTING FUNCTIONS ***
+// ***********************************
+
+// Grabs any computers in the CMDB labeled "AI_TEST_COMPUTER_"
+function getTestComputers()
+{
+  var q = new GlideRecord('cmdb_ci_computer')
+}
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</action>
+        <cid>40adef71-a211-4cd4-bade-800daa7b380c</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>CURRENT MINIFIED</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 20:12:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1d02d56b1bca50104be764e8bc4bcb18</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 02:26:22</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1d02d56b1bca50104be764e8bc4bcb18"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1d02d56b1bca50104be764e8bc4bcb18</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 20:12:16</sys_created_on>
+        <sys_id>1502d56b1bca50104be764e8bc4bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-22 20:12:16</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1d02d56b1bca50104be764e8bc4bcb18</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 20:12:16</sys_created_on>
+        <sys_id>d502d56b1bca50104be764e8bc4bcb1e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 02:26:22</sys_updated_on>
+        <value>  //minify with: https://javascript-minifier.com/ when the content of the LIBRARY script changes.
+  //Make sure NOT to copy the actual implementation at the end: (function execute(inputs, outputs) { } })(inputs, outputs);
+  
+
+//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+(function execute(inputs, outputs) {
+  
+  /*
+ j = '{"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":1001880,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA2","ServiceNow Import Prod2","FKC Region Northeast2","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}'
+ jo = JSON.parse(j) */
+
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=1d02d56b1bca50104be764e8bc4bcb18^sys_idNOT INafab79af1b0e90104be764e8bc4bcb98"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f880b7ad-09cc-47fa-bbdf-8633310df0e2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="CURRENT MINIFIED">1d02d56b1bca50104be764e8bc4bcb18</model>
+        <model_id>1d02d56b1bca50104be764e8bc4bcb18</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_1d02d56b1bca50104be764e8bc4bcb18</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 23:14:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>afab79af1b0e90104be764e8bc4bcb98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-22 23:14:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</action>
         <cid>0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2</cid>
         <extended_inputs/>
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>LIBRARY/SANDBOX</label>
+        <label>LIBRARY</label>
         <order>1</order>
         <outputs/>
         <section/>
@@ -71,7 +302,7 @@
         <sys_created_on>2020-07-20 23:07:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>73076f361bc294104ca7edf9bc4bcb6a</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -79,7 +310,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-22 15:56:17</sys_updated_on>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=73076f361bc294104ca7edf9bc4bcb6a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -90,16 +321,29 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 23:07:59</sys_created_on>
         <sys_id>7707233e1bc294104ca7edf9bc4bcbd0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-22 15:56:17</sys_updated_on>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
         <value>// *******************************
-// **** FUNCTION LIBRARY v0.2 ****
+// **** FUNCTION LIBRARY v0.3 ****
 // *******************************
 
+// **** MISC FUNCTIONS ****
+
+// returns milliseconds since epoch
+function now() { return new GlideDateTime().getNumericValue() } 
+
+//Apparently .includes() is not present in this version of javascript. I'll make my own .includes().
+function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { if (test_arr[i] == test_var) { return true } }; return false }
+
+//I needed a way to quickly generate a digest so I can check whether a JSON string changed since the last time an update occurred.
+//This was lifted directly from "index.js" at: https://github.com/darkskyapp/string-hash
+//It ingests a string of arbitrary length and spits out an integer unique to the string (i.e. non-secure hash)
+function digest(str) {var hash=5381,i=str.length;while(i){hash=(hash*33)^str.charCodeAt(--i)};return hash&gt;&gt;&gt;0}
+
 //GENERATE A RANDOM ID
-//There is no accessible ID for a particular action from within a script step, so this value is used
-//to cross reference between the debug log, the API log, operation log, etc. to uniquely identify this execution.
+//There is no accessible ID for a particular action from within a script step, so this value is intended to be used
+//to cross reference between the debug log, the API log, operation log, etc. to uniquely identify an execution.
 function generateID()
 { 
   var ans = '';
@@ -107,6 +351,51 @@ function generateID()
   for (var i = 16; i &gt; 0; i--) { ans += arr[Math.floor(Math.random() * arr.length)] } 
   return ans; 
 } 
+
+// *** GENERAL SQL OPERATION FUNCTIONS ***
+
+// INSERT OR UPDATE
+// No "insert or update" function exists natively, so rather than rewriting the entire structure in every implementation, I am abstracting it here.
+// INPUT (hash): 
+//     .table : name of the target table
+//     .unique_pairs : array of key-value pairs to check uniqueness on. If these pairs are found, will update, if not, will insert.
+//     .update_pairs : array of key-value pairs that will be changed in the update or inserted along with the unique pairs.
+// Note: this operation will run MUCH MUCH FASTER if the unique_pairs together form the primary key of the table.
+// Example:
+//          r = {}
+//          r.table = 'x_fmcna_armis_inte_armis_op_arp_table'
+//          r.unique_pairs = [ ['id','test_id'] , ['mac', 'test_mac' ] ]  -- note if this array is null or empty goes straight to an insert of the updated pairs
+//          r.update_pairs = [ ['status', 'COMPLETE'] ]
+//          insertOrUpdate(r)
+// RETURN (hash):
+//     .operation - string 'insert' or string 'update'. (returns 'error: [message]' if anything goes wrong.)
+//     .time_delta - amount of time in milliseconds it took for the operation to run
+function insertOrUpdate(r)
+{
+  var out = {}
+  var start_time = now()
+  if (r.unique_pairs == null) { r.unique_pairs = [] }
+  try {
+    var gr = new GlideRecord(r.table)
+    if (r.unique_pairs.length != 0) {
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr.addQuery(r.unique_pairs[i][0],r.unique_pairs[i][1]) } //Add all unique pairs to query
+      gr.query() }
+    if (gr.getRowCount() == 0) { //This is an insert, not an update.
+      gr.initialize()
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr[r.unique_pairs[i][0]] = r.unique_pairs[i][1] } //Add all unique pairs to our insert
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.insert(); out.operation = 'insert' }
+    else { //This is an update.
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.updateMultiple(); out.operation = 'update' }
+  }
+  catch(m) { out.operation = 'error: ' + m }
+    
+  out.time_delta = now() - start_time
+  return out
+}
+
+// *** SPECIFIC TABLE FUNCTIONS ***
 
 //WRITE TO API LOG
 //Logs the data we're sending to Armis via the API, as well as the response from Armis.
@@ -123,16 +412,15 @@ function generateID()
 //[int] time_delta_ms - ending now() - starting now()
 function writeToAPILog(p)
 {
-  var api_log_query = new GlideRecord('x_fmcna_armis_inte_armis_rest_api_log')
-  api_log_query.setValue('execution_id',p.id)
-  api_log_query.setValue('api_endpoint',p.endpoint)
-  if (p.payload != null) { api_log_query.setValue('payload',p.payload.substring(0,1999)) }
-  api_log_query.setValue('response_code',p.response_code)
-  if (p.response_body != null) { api_log_query.setValue('response_body',p.response_body.substring(0,1999)) }
-  api_log_query.setValue('query_submitted_at',p.start_time)
-  api_log_query.setValue('query_response_time_ms',p.time_delta_ms)
-  api_log_query.insert()
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',p.payload.substring(0,1999)],['response_code',p.response_code],
+    ['response_body',p.response_body.substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
 }
+
 
 //WRITE TO ACTION LOG
 //Writes to the table "Armis Action Log", which is intended to be a mechanism to monitor the performance of this integration's actions.
@@ -149,18 +437,12 @@ function writeToAPILog(p)
 //[str(2000)] debug_string - store the debug string for later diagnosis
 function writeToActionLog(p)
 {
-  var alog = new GlideRecord('x_fmcna_armis_inte_armis_action_log')
-  alog.setValue('execution_id',p.id)
-  alog.query()
-  var insert = alog.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
-  if (insert) { alog.initialize(); alog.execution_id = p.id } else { alog.next() } 
-  alog.setValue('action_type',p.action_type)
-  alog.setValue('api_time',p.api_time)
-  alog.setValue('heavy_processing_time',p.heavy_processing_time)
-  alog.setValue('total_time',p.total_time)
-  alog.setValue('report',p.report.substring(0,199))
-  alog.setValue('debug_string',p.debug_string.substring(0,1999))
-  if (insert) { return alog.insert() } else { return alog.update()}
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_action_log'
+  q.unique_pairs = [['execution_id',p.id]]
+  q.update_pairs = [['action_type',p.action_type],['api_time',p.api_time],['heavy_processing_time',p.heavy_processing_time],
+    ['total_time',p.total_time],['report',p.report.substring(0,199)],['debug_string',p.debug_string.substring(0,1999)]]
+  return insertOrUpdate(q)
 }
 
 //CONFIGURATION MANIPULATION
@@ -188,26 +470,26 @@ function getCacheValue(/*str*/ key, /* ['str','int','datetime'] */ type)
   if (cache_query.getRowCount() == 0) { return null }
   cache_query.next()
   switch (type) {
-    case 'str': return cache_query.getValue('value_string')
-    case 'int': return cache_query.getValue('value_int')
-    case 'datetime': return cache_query.getValue('value_datetime')
-    default: return null
+    case 'str': return cache_query.getValue('value_string');break;
+    case 'int': return cache_query.getValue('value_int');break;
+    case 'datetime': return cache_query.getValue('value_datetime');break;
+    default: null
   }
 }
+// alias for tokens (the most common application) to use inline for token retrieval
+function getCurrentToken() { return getCacheValue('token','str')}
 
 function setCacheValue(/*str*/ key, value, /* ['str','int','datetime'] */ type)
 {
-  var cache_query = new GlideRecord('x_fmcna_armis_inte_armis_integration_cache')
-  cache_query.addQuery('key',key)
-  cache_query.query()
-  var insert = cache_query.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
-  if (insert) { cache_query.initialize(); cache_query.key = key } else { cache_query.next() }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_integration_cache'
+  q.unique_pairs = [['key',key]]
   switch (type) {
-    case 'str': cache_query.value_string = value
-    case 'int': cache_query.value_int = value
-    case 'datetime': cache_query.value_datetime = value
+    case 'str': q.update_pairs = [['value_string',value]];break
+    case 'int': q.update_pairs = [['value_int',value]];break
+    case 'datetime': q.update_pairs = [['value_datetime',value]];break
   }
-  if (insert) { cache_query.insert() } else { cache_query.update()}
+  return insertOrUpdate(q)
 }
 
 function deleteCacheValue(/*str*/ key)
@@ -217,15 +499,6 @@ function deleteCacheValue(/*str*/ key)
   cache_query.query()
   cache_query.deleteMultiple()
 }
-
-//MISC. FUNCTIONS
-
-// returns milliseconds since epoch
-function now() { return new GlideDateTime().getNumericValue() } 
-// alias to use inline for token retrieval
-function getCurrentToken() { return getCacheValue('token','str')}
-//Apparently .includes() is not present in this version of javascript. I'll make my own .includes().
-function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { if (test_arr[i] == test_var) { return true } }; return false }
 
 
 // ***************************************
@@ -239,7 +512,7 @@ function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { 
 // Parameter tags_to_table should be true if the tags on the import should be pushed to the "Armis Tags" table. This may substantially increase the time it takes to process.
 
 //Returns a hash with the following keys:
-// action - 'insert' or 'update' depending on which action was taken
+// action - 'insert' or 'update' depending on which action was taken, can also be 'no_update_needed' if the digest matched and no update was pushed.
 // time_delta - value in milliseconds for how long this operation took
 // record - sys_id of the record that was inserted or updated
 function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
@@ -247,6 +520,8 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
   var start_time = new GlideDateTime().getNumericValue()
   var return_vals = {}
   var device = new GlideRecord('x_fmcna_armis_inte_armis_device_table')
+  var input_digest = digest(JSON.stringify(j))
+  return_vals.digest = input_digest
   //Does this already exist?
   device.addQuery('armis_device_id',j.id)
   device.query()
@@ -254,89 +529,96 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
   //Flag as an insert if it exists, otherwise it's an update.
   var is_insert = device.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
   if (is_insert) { device.initialize() } else { device.next() }
-
-  //Set all values
-  device.access_switch = j.accessSwitch
-  device.armis_device_id = j.id
-  device.armis_risk_level = j.riskLevel
-  device.category = j.category
-  device.first_seen = new GlideDateTime(j.firstSeen)
-  device.ip_address = j.ipAddress
-  device.last_seen = new GlideDateTime(j.lastSeen)
-  device.mac_address = j.macAddress
-  device.manufacturer = j.manufacturer
-  device.model = j.model
-  device.name = j.name
-  device.os = j.operatingSystem
-  device.os_version = j.operatingSystemVersion
-  device.sensor_name = j.sensor.name
-  device.sensor_type = j.sensor.type
-  device.site = j.site.name
-  device.site_location = j.site.location
-  device.armis_tags = JSON.stringify(j.tags)
-
-  //Either insert or update.
-  var device_record;
-  if (is_insert) { device_record = device.insert(); return_vals.action = 'insert' } else { device_record = device.update(); return_vals.action = 'update' }
-  return_vals.record = device_record
+  return_vals.is_insert = is_insert
   
-  //Process tags (if the flag is set to do so). Delete old tags, insert new tags.
-  if (tags_to_table)
+  //For updates, only need to actually perform the update if the digest doesn't match.
+  //If the digest does match, then the device has not been modified since the last time we refreshed this object,
+  //and no update needs to take place.
+  var perform_update_or_insert = true
+  if(!is_insert &amp;&amp; device.getValue('digest') == input_digest) { perform_update_or_insert = false }
+  return_vals.perform = perform_update_or_insert
+  return_vals.digest_existing = device.getValue('digest')
+  
+  if (perform_update_or_insert)
   {
-    if (j.tags == null) { j.tags = [] }
-    var q_tags = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
-    q_tags.addQuery('armis_device',device_record)
-    q_tags.query()
+    //Set all values
+    device.access_switch = j.accessSwitch
+    device.armis_device_id = j.id
+    device.armis_risk_level = j.riskLevel
+    device.category = j.category
+    device.first_seen = new GlideDateTime(j.firstSeen)
+    device.ip_address = j.ipAddress
+    device.last_seen = new GlideDateTime(j.lastSeen)
+    device.mac_address = j.macAddress
+    device.manufacturer = j.manufacturer
+    device.model = j.model
+    device.name = j.name
+    device.os = j.operatingSystem
+    device.os_version = j.operatingSystemVersion
+    device.sensor_name = j.sensor.name
+    device.sensor_type = j.sensor.type
+    device.site = j.site.name
+    device.site_location = j.site.location
+    device.armis_tags = JSON.stringify(j.tags)
+    device.visibility = j.visibility
+    device.digest = input_digest
 
-    //Only delete tags that aren't in the current tag list. Document the ones that are to use when inserting.
-    var already_have_these_tags = []
-    while (q_tags.next()) {
-      var tag = q_tags.getValue('armis_tag')
-      if (includes(already_have_these_tags,q_tags.getValue('armis_tag'))) { already_have_these_tags.push(tag) } else { q_tags.deleteRecord() }
-    }
-
-    //Insert new tags.
-    for(var i=0;i&lt;j.tags.length;i++)
+    //Either insert or update.
+    var device_record;
+    if (is_insert) { device_record = device.insert(); return_vals.action = 'insert' } else { device_record = device.update(); return_vals.action = 'update' }
+    return_vals.record = device_record
+  
+    //Process tags (if the flag is set to do so). Delete old tags, insert new tags.
+    if (tags_to_table)
     {
-      //Skip if we already have this tag.
-      if ( includes(already_have_these_tags,j.tags[i]) ) { continue }
-      var q_tag = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
-      q_tag.initialize()
-      q_tag.armis_device = device_record
-      q_tag.armis_tag = j.tags[i]
-      q_tag.insert()
+      if (j.tags == null) { j.tags = [] }
+      var q_tags = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+      q_tags.addQuery('armis_device',device_record)
+      q_tags.query()
+
+      //Only delete tags that aren't in the current tag list. Document the ones that are to use when inserting.
+      var already_have_these_tags = []
+      while (q_tags.next()) {
+        var tag = q_tags.getValue('armis_tag')
+        if (includes(already_have_these_tags,q_tags.getValue('armis_tag'))) { already_have_these_tags.push(tag) } else { q_tags.deleteRecord() }
+      }
+
+      //Insert new tags.
+      for(var i=0;i&lt;j.tags.length;i++)
+      {
+        //Skip if we already have this tag.
+        if ( includes(already_have_these_tags,j.tags[i]) ) { continue }
+        var q_tag = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+        q_tag.initialize()
+        q_tag.armis_device = device_record
+        q_tag.armis_tag = j.tags[i]
+        q_tag.insert()
+      }
     }
+  }
+  else
+  {
+    //The input digest was identical to the existing digest. This means no update needed to take place.
+    return_vals.action = 'no_update_needed'
   }
   return_vals.time_delta = new GlideDateTime().getNumericValue() - start_time
   return return_vals
 }
 
-// **********************
-// *** IMPLEMENTATION ***
-// **********************
+
+// *************************************************************
+// *** SANDBOX -- DO NOT COPY BELOW THIS LINE WHEN MINIFYING ***
+// *************************************************************
 
 (function execute(inputs, outputs) {
   
-  
- //j = JSON.parse('{"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":1001880,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA2","ServiceNow Import Prod2","FKC Region Northeast2","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}')
-
-  
-  
-  
-  
-  inputs.mode = 'refresh'
-  //Set up query
-  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')
-  //If this is a "refresh" run, we want to query yesterday's data. We have manually placed a placeholder in the string.
-  if (inputs.mode == 'refresh')
-  {
-    //var today = new GlideDateTime()
-    //armis_query = armis_query.replace("###YYYY-MM-DD###")
-  }
+  debug = []
  
-  //var today = new GlideDateTime()
-  outputs.debug = new GlideDateTime().getTime()
-  
+ j = '{"accessSwitch":null,"category":"Unknown","firstSeen":"2020-07-23T17:25:20","id":843846,"ipAddress":"10.55.24.104","lastSeen":"2020-07-23T17:25:20","macAddress":"d4:d2:52:4c:0a:09","manufacturer":"Intel","model":"Intel device","name":null,"operatingSystem":null,"operatingSystemVersion":null,"riskLevel":1,"sensor":{"name":"FL4-Back Right","type":"Access Point"},"site":{"location":"350 Merrimack St, Lawrence, MA 01843","name":"NxStage Lawrence MA"},"tags":[],"type":"Unknown","user":"","visibility":"Full"}'
+ jo = JSON.parse(j)
+
+  var result = updateArmisDevice(/*obj from json*/ jo,/*bool*/ false)
+  outputs.debug = result
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -395,7 +677,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <label>debug</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="LIBRARY/SANDBOX">73076f361bc294104ca7edf9bc4bcb6a</model>
+        <model display_value="LIBRARY">73076f361bc294104ca7edf9bc4bcb6a</model>
         <model_id>73076f361bc294104ca7edf9bc4bcb6a</model_id>
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_73076f361bc294104ca7edf9bc4bcb6a</name>
@@ -481,7 +763,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <label>debug</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="(v2.1) DEBUG_SandboxAndLibrary">148627ba1bc294104ca7edf9bc4bcbaf</model>
+        <model display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</model>
         <model_id>148627ba1bc294104ca7edf9bc4bcbaf</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_148627ba1bc294104ca7edf9bc4bcbaf</name>
@@ -525,15 +807,246 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_hub_step_instance action="delete_multiple" query="action=148627ba1bc294104ca7edf9bc4bcbaf^sys_idNOT IN73076f361bc294104ca7edf9bc4bcb6a"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=148627ba1bc294104ca7edf9bc4bcbaf^sys_idNOT IN050ef1bf1b0ed8104ca7edf9bc4bcb8f,1d02d56b1bca50104be764e8bc4bcb18,73076f361bc294104ca7edf9bc4bcb6a"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="(v2.1) DEBUG_SandboxAndLibrary">148627ba1bc294104ca7edf9bc4bcbaf</action>
+        <action display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</action>
+        <cid>76ba4dfd-1b50-48a2-8604-a87006f3ca28</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>DEBUG AND TESTING FUNCTIONS</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:02:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>050ef1bf1b0ed8104ca7edf9bc4bcb8f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=050ef1bf1b0ed8104ca7edf9bc4bcb8f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>050ef1bf1b0ed8104ca7edf9bc4bcb8f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:02:58</sys_created_on>
+        <sys_id>850ef1bf1b0ed8104ca7edf9bc4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>050ef1bf1b0ed8104ca7edf9bc4bcb8f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:02:58</sys_created_on>
+        <sys_id>8d0ef1bf1b0ed8104ca7edf9bc4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
+        <value>//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+// ***********************************
+// *** DEBUG AND TESTING FUNCTIONS ***
+// ***********************************
+
+// Grabs any computers in the CMDB labeled "AI_TEST_COMPUTER_"
+function getTestComputers()
+{
+  var q = new GlideRecord('cmdb_ci_computer')
+}
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</action>
+        <cid>40adef71-a211-4cd4-bade-800daa7b380c</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>CURRENT MINIFIED</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 20:12:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1d02d56b1bca50104be764e8bc4bcb18</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 02:26:22</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1d02d56b1bca50104be764e8bc4bcb18"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1d02d56b1bca50104be764e8bc4bcb18</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 20:12:16</sys_created_on>
+        <sys_id>1502d56b1bca50104be764e8bc4bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-22 20:12:16</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1d02d56b1bca50104be764e8bc4bcb18</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 20:12:16</sys_created_on>
+        <sys_id>d502d56b1bca50104be764e8bc4bcb1e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 02:26:22</sys_updated_on>
+        <value>  //minify with: https://javascript-minifier.com/ when the content of the LIBRARY script changes.
+  //Make sure NOT to copy the actual implementation at the end: (function execute(inputs, outputs) { } })(inputs, outputs);
+  
+
+//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+(function execute(inputs, outputs) {
+  
+  /*
+ j = '{"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":1001880,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA2","ServiceNow Import Prod2","FKC Region Northeast2","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}'
+ jo = JSON.parse(j) */
+
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=1d02d56b1bca50104be764e8bc4bcb18^sys_idNOT INafab79af1b0e90104be764e8bc4bcb98"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f880b7ad-09cc-47fa-bbdf-8633310df0e2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="CURRENT MINIFIED">1d02d56b1bca50104be764e8bc4bcb18</model>
+        <model_id>1d02d56b1bca50104be764e8bc4bcb18</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_1d02d56b1bca50104be764e8bc4bcb18</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-22 23:14:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>afab79af1b0e90104be764e8bc4bcb98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-22 23:14:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</action>
         <cid>0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2</cid>
         <extended_inputs/>
         <extended_outputs/>
         <icon/>
         <inputs/>
-        <label>LIBRARY/SANDBOX</label>
+        <label>LIBRARY</label>
         <order>1</order>
         <outputs/>
         <section/>
@@ -543,7 +1056,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_created_on>2020-07-20 23:07:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>73076f361bc294104ca7edf9bc4bcb6a</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -551,7 +1064,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-22 15:56:17</sys_updated_on>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=73076f361bc294104ca7edf9bc4bcb6a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -562,16 +1075,29 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 23:07:59</sys_created_on>
         <sys_id>7707233e1bc294104ca7edf9bc4bcbd0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-22 15:56:17</sys_updated_on>
+        <sys_updated_on>2020-07-23 18:02:58</sys_updated_on>
         <value>// *******************************
-// **** FUNCTION LIBRARY v0.2 ****
+// **** FUNCTION LIBRARY v0.3 ****
 // *******************************
 
+// **** MISC FUNCTIONS ****
+
+// returns milliseconds since epoch
+function now() { return new GlideDateTime().getNumericValue() } 
+
+//Apparently .includes() is not present in this version of javascript. I'll make my own .includes().
+function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { if (test_arr[i] == test_var) { return true } }; return false }
+
+//I needed a way to quickly generate a digest so I can check whether a JSON string changed since the last time an update occurred.
+//This was lifted directly from "index.js" at: https://github.com/darkskyapp/string-hash
+//It ingests a string of arbitrary length and spits out an integer unique to the string (i.e. non-secure hash)
+function digest(str) {var hash=5381,i=str.length;while(i){hash=(hash*33)^str.charCodeAt(--i)};return hash&gt;&gt;&gt;0}
+
 //GENERATE A RANDOM ID
-//There is no accessible ID for a particular action from within a script step, so this value is used
-//to cross reference between the debug log, the API log, operation log, etc. to uniquely identify this execution.
+//There is no accessible ID for a particular action from within a script step, so this value is intended to be used
+//to cross reference between the debug log, the API log, operation log, etc. to uniquely identify an execution.
 function generateID()
 { 
   var ans = '';
@@ -579,6 +1105,51 @@ function generateID()
   for (var i = 16; i &gt; 0; i--) { ans += arr[Math.floor(Math.random() * arr.length)] } 
   return ans; 
 } 
+
+// *** GENERAL SQL OPERATION FUNCTIONS ***
+
+// INSERT OR UPDATE
+// No "insert or update" function exists natively, so rather than rewriting the entire structure in every implementation, I am abstracting it here.
+// INPUT (hash): 
+//     .table : name of the target table
+//     .unique_pairs : array of key-value pairs to check uniqueness on. If these pairs are found, will update, if not, will insert.
+//     .update_pairs : array of key-value pairs that will be changed in the update or inserted along with the unique pairs.
+// Note: this operation will run MUCH MUCH FASTER if the unique_pairs together form the primary key of the table.
+// Example:
+//          r = {}
+//          r.table = 'x_fmcna_armis_inte_armis_op_arp_table'
+//          r.unique_pairs = [ ['id','test_id'] , ['mac', 'test_mac' ] ]  -- note if this array is null or empty goes straight to an insert of the updated pairs
+//          r.update_pairs = [ ['status', 'COMPLETE'] ]
+//          insertOrUpdate(r)
+// RETURN (hash):
+//     .operation - string 'insert' or string 'update'. (returns 'error: [message]' if anything goes wrong.)
+//     .time_delta - amount of time in milliseconds it took for the operation to run
+function insertOrUpdate(r)
+{
+  var out = {}
+  var start_time = now()
+  if (r.unique_pairs == null) { r.unique_pairs = [] }
+  try {
+    var gr = new GlideRecord(r.table)
+    if (r.unique_pairs.length != 0) {
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr.addQuery(r.unique_pairs[i][0],r.unique_pairs[i][1]) } //Add all unique pairs to query
+      gr.query() }
+    if (gr.getRowCount() == 0) { //This is an insert, not an update.
+      gr.initialize()
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr[r.unique_pairs[i][0]] = r.unique_pairs[i][1] } //Add all unique pairs to our insert
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.insert(); out.operation = 'insert' }
+    else { //This is an update.
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.updateMultiple(); out.operation = 'update' }
+  }
+  catch(m) { out.operation = 'error: ' + m }
+    
+  out.time_delta = now() - start_time
+  return out
+}
+
+// *** SPECIFIC TABLE FUNCTIONS ***
 
 //WRITE TO API LOG
 //Logs the data we're sending to Armis via the API, as well as the response from Armis.
@@ -595,16 +1166,15 @@ function generateID()
 //[int] time_delta_ms - ending now() - starting now()
 function writeToAPILog(p)
 {
-  var api_log_query = new GlideRecord('x_fmcna_armis_inte_armis_rest_api_log')
-  api_log_query.setValue('execution_id',p.id)
-  api_log_query.setValue('api_endpoint',p.endpoint)
-  if (p.payload != null) { api_log_query.setValue('payload',p.payload.substring(0,1999)) }
-  api_log_query.setValue('response_code',p.response_code)
-  if (p.response_body != null) { api_log_query.setValue('response_body',p.response_body.substring(0,1999)) }
-  api_log_query.setValue('query_submitted_at',p.start_time)
-  api_log_query.setValue('query_response_time_ms',p.time_delta_ms)
-  api_log_query.insert()
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',p.payload.substring(0,1999)],['response_code',p.response_code],
+    ['response_body',p.response_body.substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
 }
+
 
 //WRITE TO ACTION LOG
 //Writes to the table "Armis Action Log", which is intended to be a mechanism to monitor the performance of this integration's actions.
@@ -621,18 +1191,12 @@ function writeToAPILog(p)
 //[str(2000)] debug_string - store the debug string for later diagnosis
 function writeToActionLog(p)
 {
-  var alog = new GlideRecord('x_fmcna_armis_inte_armis_action_log')
-  alog.setValue('execution_id',p.id)
-  alog.query()
-  var insert = alog.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
-  if (insert) { alog.initialize(); alog.execution_id = p.id } else { alog.next() } 
-  alog.setValue('action_type',p.action_type)
-  alog.setValue('api_time',p.api_time)
-  alog.setValue('heavy_processing_time',p.heavy_processing_time)
-  alog.setValue('total_time',p.total_time)
-  alog.setValue('report',p.report.substring(0,199))
-  alog.setValue('debug_string',p.debug_string.substring(0,1999))
-  if (insert) { return alog.insert() } else { return alog.update()}
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_action_log'
+  q.unique_pairs = [['execution_id',p.id]]
+  q.update_pairs = [['action_type',p.action_type],['api_time',p.api_time],['heavy_processing_time',p.heavy_processing_time],
+    ['total_time',p.total_time],['report',p.report.substring(0,199)],['debug_string',p.debug_string.substring(0,1999)]]
+  return insertOrUpdate(q)
 }
 
 //CONFIGURATION MANIPULATION
@@ -660,26 +1224,26 @@ function getCacheValue(/*str*/ key, /* ['str','int','datetime'] */ type)
   if (cache_query.getRowCount() == 0) { return null }
   cache_query.next()
   switch (type) {
-    case 'str': return cache_query.getValue('value_string')
-    case 'int': return cache_query.getValue('value_int')
-    case 'datetime': return cache_query.getValue('value_datetime')
-    default: return null
+    case 'str': return cache_query.getValue('value_string');break;
+    case 'int': return cache_query.getValue('value_int');break;
+    case 'datetime': return cache_query.getValue('value_datetime');break;
+    default: null
   }
 }
+// alias for tokens (the most common application) to use inline for token retrieval
+function getCurrentToken() { return getCacheValue('token','str')}
 
 function setCacheValue(/*str*/ key, value, /* ['str','int','datetime'] */ type)
 {
-  var cache_query = new GlideRecord('x_fmcna_armis_inte_armis_integration_cache')
-  cache_query.addQuery('key',key)
-  cache_query.query()
-  var insert = cache_query.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
-  if (insert) { cache_query.initialize(); cache_query.key = key } else { cache_query.next() }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_integration_cache'
+  q.unique_pairs = [['key',key]]
   switch (type) {
-    case 'str': cache_query.value_string = value
-    case 'int': cache_query.value_int = value
-    case 'datetime': cache_query.value_datetime = value
+    case 'str': q.update_pairs = [['value_string',value]];break
+    case 'int': q.update_pairs = [['value_int',value]];break
+    case 'datetime': q.update_pairs = [['value_datetime',value]];break
   }
-  if (insert) { cache_query.insert() } else { cache_query.update()}
+  return insertOrUpdate(q)
 }
 
 function deleteCacheValue(/*str*/ key)
@@ -689,15 +1253,6 @@ function deleteCacheValue(/*str*/ key)
   cache_query.query()
   cache_query.deleteMultiple()
 }
-
-//MISC. FUNCTIONS
-
-// returns milliseconds since epoch
-function now() { return new GlideDateTime().getNumericValue() } 
-// alias to use inline for token retrieval
-function getCurrentToken() { return getCacheValue('token','str')}
-//Apparently .includes() is not present in this version of javascript. I'll make my own .includes().
-function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { if (test_arr[i] == test_var) { return true } }; return false }
 
 
 // ***************************************
@@ -711,7 +1266,7 @@ function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { 
 // Parameter tags_to_table should be true if the tags on the import should be pushed to the "Armis Tags" table. This may substantially increase the time it takes to process.
 
 //Returns a hash with the following keys:
-// action - 'insert' or 'update' depending on which action was taken
+// action - 'insert' or 'update' depending on which action was taken, can also be 'no_update_needed' if the digest matched and no update was pushed.
 // time_delta - value in milliseconds for how long this operation took
 // record - sys_id of the record that was inserted or updated
 function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
@@ -719,6 +1274,8 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
   var start_time = new GlideDateTime().getNumericValue()
   var return_vals = {}
   var device = new GlideRecord('x_fmcna_armis_inte_armis_device_table')
+  var input_digest = digest(JSON.stringify(j))
+  return_vals.digest = input_digest
   //Does this already exist?
   device.addQuery('armis_device_id',j.id)
   device.query()
@@ -726,89 +1283,96 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
   //Flag as an insert if it exists, otherwise it's an update.
   var is_insert = device.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
   if (is_insert) { device.initialize() } else { device.next() }
-
-  //Set all values
-  device.access_switch = j.accessSwitch
-  device.armis_device_id = j.id
-  device.armis_risk_level = j.riskLevel
-  device.category = j.category
-  device.first_seen = new GlideDateTime(j.firstSeen)
-  device.ip_address = j.ipAddress
-  device.last_seen = new GlideDateTime(j.lastSeen)
-  device.mac_address = j.macAddress
-  device.manufacturer = j.manufacturer
-  device.model = j.model
-  device.name = j.name
-  device.os = j.operatingSystem
-  device.os_version = j.operatingSystemVersion
-  device.sensor_name = j.sensor.name
-  device.sensor_type = j.sensor.type
-  device.site = j.site.name
-  device.site_location = j.site.location
-  device.armis_tags = JSON.stringify(j.tags)
-
-  //Either insert or update.
-  var device_record;
-  if (is_insert) { device_record = device.insert(); return_vals.action = 'insert' } else { device_record = device.update(); return_vals.action = 'update' }
-  return_vals.record = device_record
+  return_vals.is_insert = is_insert
   
-  //Process tags (if the flag is set to do so). Delete old tags, insert new tags.
-  if (tags_to_table)
+  //For updates, only need to actually perform the update if the digest doesn't match.
+  //If the digest does match, then the device has not been modified since the last time we refreshed this object,
+  //and no update needs to take place.
+  var perform_update_or_insert = true
+  if(!is_insert &amp;&amp; device.getValue('digest') == input_digest) { perform_update_or_insert = false }
+  return_vals.perform = perform_update_or_insert
+  return_vals.digest_existing = device.getValue('digest')
+  
+  if (perform_update_or_insert)
   {
-    if (j.tags == null) { j.tags = [] }
-    var q_tags = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
-    q_tags.addQuery('armis_device',device_record)
-    q_tags.query()
+    //Set all values
+    device.access_switch = j.accessSwitch
+    device.armis_device_id = j.id
+    device.armis_risk_level = j.riskLevel
+    device.category = j.category
+    device.first_seen = new GlideDateTime(j.firstSeen)
+    device.ip_address = j.ipAddress
+    device.last_seen = new GlideDateTime(j.lastSeen)
+    device.mac_address = j.macAddress
+    device.manufacturer = j.manufacturer
+    device.model = j.model
+    device.name = j.name
+    device.os = j.operatingSystem
+    device.os_version = j.operatingSystemVersion
+    device.sensor_name = j.sensor.name
+    device.sensor_type = j.sensor.type
+    device.site = j.site.name
+    device.site_location = j.site.location
+    device.armis_tags = JSON.stringify(j.tags)
+    device.visibility = j.visibility
+    device.digest = input_digest
 
-    //Only delete tags that aren't in the current tag list. Document the ones that are to use when inserting.
-    var already_have_these_tags = []
-    while (q_tags.next()) {
-      var tag = q_tags.getValue('armis_tag')
-      if (includes(already_have_these_tags,q_tags.getValue('armis_tag'))) { already_have_these_tags.push(tag) } else { q_tags.deleteRecord() }
-    }
-
-    //Insert new tags.
-    for(var i=0;i&lt;j.tags.length;i++)
+    //Either insert or update.
+    var device_record;
+    if (is_insert) { device_record = device.insert(); return_vals.action = 'insert' } else { device_record = device.update(); return_vals.action = 'update' }
+    return_vals.record = device_record
+  
+    //Process tags (if the flag is set to do so). Delete old tags, insert new tags.
+    if (tags_to_table)
     {
-      //Skip if we already have this tag.
-      if ( includes(already_have_these_tags,j.tags[i]) ) { continue }
-      var q_tag = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
-      q_tag.initialize()
-      q_tag.armis_device = device_record
-      q_tag.armis_tag = j.tags[i]
-      q_tag.insert()
+      if (j.tags == null) { j.tags = [] }
+      var q_tags = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+      q_tags.addQuery('armis_device',device_record)
+      q_tags.query()
+
+      //Only delete tags that aren't in the current tag list. Document the ones that are to use when inserting.
+      var already_have_these_tags = []
+      while (q_tags.next()) {
+        var tag = q_tags.getValue('armis_tag')
+        if (includes(already_have_these_tags,q_tags.getValue('armis_tag'))) { already_have_these_tags.push(tag) } else { q_tags.deleteRecord() }
+      }
+
+      //Insert new tags.
+      for(var i=0;i&lt;j.tags.length;i++)
+      {
+        //Skip if we already have this tag.
+        if ( includes(already_have_these_tags,j.tags[i]) ) { continue }
+        var q_tag = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+        q_tag.initialize()
+        q_tag.armis_device = device_record
+        q_tag.armis_tag = j.tags[i]
+        q_tag.insert()
+      }
     }
+  }
+  else
+  {
+    //The input digest was identical to the existing digest. This means no update needed to take place.
+    return_vals.action = 'no_update_needed'
   }
   return_vals.time_delta = new GlideDateTime().getNumericValue() - start_time
   return return_vals
 }
 
-// **********************
-// *** IMPLEMENTATION ***
-// **********************
+
+// *************************************************************
+// *** SANDBOX -- DO NOT COPY BELOW THIS LINE WHEN MINIFYING ***
+// *************************************************************
 
 (function execute(inputs, outputs) {
   
-  
- //j = JSON.parse('{"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":1001880,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA2","ServiceNow Import Prod2","FKC Region Northeast2","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}')
-
-  
-  
-  
-  
-  inputs.mode = 'refresh'
-  //Set up query
-  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')
-  //If this is a "refresh" run, we want to query yesterday's data. We have manually placed a placeholder in the string.
-  if (inputs.mode == 'refresh')
-  {
-    //var today = new GlideDateTime()
-    //armis_query = armis_query.replace("###YYYY-MM-DD###")
-  }
+  debug = []
  
-  //var today = new GlideDateTime()
-  outputs.debug = new GlideDateTime().getTime()
-  
+ j = '{"accessSwitch":null,"category":"Unknown","firstSeen":"2020-07-23T17:25:20","id":843846,"ipAddress":"10.55.24.104","lastSeen":"2020-07-23T17:25:20","macAddress":"d4:d2:52:4c:0a:09","manufacturer":"Intel","model":"Intel device","name":null,"operatingSystem":null,"operatingSystemVersion":null,"riskLevel":1,"sensor":{"name":"FL4-Back Right","type":"Access Point"},"site":{"location":"350 Merrimack St, Lawrence, MA 01843","name":"NxStage Lawrence MA"},"tags":[],"type":"Unknown","user":"","visibility":"Full"}'
+ jo = JSON.parse(j)
+
+  var result = updateArmisDevice(/*obj from json*/ jo,/*bool*/ false)
+  outputs.debug = result
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -867,7 +1431,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <label>debug</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="LIBRARY/SANDBOX">73076f361bc294104ca7edf9bc4bcb6a</model>
+        <model display_value="LIBRARY">73076f361bc294104ca7edf9bc4bcb6a</model>
         <model_id>73076f361bc294104ca7edf9bc4bcb6a</model_id>
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_73076f361bc294104ca7edf9bc4bcb6a</name>
@@ -934,6 +1498,1520 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-20 23:07:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=148627ba1bc294104ca7edf9bc4bcbaf^sys_idNOT INca0e35bf1b0ed8104ca7edf9bc4bcba9"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ca0e35bf1b0ed8104ca7edf9bc4bcba9","name":"plan"}}</plan>
+        <snapshot>d50ef1bf1b0ed8104ca7edf9bc4bcbd4</snapshot>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>ca0e35bf1b0ed8104ca7edf9bc4bcba9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:03</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>function_library_v21</internal_name>
+        <label_cache>[{"name":"{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].variable}}","label":"step➛LIBRARY➛variable","type":"step","ref":""},{"name":"{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].debug}}","label":"step➛LIBRARY➛debug","type":"step","ref":""},{"name":"{{step[40adef71-a211-4cd4-bade-800daa7b380c].variable}}","label":"step➛CURRENT MINIFIED➛variable","type":"step","ref":""},{"name":"{{step[40adef71-a211-4cd4-bade-800daa7b380c].debug}}","label":"step➛CURRENT MINIFIED➛debug","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>FUNCTION_LIBRARY (v2.1)</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="FUNCTION_LIBRARY (v2.1)">148627ba1bc294104ca7edf9bc4bcbaf</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>a50e35bf1b0ed8104ca7edf9bc4bcb12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:00</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=a50e35bf1b0ed8104ca7edf9bc4bcb12"/>
+    <sys_element_mapping action="delete_multiple" query="id=a50e35bf1b0ed8104ca7edf9bc4bcb12"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>debug</field>
+        <id>a50e35bf1b0ed8104ca7edf9bc4bcb12</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>b10e35bf1b0ed8104ca7edf9bc4bcb5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <table>var__m_sys_hub_action_output_a50e35bf1b0ed8104ca7edf9bc4bcb12</table>
+        <value>{{step[0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2].debug}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=a50e35bf1b0ed8104ca7edf9bc4bcb12^sys_idNOT IN750e35bf1b0ed8104ca7edf9bc4bcb4a,e90e35bf1b0ed8104ca7edf9bc4bcb3b,ed0e35bf1b0ed8104ca7edf9bc4bcb13"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">a50e35bf1b0ed8104ca7edf9bc4bcb12</action>
+        <cid>76ba4dfd-1b50-48a2-8604-a87006f3ca28</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>DEBUG AND TESTING FUNCTIONS</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>750e35bf1b0ed8104ca7edf9bc4bcb4a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=750e35bf1b0ed8104ca7edf9bc4bcb4a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>750e35bf1b0ed8104ca7edf9bc4bcb4a</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>bd0e35bf1b0ed8104ca7edf9bc4bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+// ***********************************
+// *** DEBUG AND TESTING FUNCTIONS ***
+// ***********************************
+
+// Grabs any computers in the CMDB labeled "AI_TEST_COMPUTER_"
+function getTestComputers()
+{
+  var q = new GlideRecord('cmdb_ci_computer')
+}
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>750e35bf1b0ed8104ca7edf9bc4bcb4a</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>f90e35bf1b0ed8104ca7edf9bc4bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">a50e35bf1b0ed8104ca7edf9bc4bcb12</action>
+        <cid>40adef71-a211-4cd4-bade-800daa7b380c</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>CURRENT MINIFIED</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e90e35bf1b0ed8104ca7edf9bc4bcb3b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e90e35bf1b0ed8104ca7edf9bc4bcb3b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e90e35bf1b0ed8104ca7edf9bc4bcb3b</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>750e35bf1b0ed8104ca7edf9bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>  //minify with: https://javascript-minifier.com/ when the content of the LIBRARY script changes.
+  //Make sure NOT to copy the actual implementation at the end: (function execute(inputs, outputs) { } })(inputs, outputs);
+  
+
+//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+(function execute(inputs, outputs) {
+  
+  /*
+ j = '{"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":1001880,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA2","ServiceNow Import Prod2","FKC Region Northeast2","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}'
+ jo = JSON.parse(j) */
+
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e90e35bf1b0ed8104ca7edf9bc4bcb3b</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>b10e35bf1b0ed8104ca7edf9bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=e90e35bf1b0ed8104ca7edf9bc4bcb3b^sys_idNOT INad0e35bf1b0ed8104ca7edf9bc4bcb3e"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f880b7ad-09cc-47fa-bbdf-8633310df0e2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="CURRENT MINIFIED">e90e35bf1b0ed8104ca7edf9bc4bcb3b</model>
+        <model_id>e90e35bf1b0ed8104ca7edf9bc4bcb3b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_e90e35bf1b0ed8104ca7edf9bc4bcb3b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ad0e35bf1b0ed8104ca7edf9bc4bcb3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">a50e35bf1b0ed8104ca7edf9bc4bcb12</action>
+        <cid>0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>LIBRARY</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ed0e35bf1b0ed8104ca7edf9bc4bcb13</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ed0e35bf1b0ed8104ca7edf9bc4bcb13"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>ed0e35bf1b0ed8104ca7edf9bc4bcb13</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>290e35bf1b0ed8104ca7edf9bc4bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>ed0e35bf1b0ed8104ca7edf9bc4bcb13</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>e90e35bf1b0ed8104ca7edf9bc4bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>// *******************************
+// **** FUNCTION LIBRARY v0.3 ****
+// *******************************
+
+// **** MISC FUNCTIONS ****
+
+// returns milliseconds since epoch
+function now() { return new GlideDateTime().getNumericValue() } 
+
+//Apparently .includes() is not present in this version of javascript. I'll make my own .includes().
+function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { if (test_arr[i] == test_var) { return true } }; return false }
+
+//I needed a way to quickly generate a digest so I can check whether a JSON string changed since the last time an update occurred.
+//This was lifted directly from "index.js" at: https://github.com/darkskyapp/string-hash
+//It ingests a string of arbitrary length and spits out an integer unique to the string (i.e. non-secure hash)
+function digest(str) {var hash=5381,i=str.length;while(i){hash=(hash*33)^str.charCodeAt(--i)};return hash&gt;&gt;&gt;0}
+
+//GENERATE A RANDOM ID
+//There is no accessible ID for a particular action from within a script step, so this value is intended to be used
+//to cross reference between the debug log, the API log, operation log, etc. to uniquely identify an execution.
+function generateID()
+{ 
+  var ans = '';
+  arr = '0123456789abcdefghijklmnopqrstuvwxyz'
+  for (var i = 16; i &gt; 0; i--) { ans += arr[Math.floor(Math.random() * arr.length)] } 
+  return ans; 
+} 
+
+// *** GENERAL SQL OPERATION FUNCTIONS ***
+
+// INSERT OR UPDATE
+// No "insert or update" function exists natively, so rather than rewriting the entire structure in every implementation, I am abstracting it here.
+// INPUT (hash): 
+//     .table : name of the target table
+//     .unique_pairs : array of key-value pairs to check uniqueness on. If these pairs are found, will update, if not, will insert.
+//     .update_pairs : array of key-value pairs that will be changed in the update or inserted along with the unique pairs.
+// Note: this operation will run MUCH MUCH FASTER if the unique_pairs together form the primary key of the table.
+// Example:
+//          r = {}
+//          r.table = 'x_fmcna_armis_inte_armis_op_arp_table'
+//          r.unique_pairs = [ ['id','test_id'] , ['mac', 'test_mac' ] ]  -- note if this array is null or empty goes straight to an insert of the updated pairs
+//          r.update_pairs = [ ['status', 'COMPLETE'] ]
+//          insertOrUpdate(r)
+// RETURN (hash):
+//     .operation - string 'insert' or string 'update'. (returns 'error: [message]' if anything goes wrong.)
+//     .time_delta - amount of time in milliseconds it took for the operation to run
+function insertOrUpdate(r)
+{
+  var out = {}
+  var start_time = now()
+  if (r.unique_pairs == null) { r.unique_pairs = [] }
+  try {
+    var gr = new GlideRecord(r.table)
+    if (r.unique_pairs.length != 0) {
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr.addQuery(r.unique_pairs[i][0],r.unique_pairs[i][1]) } //Add all unique pairs to query
+      gr.query() }
+    if (gr.getRowCount() == 0) { //This is an insert, not an update.
+      gr.initialize()
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr[r.unique_pairs[i][0]] = r.unique_pairs[i][1] } //Add all unique pairs to our insert
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.insert(); out.operation = 'insert' }
+    else { //This is an update.
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.updateMultiple(); out.operation = 'update' }
+  }
+  catch(m) { out.operation = 'error: ' + m }
+    
+  out.time_delta = now() - start_time
+  return out
+}
+
+// *** SPECIFIC TABLE FUNCTIONS ***
+
+//WRITE TO API LOG
+//Logs the data we're sending to Armis via the API, as well as the response from Armis.
+//Param template: writeToAPILog({id: , endpoint: , payload: , response_code: , response_body: , start_time: , time_delta_ms: })
+//EXAMPLE: writeToAPILog({id: generateID(), endpoint: "test", payload: "Sample Payload", response_code: 200, response_body: "Sample Response", start_time: new GlideDateTime(), time_delta_ms: 1000})
+
+//Params:
+//[str] id - action ID set by generateID() above.
+//[choice] endpoint - must be found on the choice table: https://fmcnadev.service-now.com/sys_dictionary.do?sys_id=cd79b5a01b8e9c904ca7edf9bc4bcb04
+//[str(2000)] payload - contains the text of the CSV or parameter being sent to Armis
+//[int] response_code - integer (e.g. 200 or 207 for success) representing the result of the API call
+//[str(2000)] response_body - text returned from Armis
+//[GlideDateTime] start_time - set before the call
+//[int] time_delta_ms - ending now() - starting now()
+function writeToAPILog(p)
+{
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',p.payload.substring(0,1999)],['response_code',p.response_code],
+    ['response_body',p.response_body.substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
+}
+
+
+//WRITE TO ACTION LOG
+//Writes to the table "Armis Action Log", which is intended to be a mechanism to monitor the performance of this integration's actions.
+//Param template: writeToActionLog({id: , action_type: , total_time: , api_time: , heavy_processing_time: , report: , debug_string: })
+//EXAMPLE: writeToActionLog({id: generateID(), action_type: "TEST", total_time: 100000, api_time: 50000, heavy_processing_time: 30000, report: "Test report string", debug_string: "Test debug string"})
+
+//Params:
+//[str] id - action ID set by generateID() above
+//[choice] action_type - must be found on the choice table: https://fmcnadev.service-now.com/sys_dictionary.do?sys_id=3f7a1b761b8e10104be764e8bc4bcb9f
+//[int] total_time - the total time in milliseconds ( ending now() - starting now() )
+//[int] api_time - time spent waiting for the API (measure immediately before and after a REST)
+//[int] heavy_processing_time - time spent doing something CPU/SQL intensive, such as breaking down a JSON and storing X records (measure immediately before and after)
+//[str(200)] report - human readable summary of what the action did
+//[str(2000)] debug_string - store the debug string for later diagnosis
+function writeToActionLog(p)
+{
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_action_log'
+  q.unique_pairs = [['execution_id',p.id]]
+  q.update_pairs = [['action_type',p.action_type],['api_time',p.api_time],['heavy_processing_time',p.heavy_processing_time],
+    ['total_time',p.total_time],['report',p.report.substring(0,199)],['debug_string',p.debug_string.substring(0,1999)]]
+  return insertOrUpdate(q)
+}
+
+//CONFIGURATION MANIPULATION
+//Grabs a set value from the Armis Integration Configuration table. The config table hould be treated as read-only except in specific cases.
+//NOTE: ALL CONFIG VALUES ARE STRINGS. If there is no such value, returns "".
+//Keys must be from this table: https://fmcnadev.service-now.com/sys_dictionary.do?sys_id=458563461bed90104be764e8bc4bcbf0
+function getConfigValue(key)
+{
+  var q = new GlideRecord('x_fmcna_armis_inte_armis_integration_configuration')
+  q.addQuery('key',key); q.query()
+  if (q.getRowCount() == 0) { return "" }
+  q.next(); return q.getValue('value')
+}
+
+//CACHE MANIPULATION
+//getCacheValue, setCacheValue, and deleteCacheValue manipulate the "Armis Integration Cache".
+//This table is used to store ("global") variables used between actions.
+//The table discretely separates string values, int values, and datetime values, so for the "type" of value, you need to specify via one of the following strings: ['str','int','datetime']
+
+function getCacheValue(/*str*/ key, /* ['str','int','datetime'] */ type)
+{
+  var cache_query = new GlideRecord('x_fmcna_armis_inte_armis_integration_cache')
+  cache_query.addQuery('key',key)
+  cache_query.query()
+  if (cache_query.getRowCount() == 0) { return null }
+  cache_query.next()
+  switch (type) {
+    case 'str': return cache_query.getValue('value_string');break;
+    case 'int': return cache_query.getValue('value_int');break;
+    case 'datetime': return cache_query.getValue('value_datetime');break;
+    default: null
+  }
+}
+// alias for tokens (the most common application) to use inline for token retrieval
+function getCurrentToken() { return getCacheValue('token','str')}
+
+function setCacheValue(/*str*/ key, value, /* ['str','int','datetime'] */ type)
+{
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_integration_cache'
+  q.unique_pairs = [['key',key]]
+  switch (type) {
+    case 'str': q.update_pairs = [['value_string',value]];break
+    case 'int': q.update_pairs = [['value_int',value]];break
+    case 'datetime': q.update_pairs = [['value_datetime',value]];break
+  }
+  return insertOrUpdate(q)
+}
+
+function deleteCacheValue(/*str*/ key)
+{
+  var cache_query = new GlideRecord('x_fmcna_armis_inte_armis_integration_cache')
+  cache_query.addQuery('key',key)
+  cache_query.query()
+  cache_query.deleteMultiple()
+}
+
+
+// ***************************************
+// *** GETD_GetBulkArmisData FUNCTIONS ***
+// ***************************************
+
+//UPDATE ARMIS DEVICE (v0.2)
+// Interprets the JSON block and stores its values into the Armis Device Table. Also stores tags in the Armis Tags table.
+// Parameter j is a JSON hash that represents a single device as returned from Armis.
+// Example starting JSON format: {"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":100188,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA","ServiceNow Import Prod","FKC Region Northeast","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}
+// Parameter tags_to_table should be true if the tags on the import should be pushed to the "Armis Tags" table. This may substantially increase the time it takes to process.
+
+//Returns a hash with the following keys:
+// action - 'insert' or 'update' depending on which action was taken, can also be 'no_update_needed' if the digest matched and no update was pushed.
+// time_delta - value in milliseconds for how long this operation took
+// record - sys_id of the record that was inserted or updated
+function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
+{
+  var start_time = new GlideDateTime().getNumericValue()
+  var return_vals = {}
+  var device = new GlideRecord('x_fmcna_armis_inte_armis_device_table')
+  var input_digest = digest(JSON.stringify(j))
+  return_vals.digest = input_digest
+  //Does this already exist?
+  device.addQuery('armis_device_id',j.id)
+  device.query()
+
+  //Flag as an insert if it exists, otherwise it's an update.
+  var is_insert = device.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
+  if (is_insert) { device.initialize() } else { device.next() }
+  return_vals.is_insert = is_insert
+  
+  //For updates, only need to actually perform the update if the digest doesn't match.
+  //If the digest does match, then the device has not been modified since the last time we refreshed this object,
+  //and no update needs to take place.
+  var perform_update_or_insert = true
+  if(!is_insert &amp;&amp; device.getValue('digest') == input_digest) { perform_update_or_insert = false }
+  return_vals.perform = perform_update_or_insert
+  return_vals.digest_existing = device.getValue('digest')
+  
+  if (perform_update_or_insert)
+  {
+    //Set all values
+    device.access_switch = j.accessSwitch
+    device.armis_device_id = j.id
+    device.armis_risk_level = j.riskLevel
+    device.category = j.category
+    device.first_seen = new GlideDateTime(j.firstSeen)
+    device.ip_address = j.ipAddress
+    device.last_seen = new GlideDateTime(j.lastSeen)
+    device.mac_address = j.macAddress
+    device.manufacturer = j.manufacturer
+    device.model = j.model
+    device.name = j.name
+    device.os = j.operatingSystem
+    device.os_version = j.operatingSystemVersion
+    device.sensor_name = j.sensor.name
+    device.sensor_type = j.sensor.type
+    device.site = j.site.name
+    device.site_location = j.site.location
+    device.armis_tags = JSON.stringify(j.tags)
+    device.visibility = j.visibility
+    device.digest = input_digest
+
+    //Either insert or update.
+    var device_record;
+    if (is_insert) { device_record = device.insert(); return_vals.action = 'insert' } else { device_record = device.update(); return_vals.action = 'update' }
+    return_vals.record = device_record
+  
+    //Process tags (if the flag is set to do so). Delete old tags, insert new tags.
+    if (tags_to_table)
+    {
+      if (j.tags == null) { j.tags = [] }
+      var q_tags = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+      q_tags.addQuery('armis_device',device_record)
+      q_tags.query()
+
+      //Only delete tags that aren't in the current tag list. Document the ones that are to use when inserting.
+      var already_have_these_tags = []
+      while (q_tags.next()) {
+        var tag = q_tags.getValue('armis_tag')
+        if (includes(already_have_these_tags,q_tags.getValue('armis_tag'))) { already_have_these_tags.push(tag) } else { q_tags.deleteRecord() }
+      }
+
+      //Insert new tags.
+      for(var i=0;i&lt;j.tags.length;i++)
+      {
+        //Skip if we already have this tag.
+        if ( includes(already_have_these_tags,j.tags[i]) ) { continue }
+        var q_tag = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+        q_tag.initialize()
+        q_tag.armis_device = device_record
+        q_tag.armis_tag = j.tags[i]
+        q_tag.insert()
+      }
+    }
+  }
+  else
+  {
+    //The input digest was identical to the existing digest. This means no update needed to take place.
+    return_vals.action = 'no_update_needed'
+  }
+  return_vals.time_delta = new GlideDateTime().getNumericValue() - start_time
+  return return_vals
+}
+
+
+// *************************************************************
+// *** SANDBOX -- DO NOT COPY BELOW THIS LINE WHEN MINIFYING ***
+// *************************************************************
+
+(function execute(inputs, outputs) {
+  
+  debug = []
+ 
+ j = '{"accessSwitch":null,"category":"Unknown","firstSeen":"2020-07-23T17:25:20","id":843846,"ipAddress":"10.55.24.104","lastSeen":"2020-07-23T17:25:20","macAddress":"d4:d2:52:4c:0a:09","manufacturer":"Intel","model":"Intel device","name":null,"operatingSystem":null,"operatingSystemVersion":null,"riskLevel":1,"sensor":{"name":"FL4-Back Right","type":"Access Point"},"site":{"location":"350 Merrimack St, Lawrence, MA 01843","name":"NxStage Lawrence MA"},"tags":[],"type":"Unknown","user":"","visibility":"Full"}'
+ jo = JSON.parse(j)
+
+  var result = updateArmisDevice(/*obj from json*/ jo,/*bool*/ false)
+  outputs.debug = result
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=ed0e35bf1b0ed8104ca7edf9bc4bcb13^sys_idNOT INa50e35bf1b0ed8104ca7edf9bc4bcb17"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3dd8b4c7-0a82-4a9d-9b1d-faa37e6b9813</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="LIBRARY">ed0e35bf1b0ed8104ca7edf9bc4bcb13</model>
+        <model_id>ed0e35bf1b0ed8104ca7edf9bc4bcb13</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_ed0e35bf1b0ed8104ca7edf9bc4bcb13</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a50e35bf1b0ed8104ca7edf9bc4bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_output action="delete_multiple" query="model=a50e35bf1b0ed8104ca7edf9bc4bcb12^sys_idNOT IN390e35bf1b0ed8104ca7edf9bc4bcb51"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=8f49d6ee-1463-42d9-a53f-6980e4241c94</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="FUNCTION_LIBRARY (v2.1)">a50e35bf1b0ed8104ca7edf9bc4bcb12</model>
+        <model_id>a50e35bf1b0ed8104ca7edf9bc4bcb12</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_a50e35bf1b0ed8104ca7edf9bc4bcb12</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>390e35bf1b0ed8104ca7edf9bc4bcb51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_step_instance action="delete_multiple" query="action=a50e35bf1b0ed8104ca7edf9bc4bcb12^sys_idNOT IN750e35bf1b0ed8104ca7edf9bc4bcb4a,e90e35bf1b0ed8104ca7edf9bc4bcb3b,ed0e35bf1b0ed8104ca7edf9bc4bcb13"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">a50e35bf1b0ed8104ca7edf9bc4bcb12</action>
+        <cid>76ba4dfd-1b50-48a2-8604-a87006f3ca28</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>DEBUG AND TESTING FUNCTIONS</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>750e35bf1b0ed8104ca7edf9bc4bcb4a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=750e35bf1b0ed8104ca7edf9bc4bcb4a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>750e35bf1b0ed8104ca7edf9bc4bcb4a</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>bd0e35bf1b0ed8104ca7edf9bc4bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+// ***********************************
+// *** DEBUG AND TESTING FUNCTIONS ***
+// ***********************************
+
+// Grabs any computers in the CMDB labeled "AI_TEST_COMPUTER_"
+function getTestComputers()
+{
+  var q = new GlideRecord('cmdb_ci_computer')
+}
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>750e35bf1b0ed8104ca7edf9bc4bcb4a</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>f90e35bf1b0ed8104ca7edf9bc4bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">a50e35bf1b0ed8104ca7edf9bc4bcb12</action>
+        <cid>40adef71-a211-4cd4-bade-800daa7b380c</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>CURRENT MINIFIED</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e90e35bf1b0ed8104ca7edf9bc4bcb3b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e90e35bf1b0ed8104ca7edf9bc4bcb3b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e90e35bf1b0ed8104ca7edf9bc4bcb3b</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>750e35bf1b0ed8104ca7edf9bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>  //minify with: https://javascript-minifier.com/ when the content of the LIBRARY script changes.
+  //Make sure NOT to copy the actual implementation at the end: (function execute(inputs, outputs) { } })(inputs, outputs);
+  
+
+//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+
+
+(function execute(inputs, outputs) {
+  
+  /*
+ j = '{"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":1001880,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA2","ServiceNow Import Prod2","FKC Region Northeast2","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}'
+ jo = JSON.parse(j) */
+
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>e90e35bf1b0ed8104ca7edf9bc4bcb3b</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>b10e35bf1b0ed8104ca7edf9bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=e90e35bf1b0ed8104ca7edf9bc4bcb3b^sys_idNOT INad0e35bf1b0ed8104ca7edf9bc4bcb3e"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f880b7ad-09cc-47fa-bbdf-8633310df0e2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="CURRENT MINIFIED">e90e35bf1b0ed8104ca7edf9bc4bcb3b</model>
+        <model_id>e90e35bf1b0ed8104ca7edf9bc4bcb3b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_e90e35bf1b0ed8104ca7edf9bc4bcb3b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ad0e35bf1b0ed8104ca7edf9bc4bcb3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="FUNCTION_LIBRARY (v2.1)">a50e35bf1b0ed8104ca7edf9bc4bcb12</action>
+        <cid>0020aeb9-2a56-4ba1-8e8c-c7ed0d0a30f2</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>LIBRARY</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ed0e35bf1b0ed8104ca7edf9bc4bcb13</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ed0e35bf1b0ed8104ca7edf9bc4bcb13"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>ed0e35bf1b0ed8104ca7edf9bc4bcb13</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>290e35bf1b0ed8104ca7edf9bc4bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>ed0e35bf1b0ed8104ca7edf9bc4bcb13</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_id>e90e35bf1b0ed8104ca7edf9bc4bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
+        <value>// *******************************
+// **** FUNCTION LIBRARY v0.3 ****
+// *******************************
+
+// **** MISC FUNCTIONS ****
+
+// returns milliseconds since epoch
+function now() { return new GlideDateTime().getNumericValue() } 
+
+//Apparently .includes() is not present in this version of javascript. I'll make my own .includes().
+function includes(test_arr,test_var) { for (var i=0;i&lt;test_arr.length;i++) { if (test_arr[i] == test_var) { return true } }; return false }
+
+//I needed a way to quickly generate a digest so I can check whether a JSON string changed since the last time an update occurred.
+//This was lifted directly from "index.js" at: https://github.com/darkskyapp/string-hash
+//It ingests a string of arbitrary length and spits out an integer unique to the string (i.e. non-secure hash)
+function digest(str) {var hash=5381,i=str.length;while(i){hash=(hash*33)^str.charCodeAt(--i)};return hash&gt;&gt;&gt;0}
+
+//GENERATE A RANDOM ID
+//There is no accessible ID for a particular action from within a script step, so this value is intended to be used
+//to cross reference between the debug log, the API log, operation log, etc. to uniquely identify an execution.
+function generateID()
+{ 
+  var ans = '';
+  arr = '0123456789abcdefghijklmnopqrstuvwxyz'
+  for (var i = 16; i &gt; 0; i--) { ans += arr[Math.floor(Math.random() * arr.length)] } 
+  return ans; 
+} 
+
+// *** GENERAL SQL OPERATION FUNCTIONS ***
+
+// INSERT OR UPDATE
+// No "insert or update" function exists natively, so rather than rewriting the entire structure in every implementation, I am abstracting it here.
+// INPUT (hash): 
+//     .table : name of the target table
+//     .unique_pairs : array of key-value pairs to check uniqueness on. If these pairs are found, will update, if not, will insert.
+//     .update_pairs : array of key-value pairs that will be changed in the update or inserted along with the unique pairs.
+// Note: this operation will run MUCH MUCH FASTER if the unique_pairs together form the primary key of the table.
+// Example:
+//          r = {}
+//          r.table = 'x_fmcna_armis_inte_armis_op_arp_table'
+//          r.unique_pairs = [ ['id','test_id'] , ['mac', 'test_mac' ] ]  -- note if this array is null or empty goes straight to an insert of the updated pairs
+//          r.update_pairs = [ ['status', 'COMPLETE'] ]
+//          insertOrUpdate(r)
+// RETURN (hash):
+//     .operation - string 'insert' or string 'update'. (returns 'error: [message]' if anything goes wrong.)
+//     .time_delta - amount of time in milliseconds it took for the operation to run
+function insertOrUpdate(r)
+{
+  var out = {}
+  var start_time = now()
+  if (r.unique_pairs == null) { r.unique_pairs = [] }
+  try {
+    var gr = new GlideRecord(r.table)
+    if (r.unique_pairs.length != 0) {
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr.addQuery(r.unique_pairs[i][0],r.unique_pairs[i][1]) } //Add all unique pairs to query
+      gr.query() }
+    if (gr.getRowCount() == 0) { //This is an insert, not an update.
+      gr.initialize()
+      for (var i=0;i&lt;r.unique_pairs.length;i++) { gr[r.unique_pairs[i][0]] = r.unique_pairs[i][1] } //Add all unique pairs to our insert
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.insert(); out.operation = 'insert' }
+    else { //This is an update.
+      for (var i=0;i&lt;r.update_pairs.length;i++) { gr[r.update_pairs[i][0]] = r.update_pairs[i][1] } //Add all update pairs to our insert
+      gr.updateMultiple(); out.operation = 'update' }
+  }
+  catch(m) { out.operation = 'error: ' + m }
+    
+  out.time_delta = now() - start_time
+  return out
+}
+
+// *** SPECIFIC TABLE FUNCTIONS ***
+
+//WRITE TO API LOG
+//Logs the data we're sending to Armis via the API, as well as the response from Armis.
+//Param template: writeToAPILog({id: , endpoint: , payload: , response_code: , response_body: , start_time: , time_delta_ms: })
+//EXAMPLE: writeToAPILog({id: generateID(), endpoint: "test", payload: "Sample Payload", response_code: 200, response_body: "Sample Response", start_time: new GlideDateTime(), time_delta_ms: 1000})
+
+//Params:
+//[str] id - action ID set by generateID() above.
+//[choice] endpoint - must be found on the choice table: https://fmcnadev.service-now.com/sys_dictionary.do?sys_id=cd79b5a01b8e9c904ca7edf9bc4bcb04
+//[str(2000)] payload - contains the text of the CSV or parameter being sent to Armis
+//[int] response_code - integer (e.g. 200 or 207 for success) representing the result of the API call
+//[str(2000)] response_body - text returned from Armis
+//[GlideDateTime] start_time - set before the call
+//[int] time_delta_ms - ending now() - starting now()
+function writeToAPILog(p)
+{
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',p.payload.substring(0,1999)],['response_code',p.response_code],
+    ['response_body',p.response_body.substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
+}
+
+
+//WRITE TO ACTION LOG
+//Writes to the table "Armis Action Log", which is intended to be a mechanism to monitor the performance of this integration's actions.
+//Param template: writeToActionLog({id: , action_type: , total_time: , api_time: , heavy_processing_time: , report: , debug_string: })
+//EXAMPLE: writeToActionLog({id: generateID(), action_type: "TEST", total_time: 100000, api_time: 50000, heavy_processing_time: 30000, report: "Test report string", debug_string: "Test debug string"})
+
+//Params:
+//[str] id - action ID set by generateID() above
+//[choice] action_type - must be found on the choice table: https://fmcnadev.service-now.com/sys_dictionary.do?sys_id=3f7a1b761b8e10104be764e8bc4bcb9f
+//[int] total_time - the total time in milliseconds ( ending now() - starting now() )
+//[int] api_time - time spent waiting for the API (measure immediately before and after a REST)
+//[int] heavy_processing_time - time spent doing something CPU/SQL intensive, such as breaking down a JSON and storing X records (measure immediately before and after)
+//[str(200)] report - human readable summary of what the action did
+//[str(2000)] debug_string - store the debug string for later diagnosis
+function writeToActionLog(p)
+{
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_action_log'
+  q.unique_pairs = [['execution_id',p.id]]
+  q.update_pairs = [['action_type',p.action_type],['api_time',p.api_time],['heavy_processing_time',p.heavy_processing_time],
+    ['total_time',p.total_time],['report',p.report.substring(0,199)],['debug_string',p.debug_string.substring(0,1999)]]
+  return insertOrUpdate(q)
+}
+
+//CONFIGURATION MANIPULATION
+//Grabs a set value from the Armis Integration Configuration table. The config table hould be treated as read-only except in specific cases.
+//NOTE: ALL CONFIG VALUES ARE STRINGS. If there is no such value, returns "".
+//Keys must be from this table: https://fmcnadev.service-now.com/sys_dictionary.do?sys_id=458563461bed90104be764e8bc4bcbf0
+function getConfigValue(key)
+{
+  var q = new GlideRecord('x_fmcna_armis_inte_armis_integration_configuration')
+  q.addQuery('key',key); q.query()
+  if (q.getRowCount() == 0) { return "" }
+  q.next(); return q.getValue('value')
+}
+
+//CACHE MANIPULATION
+//getCacheValue, setCacheValue, and deleteCacheValue manipulate the "Armis Integration Cache".
+//This table is used to store ("global") variables used between actions.
+//The table discretely separates string values, int values, and datetime values, so for the "type" of value, you need to specify via one of the following strings: ['str','int','datetime']
+
+function getCacheValue(/*str*/ key, /* ['str','int','datetime'] */ type)
+{
+  var cache_query = new GlideRecord('x_fmcna_armis_inte_armis_integration_cache')
+  cache_query.addQuery('key',key)
+  cache_query.query()
+  if (cache_query.getRowCount() == 0) { return null }
+  cache_query.next()
+  switch (type) {
+    case 'str': return cache_query.getValue('value_string');break;
+    case 'int': return cache_query.getValue('value_int');break;
+    case 'datetime': return cache_query.getValue('value_datetime');break;
+    default: null
+  }
+}
+// alias for tokens (the most common application) to use inline for token retrieval
+function getCurrentToken() { return getCacheValue('token','str')}
+
+function setCacheValue(/*str*/ key, value, /* ['str','int','datetime'] */ type)
+{
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_integration_cache'
+  q.unique_pairs = [['key',key]]
+  switch (type) {
+    case 'str': q.update_pairs = [['value_string',value]];break
+    case 'int': q.update_pairs = [['value_int',value]];break
+    case 'datetime': q.update_pairs = [['value_datetime',value]];break
+  }
+  return insertOrUpdate(q)
+}
+
+function deleteCacheValue(/*str*/ key)
+{
+  var cache_query = new GlideRecord('x_fmcna_armis_inte_armis_integration_cache')
+  cache_query.addQuery('key',key)
+  cache_query.query()
+  cache_query.deleteMultiple()
+}
+
+
+// ***************************************
+// *** GETD_GetBulkArmisData FUNCTIONS ***
+// ***************************************
+
+//UPDATE ARMIS DEVICE (v0.2)
+// Interprets the JSON block and stores its values into the Armis Device Table. Also stores tags in the Armis Tags table.
+// Parameter j is a JSON hash that represents a single device as returned from Armis.
+// Example starting JSON format: {"accessSwitch":null,"category":"Medical Therapeutic","firstSeen":"2020-05-12T04:34:00","id":100188,"ipAddress":"10.25.170.184","lastSeen":"2020-06-27T10:54:37.220709","macAddress":"00:0e:8e:5b:18:e6","manufacturer":"Fresenius Medical Care","model":"2008T G2 Pri","name":"FMC_74FE480AA906","operatingSystem":"Linux","operatingSystemVersion":null,"riskLevel":2,"sensor":{"name":"SPAN 9153 eth7 (ITG Datacenter Waltham 1 )","type":"SPAN"},"site":{"location":"Waltham, MA","name":"ITG Waltham Datacenter"},"tags":["FDA","ServiceNow Import Prod","FKC Region Northeast","FKC Pennsylvania","FKC","ServiceNow"],"type":"Cart","user":"","visibility":"Full"}
+// Parameter tags_to_table should be true if the tags on the import should be pushed to the "Armis Tags" table. This may substantially increase the time it takes to process.
+
+//Returns a hash with the following keys:
+// action - 'insert' or 'update' depending on which action was taken, can also be 'no_update_needed' if the digest matched and no update was pushed.
+// time_delta - value in milliseconds for how long this operation took
+// record - sys_id of the record that was inserted or updated
+function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
+{
+  var start_time = new GlideDateTime().getNumericValue()
+  var return_vals = {}
+  var device = new GlideRecord('x_fmcna_armis_inte_armis_device_table')
+  var input_digest = digest(JSON.stringify(j))
+  return_vals.digest = input_digest
+  //Does this already exist?
+  device.addQuery('armis_device_id',j.id)
+  device.query()
+
+  //Flag as an insert if it exists, otherwise it's an update.
+  var is_insert = device.getRowCount() == 0 //If we have no records, it's an insert, otherwise it's an update.
+  if (is_insert) { device.initialize() } else { device.next() }
+  return_vals.is_insert = is_insert
+  
+  //For updates, only need to actually perform the update if the digest doesn't match.
+  //If the digest does match, then the device has not been modified since the last time we refreshed this object,
+  //and no update needs to take place.
+  var perform_update_or_insert = true
+  if(!is_insert &amp;&amp; device.getValue('digest') == input_digest) { perform_update_or_insert = false }
+  return_vals.perform = perform_update_or_insert
+  return_vals.digest_existing = device.getValue('digest')
+  
+  if (perform_update_or_insert)
+  {
+    //Set all values
+    device.access_switch = j.accessSwitch
+    device.armis_device_id = j.id
+    device.armis_risk_level = j.riskLevel
+    device.category = j.category
+    device.first_seen = new GlideDateTime(j.firstSeen)
+    device.ip_address = j.ipAddress
+    device.last_seen = new GlideDateTime(j.lastSeen)
+    device.mac_address = j.macAddress
+    device.manufacturer = j.manufacturer
+    device.model = j.model
+    device.name = j.name
+    device.os = j.operatingSystem
+    device.os_version = j.operatingSystemVersion
+    device.sensor_name = j.sensor.name
+    device.sensor_type = j.sensor.type
+    device.site = j.site.name
+    device.site_location = j.site.location
+    device.armis_tags = JSON.stringify(j.tags)
+    device.visibility = j.visibility
+    device.digest = input_digest
+
+    //Either insert or update.
+    var device_record;
+    if (is_insert) { device_record = device.insert(); return_vals.action = 'insert' } else { device_record = device.update(); return_vals.action = 'update' }
+    return_vals.record = device_record
+  
+    //Process tags (if the flag is set to do so). Delete old tags, insert new tags.
+    if (tags_to_table)
+    {
+      if (j.tags == null) { j.tags = [] }
+      var q_tags = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+      q_tags.addQuery('armis_device',device_record)
+      q_tags.query()
+
+      //Only delete tags that aren't in the current tag list. Document the ones that are to use when inserting.
+      var already_have_these_tags = []
+      while (q_tags.next()) {
+        var tag = q_tags.getValue('armis_tag')
+        if (includes(already_have_these_tags,q_tags.getValue('armis_tag'))) { already_have_these_tags.push(tag) } else { q_tags.deleteRecord() }
+      }
+
+      //Insert new tags.
+      for(var i=0;i&lt;j.tags.length;i++)
+      {
+        //Skip if we already have this tag.
+        if ( includes(already_have_these_tags,j.tags[i]) ) { continue }
+        var q_tag = new GlideRecord('x_fmcna_armis_inte_armis_device_tags')
+        q_tag.initialize()
+        q_tag.armis_device = device_record
+        q_tag.armis_tag = j.tags[i]
+        q_tag.insert()
+      }
+    }
+  }
+  else
+  {
+    //The input digest was identical to the existing digest. This means no update needed to take place.
+    return_vals.action = 'no_update_needed'
+  }
+  return_vals.time_delta = new GlideDateTime().getNumericValue() - start_time
+  return return_vals
+}
+
+
+// *************************************************************
+// *** SANDBOX -- DO NOT COPY BELOW THIS LINE WHEN MINIFYING ***
+// *************************************************************
+
+(function execute(inputs, outputs) {
+  
+  debug = []
+ 
+ j = '{"accessSwitch":null,"category":"Unknown","firstSeen":"2020-07-23T17:25:20","id":843846,"ipAddress":"10.55.24.104","lastSeen":"2020-07-23T17:25:20","macAddress":"d4:d2:52:4c:0a:09","manufacturer":"Intel","model":"Intel device","name":null,"operatingSystem":null,"operatingSystemVersion":null,"riskLevel":1,"sensor":{"name":"FL4-Back Right","type":"Access Point"},"site":{"location":"350 Merrimack St, Lawrence, MA 01843","name":"NxStage Lawrence MA"},"tags":[],"type":"Unknown","user":"","visibility":"Full"}'
+ jo = JSON.parse(j)
+
+  var result = updateArmisDevice(/*obj from json*/ jo,/*bool*/ false)
+  outputs.debug = result
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=ed0e35bf1b0ed8104ca7edf9bc4bcb13^sys_idNOT INa50e35bf1b0ed8104ca7edf9bc4bcb17"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3dd8b4c7-0a82-4a9d-9b1d-faa37e6b9813</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="LIBRARY">ed0e35bf1b0ed8104ca7edf9bc4bcb13</model>
+        <model_id>ed0e35bf1b0ed8104ca7edf9bc4bcb13</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_ed0e35bf1b0ed8104ca7edf9bc4bcb13</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a50e35bf1b0ed8104ca7edf9bc4bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_a50e35bf1b0ed8104ca7edf9bc4bcb12^sys_idNOT INb10e35bf1b0ed8104ca7edf9bc4bcb57"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>debug</element>
+        <help/>
+        <hint/>
+        <label>debug</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_a50e35bf1b0ed8104ca7edf9bc4bcb12</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-23 18:03:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b10e35bf1b0ed8104ca7edf9bc4bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-23 18:03:01</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>

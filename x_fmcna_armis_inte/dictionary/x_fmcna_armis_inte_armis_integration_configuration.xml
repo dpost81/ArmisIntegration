@@ -6,7 +6,10 @@
                 <element hint="This tag is attached to every export/update to Armis." inactive_on_update="false" label="armis_import_universal_tag" value="armis_import_universal_tag"/>
                 <element inactive_on_update="false" label="armis_master_query" value="armis_master_query"/>
                 <element inactive_on_update="false" label="armis_refresh_query" value="armis_refresh_query"/>
+                <element inactive_on_update="false" label="cleanup_older_than_hours" value="cleanup_older_than_hours"/>
                 <element hint="This defines the end of the &quot;cooldown period&quot; during which updates cannot be sent to Armis. The cooldown period is used to prevent loopback responses from Armis from re-uploading and causing an infinite loop." inactive_on_update="false" label="cooldown_end_seconds" value="cooldown_end_seconds"/>
+                <element inactive_on_update="false" label="getd_max_seconds" value="getd_max_seconds"/>
+                <element inactive_on_update="false" label="getd_refresh_passes" value="getd_refresh_passes"/>
                 <element hint="This defines the beginning of the &quot;grace period&quot; during which updates can be sent to Armis before the cooldown period. The cooldown period is used to prevent loopback responses from Armis from re-uploading and causing an infinite loop." inactive_on_update="false" label="grace_period_cooldown_seconds" value="grace_period_cooldown_seconds"/>
                 <element inactive_on_update="false" label="max_main_queue_executions" value="max_main_queue_executions"/>
                 <element hint="This is the % of time (max value 1) that queue processing will occur. Every minute, processing will occur until this % of a minute has elapsed. For example, if set to 50%, then every minute it will do 30 seconds of processing and then stop." inactive_on_update="false" label="runtime_percent" value="runtime_percent"/>
@@ -14,5 +17,8 @@
             </choice>
         </element>
         <element label="value" max_length="256" name="value" type="string"/>
+        <index name="index">
+            <element name="key"/>
+        </index>
     </element>
 </database>

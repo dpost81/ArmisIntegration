@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Op - ARP Table" max_length="40" name="x_fmcna_armis_inte_armis_op_arp_table" sizeclass="0" type="collection">
+    <element label="Armis Op - ARP Upload" max_length="40" name="x_fmcna_armis_inte_armis_op_arp_table" sizeclass="4" type="collection">
+        <element label="Execution ID" max_length="16" name="execution_id" type="string"/>
         <element label="IP" max_length="20" name="ip" type="string"/>
         <element label="MAC" max_length="20" name="mac" type="string"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">
@@ -9,5 +10,9 @@
                 <element inactive_on_update="false" label="PROCESSING" value="PROCESSING"/>
             </choice>
         </element>
+        <index name="index">
+            <element name="ip"/>
+            <element name="mac"/>
+        </index>
     </element>
 </database>
