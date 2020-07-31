@@ -13,21 +13,21 @@
         <ih_action>false</ih_action>
         <internal_name>csv_buildcsvfromoperationrecords</internal_name>
         <label_cache>[{"name":"{{action.records}}","label":"action➛records","type":"action","ref":""},{"name":"{{action._}}","label":"action➛","type":"action","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].csv}}","label":"step➛Script step➛csv","type":"step","ref":""},{"name":"{{step[8e5a5bb6-9a9b-45bb-ac20-c1dc0b97603c].records}}","label":"step➛Look Up Records step➛Armis Operation Queue records","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].operation_sys_ids}}","label":"step➛Script step➛operation_sys_ids","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].operation_count}}","label":"step➛Script step➛operation_count","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>2b0cea961bb910104be764e8bc4bcb64</latest_snapshot>
+        <latest_snapshot>b42f16411b9a14104ca7edf9bc4bcb4e</latest_snapshot>
         <master_snapshot>b536669e1b7910104be764e8bc4bcb7e</master_snapshot>
-        <name>CSV_BuildCSVFromOperationRecords</name>
+        <name>(OLD) CSV_BuildCSVFromOperationRecords</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <state>published</state>
+        <state>draft</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-06 18:49:02</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>4685a2da1b7910104be764e8bc4bcbf5</sys_id>
-        <sys_mod_count>25</sys_mod_count>
-        <sys_name>CSV_BuildCSVFromOperationRecords</sys_name>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>(OLD) CSV_BuildCSVFromOperationRecords</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_4685a2da1b7910104be764e8bc4bcbf5</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-06 19:17:35</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:23</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -93,7 +93,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=4685a2da1b7910104be764e8bc4bcbf5^sys_idNOT IN4c08ae121bb910104be764e8bc4bcb23,9536669e1b7910104be764e8bc4bcb1b"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
+        <action display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
         <cid>8e5a5bb6-9a9b-45bb-ac20-c1dc0b97603c</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -177,7 +177,7 @@
         <variable display_value="">2df79dd187003300663ca1bb36cb0b33</variable>
     </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
+        <action display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
         <cid>5b9c3512-fce6-4a43-8d9c-efa48720347e</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -538,7 +538,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=de3ad902-0162-4945-9dd4-49b79e5d1cc7,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=f6bbf413-2495-4a5e-baf3-7e524b5ec42b,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -597,7 +597,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_created_on>2020-07-06 19:02:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e6a8ea521bb910104be764e8bc4bcb9c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -605,7 +605,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-06 19:17:30</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:22</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -659,7 +659,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <label>operation_count</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</model>
+        <model display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</model>
         <model_id>4685a2da1b7910104be764e8bc4bcbf5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_4685a2da1b7910104be764e8bc4bcbf5</name>
@@ -707,7 +707,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=a5ceffe1-faf2-4e3c-b571-feb3a5278c52,co_type_name=FD22a8ea520db91010189e81d8d6bac3a8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
+        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=e2e9b5d8-1c51-47cf-a689-c9bd4f3ec8c1,co_type_name=FD22a8ea520db91010189e81d8d6bac3a8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -744,7 +744,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <label>operation_sys_id</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</model>
+        <model display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</model>
         <model_id>4685a2da1b7910104be764e8bc4bcbf5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_4685a2da1b7910104be764e8bc4bcbf5</name>
@@ -768,7 +768,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_created_on>2020-07-06 19:02:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>62a8ea521bb910104be764e8bc4bcbac</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -776,7 +776,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-06 19:17:31</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -829,7 +829,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <label>csv</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</model>
+        <model display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</model>
         <model_id>4685a2da1b7910104be764e8bc4bcbf5</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_4685a2da1b7910104be764e8bc4bcbf5</name>
@@ -875,7 +875,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=4685a2da1b7910104be764e8bc4bcbf5^sys_idNOT IN4c08ae121bb910104be764e8bc4bcb23,9536669e1b7910104be764e8bc4bcb1b"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
+        <action display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
         <cid>8e5a5bb6-9a9b-45bb-ac20-c1dc0b97603c</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -959,7 +959,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <variable display_value="">2df79dd187003300663ca1bb36cb0b33</variable>
     </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
+        <action display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action>
         <cid>5b9c3512-fce6-4a43-8d9c-efa48720347e</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1320,7 +1320,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=de3ad902-0162-4945-9dd4-49b79e5d1cc7,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=f6bbf413-2495-4a5e-baf3-7e524b5ec42b,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1379,7 +1379,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_created_on>2020-07-06 19:02:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e6a8ea521bb910104be764e8bc4bcb9c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1387,7 +1387,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-06 19:17:30</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:22</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1477,7 +1477,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=4685a2da1b7910104be764e8bc4bcbf5^sys_idNOT IN5636669e1b7910104be764e8bc4bcbf9"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action_id>
+        <action_id display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"5636669e1b7910104be764e8bc4bcbf9","name":"plan"}}</plan>
         <snapshot>2b0cea961bb910104be764e8bc4bcb64</snapshot>
         <sys_created_by>3244578</sys_created_by>
@@ -1507,7 +1507,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</parent_action>
+        <parent_action display_value="(OLD) CSV_BuildCSVFromOperationRecords">4685a2da1b7910104be764e8bc4bcbf5</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-06 18:52:01</sys_created_on>
@@ -2902,12 +2902,12 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_customer_update>false</sys_customer_update>
         <sys_id>63a82e521bb910104be764e8bc4bcbc9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>operation_sys_id</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_b536669e1b7910104be764e8bc4bcb7e_operation_sys_id_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-06 19:02:47</sys_updated_on>
         <url/>
@@ -2927,12 +2927,12 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_customer_update>false</sys_customer_update>
         <sys_id>901c2e961bb910104be764e8bc4bcb27</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>operation_count</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_b536669e1b7910104be764e8bc4bcb7e_operation_count_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-06 19:17:35</sys_updated_on>
         <url/>
@@ -2952,12 +2952,12 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ca36669e1b7910104be764e8bc4bcba0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>csv</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_b536669e1b7910104be764e8bc4bcb7e_csv_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-06 18:52:02</sys_updated_on>
         <url/>

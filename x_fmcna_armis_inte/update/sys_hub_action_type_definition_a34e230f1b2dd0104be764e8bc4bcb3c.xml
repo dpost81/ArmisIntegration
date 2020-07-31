@@ -15,19 +15,19 @@
         <label_cache>[{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":"u_cmdb_ci_computers_from_armis"},{"name":"{{action.records}}","label":"action➛records","type":"action","ref":"u_cmdb_ci_computers_from_armis"},{"name":"{{step[70de88ba-60f7-43b1-8fd7-056ac8604d68].variable}}","label":"step➛Extract MACs➛variable","type":"step","ref":""},{"name":"{{step[70de88ba-60f7-43b1-8fd7-056ac8604d68].mac_string}}","label":"step➛Extract MACs➛mac_string","type":"step","ref":""}]</label_cache>
         <latest_snapshot>a67e270f1b2dd0104be764e8bc4bcb73</latest_snapshot>
         <master_snapshot>727e270f1b2dd0104be764e8bc4bcbb2</master_snapshot>
-        <name>LINK_ExtractMACs</name>
+        <name>(OLD) LINK_ExtractMACs</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <state>published</state>
+        <state>draft</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-26 21:46:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>a34e230f1b2dd0104be764e8bc4bcb3c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>LINK_ExtractMACs</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>(OLD) LINK_ExtractMACs</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a34e230f1b2dd0104be764e8bc4bcb3c</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-06-26 21:47:31</sys_updated_on>
+        <sys_updated_on>2020-07-31 05:31:04</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -55,7 +55,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=a34e230f1b2dd0104be764e8bc4bcb3c^sys_idNOT IN2b4e230f1b2dd0104be764e8bc4bcb48"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</action>
+        <action display_value="(OLD) LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</action>
         <cid>70de88ba-60f7-43b1-8fd7-056ac8604d68</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -370,7 +370,7 @@ while(inputs.records.next())
         <label>records</label>
         <mandatory>false</mandatory>
         <max_length>1024</max_length>
-        <model display_value="LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</model>
+        <model display_value="(OLD) LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</model>
         <model_id>a34e230f1b2dd0104be764e8bc4bcb3c</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a34e230f1b2dd0104be764e8bc4bcb3c</name>
@@ -456,7 +456,7 @@ while(inputs.records.next())
         <label>mac_string</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</model>
+        <model display_value="(OLD) LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</model>
         <model_id>a34e230f1b2dd0104be764e8bc4bcb3c</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a34e230f1b2dd0104be764e8bc4bcb3c</name>
@@ -502,7 +502,7 @@ while(inputs.records.next())
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=a34e230f1b2dd0104be764e8bc4bcb3c^sys_idNOT IN2b4e230f1b2dd0104be764e8bc4bcb48"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</action>
+        <action display_value="(OLD) LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</action>
         <cid>70de88ba-60f7-43b1-8fd7-056ac8604d68</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -831,7 +831,7 @@ while(inputs.records.next())
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=a34e230f1b2dd0104be764e8bc4bcb3c^sys_idNOT IN4f7e670f1b2dd0104be764e8bc4bcb07"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</action_id>
+        <action_id display_value="(OLD) LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"4f7e670f1b2dd0104be764e8bc4bcb07","name":"plan"}}</plan>
         <snapshot>a67e270f1b2dd0104be764e8bc4bcb73</snapshot>
         <sys_created_by>3244578</sys_created_by>
@@ -861,7 +861,7 @@ while(inputs.records.next())
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</parent_action>
+        <parent_action display_value="(OLD) LINK_ExtractMACs">a34e230f1b2dd0104be764e8bc4bcb3c</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-06-26 21:47:30</sys_created_on>
@@ -1634,12 +1634,12 @@ while(inputs.records.next())
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fa7e270f1b2dd0104be764e8bc4bcbb7</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>records</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_727e270f1b2dd0104be764e8bc4bcbb2_records_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-06-26 21:47:30</sys_updated_on>
         <url/>
@@ -1660,12 +1660,12 @@ while(inputs.records.next())
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f67e270f1b2dd0104be764e8bc4bcbd3</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>mac_string</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_727e270f1b2dd0104be764e8bc4bcbb2_mac_string_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-06-26 21:47:31</sys_updated_on>
         <url/>

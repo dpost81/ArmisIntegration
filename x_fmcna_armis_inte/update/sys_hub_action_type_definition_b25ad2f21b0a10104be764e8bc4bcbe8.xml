@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>getd_getbulkarmisdata</internal_name>
         <label_cache>[{"name":"{{action.mode}}","label":"action➛mode","type":"action","ref":""},{"name":"{{action.max_runtime}}","label":"action➛max_runtime","type":"action","ref":""},{"name":"{{action.query}}","label":"action➛query","type":"action","ref":""},{"name":"{{action.tags_to_table}}","label":"action➛tags_to_table","type":"action","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug1}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug2}}","label":"step➛Script step➛debug2","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug3}}","label":"step➛Script step➛debug3","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].time_left_s}}","label":"step➛Script step➛time_left_s","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>63d9b17b1b0ed8104ca7edf9bc4bcb54</latest_snapshot>
+        <latest_snapshot>7c0d6fca1b9e58104be764e8bc4bcb02</latest_snapshot>
         <master_snapshot>d4181bf61b8294104ca7edf9bc4bcb8f</master_snapshot>
         <name>GETD_GetBulkArmisData (v2.1)</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>b25ad2f21b0a10104be764e8bc4bcbe8</sys_id>
-        <sys_mod_count>137</sys_mod_count>
+        <sys_mod_count>190</sys_mod_count>
         <sys_name>GETD_GetBulkArmisData (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b25ad2f21b0a10104be764e8bc4bcbe8</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:53</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -86,7 +86,7 @@
         <sys_created_on>2020-07-20 18:08:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>728266fe1b0a10104be764e8bc4bcb36</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -94,7 +94,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:50</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=728266fe1b0a10104be764e8bc4bcb36"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -119,9 +119,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 18:08:39</sys_created_on>
         <sys_id>3e82e6321b4a10104be764e8bc4bcbe7</sys_id>
-        <sys_mod_count>49</sys_mod_count>
+        <sys_mod_count>64</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:50</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -138,23 +138,27 @@
   
   */
 
-//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
 //FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+//UPDATE ARMIS DEVICE (v0.2)
+//MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
+function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={},t=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),r=digest(JSON.stringify(e));a.digest=r,t.addQuery("armis_device_id",e.id),t.query();var n=0==t.getRowCount();n?t.initialize():t.next(),a.is_insert=n;var d,_=!0;if(n||t.getValue("digest")!=r||(_=!1),a.perform=_,a.digest_existing=t.getValue("digest"),_){if(t.access_switch=e.accessSwitch,t.armis_device_id=e.id,t.armis_risk_level=e.riskLevel,t.category=e.category,t.first_seen=new GlideDateTime(e.firstSeen),t.ip_address=e.ipAddress,t.last_seen=new GlideDateTime(e.lastSeen),t.mac_address=e.macAddress,t.manufacturer=e.manufacturer,t.model=e.model,t.name=e.name,t.os=e.operatingSystem,t.os_version=e.operatingSystemVersion,null!=e.sensor&amp;&amp;(t.sensor_name=e.sensor.name),null!=e.sensor&amp;&amp;(t.sensor_type=e.sensor.type),null!=e.site&amp;&amp;(t.site=e.site.name),null!=e.site&amp;&amp;(t.site_location=e.site.location),t.armis_tags=JSON.stringify(e.tags),t.visibility=e.visibility,t.digest=r,n?(d=t.insert(),a.action="insert"):(d=t.update(),a.action="update"),a.record=d,i){null==e.tags&amp;&amp;(e.tags=[]);var l=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");l.addQuery("armis_device",d),l.query();for(var m=[];l.next();){var c=l.getValue("armis_tag");includes(m,l.getValue("armis_tag"))?m.push(c):l.deleteRecord()}for(var o=0;o&lt;e.tags.length;o++)if(!includes(m,e.tags[o])){var g=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");g.initialize(),g.armis_device=d,g.armis_tag=e.tags[o],g.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-s,a}
 
 // *********************************
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
 //This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0 (this is done
+// 1. The n counter resets to 0
 // 2. The time since the last reset is measured
 // 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
 //The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
 //set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
 function recalculateRefreshHours()
   {
-    //We always want to be able to do several (let's say 3) refresh runs before an updated device drops off of the query parameters,
+    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
     //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
     //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
     var debug = []
@@ -190,7 +194,7 @@ function recalculateRefreshHours()
 
   //Escape early
   if(inputs.mode == 'test') { return }
-  if(inputs.max_runtime_seconds &lt;= 0) { return }
+  if(inputs.max_runtime_seconds &lt;= 0) { outputs.time_left_s = inputs.max_runtime_seconds; return }
   
   //Init
   var execution_id = generateID()
@@ -207,7 +211,7 @@ function recalculateRefreshHours()
   if (inputs.mode == 'refresh')
   {
     var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '') { cached_hours = 24 }
+    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
     armis_query = armis_query.replace("###",cached_hours)
   }
   debug.push("QUERY= '" + armis_query + "'.")
@@ -221,7 +225,10 @@ function recalculateRefreshHours()
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
+  var total_mode_records = 0
   var end_script_report = "";
+  var original_getd_n = 0
+  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //LOOP - until we are out of time.
   // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
@@ -235,6 +242,7 @@ function recalculateRefreshHours()
     var getd_n = getCacheValue(cache_key,'int')
     if (getd_n == null) { getd_n = 0 }
     debug.push("getd_n: " + getd_n)
+    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
     
     //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
     try {
@@ -269,6 +277,7 @@ function recalculateRefreshHours()
           
           //Parse!
           var data = JSON.parse(response.getBody()).data
+          total_mode_records = data.total
           debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
           
           num_armis_devices += data.count
@@ -286,11 +295,19 @@ function recalculateRefreshHours()
                 setCacheValue(cache_key, 0, 'int');
                 end_script_report += '[MAXED,RESET TO 0] '
                 //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                recalculateRefreshHours()
+                //recalculateRefreshHours()
                 break;
             }
           }
-          else { setCacheValue(cache_key, data.next, 'int') } //Update the cache so the next run starts where we left off.
+          else { 
+            //Update the cache so the next run starts where we left off.
+            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
+            //This won't be perfect but should go a long way toward improving consistency.
+            switch (inputs.mode) {
+              case 'master': setCacheValue(cache_key, data.next, 'int');break
+              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
+            }
+          }
           
           //Set the total too, just for reference.
           setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
@@ -318,13 +335,19 @@ function recalculateRefreshHours()
           {
             //We have 0 records.
             //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+            
             if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
               outputs.debug = "0 records, killed script."
               outputs.time_left_s = calculateTimeLeft(inputs)
               return
             }
             //If we're in master mode, we still want to report, but we're done looping.
-            if (inputs.mode == 'master') { end_loop_early = true }
+            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+            if (inputs.mode == 'master')
+            {
+              setCacheValue('master_complete', 1, 'int')
+              end_loop_early = true
+            }
             //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
           
@@ -344,9 +367,14 @@ function recalculateRefreshHours()
       end_loop_early = true
     }
   }
+  
+  //Percentage reporting, to get a good idea of how far we've come along.
+  var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "] From n=" + getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
+  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
   total_time = now() - start_time
   var flattened_debug = debug.join('\n')
   writeToActionLog(
@@ -1218,7 +1246,7 @@ function recalculateRefreshHours()
         <sys_created_on>2020-07-20 18:08:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>728266fe1b0a10104be764e8bc4bcb36</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1226,7 +1254,7 @@ function recalculateRefreshHours()
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:50</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=728266fe1b0a10104be764e8bc4bcb36"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1251,9 +1279,9 @@ function recalculateRefreshHours()
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 18:08:39</sys_created_on>
         <sys_id>3e82e6321b4a10104be764e8bc4bcbe7</sys_id>
-        <sys_mod_count>49</sys_mod_count>
+        <sys_mod_count>64</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:50</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -1270,23 +1298,27 @@ function recalculateRefreshHours()
   
   */
 
-//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
 //FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+//UPDATE ARMIS DEVICE (v0.2)
+//MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
+function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={},t=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),r=digest(JSON.stringify(e));a.digest=r,t.addQuery("armis_device_id",e.id),t.query();var n=0==t.getRowCount();n?t.initialize():t.next(),a.is_insert=n;var d,_=!0;if(n||t.getValue("digest")!=r||(_=!1),a.perform=_,a.digest_existing=t.getValue("digest"),_){if(t.access_switch=e.accessSwitch,t.armis_device_id=e.id,t.armis_risk_level=e.riskLevel,t.category=e.category,t.first_seen=new GlideDateTime(e.firstSeen),t.ip_address=e.ipAddress,t.last_seen=new GlideDateTime(e.lastSeen),t.mac_address=e.macAddress,t.manufacturer=e.manufacturer,t.model=e.model,t.name=e.name,t.os=e.operatingSystem,t.os_version=e.operatingSystemVersion,null!=e.sensor&amp;&amp;(t.sensor_name=e.sensor.name),null!=e.sensor&amp;&amp;(t.sensor_type=e.sensor.type),null!=e.site&amp;&amp;(t.site=e.site.name),null!=e.site&amp;&amp;(t.site_location=e.site.location),t.armis_tags=JSON.stringify(e.tags),t.visibility=e.visibility,t.digest=r,n?(d=t.insert(),a.action="insert"):(d=t.update(),a.action="update"),a.record=d,i){null==e.tags&amp;&amp;(e.tags=[]);var l=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");l.addQuery("armis_device",d),l.query();for(var m=[];l.next();){var c=l.getValue("armis_tag");includes(m,l.getValue("armis_tag"))?m.push(c):l.deleteRecord()}for(var o=0;o&lt;e.tags.length;o++)if(!includes(m,e.tags[o])){var g=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");g.initialize(),g.armis_device=d,g.armis_tag=e.tags[o],g.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-s,a}
 
 // *********************************
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
 //This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0 (this is done
+// 1. The n counter resets to 0
 // 2. The time since the last reset is measured
 // 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
 //The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
 //set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
 function recalculateRefreshHours()
   {
-    //We always want to be able to do several (let's say 3) refresh runs before an updated device drops off of the query parameters,
+    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
     //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
     //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
     var debug = []
@@ -1322,7 +1354,7 @@ function recalculateRefreshHours()
 
   //Escape early
   if(inputs.mode == 'test') { return }
-  if(inputs.max_runtime_seconds &lt;= 0) { return }
+  if(inputs.max_runtime_seconds &lt;= 0) { outputs.time_left_s = inputs.max_runtime_seconds; return }
   
   //Init
   var execution_id = generateID()
@@ -1339,7 +1371,7 @@ function recalculateRefreshHours()
   if (inputs.mode == 'refresh')
   {
     var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '') { cached_hours = 24 }
+    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
     armis_query = armis_query.replace("###",cached_hours)
   }
   debug.push("QUERY= '" + armis_query + "'.")
@@ -1353,7 +1385,10 @@ function recalculateRefreshHours()
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
+  var total_mode_records = 0
   var end_script_report = "";
+  var original_getd_n = 0
+  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //LOOP - until we are out of time.
   // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
@@ -1367,6 +1402,7 @@ function recalculateRefreshHours()
     var getd_n = getCacheValue(cache_key,'int')
     if (getd_n == null) { getd_n = 0 }
     debug.push("getd_n: " + getd_n)
+    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
     
     //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
     try {
@@ -1401,6 +1437,7 @@ function recalculateRefreshHours()
           
           //Parse!
           var data = JSON.parse(response.getBody()).data
+          total_mode_records = data.total
           debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
           
           num_armis_devices += data.count
@@ -1418,11 +1455,19 @@ function recalculateRefreshHours()
                 setCacheValue(cache_key, 0, 'int');
                 end_script_report += '[MAXED,RESET TO 0] '
                 //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                recalculateRefreshHours()
+                //recalculateRefreshHours()
                 break;
             }
           }
-          else { setCacheValue(cache_key, data.next, 'int') } //Update the cache so the next run starts where we left off.
+          else { 
+            //Update the cache so the next run starts where we left off.
+            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
+            //This won't be perfect but should go a long way toward improving consistency.
+            switch (inputs.mode) {
+              case 'master': setCacheValue(cache_key, data.next, 'int');break
+              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
+            }
+          }
           
           //Set the total too, just for reference.
           setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
@@ -1450,13 +1495,19 @@ function recalculateRefreshHours()
           {
             //We have 0 records.
             //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+            
             if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
               outputs.debug = "0 records, killed script."
               outputs.time_left_s = calculateTimeLeft(inputs)
               return
             }
             //If we're in master mode, we still want to report, but we're done looping.
-            if (inputs.mode == 'master') { end_loop_early = true }
+            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+            if (inputs.mode == 'master')
+            {
+              setCacheValue('master_complete', 1, 'int')
+              end_loop_early = true
+            }
             //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
           
@@ -1476,9 +1527,14 @@ function recalculateRefreshHours()
       end_loop_early = true
     }
   }
+  
+  //Percentage reporting, to get a good idea of how far we've come along.
+  var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "] From n=" + getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
+  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
   total_time = now() - start_time
   var flattened_debug = debug.join('\n')
   writeToActionLog(
@@ -2158,16 +2214,16 @@ function recalculateRefreshHours()
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="GETD_GetBulkArmisData (v2.1)">b25ad2f21b0a10104be764e8bc4bcbe8</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f8185bf61b8294104ca7edf9bc4bcb1d","name":"plan"}}</plan>
-        <snapshot>63d9b17b1b0ed8104ca7edf9bc4bcb54</snapshot>
+        <snapshot>7c0d6fca1b9e58104be764e8bc4bcb02</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>f8185bf61b8294104ca7edf9bc4bcb1d</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:55</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:19</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2253,7 +2309,7 @@ function recalculateRefreshHours()
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>60181bf61b8294104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2261,7 +2317,7 @@ function recalculateRefreshHours()
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:53</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=60181bf61b8294104ca7edf9bc4bcb9d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2272,9 +2328,9 @@ function recalculateRefreshHours()
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_id>20181bf61b8294104ca7edf9bc4bcbdc</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:53</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -2291,23 +2347,27 @@ function recalculateRefreshHours()
   
   */
 
-//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
 //FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+//UPDATE ARMIS DEVICE (v0.2)
+//MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
+function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={},t=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),r=digest(JSON.stringify(e));a.digest=r,t.addQuery("armis_device_id",e.id),t.query();var n=0==t.getRowCount();n?t.initialize():t.next(),a.is_insert=n;var d,_=!0;if(n||t.getValue("digest")!=r||(_=!1),a.perform=_,a.digest_existing=t.getValue("digest"),_){if(t.access_switch=e.accessSwitch,t.armis_device_id=e.id,t.armis_risk_level=e.riskLevel,t.category=e.category,t.first_seen=new GlideDateTime(e.firstSeen),t.ip_address=e.ipAddress,t.last_seen=new GlideDateTime(e.lastSeen),t.mac_address=e.macAddress,t.manufacturer=e.manufacturer,t.model=e.model,t.name=e.name,t.os=e.operatingSystem,t.os_version=e.operatingSystemVersion,null!=e.sensor&amp;&amp;(t.sensor_name=e.sensor.name),null!=e.sensor&amp;&amp;(t.sensor_type=e.sensor.type),null!=e.site&amp;&amp;(t.site=e.site.name),null!=e.site&amp;&amp;(t.site_location=e.site.location),t.armis_tags=JSON.stringify(e.tags),t.visibility=e.visibility,t.digest=r,n?(d=t.insert(),a.action="insert"):(d=t.update(),a.action="update"),a.record=d,i){null==e.tags&amp;&amp;(e.tags=[]);var l=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");l.addQuery("armis_device",d),l.query();for(var m=[];l.next();){var c=l.getValue("armis_tag");includes(m,l.getValue("armis_tag"))?m.push(c):l.deleteRecord()}for(var o=0;o&lt;e.tags.length;o++)if(!includes(m,e.tags[o])){var g=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");g.initialize(),g.armis_device=d,g.armis_tag=e.tags[o],g.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-s,a}
 
 // *********************************
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
 //This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0 (this is done
+// 1. The n counter resets to 0
 // 2. The time since the last reset is measured
 // 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
 //The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
 //set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
 function recalculateRefreshHours()
   {
-    //We always want to be able to do several (let's say 3) refresh runs before an updated device drops off of the query parameters,
+    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
     //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
     //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
     var debug = []
@@ -2343,7 +2403,7 @@ function recalculateRefreshHours()
 
   //Escape early
   if(inputs.mode == 'test') { return }
-  if(inputs.max_runtime_seconds &lt;= 0) { return }
+  if(inputs.max_runtime_seconds &lt;= 0) { outputs.time_left_s = inputs.max_runtime_seconds; return }
   
   //Init
   var execution_id = generateID()
@@ -2360,7 +2420,7 @@ function recalculateRefreshHours()
   if (inputs.mode == 'refresh')
   {
     var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '') { cached_hours = 24 }
+    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
     armis_query = armis_query.replace("###",cached_hours)
   }
   debug.push("QUERY= '" + armis_query + "'.")
@@ -2374,7 +2434,10 @@ function recalculateRefreshHours()
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
+  var total_mode_records = 0
   var end_script_report = "";
+  var original_getd_n = 0
+  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //LOOP - until we are out of time.
   // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
@@ -2388,6 +2451,7 @@ function recalculateRefreshHours()
     var getd_n = getCacheValue(cache_key,'int')
     if (getd_n == null) { getd_n = 0 }
     debug.push("getd_n: " + getd_n)
+    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
     
     //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
     try {
@@ -2422,6 +2486,7 @@ function recalculateRefreshHours()
           
           //Parse!
           var data = JSON.parse(response.getBody()).data
+          total_mode_records = data.total
           debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
           
           num_armis_devices += data.count
@@ -2439,11 +2504,19 @@ function recalculateRefreshHours()
                 setCacheValue(cache_key, 0, 'int');
                 end_script_report += '[MAXED,RESET TO 0] '
                 //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                recalculateRefreshHours()
+                //recalculateRefreshHours()
                 break;
             }
           }
-          else { setCacheValue(cache_key, data.next, 'int') } //Update the cache so the next run starts where we left off.
+          else { 
+            //Update the cache so the next run starts where we left off.
+            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
+            //This won't be perfect but should go a long way toward improving consistency.
+            switch (inputs.mode) {
+              case 'master': setCacheValue(cache_key, data.next, 'int');break
+              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
+            }
+          }
           
           //Set the total too, just for reference.
           setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
@@ -2471,13 +2544,19 @@ function recalculateRefreshHours()
           {
             //We have 0 records.
             //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+            
             if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
               outputs.debug = "0 records, killed script."
               outputs.time_left_s = calculateTimeLeft(inputs)
               return
             }
             //If we're in master mode, we still want to report, but we're done looping.
-            if (inputs.mode == 'master') { end_loop_early = true }
+            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+            if (inputs.mode == 'master')
+            {
+              setCacheValue('master_complete', 1, 'int')
+              end_loop_early = true
+            }
             //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
           
@@ -2497,9 +2576,14 @@ function recalculateRefreshHours()
       end_loop_early = true
     }
   }
+  
+  //Percentage reporting, to get a good idea of how far we've come along.
+  var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "] From n=" + getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
+  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
   total_time = now() - start_time
   var flattened_debug = debug.join('\n')
   writeToActionLog(
@@ -3385,7 +3469,7 @@ function recalculateRefreshHours()
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>60181bf61b8294104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3393,7 +3477,7 @@ function recalculateRefreshHours()
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:53</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=60181bf61b8294104ca7edf9bc4bcb9d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3404,9 +3488,9 @@ function recalculateRefreshHours()
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_id>20181bf61b8294104ca7edf9bc4bcbdc</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 17:44:53</sys_updated_on>
+        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -3423,23 +3507,27 @@ function recalculateRefreshHours()
   
   */
 
-//FUNCTION LIBRARY (v0.3) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
+//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
 //FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,i){for(var t=0;t&lt;e.length;t++)if(e[t]==i)return!0;return!1}function digest(e){for(var i=5381,t=e.length;t;)i=33*i^e.charCodeAt(--t);return i&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyz";for(var i=16;i&gt;0;i--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var i={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var r=0;r&lt;e.unique_pairs.length;r++)a.addQuery(e.unique_pairs[r][0],e.unique_pairs[r][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(r=0;r&lt;e.unique_pairs.length;r++)a[e.unique_pairs[r][0]]=e.unique_pairs[r][1];for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.insert(),i.operation="insert"}else{for(r=0;r&lt;e.update_pairs.length;r++)a[e.update_pairs[r][0]]=e.update_pairs[r][1];a.updateMultiple(),i.operation="update"}}catch(e){i.operation="error: "+e}return i.time_delta=now()-t,i}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var i={table:"x_fmcna_armis_inte_armis_rest_api_log"};return i.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(i)}function writeToActionLog(e){var i={table:"x_fmcna_armis_inte_armis_action_log"};return i.unique_pairs=[["execution_id",e.id]],i.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(i)}function getConfigValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return i.addQuery("key",e),i.query(),0==i.getRowCount()?"":(i.next(),i.getValue("value"))}function getCacheValue(e,i){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),i){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,i,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",i]];break;case"int":a.update_pairs=[["value_int",i]];break;case"datetime":a.update_pairs=[["value_datetime",i]]}return insertOrUpdate(a)}function deleteCacheValue(e){var i=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");i.addQuery("key",e),i.query(),i.deleteMultiple()}function updateArmisDevice(e,i){var t=(new GlideDateTime).getNumericValue(),a={},r=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),n=digest(JSON.stringify(e));a.digest=n,r.addQuery("armis_device_id",e.id),r.query();var s=0==r.getRowCount();s?r.initialize():r.next(),a.is_insert=s;var u,_=!0;if(s||r.getValue("digest")!=n||(_=!1),a.perform=_,a.digest_existing=r.getValue("digest"),_){if(r.access_switch=e.accessSwitch,r.armis_device_id=e.id,r.armis_risk_level=e.riskLevel,r.category=e.category,r.first_seen=new GlideDateTime(e.firstSeen),r.ip_address=e.ipAddress,r.last_seen=new GlideDateTime(e.lastSeen),r.mac_address=e.macAddress,r.manufacturer=e.manufacturer,r.model=e.model,r.name=e.name,r.os=e.operatingSystem,r.os_version=e.operatingSystemVersion,r.sensor_name=e.sensor.name,r.sensor_type=e.sensor.type,r.site=e.site.name,r.site_location=e.site.location,r.armis_tags=JSON.stringify(e.tags),r.visibility=e.visibility,r.digest=n,s?(u=r.insert(),a.action="insert"):(u=r.update(),a.action="update"),a.record=u,i){null==e.tags&amp;&amp;(e.tags=[]);var o=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");o.addQuery("armis_device",u),o.query();for(var d=[];o.next();){var l=o.getValue("armis_tag");includes(d,o.getValue("armis_tag"))?d.push(l):o.deleteRecord()}for(var c=0;c&lt;e.tags.length;c++)if(!includes(d,e.tags[c])){var p=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");p.initialize(),p.armis_device=u,p.armis_tag=e.tags[c],p.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-t,a}
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+//UPDATE ARMIS DEVICE (v0.2)
+//MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
+function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={},t=new GlideRecord("x_fmcna_armis_inte_armis_device_table"),r=digest(JSON.stringify(e));a.digest=r,t.addQuery("armis_device_id",e.id),t.query();var n=0==t.getRowCount();n?t.initialize():t.next(),a.is_insert=n;var d,_=!0;if(n||t.getValue("digest")!=r||(_=!1),a.perform=_,a.digest_existing=t.getValue("digest"),_){if(t.access_switch=e.accessSwitch,t.armis_device_id=e.id,t.armis_risk_level=e.riskLevel,t.category=e.category,t.first_seen=new GlideDateTime(e.firstSeen),t.ip_address=e.ipAddress,t.last_seen=new GlideDateTime(e.lastSeen),t.mac_address=e.macAddress,t.manufacturer=e.manufacturer,t.model=e.model,t.name=e.name,t.os=e.operatingSystem,t.os_version=e.operatingSystemVersion,null!=e.sensor&amp;&amp;(t.sensor_name=e.sensor.name),null!=e.sensor&amp;&amp;(t.sensor_type=e.sensor.type),null!=e.site&amp;&amp;(t.site=e.site.name),null!=e.site&amp;&amp;(t.site_location=e.site.location),t.armis_tags=JSON.stringify(e.tags),t.visibility=e.visibility,t.digest=r,n?(d=t.insert(),a.action="insert"):(d=t.update(),a.action="update"),a.record=d,i){null==e.tags&amp;&amp;(e.tags=[]);var l=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");l.addQuery("armis_device",d),l.query();for(var m=[];l.next();){var c=l.getValue("armis_tag");includes(m,l.getValue("armis_tag"))?m.push(c):l.deleteRecord()}for(var o=0;o&lt;e.tags.length;o++)if(!includes(m,e.tags[o])){var g=new GlideRecord("x_fmcna_armis_inte_armis_device_tags");g.initialize(),g.armis_device=d,g.armis_tag=e.tags[o],g.insert()}}}else a.action="no_update_needed";return a.time_delta=(new GlideDateTime).getNumericValue()-s,a}
 
 // *********************************
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
 //This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0 (this is done
+// 1. The n counter resets to 0
 // 2. The time since the last reset is measured
 // 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
 //The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
 //set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
 function recalculateRefreshHours()
   {
-    //We always want to be able to do several (let's say 3) refresh runs before an updated device drops off of the query parameters,
+    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
     //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
     //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
     var debug = []
@@ -3475,7 +3563,7 @@ function recalculateRefreshHours()
 
   //Escape early
   if(inputs.mode == 'test') { return }
-  if(inputs.max_runtime_seconds &lt;= 0) { return }
+  if(inputs.max_runtime_seconds &lt;= 0) { outputs.time_left_s = inputs.max_runtime_seconds; return }
   
   //Init
   var execution_id = generateID()
@@ -3492,7 +3580,7 @@ function recalculateRefreshHours()
   if (inputs.mode == 'refresh')
   {
     var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '') { cached_hours = 24 }
+    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
     armis_query = armis_query.replace("###",cached_hours)
   }
   debug.push("QUERY= '" + armis_query + "'.")
@@ -3506,7 +3594,10 @@ function recalculateRefreshHours()
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
+  var total_mode_records = 0
   var end_script_report = "";
+  var original_getd_n = 0
+  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //LOOP - until we are out of time.
   // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
@@ -3520,6 +3611,7 @@ function recalculateRefreshHours()
     var getd_n = getCacheValue(cache_key,'int')
     if (getd_n == null) { getd_n = 0 }
     debug.push("getd_n: " + getd_n)
+    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
     
     //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
     try {
@@ -3554,6 +3646,7 @@ function recalculateRefreshHours()
           
           //Parse!
           var data = JSON.parse(response.getBody()).data
+          total_mode_records = data.total
           debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
           
           num_armis_devices += data.count
@@ -3571,11 +3664,19 @@ function recalculateRefreshHours()
                 setCacheValue(cache_key, 0, 'int');
                 end_script_report += '[MAXED,RESET TO 0] '
                 //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                recalculateRefreshHours()
+                //recalculateRefreshHours()
                 break;
             }
           }
-          else { setCacheValue(cache_key, data.next, 'int') } //Update the cache so the next run starts where we left off.
+          else { 
+            //Update the cache so the next run starts where we left off.
+            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
+            //This won't be perfect but should go a long way toward improving consistency.
+            switch (inputs.mode) {
+              case 'master': setCacheValue(cache_key, data.next, 'int');break
+              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
+            }
+          }
           
           //Set the total too, just for reference.
           setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
@@ -3603,13 +3704,19 @@ function recalculateRefreshHours()
           {
             //We have 0 records.
             //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+            
             if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
               outputs.debug = "0 records, killed script."
               outputs.time_left_s = calculateTimeLeft(inputs)
               return
             }
             //If we're in master mode, we still want to report, but we're done looping.
-            if (inputs.mode == 'master') { end_loop_early = true }
+            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+            if (inputs.mode == 'master')
+            {
+              setCacheValue('master_complete', 1, 'int')
+              end_loop_early = true
+            }
             //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
           
@@ -3629,9 +3736,14 @@ function recalculateRefreshHours()
       end_loop_early = true
     }
   }
+  
+  //Percentage reporting, to get a good idea of how far we've come along.
+  var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "] From n=" + getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
+  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
   total_time = now() - start_time
   var flattened_debug = debug.join('\n')
   writeToActionLog(

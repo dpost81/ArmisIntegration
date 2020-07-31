@@ -6,15 +6,15 @@
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build>glide-orlando-12-11-2019__patch4-05-20-2020</compiler_build>
+        <compiler_build>glide-orlando-12-11-2019__patch5-06-17-2020</compiler_build>
         <copied_from/>
         <copied_from_name/>
         <description/>
         <internal_name>main_checkcooldown</internal_name>
         <label_cache>[{"name":"ea9362d7-2667-419e-b9b9-bc7b301b6dab.config_value","label":"1➛config_value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f48f87a9-eb14-40ff-87ee-05fc9335fce8"}},{"name":"75016268-888c-447b-9d42-29d36024fbb8.config_value","label":"2➛config_value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f48f87a9-eb14-40ff-87ee-05fc9335fce8"}},{"name":"d4df8032-a268-4b36-989a-10add863629a.status","label":"3➛status","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"64ec6e0b-cffd-40f5-b45a-89cc8624afaf"}},{"name":"subflow.record","label":"Input➛record","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"03361559-6389-4e2d-927c-ba1e0341b9e7","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
-        <latest_snapshot>486c1a031bf194104be764e8bc4bcbdb</latest_snapshot>
+        <latest_snapshot>ce4066ca1b1e10104ca7edf9bc4bcbe1</latest_snapshot>
         <master_snapshot>8c801ecf1b7194104be764e8bc4bcbdf</master_snapshot>
-        <name>MAIN_CheckCooldown</name>
+        <name>(OLD) MAIN_CheckCooldown</name>
         <natlang/>
         <outputs/>
         <remote_trigger_id/>
@@ -29,8 +29,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>a322420b1bfd54104be764e8bc4bcbc9</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>MAIN_CheckCooldown</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>(OLD) MAIN_CheckCooldown</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -38,20 +38,20 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_flow_a322420b1bfd54104be764e8bc4bcbc9</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:39</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_variable_value action="delete_multiple" query="document_key=a322420b1bfd54104be764e8bc4bcbc9"/>
     <sys_hub_flow_component action="delete_multiple" query="flow=a322420b1bfd54104be764e8bc4bcbc9^sys_idNOT IN18709acf1b7194104be764e8bc4bcbb5,5c709acf1b7194104be764e8bc4bcba1,5dd30ec31b3194104be764e8bc4bcb6e,94709acf1b7194104be764e8bc4bcbb8,9c709acf1b7194104be764e8bc4bcb97,a4efce8f1b7194104be764e8bc4bcb8f,d1d30ec31b3194104be764e8bc4bcb72,d8709acf1b7194104be764e8bc4bcba4,f8efce8f1b7194104be764e8bc4bcb92"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">50709acf1b7194104be764e8bc4bcbb5</block>
+        <block display_value="">1b106ec21b9658104be764e8bc4bcb43</block>
         <comment>cooldown_status = after_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>6.1</order>
@@ -63,7 +63,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18709acf1b7194104be764e8bc4bcbb5</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -71,7 +71,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>a581db26-15d6-4aae-8ab9-564e89a8ed74</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -92,14 +92,14 @@
         <variable display_value="">d5d30ec31b3194104be764e8bc4bcb53</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">94709acf1b7194104be764e8bc4bcba1</block>
+        <block display_value="">57106ec21b9658104be764e8bc4bcb39</block>
         <comment>cooldown_status = during_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>5.1</order>
@@ -111,7 +111,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5c709acf1b7194104be764e8bc4bcba1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -119,7 +119,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>d6f4d7c3-1d98-426d-ab30-fe15b4ab5ada</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -142,7 +142,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>grace_period_cooldown_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <order>1</order>
         <parent_ui_id/>
@@ -152,7 +152,7 @@
         <sys_created_on>2020-07-09 00:17:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5dd30ec31b3194104be764e8bc4bcb6e</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -160,7 +160,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:32</sys_updated_on>
         <ui_id>ea9362d7-2667-419e-b9b9-bc7b301b6dab</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5dd30ec31b3194104be764e8bc4bcb6e"/>
@@ -193,14 +193,14 @@
         <variable display_value="">4e13c1741bbd90104be764e8bc4bcb9b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">dc709acf1b7194104be764e8bc4bcbb7</block>
+        <block display_value="">9b106ec21b9658104be764e8bc4bcb48</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -213,7 +213,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>94709acf1b7194104be764e8bc4bcbb8</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -221,7 +221,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>13794a24-52e4-45eb-bf90-8576e278a393</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -267,14 +267,14 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">d4709acf1b7194104be764e8bc4bcb97</block>
+        <block display_value="">97106ec21b9658104be764e8bc4bcb22</block>
         <comment>cooldown_status = grace_period</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>4.1</order>
@@ -286,7 +286,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9c709acf1b7194104be764e8bc4bcb97</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -294,7 +294,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>6ef1cb3e-ab3f-4f5c-86fe-c24d175bb7d2</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -322,7 +322,7 @@
         <comment/>
         <compiled_snapshot>a78f468f1b7194104be764e8bc4bcb21</compiled_snapshot>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <order>3</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -330,15 +330,15 @@
         <sys_created_on>2020-07-09 01:09:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a4efce8f1b7194104be764e8bc4bcb8f</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 02:04:33</sys_updated_on>
+        <sys_updated_by>svc_armis_sn</sys_updated_by>
+        <sys_updated_on>2020-07-30 20:19:05</sys_updated_on>
         <ui_id>d4df8032-a268-4b36-989a-10add863629a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a4efce8f1b7194104be764e8bc4bcb8f"/>
@@ -410,7 +410,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>cooldown_end_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <order>2</order>
         <parent_ui_id/>
@@ -420,7 +420,7 @@
         <sys_created_on>2020-07-09 00:17:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d1d30ec31b3194104be764e8bc4bcb72</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -428,7 +428,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:32</sys_updated_on>
         <ui_id>75016268-888c-447b-9d42-29d36024fbb8</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d1d30ec31b3194104be764e8bc4bcb72"/>
@@ -461,14 +461,14 @@
         <variable display_value="">4e13c1741bbd90104be764e8bc4bcb9b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">14709acf1b7194104be764e8bc4bcba4</block>
+        <block display_value="">d7106ec21b9658104be764e8bc4bcb3e</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -481,7 +481,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d8709acf1b7194104be764e8bc4bcba4</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -489,7 +489,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>c02ecafd-7d5a-4c23-83fb-e9fcb2547e35</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -535,14 +535,14 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">fcefce8f1b7194104be764e8bc4bcb91</block>
+        <block display_value="">5f106ec21b9658104be764e8bc4bcb27</block>
         <comment/>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -555,7 +555,7 @@
         <sys_created_on>2020-07-09 01:09:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f8efce8f1b7194104be764e8bc4bcb92</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -563,7 +563,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>03508453-78b8-4f3a-85b6-1402dade8e32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -667,7 +667,7 @@
         <label>record</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</model>
+        <model display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</model>
         <model_id>a322420b1bfd54104be764e8bc4bcbc9</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_input_a322420b1bfd54104be764e8bc4bcbc9</name>
@@ -751,7 +751,7 @@
         <label>cooldown_status</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</model>
+        <model display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</model>
         <model_id>a322420b1bfd54104be764e8bc4bcbc9</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_output_a322420b1bfd54104be764e8bc4bcbc9</name>
@@ -804,7 +804,7 @@
         <comment/>
         <compiled_snapshot>a78f468f1b7194104be764e8bc4bcb21</compiled_snapshot>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <order>3</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -812,15 +812,15 @@
         <sys_created_on>2020-07-09 01:09:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a4efce8f1b7194104be764e8bc4bcb8f</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 02:04:33</sys_updated_on>
+        <sys_updated_by>svc_armis_sn</sys_updated_by>
+        <sys_updated_on>2020-07-30 20:19:05</sys_updated_on>
         <ui_id>d4df8032-a268-4b36-989a-10add863629a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a4efce8f1b7194104be764e8bc4bcb8f"/>
@@ -893,7 +893,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>grace_period_cooldown_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <order>1</order>
         <parent_ui_id/>
@@ -903,7 +903,7 @@
         <sys_created_on>2020-07-09 00:17:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5dd30ec31b3194104be764e8bc4bcb6e</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -911,7 +911,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:32</sys_updated_on>
         <ui_id>ea9362d7-2667-419e-b9b9-bc7b301b6dab</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5dd30ec31b3194104be764e8bc4bcb6e"/>
@@ -946,7 +946,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>cooldown_end_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <order>2</order>
         <parent_ui_id/>
@@ -956,7 +956,7 @@
         <sys_created_on>2020-07-09 00:17:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d1d30ec31b3194104be764e8bc4bcb72</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -964,7 +964,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:32</sys_updated_on>
         <ui_id>75016268-888c-447b-9d42-29d36024fbb8</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d1d30ec31b3194104be764e8bc4bcb72"/>
@@ -998,14 +998,14 @@
     </sys_variable_value>
     <sys_hub_flow_logic action="delete_multiple" query="flow=a322420b1bfd54104be764e8bc4bcbc9^sys_idNOT IN18709acf1b7194104be764e8bc4bcbb5,5c709acf1b7194104be764e8bc4bcba1,94709acf1b7194104be764e8bc4bcbb8,9c709acf1b7194104be764e8bc4bcb97,d8709acf1b7194104be764e8bc4bcba4,f8efce8f1b7194104be764e8bc4bcb92"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">50709acf1b7194104be764e8bc4bcbb5</block>
+        <block display_value="">1b106ec21b9658104be764e8bc4bcb43</block>
         <comment>cooldown_status = after_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>6.1</order>
@@ -1017,7 +1017,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18709acf1b7194104be764e8bc4bcbb5</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1025,7 +1025,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>a581db26-15d6-4aae-8ab9-564e89a8ed74</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1046,14 +1046,14 @@
         <variable display_value="">d5d30ec31b3194104be764e8bc4bcb53</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">94709acf1b7194104be764e8bc4bcba1</block>
+        <block display_value="">57106ec21b9658104be764e8bc4bcb39</block>
         <comment>cooldown_status = during_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>5.1</order>
@@ -1065,7 +1065,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5c709acf1b7194104be764e8bc4bcba1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1073,7 +1073,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>d6f4d7c3-1d98-426d-ab30-fe15b4ab5ada</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1094,14 +1094,14 @@
         <variable display_value="">d5d30ec31b3194104be764e8bc4bcb53</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">dc709acf1b7194104be764e8bc4bcbb7</block>
+        <block display_value="">9b106ec21b9658104be764e8bc4bcb48</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -1114,7 +1114,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>94709acf1b7194104be764e8bc4bcbb8</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1122,7 +1122,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>13794a24-52e4-45eb-bf90-8576e278a393</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1168,14 +1168,14 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">d4709acf1b7194104be764e8bc4bcb97</block>
+        <block display_value="">97106ec21b9658104be764e8bc4bcb22</block>
         <comment>cooldown_status = grace_period</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>4.1</order>
@@ -1187,7 +1187,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9c709acf1b7194104be764e8bc4bcb97</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1195,7 +1195,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>6ef1cb3e-ab3f-4f5c-86fe-c24d175bb7d2</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1216,14 +1216,14 @@
         <variable display_value="">d5d30ec31b3194104be764e8bc4bcb53</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">14709acf1b7194104be764e8bc4bcba4</block>
+        <block display_value="">d7106ec21b9658104be764e8bc4bcb3e</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -1236,7 +1236,7 @@
         <sys_created_on>2020-07-09 01:12:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d8709acf1b7194104be764e8bc4bcba4</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1244,7 +1244,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>c02ecafd-7d5a-4c23-83fb-e9fcb2547e35</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1290,14 +1290,14 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">fcefce8f1b7194104be764e8bc4bcb91</block>
+        <block display_value="">5f106ec21b9658104be764e8bc4bcb27</block>
         <comment/>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -1310,7 +1310,7 @@
         <sys_created_on>2020-07-09 01:09:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f8efce8f1b7194104be764e8bc4bcb92</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1318,7 +1318,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:38</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:33</sys_updated_on>
         <ui_id>03508453-78b8-4f3a-85b6-1402dade8e32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1475,15 +1475,15 @@
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=a322420b1bfd54104be764e8bc4bcbc9^sys_idNOT IN60805ecf1b7194104be764e8bc4bcbc7"/>
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"60805ecf1b7194104be764e8bc4bcbc7","name":"plan"}}</plan>
-        <plan_id display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</plan_id>
-        <snapshot>486c1a031bf194104be764e8bc4bcbdb</snapshot>
+        <plan_id display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</plan_id>
+        <snapshot>ce4066ca1b1e10104ca7edf9bc4bcbe1</snapshot>
         <sys_class_name>sys_flow_subflow_plan</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-09 01:12:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>60805ecf1b7194104be764e8bc4bcbc7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1492,7 +1492,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:37</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:32</sys_updated_on>
     </sys_flow_subflow_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1507,10 +1507,10 @@
         <internal_name>main_checkcooldown</internal_name>
         <label_cache>[{"name":"ea9362d7-2667-419e-b9b9-bc7b301b6dab.config_value","label":"1➛config_value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f48f87a9-eb14-40ff-87ee-05fc9335fce8"}},{"name":"75016268-888c-447b-9d42-29d36024fbb8.config_value","label":"2➛config_value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f48f87a9-eb14-40ff-87ee-05fc9335fce8"}},{"name":"d4df8032-a268-4b36-989a-10add863629a.status","label":"3➛status","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"64ec6e0b-cffd-40f5-b45a-89cc8624afaf"}},{"name":"subflow.record","label":"Input➛record","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"03361559-6389-4e2d-927c-ba1e0341b9e7","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
         <master>true</master>
-        <name>MAIN_CheckCooldown</name>
+        <name>(OLD) MAIN_CheckCooldown</name>
         <natlang/>
         <outputs/>
-        <parent_flow display_value="MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</parent_flow>
+        <parent_flow display_value="(OLD) MAIN_CheckCooldown">a322420b1bfd54104be764e8bc4bcbc9</parent_flow>
         <remote_trigger_id/>
         <run_as>user</run_as>
         <sc_callable>false</sc_callable>
@@ -1521,7 +1521,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>8c801ecf1b7194104be764e8bc4bcbdf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1530,7 +1530,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:31</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=8c801ecf1b7194104be764e8bc4bcbdf"/>
@@ -1538,7 +1538,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>cooldown_end_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <order>2</order>
         <parent_ui_id/>
@@ -1548,7 +1548,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>14805ecf1b7194104be764e8bc4bcb78</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1556,7 +1556,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>75016268-888c-447b-9d42-29d36024fbb8</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=14805ecf1b7194104be764e8bc4bcb78"/>
@@ -1589,14 +1589,14 @@
         <variable display_value="">4e13c1741bbd90104be764e8bc4bcb9b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">94709acf1b7194104be764e8bc4bcba1</block>
+        <block display_value="">57106ec21b9658104be764e8bc4bcb39</block>
         <comment>cooldown_status = during_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>5.1</order>
@@ -1608,7 +1608,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18805ecf1b7194104be764e8bc4bcb57</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1616,7 +1616,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>d6f4d7c3-1d98-426d-ab30-fe15b4ab5ada</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1637,14 +1637,14 @@
         <variable display_value="">9c805ecf1b7194104be764e8bc4bcb0b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">14709acf1b7194104be764e8bc4bcba4</block>
+        <block display_value="">d7106ec21b9658104be764e8bc4bcb3e</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -1657,7 +1657,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18805ecf1b7194104be764e8bc4bcb5a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1665,7 +1665,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:31</sys_updated_on>
         <ui_id>c02ecafd-7d5a-4c23-83fb-e9fcb2547e35</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1711,14 +1711,14 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">d4709acf1b7194104be764e8bc4bcb97</block>
+        <block display_value="">97106ec21b9658104be764e8bc4bcb22</block>
         <comment>cooldown_status = grace_period</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>4.1</order>
@@ -1730,7 +1730,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>54805ecf1b7194104be764e8bc4bcb43</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1738,7 +1738,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>6ef1cb3e-ab3f-4f5c-86fe-c24d175bb7d2</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1761,7 +1761,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>grace_period_cooldown_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <order>1</order>
         <parent_ui_id/>
@@ -1771,7 +1771,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>90805ecf1b7194104be764e8bc4bcb69</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1779,7 +1779,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>ea9362d7-2667-419e-b9b9-bc7b301b6dab</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=90805ecf1b7194104be764e8bc4bcb69"/>
@@ -1812,14 +1812,14 @@
         <variable display_value="">4e13c1741bbd90104be764e8bc4bcb9b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">fcefce8f1b7194104be764e8bc4bcb91</block>
+        <block display_value="">5f106ec21b9658104be764e8bc4bcb27</block>
         <comment/>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -1832,7 +1832,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>98805ecf1b7194104be764e8bc4bcb53</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1840,7 +1840,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>03508453-78b8-4f3a-85b6-1402dade8e32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1893,7 +1893,7 @@
         <comment/>
         <compiled_snapshot>a78f468f1b7194104be764e8bc4bcb21</compiled_snapshot>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <order>3</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -1901,7 +1901,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d0805ecf1b7194104be764e8bc4bcb67</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1909,7 +1909,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>d4df8032-a268-4b36-989a-10add863629a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d0805ecf1b7194104be764e8bc4bcb67"/>
@@ -1979,14 +1979,14 @@
         <value>{{subflow.record}}</value>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">50709acf1b7194104be764e8bc4bcbb5</block>
+        <block display_value="">1b106ec21b9658104be764e8bc4bcb43</block>
         <comment>cooldown_status = after_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>6.1</order>
@@ -1998,7 +1998,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d4805ecf1b7194104be764e8bc4bcb5e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2006,7 +2006,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:31</sys_updated_on>
         <ui_id>a581db26-15d6-4aae-8ab9-564e89a8ed74</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2027,14 +2027,14 @@
         <variable display_value="">9c805ecf1b7194104be764e8bc4bcb0b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">dc709acf1b7194104be764e8bc4bcbb7</block>
+        <block display_value="">9b106ec21b9658104be764e8bc4bcb48</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -2047,7 +2047,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d4805ecf1b7194104be764e8bc4bcb61</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2055,7 +2055,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:31</sys_updated_on>
         <ui_id>13794a24-52e4-45eb-bf90-8576e278a393</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2159,7 +2159,7 @@
         <label>record</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</model>
+        <model display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</model>
         <model_id>8c801ecf1b7194104be764e8bc4bcbdf</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
         <name>var__m_sys_hub_flow_input_8c801ecf1b7194104be764e8bc4bcbdf</name>
@@ -2243,7 +2243,7 @@
         <label>cooldown_status</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</model>
+        <model display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</model>
         <model_id>8c801ecf1b7194104be764e8bc4bcbdf</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
         <name>var__m_sys_hub_flow_output_8c801ecf1b7194104be764e8bc4bcbdf</name>
@@ -2296,7 +2296,7 @@
         <comment/>
         <compiled_snapshot>a78f468f1b7194104be764e8bc4bcb21</compiled_snapshot>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <order>3</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -2304,7 +2304,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d0805ecf1b7194104be764e8bc4bcb67</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2312,7 +2312,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>d4df8032-a268-4b36-989a-10add863629a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d0805ecf1b7194104be764e8bc4bcb67"/>
@@ -2385,7 +2385,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>cooldown_end_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <order>2</order>
         <parent_ui_id/>
@@ -2395,7 +2395,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>14805ecf1b7194104be764e8bc4bcb78</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2403,7 +2403,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>75016268-888c-447b-9d42-29d36024fbb8</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=14805ecf1b7194104be764e8bc4bcb78"/>
@@ -2438,7 +2438,7 @@
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>grace_period_cooldown_seconds</comment>
         <display_text/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <order>1</order>
         <parent_ui_id/>
@@ -2448,7 +2448,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>90805ecf1b7194104be764e8bc4bcb69</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2456,7 +2456,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>ea9362d7-2667-419e-b9b9-bc7b301b6dab</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=90805ecf1b7194104be764e8bc4bcb69"/>
@@ -2490,14 +2490,14 @@
     </sys_variable_value>
     <sys_hub_flow_logic action="delete_multiple" query="flow=8c801ecf1b7194104be764e8bc4bcbdf^sys_idNOT IN18805ecf1b7194104be764e8bc4bcb57,18805ecf1b7194104be764e8bc4bcb5a,54805ecf1b7194104be764e8bc4bcb43,98805ecf1b7194104be764e8bc4bcb53,d4805ecf1b7194104be764e8bc4bcb5e,d4805ecf1b7194104be764e8bc4bcb61"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">94709acf1b7194104be764e8bc4bcba1</block>
+        <block display_value="">57106ec21b9658104be764e8bc4bcb39</block>
         <comment>cooldown_status = during_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>5.1</order>
@@ -2509,7 +2509,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18805ecf1b7194104be764e8bc4bcb57</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2517,7 +2517,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>d6f4d7c3-1d98-426d-ab30-fe15b4ab5ada</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2538,14 +2538,14 @@
         <variable display_value="">9c805ecf1b7194104be764e8bc4bcb0b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">14709acf1b7194104be764e8bc4bcba4</block>
+        <block display_value="">d7106ec21b9658104be764e8bc4bcb3e</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -2558,7 +2558,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18805ecf1b7194104be764e8bc4bcb5a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2566,7 +2566,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:31</sys_updated_on>
         <ui_id>c02ecafd-7d5a-4c23-83fb-e9fcb2547e35</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2612,14 +2612,14 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">d4709acf1b7194104be764e8bc4bcb97</block>
+        <block display_value="">97106ec21b9658104be764e8bc4bcb22</block>
         <comment>cooldown_status = grace_period</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>4.1</order>
@@ -2631,7 +2631,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>54805ecf1b7194104be764e8bc4bcb43</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2639,7 +2639,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>6ef1cb3e-ab3f-4f5c-86fe-c24d175bb7d2</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2660,14 +2660,14 @@
         <variable display_value="">9c805ecf1b7194104be764e8bc4bcb0b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">fcefce8f1b7194104be764e8bc4bcb91</block>
+        <block display_value="">5f106ec21b9658104be764e8bc4bcb27</block>
         <comment/>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -2680,7 +2680,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>98805ecf1b7194104be764e8bc4bcb53</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2688,7 +2688,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:30</sys_updated_on>
         <ui_id>03508453-78b8-4f3a-85b6-1402dade8e32</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2734,14 +2734,14 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">50709acf1b7194104be764e8bc4bcbb5</block>
+        <block display_value="">1b106ec21b9658104be764e8bc4bcb43</block>
         <comment>cooldown_status = after_cooldown</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>6.1</order>
@@ -2753,7 +2753,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d4805ecf1b7194104be764e8bc4bcb5e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2761,7 +2761,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:31</sys_updated_on>
         <ui_id>a581db26-15d6-4aae-8ab9-564e89a8ed74</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2782,14 +2782,14 @@
         <variable display_value="">9c805ecf1b7194104be764e8bc4bcb0b</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">dc709acf1b7194104be764e8bc4bcbb7</block>
+        <block display_value="">9b106ec21b9658104be764e8bc4bcb48</block>
         <comment/>
         <connected_to>03508453-78b8-4f3a-85b6-1402dade8e32</connected_to>
         <decision_table/>
         <decision_table_inputs/>
         <display_text/>
         <extended_inputs/>
-        <flow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
+        <flow display_value="(OLD) MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</flow>
         <inputs/>
         <inputs/>
         <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
@@ -2802,7 +2802,7 @@
         <sys_created_on>2020-07-09 01:12:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d4805ecf1b7194104be764e8bc4bcb61</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2810,7 +2810,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 01:12:36</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:18:31</sys_updated_on>
         <ui_id>13794a24-52e4-45eb-bf90-8576e278a393</ui_id>
         <workflow_inputs/>
         <workflow_reference/>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis Attachment Upload" max_length="40" name="x_fmcna_armis_inte_armis_attachment_upload" sizeclass="32" type="collection">
+        <element label="Attachment" max_length="32" name="attachment" reference="sys_attachment" type="reference"/>
+        <element label="Content" max_length="200000" name="content" type="string"/>
+        <element label="Execution ID" max_length="6" name="execution_id" type="string"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="COMPLETE" value="COMPLETE"/>
+                <element inactive_on_update="false" label="PENDING" value="PENDING"/>
+                <element inactive_on_update="false" label="PROCESSING" value="PROCESSING"/>
+            </choice>
+        </element>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="ARP" value="ARP"/>
+                <element inactive_on_update="false" label="CSV" value="CSV"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="attachment"/>
+        </index>
+    </element>
+</database>

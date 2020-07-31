@@ -12,20 +12,21 @@
         <description/>
         <ih_action>false</ih_action>
         <internal_name>up_uploadarpbatch_v21</internal_name>
-        <label_cache>[{"name":"{{action.max_seconds}}","label":"action➛max_seconds","type":"action","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].debug}}","label":"step➛Script step➛debug","type":"step","ref":""}]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
+        <label_cache>[{"name":"{{action.max_seconds}}","label":"action➛max_seconds","type":"action","ref":""},{"name":"{{action.operation}}","label":"action➛operation","type":"action","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].report}}","label":"step➛Script step➛report","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>37ded2561b92d0104ca7edf9bc4bcba6</latest_snapshot>
+        <master_snapshot>c6debdf11b1ad4104be764e8bc4bcbd7</master_snapshot>
         <name>UP_UploadBatches (v2.1)</name>
         <natlang/>
         <outputs/>
-        <state>draft</state>
+        <outputs/>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-24 20:05:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>2f83678c1b969c104ca7edf9bc4bcb28</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>82</sys_mod_count>
         <sys_name>UP_UploadBatches (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -34,11 +35,24 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_2f83678c1b969c104ca7edf9bc4bcb28</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-24 23:23:12</sys_updated_on>
+        <sys_updated_on>2020-07-31 14:51:21</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
     <sys_variable_value action="delete_multiple" query="document_key=2f83678c1b969c104ca7edf9bc4bcb28"/>
+    <sys_element_mapping action="delete_multiple" query="id=2f83678c1b969c104ca7edf9bc4bcb28"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>debug</field>
+        <id>2f83678c1b969c104ca7edf9bc4bcb28</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:25:51</sys_created_on>
+        <sys_id>829310fd1b1e94104be764e8bc4bcb52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:25:51</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2f83678c1b969c104ca7edf9bc4bcb28</table>
+        <value>{{step[9c44111f-3494-4908-9eca-f8468b3064d0].debug}}</value>
+    </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</action>
@@ -58,7 +72,7 @@
         <sys_created_on>2020-07-24 21:08:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>67123b081b1a9c104ca7edf9bc4bcb17</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -66,7 +80,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-24 23:23:12</sys_updated_on>
+        <sys_updated_on>2020-07-31 14:51:18</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -91,9 +105,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-24 21:08:43</sys_created_on>
         <sys_id>e7123b081b1a9c104ca7edf9bc4bcb25</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-24 23:23:12</sys_updated_on>
+        <sys_updated_on>2020-07-31 14:51:18</sys_updated_on>
         <value>/* 
 
 This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
@@ -102,134 +116,221 @@ For each operation:
 1. Pull up to 2000 records and set their status to PROCESSING.
 2. Compose a JSON payload or a CSV attachment with the contents.
 3. Execute the REST API call and document the results. If it succeeds, set all 1000 records to COMPLETED, otherwise reset them to PENDING.
+   - Note: for CSV/ARP uploads, can't actually do a multipart upload in a script due to limitation, have to be executed with IntegrationHub.
 
 Operations should be done precisely in the order of ARP, then Key Attribute, then Property, then Application. However, because more ARPs may come in while the last stack of ARPs is processing, snapshots of the counts of each will be taken at the beginning to ensure that the system doesn't get bogged down doing a handful of ARPs over and over and nothing else.
 
 */
 
-//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.11 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),u={};return 1==e.async?r=i.executeAsync():(r=i.execute(),u.response_code=r.getStatusCode(),u.response_body=r.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function queueInitialARPandCSV(e,t){var i=e.mac_address,a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
+
 
 
 // ACTION SPECIFIC FUNCTIONS
 
 // CSV encapsulation as per RFC4180. Note that Armis is a bit finicky so I'm just encapsulating and not checking whether I have to.
-function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
+function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' }
+
+// **********************
+// *** IMPLEMENTATION ***
+// **********************
 
 (function execute(inputs, outputs) {
   
   //Init
   var debug = []
   var start_time = now()
+  var execution_id = generateID()
   var api_total = 0 // total time spent on the api
   var heavy_total = 0 // total time spent on sql processing
   var query_limit = 2 //This is how many properties should be processed at once--for each of the operations below, Armis can sustain 2000 at once.
+  var max_entries = 1900 //All of the upload functions we're using should be able to handle this many.
+  var total_entries = 0
+  var report_string = ''
+  var error_message = ''
+  var max_seconds = parseInt(inputs.max_seconds)
+  if(isNaN(max_seconds)) { max_seconds = 240 }
   
-  //Setting these up for easy reference/manipulation
-  var ops = [
-    { name: 'arp',
-      table: 'x_fmcna_armis_inte_armis_op_arp_table' },
-    { name: 'key_attributes',
-      table: 'x_fmcna_armis_inte_armis_op_key_attribute' },
-    { name: 'properties',
-      table: 'x_fmcna_armis_inte_armis_op_property_upload' },
-    { name: 'applications',
-      table: 'x_fmcna_armis_inte_armis_op_application_upload' }
-  ]
-  
-  
-  //First, count how many sets of operations we'll need for each.
-  debug.push("COUNT OPERATIONS")
-  for(var i=0;i&lt;ops.length;i++)
+  //Set up initial variables depending on the operation we're executing
+  var table = ''
+  var payload
+  var endpoint = ''
+  switch (inputs.operation)
   {
-    var agg = new GlideAggregate(ops[i].table)
-    agg.addAggregate('COUNT', 'status')
-    agg.addQuery('status','PENDING')
-    
-    var heavy_ms = now()
-    agg.query()
-    heavy_ms = now() - heavy_ms
-    heavy_total += heavy_ms
-    
-    while(agg.next())
-    {
-      var count = agg.getAggregate('COUNT','status')
-      ops[i].num_loops_to_do = Math.ceil(count/query_limit)
-      ops[i].count = count
-      debug.push( "Operation " + ops[i].name + " count: " + ops[i].count + " (" + ops[i].count + " loops, " + heavy_ms + "ms)" )
-    }
+    case 'arp':
+      table = 'x_fmcna_armis_inte_armis_op_arp_table'
+      payload = ["ip,mac"]
+      break;
+    case 'csv':
+      table = 'x_fmcna_armis_inte_armis_op_key_attribute'
+      payload = ["id,mac,key,value"]
+      break;
+    case 'app':
+      table = 'x_fmcna_armis_inte_armis_op_application_upload'
+      payload = []
+      endpoint = "POST Applications"
+      break;
+    case 'prop':
+      table = 'x_fmcna_armis_inte_armis_op_property_upload'
+      payload = []
+      endpoint = "POST Properties"
+      break;  
+    default: return
   }
+  debug.push("Operation: " + inputs.operation)
+  debug.push("Table: " + table)
   
-  //EXECUTE THE LOOP.
-  // We end when we're out of time OR if we've flagged for an early exit.
-  var end_loop_early = false
-  var oi = 0 // "operation index"
-  var operation_loop_count = 0
-  while(!end_loop_early &amp;&amp; now() - start_time &lt; inputs.max_seconds*1000)
+  try
   {
-    //Counting the number of loops done for this option within the ops array
-    if(ops[oi].num_loops_done == null) { ops[oi].num_loops_done = 0 }
-    debug.push("PERFORMING OPERATION '" + ops[oi].name + "', iteration " + (ops[oi].num_loops_done + 1) + "/" + ops[oi].num_loops_to_do)
-    
-    //EXECUTE API REQUEST
-    var q = new GlideRecord(ops[oi].table)
+    //Find out potentially how many loops we'll be processing.
+    var q = new GlideAggregate(table)
     q.addQuery('status','PENDING')
-    q.setLimit(query_limit)
-    
-    var heavy_ms = now()
+    q.addAggregate('COUNT')
     q.query()
-    heavy_ms = now() - heavy_ms
-    heavy_total += heavy_ms
-    debug.push("    Retrieved " + q.getRowCount() + " records. (" + heavy_ms + "ms)")
-    
-    //Prep the payload that will be sent as an attachment or as the body of a query.
-    var payload
-    switch (ops[oi].name)
+    var num_pending = 0
+    if (q.next()) { num_pending = q.getAggregate('COUNT') }
+    var num_loops = Math.ceil(num_pending/max_entries)
+    debug.push("Num pending: " + num_pending + " (" + num_loops + " loops)")
+
+    //Do the loop!
+    //Keep processing queries until we're out of time, out of queries, or another failure has triggered an early abort.
+    var loop_counter = 0
+    var end_loop_early = false
+    debug.push("loop_counter=" + loop_counter + ",num_loops=" + num_loops + ",max_seconds=" + max_seconds)
+    while(loop_counter &lt; num_loops &amp;&amp; end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_seconds*1000)
     {
-      case 'arp': payload = ['mac,ip'];break;
-      case 'key_attributes': payload = ['id,mac,key,value'];break;
-      case 'properties':
-      case 'applications':
-        payload = []    
-    }
-    
-    while(q.next())
-    {
-      //Behavior depends on which operation
-      switch (ops[oi].name)
+      loop_counter++
+      debug.push("START LOOP " + loop_counter)
+      
+      //Initialize payload
+      switch (inputs.operation)
       {
         case 'arp':
-          payload.push(q.mac + ',' + q.ip);break;
-        case 'key_attributes':
-          var id=0; if(q.armis_device_id != null) { id = q.armis_device_id }
-          var mac=""; if(q.armis_mac != null) { mac = q.armis_mac }
-          payload.push(id + "," + mac + "," + q.
-                       
-                       
-                       
-                       /////////////////////////////BREAKING FOR WORK, 7/24//////////////////////////////
-                       
-                       
-                       
-                       
+          payload = ["ip,mac"]
+          break;
+        case 'csv':
+          payload = ["id,mac,key,value"]
+          break;
+        case 'app':
+        case 'prop':
+          payload = []
+          break;  
+        default: return
+      }
+
+      //Get the sys_id of the last entry in our current batch. (See FUNCTION_LIBRARY for details.)
+      var end_sys_id = getPendingRecordsEndSysID(max_entries,table)
+
+      //Get two sets of records: one to iterate through, one to updatemultiple() to "COMPLETE" when we're done.
+      var rec1 = getNumPendingRecords(max_entries,table,end_sys_id)
+      var rec2 = getNumPendingRecords(max_entries,table,end_sys_id)
+      debug.push("Records end at sys_id '" + end_sys_id + "', total records (1) " + rec1.getRowCount() + " (2) " + rec2.getRowCount())
+
+      //Format: "2020-07-29T15:07:56"
+      var lastSeenString = new GlideDateTime().getDisplayValue().replace(" ","T")
+
+      var heavy_timer = now()
+      var rec_counter = 0
+      var rec_time = now()
+
+      //Pull all of the values from our records-to-process.
+      while(rec1.next())
+      {
+        rec_counter++
+        switch (inputs.operation)
+        {
+          case 'arp':
+            payload.push(rec1.getValue('ip') + "," + rec1.getValue('mac'))
+            break;
+          case 'csv':
+            var device_id = parseInt(rec1.getValue('armis_device_id'))
+            if(isNaN(device_id)) { device_id = ''}
+            var payload_line = '' + device_id + "," + rec1.getValue('armis_mac') + "," + rec1.getValue('attribute') + "," + csv_encapsulate(rec1.getValue('value'))
+            payload.push(payload_line)
+            break;
+          case 'app':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'name': rec1.getValue('application_name'),
+              'application_version': rec1.getValue('version') } } )
+            break;
+          case 'prop':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'description': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_name'),
+              'value': rec1.getValue('property_value') } } )
+            break;  
+          default: return
+        }
+      }
+      debug.push("Processed " + rec_counter + " records. (" + (now() - rec_time) + "ms)")
+
+      //Processed all, mark them complete.
+      rec_time = now()
+      rec2.setValue('status','COMPLETE')
+      rec2.updateMultiple()
+      heavy_total += ( now() - heavy_timer )
+      debug.push("Marked records as complete. (" + (now() - rec_time) + "ms)")
+
+      //Combine payload.
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          payload = payload.join("\n")
+          break;
+        case 'app':
+        case 'prop':
+          payload = JSON.stringify(payload)
+      }
+      debug.push("Combined payload (" + ('' + payload).length + "): '" + ('' + payload).substring(0,1000) + "'")
+
+      //Upload payload to Armis. (Or queue attachment for upload.
+      var rest_results = {}
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          queueAttachmentREST({id: execution_id, type: inputs.operation.toUpperCase(), payload: payload})
+          debug.push("Queued payload for attachment upload.")
+          break;
+        case 'app':
+        case 'prop':
+          rest_results = executeStandardREST({id: execution_id, endpoint: endpoint, payload: payload, async: false, query_params: []})
+          api_total += rest_results.api_time
+          debug.push("REST Executed (" + rest_results.api_time + "ms). Result: " + rest_results.response_code + " : " + rest_results.response_body)
+          if(rest_results.response_code != 207)
+          {
+            //If there was a problem, we don't want to keep looping.
+            report_string += '[REST:' + rest_results.response_code + ',' + rest_results.response_body + ']'
+            end_loop_early = true
+          } 
       }
     }
-    
-    //Done with this operation, iterate it.
-    ops[oi].num_loops_done++
-    //Are we done with all loops for this operation?
-    if(ops[oi].num_loops_done &gt;= ops[oi].num_loops_to_do)
-    {
-      debug.push("Completed all operations for '" + ops[oi].name + "'.")
-      oi++
-      if(oi &gt;= ops.length) { end_loop_early = true }
-    }
-    
+  }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + ']'
   }
   
-  debug.push("FINAL INFO ARRAY: " + JSON.stringify(ops))
+  
+  //Done looping. Report! Not much to report here except the number of loops we executed, as the REST API log has all the rest of the data.
+  report_string += error_message + inputs.operation + ' operation, ' + loop_counter  + ' executions, ' + rec_counter + ' records processed.'
+  if(num_loops &gt; 0) { writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches('+inputs.operation+')', total_time: (now() - start_time), api_time: api_total, heavy_processing_time: heavy_total, report: report_string, debug_string: debug.join('\n')}) }
+  
   outputs.debug = debug.join('\n')
+  
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -260,6 +361,18 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <value>{{action.max_seconds}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>67123b081b1a9c104ca7edf9bc4bcb17</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:20:53</sys_created_on>
+        <sys_id>4172907d1b1e94104be764e8bc4bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:20:53</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_67123b081b1a9c104ca7edf9bc4bcb17</table>
+        <value>{{action.operation}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>script</field>
         <id>67123b081b1a9c104ca7edf9bc4bcb17</id>
         <sys_created_by>3244578</sys_created_by>
@@ -271,7 +384,90 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT INbea488101b9a9c104ca7edf9bc4bcb05"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT IN8172907d1b1e94104be764e8bc4bcb7e,bea488101b9a9c104ca7edf9bc4bcb05"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operation</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">67123b081b1a9c104ca7edf9bc4bcb17</model>
+        <model_id>67123b081b1a9c104ca7edf9bc4bcb17</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_67123b081b1a9c104ca7edf9bc4bcb17</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:20:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8172907d1b1e94104be764e8bc4bcb7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:20:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -355,7 +551,7 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT IN23123b081b1a9c104ca7edf9bc4bcb1c"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT IN23123b081b1a9c104ca7edf9bc4bcb1c,cf9ca99a1b1e90104ca7edf9bc4bcb48"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -439,7 +635,173 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT INe71273401b1a9c104ca7edf9bc4bcb9c"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=32b9c1fb-76e3-4d8b-9640-d0a4c17d940e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>report</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>report</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">67123b081b1a9c104ca7edf9bc4bcb17</model>
+        <model_id>67123b081b1a9c104ca7edf9bc4bcb17</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_67123b081b1a9c104ca7edf9bc4bcb17</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-31 11:11:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf9ca99a1b1e90104ca7edf9bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 11:11:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_input action="delete_multiple" query="model=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN0972907d1b1e94104be764e8bc4bcb5d,e71273401b1a9c104ca7edf9bc4bcb9c"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=44937559-1e06-479a-9e55-83b57f077326</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>arp</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operation</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>operation</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</model>
+        <model_id>2f83678c1b969c104ca7edf9bc4bcb28</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:20:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0972907d1b1e94104be764e8bc4bcb5d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:20:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -523,6 +885,92 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN0e9310fd1b1e94104be764e8bc4bcb48"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=449b114f-4fd3-4a08-a4b3-5722cc0b4731</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</model>
+        <model_id>2f83678c1b969c104ca7edf9bc4bcb28</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_2f83678c1b969c104ca7edf9bc4bcb28</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:25:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0e9310fd1b1e94104be764e8bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:25:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</action>
@@ -542,7 +990,7 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <sys_created_on>2020-07-24 21:08:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>67123b081b1a9c104ca7edf9bc4bcb17</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -550,7 +998,7 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-24 23:23:12</sys_updated_on>
+        <sys_updated_on>2020-07-31 14:51:18</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -575,9 +1023,9 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-24 21:08:43</sys_created_on>
         <sys_id>e7123b081b1a9c104ca7edf9bc4bcb25</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-24 23:23:12</sys_updated_on>
+        <sys_updated_on>2020-07-31 14:51:18</sys_updated_on>
         <value>/* 
 
 This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
@@ -586,134 +1034,221 @@ For each operation:
 1. Pull up to 2000 records and set their status to PROCESSING.
 2. Compose a JSON payload or a CSV attachment with the contents.
 3. Execute the REST API call and document the results. If it succeeds, set all 1000 records to COMPLETED, otherwise reset them to PENDING.
+   - Note: for CSV/ARP uploads, can't actually do a multipart upload in a script due to limitation, have to be executed with IntegrationHub.
 
 Operations should be done precisely in the order of ARP, then Key Attribute, then Property, then Application. However, because more ARPs may come in while the last stack of ARPs is processing, snapshots of the counts of each will be taken at the beginning to ensure that the system doesn't get bogged down doing a handful of ARPs over and over and nothing else.
 
 */
 
-//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.11 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),u={};return 1==e.async?r=i.executeAsync():(r=i.execute(),u.response_code=r.getStatusCode(),u.response_body=r.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function queueInitialARPandCSV(e,t){var i=e.mac_address,a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
+
 
 
 // ACTION SPECIFIC FUNCTIONS
 
 // CSV encapsulation as per RFC4180. Note that Armis is a bit finicky so I'm just encapsulating and not checking whether I have to.
-function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
+function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' }
+
+// **********************
+// *** IMPLEMENTATION ***
+// **********************
 
 (function execute(inputs, outputs) {
   
   //Init
   var debug = []
   var start_time = now()
+  var execution_id = generateID()
   var api_total = 0 // total time spent on the api
   var heavy_total = 0 // total time spent on sql processing
   var query_limit = 2 //This is how many properties should be processed at once--for each of the operations below, Armis can sustain 2000 at once.
+  var max_entries = 1900 //All of the upload functions we're using should be able to handle this many.
+  var total_entries = 0
+  var report_string = ''
+  var error_message = ''
+  var max_seconds = parseInt(inputs.max_seconds)
+  if(isNaN(max_seconds)) { max_seconds = 240 }
   
-  //Setting these up for easy reference/manipulation
-  var ops = [
-    { name: 'arp',
-      table: 'x_fmcna_armis_inte_armis_op_arp_table' },
-    { name: 'key_attributes',
-      table: 'x_fmcna_armis_inte_armis_op_key_attribute' },
-    { name: 'properties',
-      table: 'x_fmcna_armis_inte_armis_op_property_upload' },
-    { name: 'applications',
-      table: 'x_fmcna_armis_inte_armis_op_application_upload' }
-  ]
-  
-  
-  //First, count how many sets of operations we'll need for each.
-  debug.push("COUNT OPERATIONS")
-  for(var i=0;i&lt;ops.length;i++)
+  //Set up initial variables depending on the operation we're executing
+  var table = ''
+  var payload
+  var endpoint = ''
+  switch (inputs.operation)
   {
-    var agg = new GlideAggregate(ops[i].table)
-    agg.addAggregate('COUNT', 'status')
-    agg.addQuery('status','PENDING')
-    
-    var heavy_ms = now()
-    agg.query()
-    heavy_ms = now() - heavy_ms
-    heavy_total += heavy_ms
-    
-    while(agg.next())
-    {
-      var count = agg.getAggregate('COUNT','status')
-      ops[i].num_loops_to_do = Math.ceil(count/query_limit)
-      ops[i].count = count
-      debug.push( "Operation " + ops[i].name + " count: " + ops[i].count + " (" + ops[i].count + " loops, " + heavy_ms + "ms)" )
-    }
+    case 'arp':
+      table = 'x_fmcna_armis_inte_armis_op_arp_table'
+      payload = ["ip,mac"]
+      break;
+    case 'csv':
+      table = 'x_fmcna_armis_inte_armis_op_key_attribute'
+      payload = ["id,mac,key,value"]
+      break;
+    case 'app':
+      table = 'x_fmcna_armis_inte_armis_op_application_upload'
+      payload = []
+      endpoint = "POST Applications"
+      break;
+    case 'prop':
+      table = 'x_fmcna_armis_inte_armis_op_property_upload'
+      payload = []
+      endpoint = "POST Properties"
+      break;  
+    default: return
   }
+  debug.push("Operation: " + inputs.operation)
+  debug.push("Table: " + table)
   
-  //EXECUTE THE LOOP.
-  // We end when we're out of time OR if we've flagged for an early exit.
-  var end_loop_early = false
-  var oi = 0 // "operation index"
-  var operation_loop_count = 0
-  while(!end_loop_early &amp;&amp; now() - start_time &lt; inputs.max_seconds*1000)
+  try
   {
-    //Counting the number of loops done for this option within the ops array
-    if(ops[oi].num_loops_done == null) { ops[oi].num_loops_done = 0 }
-    debug.push("PERFORMING OPERATION '" + ops[oi].name + "', iteration " + (ops[oi].num_loops_done + 1) + "/" + ops[oi].num_loops_to_do)
-    
-    //EXECUTE API REQUEST
-    var q = new GlideRecord(ops[oi].table)
+    //Find out potentially how many loops we'll be processing.
+    var q = new GlideAggregate(table)
     q.addQuery('status','PENDING')
-    q.setLimit(query_limit)
-    
-    var heavy_ms = now()
+    q.addAggregate('COUNT')
     q.query()
-    heavy_ms = now() - heavy_ms
-    heavy_total += heavy_ms
-    debug.push("    Retrieved " + q.getRowCount() + " records. (" + heavy_ms + "ms)")
-    
-    //Prep the payload that will be sent as an attachment or as the body of a query.
-    var payload
-    switch (ops[oi].name)
+    var num_pending = 0
+    if (q.next()) { num_pending = q.getAggregate('COUNT') }
+    var num_loops = Math.ceil(num_pending/max_entries)
+    debug.push("Num pending: " + num_pending + " (" + num_loops + " loops)")
+
+    //Do the loop!
+    //Keep processing queries until we're out of time, out of queries, or another failure has triggered an early abort.
+    var loop_counter = 0
+    var end_loop_early = false
+    debug.push("loop_counter=" + loop_counter + ",num_loops=" + num_loops + ",max_seconds=" + max_seconds)
+    while(loop_counter &lt; num_loops &amp;&amp; end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_seconds*1000)
     {
-      case 'arp': payload = ['mac,ip'];break;
-      case 'key_attributes': payload = ['id,mac,key,value'];break;
-      case 'properties':
-      case 'applications':
-        payload = []    
-    }
-    
-    while(q.next())
-    {
-      //Behavior depends on which operation
-      switch (ops[oi].name)
+      loop_counter++
+      debug.push("START LOOP " + loop_counter)
+      
+      //Initialize payload
+      switch (inputs.operation)
       {
         case 'arp':
-          payload.push(q.mac + ',' + q.ip);break;
-        case 'key_attributes':
-          var id=0; if(q.armis_device_id != null) { id = q.armis_device_id }
-          var mac=""; if(q.armis_mac != null) { mac = q.armis_mac }
-          payload.push(id + "," + mac + "," + q.
-                       
-                       
-                       
-                       /////////////////////////////BREAKING FOR WORK, 7/24//////////////////////////////
-                       
-                       
-                       
-                       
+          payload = ["ip,mac"]
+          break;
+        case 'csv':
+          payload = ["id,mac,key,value"]
+          break;
+        case 'app':
+        case 'prop':
+          payload = []
+          break;  
+        default: return
+      }
+
+      //Get the sys_id of the last entry in our current batch. (See FUNCTION_LIBRARY for details.)
+      var end_sys_id = getPendingRecordsEndSysID(max_entries,table)
+
+      //Get two sets of records: one to iterate through, one to updatemultiple() to "COMPLETE" when we're done.
+      var rec1 = getNumPendingRecords(max_entries,table,end_sys_id)
+      var rec2 = getNumPendingRecords(max_entries,table,end_sys_id)
+      debug.push("Records end at sys_id '" + end_sys_id + "', total records (1) " + rec1.getRowCount() + " (2) " + rec2.getRowCount())
+
+      //Format: "2020-07-29T15:07:56"
+      var lastSeenString = new GlideDateTime().getDisplayValue().replace(" ","T")
+
+      var heavy_timer = now()
+      var rec_counter = 0
+      var rec_time = now()
+
+      //Pull all of the values from our records-to-process.
+      while(rec1.next())
+      {
+        rec_counter++
+        switch (inputs.operation)
+        {
+          case 'arp':
+            payload.push(rec1.getValue('ip') + "," + rec1.getValue('mac'))
+            break;
+          case 'csv':
+            var device_id = parseInt(rec1.getValue('armis_device_id'))
+            if(isNaN(device_id)) { device_id = ''}
+            var payload_line = '' + device_id + "," + rec1.getValue('armis_mac') + "," + rec1.getValue('attribute') + "," + csv_encapsulate(rec1.getValue('value'))
+            payload.push(payload_line)
+            break;
+          case 'app':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'name': rec1.getValue('application_name'),
+              'application_version': rec1.getValue('version') } } )
+            break;
+          case 'prop':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'description': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_name'),
+              'value': rec1.getValue('property_value') } } )
+            break;  
+          default: return
+        }
+      }
+      debug.push("Processed " + rec_counter + " records. (" + (now() - rec_time) + "ms)")
+
+      //Processed all, mark them complete.
+      rec_time = now()
+      rec2.setValue('status','COMPLETE')
+      rec2.updateMultiple()
+      heavy_total += ( now() - heavy_timer )
+      debug.push("Marked records as complete. (" + (now() - rec_time) + "ms)")
+
+      //Combine payload.
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          payload = payload.join("\n")
+          break;
+        case 'app':
+        case 'prop':
+          payload = JSON.stringify(payload)
+      }
+      debug.push("Combined payload (" + ('' + payload).length + "): '" + ('' + payload).substring(0,1000) + "'")
+
+      //Upload payload to Armis. (Or queue attachment for upload.
+      var rest_results = {}
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          queueAttachmentREST({id: execution_id, type: inputs.operation.toUpperCase(), payload: payload})
+          debug.push("Queued payload for attachment upload.")
+          break;
+        case 'app':
+        case 'prop':
+          rest_results = executeStandardREST({id: execution_id, endpoint: endpoint, payload: payload, async: false, query_params: []})
+          api_total += rest_results.api_time
+          debug.push("REST Executed (" + rest_results.api_time + "ms). Result: " + rest_results.response_code + " : " + rest_results.response_body)
+          if(rest_results.response_code != 207)
+          {
+            //If there was a problem, we don't want to keep looping.
+            report_string += '[REST:' + rest_results.response_code + ',' + rest_results.response_body + ']'
+            end_loop_early = true
+          } 
       }
     }
-    
-    //Done with this operation, iterate it.
-    ops[oi].num_loops_done++
-    //Are we done with all loops for this operation?
-    if(ops[oi].num_loops_done &gt;= ops[oi].num_loops_to_do)
-    {
-      debug.push("Completed all operations for '" + ops[oi].name + "'.")
-      oi++
-      if(oi &gt;= ops.length) { end_loop_early = true }
-    }
-    
+  }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + ']'
   }
   
-  debug.push("FINAL INFO ARRAY: " + JSON.stringify(ops))
+  
+  //Done looping. Report! Not much to report here except the number of loops we executed, as the REST API log has all the rest of the data.
+  report_string += error_message + inputs.operation + ' operation, ' + loop_counter  + ' executions, ' + rec_counter + ' records processed.'
+  if(num_loops &gt; 0) { writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches('+inputs.operation+')', total_time: (now() - start_time), api_time: api_total, heavy_processing_time: heavy_total, report: report_string, debug_string: debug.join('\n')}) }
+  
   outputs.debug = debug.join('\n')
+  
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -744,6 +1279,18 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <value>{{action.max_seconds}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>67123b081b1a9c104ca7edf9bc4bcb17</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:20:53</sys_created_on>
+        <sys_id>4172907d1b1e94104be764e8bc4bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:20:53</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_67123b081b1a9c104ca7edf9bc4bcb17</table>
+        <value>{{action.operation}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>script</field>
         <id>67123b081b1a9c104ca7edf9bc4bcb17</id>
         <sys_created_by>3244578</sys_created_by>
@@ -755,7 +1302,90 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT INbea488101b9a9c104ca7edf9bc4bcb05"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT IN8172907d1b1e94104be764e8bc4bcb7e,bea488101b9a9c104ca7edf9bc4bcb05"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operation</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">67123b081b1a9c104ca7edf9bc4bcb17</model>
+        <model_id>67123b081b1a9c104ca7edf9bc4bcb17</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_67123b081b1a9c104ca7edf9bc4bcb17</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:20:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8172907d1b1e94104be764e8bc4bcb7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:20:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -839,7 +1469,7 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT IN23123b081b1a9c104ca7edf9bc4bcb1c"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=67123b081b1a9c104ca7edf9bc4bcb17^sys_idNOT IN23123b081b1a9c104ca7edf9bc4bcb1c,cf9ca99a1b1e90104ca7edf9bc4bcb48"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -923,7 +1553,115 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT INaf123b081b1a9c104ca7edf9bc4bcb14"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=32b9c1fb-76e3-4d8b-9640-d0a4c17d940e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>report</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>report</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">67123b081b1a9c104ca7edf9bc4bcb17</model>
+        <model_id>67123b081b1a9c104ca7edf9bc4bcb17</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_67123b081b1a9c104ca7edf9bc4bcb17</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-31 11:11:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf9ca99a1b1e90104ca7edf9bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 11:11:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN8d72907d1b1e94104be764e8bc4bcb75,af123b081b1a9c104ca7edf9bc4bcb14"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>operation</element>
+        <help/>
+        <hint/>
+        <label>operation</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:20:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8d72907d1b1e94104be764e8bc4bcb75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:20:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>max_seconds</element>
         <help/>
@@ -946,6 +1684,1908 @@ function csv_encapsulate(str) { return '"' + str.replace('"','""') + '"' }
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-24 21:08:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN0d72907d1b1e94104be764e8bc4bcb61,c572907d1b1e94104be764e8bc4bcb62,8172907d1b1e94104be764e8bc4bcb63,4d72907d1b1e94104be764e8bc4bcb63"/>
+    <sys_choice field="operation" table="var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>arp</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
+            <sequence>0</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 15:20:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>0d72907d1b1e94104be764e8bc4bcb61</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 15:21:47</sys_updated_on>
+            <value>arp</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>prop</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
+            <sequence>1</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 15:20:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c572907d1b1e94104be764e8bc4bcb62</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 15:21:47</sys_updated_on>
+            <value>prop</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>csv</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
+            <sequence>2</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 15:20:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8172907d1b1e94104be764e8bc4bcb63</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 15:21:47</sys_updated_on>
+            <value>csv</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>app</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
+            <sequence>3</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 15:20:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4d72907d1b1e94104be764e8bc4bcb63</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 15:21:47</sys_updated_on>
+            <value>app</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN8e9310fd1b1e94104be764e8bc4bcb4e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>debug</element>
+        <help/>
+        <hint/>
+        <label>debug</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2f83678c1b969c104ca7edf9bc4bcb28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 15:25:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8e9310fd1b1e94104be764e8bc4bcb4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 15:25:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT INb2defdf11b1ad4104be764e8bc4bcba4"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"b2defdf11b1ad4104be764e8bc4bcba4","name":"plan"}}</plan>
+        <snapshot>37ded2561b92d0104ca7edf9bc4bcba6</snapshot>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b2defdf11b1ad4104be764e8bc4bcba4</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 14:51:23</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>up_uploadbatches_v21</internal_name>
+        <label_cache>[{"name":"{{action.max_seconds}}","label":"action➛max_seconds","type":"action","ref":""},{"name":"{{action.operation}}","label":"action➛operation","type":"action","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].report}}","label":"step➛Script step➛report","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>UP_UploadBatches (v2.1)</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>c6debdf11b1ad4104be764e8bc4bcbd7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 11:11:47</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=c6debdf11b1ad4104be764e8bc4bcbd7"/>
+    <sys_element_mapping action="delete_multiple" query="id=c6debdf11b1ad4104be764e8bc4bcbd7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>debug</field>
+        <id>c6debdf11b1ad4104be764e8bc4bcbd7</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>aadefdf11b1ad4104be764e8bc4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_hub_action_output_c6debdf11b1ad4104be764e8bc4bcbd7</table>
+        <value>{{step[9c44111f-3494-4908-9eca-f8468b3064d0].debug}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT IN92debdf11b1ad4104be764e8bc4bcbf0"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</action>
+        <cid>9c44111f-3494-4908-9eca-f8468b3064d0</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>92debdf11b1ad4104be764e8bc4bcbf0</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 14:51:21</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=92debdf11b1ad4104be764e8bc4bcbf0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>92debdf11b1ad4104be764e8bc4bcbf0</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>5edefdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 14:51:21</sys_updated_on>
+        <value>/* 
+
+This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
+
+For each operation:
+1. Pull up to 2000 records and set their status to PROCESSING.
+2. Compose a JSON payload or a CSV attachment with the contents.
+3. Execute the REST API call and document the results. If it succeeds, set all 1000 records to COMPLETED, otherwise reset them to PENDING.
+   - Note: for CSV/ARP uploads, can't actually do a multipart upload in a script due to limitation, have to be executed with IntegrationHub.
+
+Operations should be done precisely in the order of ARP, then Key Attribute, then Property, then Application. However, because more ARPs may come in while the last stack of ARPs is processing, snapshots of the counts of each will be taken at the beginning to ensure that the system doesn't get bogged down doing a handful of ARPs over and over and nothing else.
+
+*/
+
+//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.11 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),u={};return 1==e.async?r=i.executeAsync():(r=i.execute(),u.response_code=r.getStatusCode(),u.response_body=r.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function queueInitialARPandCSV(e,t){var i=e.mac_address,a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
+
+
+
+// ACTION SPECIFIC FUNCTIONS
+
+// CSV encapsulation as per RFC4180. Note that Armis is a bit finicky so I'm just encapsulating and not checking whether I have to.
+function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' }
+
+// **********************
+// *** IMPLEMENTATION ***
+// **********************
+
+(function execute(inputs, outputs) {
+  
+  //Init
+  var debug = []
+  var start_time = now()
+  var execution_id = generateID()
+  var api_total = 0 // total time spent on the api
+  var heavy_total = 0 // total time spent on sql processing
+  var query_limit = 2 //This is how many properties should be processed at once--for each of the operations below, Armis can sustain 2000 at once.
+  var max_entries = 1900 //All of the upload functions we're using should be able to handle this many.
+  var total_entries = 0
+  var report_string = ''
+  var error_message = ''
+  var max_seconds = parseInt(inputs.max_seconds)
+  if(isNaN(max_seconds)) { max_seconds = 240 }
+  
+  //Set up initial variables depending on the operation we're executing
+  var table = ''
+  var payload
+  var endpoint = ''
+  switch (inputs.operation)
+  {
+    case 'arp':
+      table = 'x_fmcna_armis_inte_armis_op_arp_table'
+      payload = ["ip,mac"]
+      break;
+    case 'csv':
+      table = 'x_fmcna_armis_inte_armis_op_key_attribute'
+      payload = ["id,mac,key,value"]
+      break;
+    case 'app':
+      table = 'x_fmcna_armis_inte_armis_op_application_upload'
+      payload = []
+      endpoint = "POST Applications"
+      break;
+    case 'prop':
+      table = 'x_fmcna_armis_inte_armis_op_property_upload'
+      payload = []
+      endpoint = "POST Properties"
+      break;  
+    default: return
+  }
+  debug.push("Operation: " + inputs.operation)
+  debug.push("Table: " + table)
+  
+  try
+  {
+    //Find out potentially how many loops we'll be processing.
+    var q = new GlideAggregate(table)
+    q.addQuery('status','PENDING')
+    q.addAggregate('COUNT')
+    q.query()
+    var num_pending = 0
+    if (q.next()) { num_pending = q.getAggregate('COUNT') }
+    var num_loops = Math.ceil(num_pending/max_entries)
+    debug.push("Num pending: " + num_pending + " (" + num_loops + " loops)")
+
+    //Do the loop!
+    //Keep processing queries until we're out of time, out of queries, or another failure has triggered an early abort.
+    var loop_counter = 0
+    var end_loop_early = false
+    debug.push("loop_counter=" + loop_counter + ",num_loops=" + num_loops + ",max_seconds=" + max_seconds)
+    while(loop_counter &lt; num_loops &amp;&amp; end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_seconds*1000)
+    {
+      loop_counter++
+      debug.push("START LOOP " + loop_counter)
+      
+      //Initialize payload
+      switch (inputs.operation)
+      {
+        case 'arp':
+          payload = ["ip,mac"]
+          break;
+        case 'csv':
+          payload = ["id,mac,key,value"]
+          break;
+        case 'app':
+        case 'prop':
+          payload = []
+          break;  
+        default: return
+      }
+
+      //Get the sys_id of the last entry in our current batch. (See FUNCTION_LIBRARY for details.)
+      var end_sys_id = getPendingRecordsEndSysID(max_entries,table)
+
+      //Get two sets of records: one to iterate through, one to updatemultiple() to "COMPLETE" when we're done.
+      var rec1 = getNumPendingRecords(max_entries,table,end_sys_id)
+      var rec2 = getNumPendingRecords(max_entries,table,end_sys_id)
+      debug.push("Records end at sys_id '" + end_sys_id + "', total records (1) " + rec1.getRowCount() + " (2) " + rec2.getRowCount())
+
+      //Format: "2020-07-29T15:07:56"
+      var lastSeenString = new GlideDateTime().getDisplayValue().replace(" ","T")
+
+      var heavy_timer = now()
+      var rec_counter = 0
+      var rec_time = now()
+
+      //Pull all of the values from our records-to-process.
+      while(rec1.next())
+      {
+        rec_counter++
+        switch (inputs.operation)
+        {
+          case 'arp':
+            payload.push(rec1.getValue('ip') + "," + rec1.getValue('mac'))
+            break;
+          case 'csv':
+            var device_id = parseInt(rec1.getValue('armis_device_id'))
+            if(isNaN(device_id)) { device_id = ''}
+            var payload_line = '' + device_id + "," + rec1.getValue('armis_mac') + "," + rec1.getValue('attribute') + "," + csv_encapsulate(rec1.getValue('value'))
+            payload.push(payload_line)
+            break;
+          case 'app':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'name': rec1.getValue('application_name'),
+              'application_version': rec1.getValue('version') } } )
+            break;
+          case 'prop':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'description': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_name'),
+              'value': rec1.getValue('property_value') } } )
+            break;  
+          default: return
+        }
+      }
+      debug.push("Processed " + rec_counter + " records. (" + (now() - rec_time) + "ms)")
+
+      //Processed all, mark them complete.
+      rec_time = now()
+      rec2.setValue('status','COMPLETE')
+      rec2.updateMultiple()
+      heavy_total += ( now() - heavy_timer )
+      debug.push("Marked records as complete. (" + (now() - rec_time) + "ms)")
+
+      //Combine payload.
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          payload = payload.join("\n")
+          break;
+        case 'app':
+        case 'prop':
+          payload = JSON.stringify(payload)
+      }
+      debug.push("Combined payload (" + ('' + payload).length + "): '" + ('' + payload).substring(0,1000) + "'")
+
+      //Upload payload to Armis. (Or queue attachment for upload.
+      var rest_results = {}
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          queueAttachmentREST({id: execution_id, type: inputs.operation.toUpperCase(), payload: payload})
+          debug.push("Queued payload for attachment upload.")
+          break;
+        case 'app':
+        case 'prop':
+          rest_results = executeStandardREST({id: execution_id, endpoint: endpoint, payload: payload, async: false, query_params: []})
+          api_total += rest_results.api_time
+          debug.push("REST Executed (" + rest_results.api_time + "ms). Result: " + rest_results.response_code + " : " + rest_results.response_body)
+          if(rest_results.response_code != 207)
+          {
+            //If there was a problem, we don't want to keep looping.
+            report_string += '[REST:' + rest_results.response_code + ',' + rest_results.response_body + ']'
+            end_loop_early = true
+          } 
+      }
+    }
+  }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + ']'
+  }
+  
+  
+  //Done looping. Report! Not much to report here except the number of loops we executed, as the REST API log has all the rest of the data.
+  report_string += error_message + inputs.operation + ' operation, ' + loop_counter  + ' executions, ' + rec_counter + ' records processed.'
+  if(num_loops &gt; 0) { writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches('+inputs.operation+')', total_time: (now() - start_time), api_time: api_total, heavy_processing_time: heavy_total, report: report_string, debug_string: debug.join('\n')}) }
+  
+  outputs.debug = debug.join('\n')
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>92debdf11b1ad4104be764e8bc4bcbf0</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>9adefdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=92debdf11b1ad4104be764e8bc4bcbf0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>56defdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_seconds</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>d6defdf11b1ad4104be764e8bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</table>
+        <value>{{action.max_seconds}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>9adefdf11b1ad4104be764e8bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</table>
+        <value>{{action.operation}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>1adefdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=92debdf11b1ad4104be764e8bc4bcbf0^sys_idNOT IN52defdf11b1ad4104be764e8bc4bcb06,dedebdf11b1ad4104be764e8bc4bcbf2"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operation</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>operation</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>52defdf11b1ad4104be764e8bc4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>max_seconds</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>max_seconds</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dedebdf11b1ad4104be764e8bc4bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=92debdf11b1ad4104be764e8bc4bcbf0^sys_idNOT IN8cace99a1b1e90104ca7edf9bc4bcb64,dadefdf11b1ad4104be764e8bc4bcb0c"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=32b9c1fb-76e3-4d8b-9640-d0a4c17d940e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>report</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>report</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-31 11:11:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8cace99a1b1e90104ca7edf9bc4bcb64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 11:11:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=43d13408-838c-41e3-bd14-36ff6a8d5360</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dadefdf11b1ad4104be764e8bc4bcb0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_input action="delete_multiple" query="model=c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT IN0adebdf11b1ad4104be764e8bc4bcbd8,9adebdf11b1ad4104be764e8bc4bcbe2"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=9dd34c62-d723-4356-892b-72c8373f376e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>30</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>max_seconds</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>max_seconds</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
+        <model_id>c6debdf11b1ad4104be764e8bc4bcbd7</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0adebdf11b1ad4104be764e8bc4bcbd8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=44937559-1e06-479a-9e55-83b57f077326</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>arp</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operation</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>operation</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
+        <model_id>c6debdf11b1ad4104be764e8bc4bcbd7</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9adebdf11b1ad4104be764e8bc4bcbe2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT IN26defdf11b1ad4104be764e8bc4bcb26"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=449b114f-4fd3-4a08-a4b3-5722cc0b4731</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
+        <model_id>c6debdf11b1ad4104be764e8bc4bcbd7</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>26defdf11b1ad4104be764e8bc4bcb26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_step_instance action="delete_multiple" query="action=c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT IN92debdf11b1ad4104be764e8bc4bcbf0"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</action>
+        <cid>9c44111f-3494-4908-9eca-f8468b3064d0</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>92debdf11b1ad4104be764e8bc4bcbf0</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 14:51:21</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=92debdf11b1ad4104be764e8bc4bcbf0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>92debdf11b1ad4104be764e8bc4bcbf0</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>5edefdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 14:51:21</sys_updated_on>
+        <value>/* 
+
+This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
+
+For each operation:
+1. Pull up to 2000 records and set their status to PROCESSING.
+2. Compose a JSON payload or a CSV attachment with the contents.
+3. Execute the REST API call and document the results. If it succeeds, set all 1000 records to COMPLETED, otherwise reset them to PENDING.
+   - Note: for CSV/ARP uploads, can't actually do a multipart upload in a script due to limitation, have to be executed with IntegrationHub.
+
+Operations should be done precisely in the order of ARP, then Key Attribute, then Property, then Application. However, because more ARPs may come in while the last stack of ARPs is processing, snapshots of the counts of each will be taken at the beginning to ensure that the system doesn't get bogged down doing a handful of ARPs over and over and nothing else.
+
+*/
+
+//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+
+
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.11 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),u={};return 1==e.async?r=i.executeAsync():(r=i.execute(),u.response_code=r.getStatusCode(),u.response_body=r.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function queueInitialARPandCSV(e,t){var i=e.mac_address,a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
+
+
+
+// ACTION SPECIFIC FUNCTIONS
+
+// CSV encapsulation as per RFC4180. Note that Armis is a bit finicky so I'm just encapsulating and not checking whether I have to.
+function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' }
+
+// **********************
+// *** IMPLEMENTATION ***
+// **********************
+
+(function execute(inputs, outputs) {
+  
+  //Init
+  var debug = []
+  var start_time = now()
+  var execution_id = generateID()
+  var api_total = 0 // total time spent on the api
+  var heavy_total = 0 // total time spent on sql processing
+  var query_limit = 2 //This is how many properties should be processed at once--for each of the operations below, Armis can sustain 2000 at once.
+  var max_entries = 1900 //All of the upload functions we're using should be able to handle this many.
+  var total_entries = 0
+  var report_string = ''
+  var error_message = ''
+  var max_seconds = parseInt(inputs.max_seconds)
+  if(isNaN(max_seconds)) { max_seconds = 240 }
+  
+  //Set up initial variables depending on the operation we're executing
+  var table = ''
+  var payload
+  var endpoint = ''
+  switch (inputs.operation)
+  {
+    case 'arp':
+      table = 'x_fmcna_armis_inte_armis_op_arp_table'
+      payload = ["ip,mac"]
+      break;
+    case 'csv':
+      table = 'x_fmcna_armis_inte_armis_op_key_attribute'
+      payload = ["id,mac,key,value"]
+      break;
+    case 'app':
+      table = 'x_fmcna_armis_inte_armis_op_application_upload'
+      payload = []
+      endpoint = "POST Applications"
+      break;
+    case 'prop':
+      table = 'x_fmcna_armis_inte_armis_op_property_upload'
+      payload = []
+      endpoint = "POST Properties"
+      break;  
+    default: return
+  }
+  debug.push("Operation: " + inputs.operation)
+  debug.push("Table: " + table)
+  
+  try
+  {
+    //Find out potentially how many loops we'll be processing.
+    var q = new GlideAggregate(table)
+    q.addQuery('status','PENDING')
+    q.addAggregate('COUNT')
+    q.query()
+    var num_pending = 0
+    if (q.next()) { num_pending = q.getAggregate('COUNT') }
+    var num_loops = Math.ceil(num_pending/max_entries)
+    debug.push("Num pending: " + num_pending + " (" + num_loops + " loops)")
+
+    //Do the loop!
+    //Keep processing queries until we're out of time, out of queries, or another failure has triggered an early abort.
+    var loop_counter = 0
+    var end_loop_early = false
+    debug.push("loop_counter=" + loop_counter + ",num_loops=" + num_loops + ",max_seconds=" + max_seconds)
+    while(loop_counter &lt; num_loops &amp;&amp; end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_seconds*1000)
+    {
+      loop_counter++
+      debug.push("START LOOP " + loop_counter)
+      
+      //Initialize payload
+      switch (inputs.operation)
+      {
+        case 'arp':
+          payload = ["ip,mac"]
+          break;
+        case 'csv':
+          payload = ["id,mac,key,value"]
+          break;
+        case 'app':
+        case 'prop':
+          payload = []
+          break;  
+        default: return
+      }
+
+      //Get the sys_id of the last entry in our current batch. (See FUNCTION_LIBRARY for details.)
+      var end_sys_id = getPendingRecordsEndSysID(max_entries,table)
+
+      //Get two sets of records: one to iterate through, one to updatemultiple() to "COMPLETE" when we're done.
+      var rec1 = getNumPendingRecords(max_entries,table,end_sys_id)
+      var rec2 = getNumPendingRecords(max_entries,table,end_sys_id)
+      debug.push("Records end at sys_id '" + end_sys_id + "', total records (1) " + rec1.getRowCount() + " (2) " + rec2.getRowCount())
+
+      //Format: "2020-07-29T15:07:56"
+      var lastSeenString = new GlideDateTime().getDisplayValue().replace(" ","T")
+
+      var heavy_timer = now()
+      var rec_counter = 0
+      var rec_time = now()
+
+      //Pull all of the values from our records-to-process.
+      while(rec1.next())
+      {
+        rec_counter++
+        switch (inputs.operation)
+        {
+          case 'arp':
+            payload.push(rec1.getValue('ip') + "," + rec1.getValue('mac'))
+            break;
+          case 'csv':
+            var device_id = parseInt(rec1.getValue('armis_device_id'))
+            if(isNaN(device_id)) { device_id = ''}
+            var payload_line = '' + device_id + "," + rec1.getValue('armis_mac') + "," + rec1.getValue('attribute') + "," + csv_encapsulate(rec1.getValue('value'))
+            payload.push(payload_line)
+            break;
+          case 'app':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'name': rec1.getValue('application_name'),
+              'application_version': rec1.getValue('version') } } )
+            break;
+          case 'prop':
+            payload.push( { 'upsert': {
+              'deviceId': parseInt(rec1.getValue('armis_device_id')),
+              'lastSeen': lastSeenString,
+              'description': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_name'),
+              'value': rec1.getValue('property_value') } } )
+            break;  
+          default: return
+        }
+      }
+      debug.push("Processed " + rec_counter + " records. (" + (now() - rec_time) + "ms)")
+
+      //Processed all, mark them complete.
+      rec_time = now()
+      rec2.setValue('status','COMPLETE')
+      rec2.updateMultiple()
+      heavy_total += ( now() - heavy_timer )
+      debug.push("Marked records as complete. (" + (now() - rec_time) + "ms)")
+
+      //Combine payload.
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          payload = payload.join("\n")
+          break;
+        case 'app':
+        case 'prop':
+          payload = JSON.stringify(payload)
+      }
+      debug.push("Combined payload (" + ('' + payload).length + "): '" + ('' + payload).substring(0,1000) + "'")
+
+      //Upload payload to Armis. (Or queue attachment for upload.
+      var rest_results = {}
+      switch (inputs.operation)
+      {
+        case 'arp':
+        case 'csv':
+          queueAttachmentREST({id: execution_id, type: inputs.operation.toUpperCase(), payload: payload})
+          debug.push("Queued payload for attachment upload.")
+          break;
+        case 'app':
+        case 'prop':
+          rest_results = executeStandardREST({id: execution_id, endpoint: endpoint, payload: payload, async: false, query_params: []})
+          api_total += rest_results.api_time
+          debug.push("REST Executed (" + rest_results.api_time + "ms). Result: " + rest_results.response_code + " : " + rest_results.response_body)
+          if(rest_results.response_code != 207)
+          {
+            //If there was a problem, we don't want to keep looping.
+            report_string += '[REST:' + rest_results.response_code + ',' + rest_results.response_body + ']'
+            end_loop_early = true
+          } 
+      }
+    }
+  }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + ']'
+  }
+  
+  
+  //Done looping. Report! Not much to report here except the number of loops we executed, as the REST API log has all the rest of the data.
+  report_string += error_message + inputs.operation + ' operation, ' + loop_counter  + ' executions, ' + rec_counter + ' records processed.'
+  if(num_loops &gt; 0) { writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches('+inputs.operation+')', total_time: (now() - start_time), api_time: api_total, heavy_processing_time: heavy_total, report: report_string, debug_string: debug.join('\n')}) }
+  
+  outputs.debug = debug.join('\n')
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>92debdf11b1ad4104be764e8bc4bcbf0</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>9adefdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=92debdf11b1ad4104be764e8bc4bcbf0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>56defdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_seconds</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>d6defdf11b1ad4104be764e8bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</table>
+        <value>{{action.max_seconds}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>9adefdf11b1ad4104be764e8bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</table>
+        <value>{{action.operation}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>92debdf11b1ad4104be764e8bc4bcbf0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_id>1adefdf11b1ad4104be764e8bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=92debdf11b1ad4104be764e8bc4bcbf0^sys_idNOT IN52defdf11b1ad4104be764e8bc4bcb06,dedebdf11b1ad4104be764e8bc4bcbf2"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operation</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>operation</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>52defdf11b1ad4104be764e8bc4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>max_seconds</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>max_seconds</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dedebdf11b1ad4104be764e8bc4bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=92debdf11b1ad4104be764e8bc4bcbf0^sys_idNOT IN8cace99a1b1e90104ca7edf9bc4bcb64,dadefdf11b1ad4104be764e8bc4bcb0c"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=32b9c1fb-76e3-4d8b-9640-d0a4c17d940e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>report</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>report</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-31 11:11:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8cace99a1b1e90104ca7edf9bc4bcb64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-31 11:11:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=43d13408-838c-41e3-bd14-36ff6a8d5360</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>debug</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>debug</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">92debdf11b1ad4104be764e8bc4bcbf0</model>
+        <model_id>92debdf11b1ad4104be764e8bc4bcbf0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_92debdf11b1ad4104be764e8bc4bcbf0</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dadefdf11b1ad4104be764e8bc4bcb0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT INd2debdf11b1ad4104be764e8bc4bcbe1,d6debdf11b1ad4104be764e8bc4bcbed"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>max_seconds</element>
+        <help/>
+        <hint/>
+        <label>max_seconds</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d2debdf11b1ad4104be764e8bc4bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>operation</element>
+        <help/>
+        <hint/>
+        <label>operation</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d6debdf11b1ad4104be764e8bc4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT IN56debdf11b1ad4104be764e8bc4bcbe6,12debdf11b1ad4104be764e8bc4bcbe7,dadebdf11b1ad4104be764e8bc4bcbe7,96debdf11b1ad4104be764e8bc4bcbe8"/>
+    <sys_choice field="operation" table="var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>arp</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+            <sequence>0</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>56debdf11b1ad4104be764e8bc4bcbe6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+            <value>arp</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>prop</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+            <sequence>1</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>12debdf11b1ad4104be764e8bc4bcbe7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+            <value>prop</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>csv</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+            <sequence>2</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>dadebdf11b1ad4104be764e8bc4bcbe7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+            <value>csv</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>operation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>app</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+            <sequence>3</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-29 23:14:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>96debdf11b1ad4104be764e8bc4bcbe8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-29 23:14:27</sys_updated_on>
+            <value>app</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT INaadefdf11b1ad4104be764e8bc4bcb2b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>debug</element>
+        <help/>
+        <hint/>
+        <label>debug</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_c6debdf11b1ad4104be764e8bc4bcbd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-29 23:14:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>aadefdf11b1ad4104be764e8bc4bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-29 23:14:28</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>

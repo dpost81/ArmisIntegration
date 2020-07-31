@@ -13,9 +13,9 @@
         <ih_action>false</ih_action>
         <internal_name>util_getconfigvalue_v21</internal_name>
         <label_cache>[{"name":"{{action.cache_key}}","label":"action➛config_key","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛type","type":"action","ref":""},{"name":"{{action.operation}}","label":"action➛operation","type":"action","ref":""},{"name":"{{action.config}}","label":"action➛config_key","type":"action","ref":""},{"name":"{{action.config_key}}","label":"action➛config_key","type":"action","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].debug}}","label":"step➛Script step➛value","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].str}}","label":"step➛Script step➛str","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].int}}","label":"step➛Script step➛int","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].datetime}}","label":"step➛Script step➛datetime","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].value}}","label":"step➛Script step➛value","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>ec78ddf71b4ad8104ca7edf9bc4bcb55</latest_snapshot>
+        <latest_snapshot>542f6c561b1e50104ca7edf9bc4bcb4f</latest_snapshot>
         <master_snapshot>2b48d9f71b4ad8104ca7edf9bc4bcb62</master_snapshot>
-        <name>UTIL_GetConfigValue (v2.1)</name>
+        <name>UTIL_GetConfigValue (v2-1)</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -26,8 +26,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>2ff21d331b4ad8104ca7edf9bc4bcbfa</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_name>UTIL_GetConfigValue (v2.1)</sys_name>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>UTIL_GetConfigValue (v2-1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_2ff21d331b4ad8104ca7edf9bc4bcbfa</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:51</sys_updated_on>
+        <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -91,7 +91,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=2ff21d331b4ad8104ca7edf9bc4bcbfa^sys_idNOT IN23f2dd331b4ad8104ca7edf9bc4bcbf2"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_GetConfigValue (v2.1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</action>
+        <action display_value="UTIL_GetConfigValue (v2-1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</action>
         <cid>9674af04-1862-4a13-bce5-5e6f48b08436</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -108,7 +108,7 @@
         <sys_created_on>2020-07-23 14:55:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>23f2dd331b4ad8104ca7edf9bc4bcbf2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -116,7 +116,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:08</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:24:57</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=23f2dd331b4ad8104ca7edf9bc4bcbf2"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -127,13 +127,14 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 14:55:01</sys_created_on>
         <sys_id>7bf211731b4ad8104ca7edf9bc4bcb70</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:09</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:24:57</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var q = new GlideRecord('x_fmcna_armis_inte_armis_integration_configuration')
   q.addQuery('key',inputs.key)
   q.query()
+  outputs.value = ''
   outputs.debug = inputs.key
   if (q.getRowCount() &gt; 0)
   {
@@ -498,7 +499,7 @@
         <label>config_key</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_GetConfigValue (v2.1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</model>
+        <model display_value="UTIL_GetConfigValue (v2-1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</model>
         <model_id>2ff21d331b4ad8104ca7edf9bc4bcbfa</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_2ff21d331b4ad8104ca7edf9bc4bcbfa</name>
@@ -584,7 +585,7 @@
         <label>value</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UTIL_GetConfigValue (v2.1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</model>
+        <model display_value="UTIL_GetConfigValue (v2-1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</model>
         <model_id>2ff21d331b4ad8104ca7edf9bc4bcbfa</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_2ff21d331b4ad8104ca7edf9bc4bcbfa</name>
@@ -630,7 +631,7 @@
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=2ff21d331b4ad8104ca7edf9bc4bcbfa^sys_idNOT IN23f2dd331b4ad8104ca7edf9bc4bcbf2"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_GetConfigValue (v2.1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</action>
+        <action display_value="UTIL_GetConfigValue (v2-1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</action>
         <cid>9674af04-1862-4a13-bce5-5e6f48b08436</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -647,7 +648,7 @@
         <sys_created_on>2020-07-23 14:55:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>23f2dd331b4ad8104ca7edf9bc4bcbf2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -655,7 +656,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:08</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:24:57</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=23f2dd331b4ad8104ca7edf9bc4bcbf2"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -666,13 +667,14 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 14:55:01</sys_created_on>
         <sys_id>7bf211731b4ad8104ca7edf9bc4bcb70</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:09</sys_updated_on>
+        <sys_updated_on>2020-07-30 20:24:57</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var q = new GlideRecord('x_fmcna_armis_inte_armis_integration_configuration')
   q.addQuery('key',inputs.key)
   q.query()
+  outputs.value = ''
   outputs.debug = inputs.key
   if (q.getRowCount() &gt; 0)
   {
@@ -1072,18 +1074,18 @@
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=2ff21d331b4ad8104ca7edf9bc4bcbfa^sys_idNOT INf348d9f71b4ad8104ca7edf9bc4bcbea"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="UTIL_GetConfigValue (v2.1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</action_id>
+        <action_id display_value="UTIL_GetConfigValue (v2-1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f348d9f71b4ad8104ca7edf9bc4bcbea","name":"plan"}}</plan>
-        <snapshot>ec78ddf71b4ad8104ca7edf9bc4bcb55</snapshot>
+        <snapshot>542f6c561b1e50104ca7edf9bc4bcb4f</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 15:18:14</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>f348d9f71b4ad8104ca7edf9bc4bcbea</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:52</sys_updated_on>
+        <sys_updated_on>2020-07-31 06:43:10</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1098,18 +1100,18 @@
         <internal_name>util_getconfigvalue_v21</internal_name>
         <label_cache>[{"name":"{{action.cache_key}}","label":"action➛config_key","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛type","type":"action","ref":""},{"name":"{{action.operation}}","label":"action➛operation","type":"action","ref":""},{"name":"{{action.config}}","label":"action➛config_key","type":"action","ref":""},{"name":"{{action.config_key}}","label":"action➛config_key","type":"action","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].debug}}","label":"step➛Script step➛value","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].str}}","label":"step➛Script step➛str","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].int}}","label":"step➛Script step➛int","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].datetime}}","label":"step➛Script step➛datetime","type":"step","ref":""},{"name":"{{step[9674af04-1862-4a13-bce5-5e6f48b08436].value}}","label":"step➛Script step➛value","type":"step","ref":""}]</label_cache>
         <master>true</master>
-        <name>UTIL_GetConfigValue (v2.1)</name>
+        <name>UTIL_GetConfigValue (v2-1)</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="UTIL_GetConfigValue (v2.1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</parent_action>
+        <parent_action display_value="UTIL_GetConfigValue (v2-1)">2ff21d331b4ad8104ca7edf9bc4bcbfa</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 15:18:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>2b48d9f71b4ad8104ca7edf9bc4bcb62</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1118,7 +1120,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
+        <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1138,7 +1140,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=2b48d9f71b4ad8104ca7edf9bc4bcb62^sys_idNOT IN2b48d9f71b4ad8104ca7edf9bc4bcb85"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_GetConfigValue (v2.1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</action>
+        <action display_value="UTIL_GetConfigValue (v2-1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</action>
         <cid>9674af04-1862-4a13-bce5-5e6f48b08436</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1155,7 +1157,7 @@
         <sys_created_on>2020-07-23 15:18:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2b48d9f71b4ad8104ca7edf9bc4bcb85</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1163,7 +1165,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
+        <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2b48d9f71b4ad8104ca7edf9bc4bcb85"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1174,13 +1176,14 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 15:18:13</sys_created_on>
         <sys_id>2f48d9f71b4ad8104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
+        <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var q = new GlideRecord('x_fmcna_armis_inte_armis_integration_configuration')
   q.addQuery('key',inputs.key)
   q.query()
+  outputs.value = ''
   outputs.debug = inputs.key
   if (q.getRowCount() &gt; 0)
   {
@@ -1533,7 +1536,7 @@
         <label>config_key</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UTIL_GetConfigValue (v2.1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</model>
+        <model display_value="UTIL_GetConfigValue (v2-1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</model>
         <model_id>2b48d9f71b4ad8104ca7edf9bc4bcb62</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
@@ -1619,7 +1622,7 @@
         <label>value</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UTIL_GetConfigValue (v2.1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</model>
+        <model display_value="UTIL_GetConfigValue (v2-1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</model>
         <model_id>2b48d9f71b4ad8104ca7edf9bc4bcb62</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
@@ -1665,7 +1668,7 @@
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=2b48d9f71b4ad8104ca7edf9bc4bcb62^sys_idNOT IN2b48d9f71b4ad8104ca7edf9bc4bcb85"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UTIL_GetConfigValue (v2.1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</action>
+        <action display_value="UTIL_GetConfigValue (v2-1)">2b48d9f71b4ad8104ca7edf9bc4bcb62</action>
         <cid>9674af04-1862-4a13-bce5-5e6f48b08436</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1682,7 +1685,7 @@
         <sys_created_on>2020-07-23 15:18:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2b48d9f71b4ad8104ca7edf9bc4bcb85</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1690,7 +1693,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
+        <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2b48d9f71b4ad8104ca7edf9bc4bcb85"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1701,13 +1704,14 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 15:18:13</sys_created_on>
         <sys_id>2f48d9f71b4ad8104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
+        <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var q = new GlideRecord('x_fmcna_armis_inte_armis_integration_configuration')
   q.addQuery('key',inputs.key)
   q.query()
+  outputs.value = ''
   outputs.debug = inputs.key
   if (q.getRowCount() &gt; 0)
   {
@@ -2046,7 +2050,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62^sys_idNOT IN6348d9f71b4ad8104ca7edf9bc4bcb68,e348d9f71b4ad8104ca7edf9bc4bcb69,6b48d9f71b4ad8104ca7edf9bc4bcb76,2b48d9f71b4ad8104ca7edf9bc4bcb77,e748d9f71b4ad8104ca7edf9bc4bcb78,a748d9f71b4ad8104ca7edf9bc4bcb79,6748d9f71b4ad8104ca7edf9bc4bcb7a,2748d9f71b4ad8104ca7edf9bc4bcb7b,e348d9f71b4ad8104ca7edf9bc4bcb7c,a348d9f71b4ad8104ca7edf9bc4bcb7d,6348d9f71b4ad8104ca7edf9bc4bcb7e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62^sys_idNOT IN6348d9f71b4ad8104ca7edf9bc4bcb68,e348d9f71b4ad8104ca7edf9bc4bcb69,6b48d9f71b4ad8104ca7edf9bc4bcb76,2b48d9f71b4ad8104ca7edf9bc4bcb77,e748d9f71b4ad8104ca7edf9bc4bcb78,b82fac561b1e50104ca7edf9bc4bcb76,a748d9f71b4ad8104ca7edf9bc4bcb79,6748d9f71b4ad8104ca7edf9bc4bcb7a,702fac561b1e50104ca7edf9bc4bcb79,2748d9f71b4ad8104ca7edf9bc4bcb7b,782fac561b1e50104ca7edf9bc4bcb7a,782fac561b1e50104ca7edf9bc4bcba0,e348d9f71b4ad8104ca7edf9bc4bcb7c,702fac561b1e50104ca7edf9bc4bcba2,3c2fac561b1e50104ca7edf9bc4bcba2,a348d9f71b4ad8104ca7edf9bc4bcb7d,342fac561b1e50104ca7edf9bc4bcba4,fc2fac561b1e50104ca7edf9bc4bcba4,b82fac561b1e50104ca7edf9bc4bcba5,6348d9f71b4ad8104ca7edf9bc4bcb7e"/>
     <sys_choice field="config_key" table="var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62">
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -2143,17 +2147,35 @@
             <element>config_key</element>
             <hint/>
             <inactive>false</inactive>
-            <label>cooldown_end_seconds</label>
+            <label>cleanup_older_than_hours</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
             <sequence>5</sequence>
             <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b82fac561b1e50104ca7edf9bc4bcb76</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>cleanup_older_than_hours</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>cooldown_end_seconds</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>6</sequence>
+            <sys_created_by>3244578</sys_created_by>
             <sys_created_on>2020-07-23 15:18:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>a748d9f71b4ad8104ca7edf9bc4bcb79</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>3244578</sys_updated_by>
-            <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
             <value>cooldown_end_seconds</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -2164,15 +2186,33 @@
             <label>getd_max_seconds</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
-            <sequence>6</sequence>
+            <sequence>7</sequence>
             <sys_created_by>3244578</sys_created_by>
             <sys_created_on>2020-07-23 15:18:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>6748d9f71b4ad8104ca7edf9bc4bcb7a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>getd_max_seconds</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>getd_refresh_passes</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>8</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>702fac561b1e50104ca7edf9bc4bcb79</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>3244578</sys_updated_by>
-            <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
-            <value>getd_max_seconds</value>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>getd_refresh_passes</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -2182,15 +2222,51 @@
             <label>grace_period_cooldown_seconds</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
-            <sequence>7</sequence>
+            <sequence>9</sequence>
             <sys_created_by>3244578</sys_created_by>
             <sys_created_on>2020-07-23 15:18:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>2748d9f71b4ad8104ca7edf9bc4bcb7b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>grace_period_cooldown_seconds</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>integration_is_live</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>10</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>782fac561b1e50104ca7edf9bc4bcb7a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>3244578</sys_updated_by>
-            <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
-            <value>grace_period_cooldown_seconds</value>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>integration_is_live</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MAIN_POWER_ON</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>11</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>782fac561b1e50104ca7edf9bc4bcba0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>MAIN_POWER_ON</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -2200,15 +2276,51 @@
             <label>max_main_queue_executions</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
-            <sequence>8</sequence>
+            <sequence>12</sequence>
             <sys_created_by>3244578</sys_created_by>
             <sys_created_on>2020-07-23 15:18:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>e348d9f71b4ad8104ca7edf9bc4bcb7c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>max_main_queue_executions</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>max_seconds_api_upload</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>13</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>702fac561b1e50104ca7edf9bc4bcba2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>3244578</sys_updated_by>
-            <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
-            <value>max_main_queue_executions</value>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>max_seconds_api_upload</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>max_seconds_link_armis_devices</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>14</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>3c2fac561b1e50104ca7edf9bc4bcba2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>max_seconds_link_armis_devices</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -2218,15 +2330,69 @@
             <label>runtime_percent</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
-            <sequence>9</sequence>
+            <sequence>15</sequence>
             <sys_created_by>3244578</sys_created_by>
             <sys_created_on>2020-07-23 15:18:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>a348d9f71b4ad8104ca7edf9bc4bcb7d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>runtime_percent</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>snow_property_reference_1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>16</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>342fac561b1e50104ca7edf9bc4bcba4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>3244578</sys_updated_by>
-            <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
-            <value>runtime_percent</value>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>snow_property_reference_1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>snow_property_reference_2</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>17</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>fc2fac561b1e50104ca7edf9bc4bcba4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>snow_property_reference_2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>config_key</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>snow_property_reference_3</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
+            <sequence>18</sequence>
+            <sys_created_by>3244578</sys_created_by>
+            <sys_created_on>2020-07-31 06:43:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b82fac561b1e50104ca7edf9bc4bcba5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>3244578</sys_updated_by>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
+            <value>snow_property_reference_3</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -2236,14 +2402,14 @@
             <label>vmac_threshold</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_2b48d9f71b4ad8104ca7edf9bc4bcb62</name>
-            <sequence>10</sequence>
+            <sequence>19</sequence>
             <sys_created_by>3244578</sys_created_by>
             <sys_created_on>2020-07-23 15:18:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_id>6348d9f71b4ad8104ca7edf9bc4bcb7e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>3244578</sys_updated_by>
-            <sys_updated_on>2020-07-23 15:18:13</sys_updated_on>
+            <sys_updated_on>2020-07-31 06:43:09</sys_updated_on>
             <value>vmac_threshold</value>
         </sys_choice>
     </sys_choice>

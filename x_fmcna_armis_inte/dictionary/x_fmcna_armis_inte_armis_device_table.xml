@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="hasLabels=true" label="Armis Device Table" max_length="40" name="x_fmcna_armis_inte_armis_device_table" sizeclass="253818" type="collection">
+    <element attributes="hasLabels=true" label="Armis Device Table" max_length="40" name="x_fmcna_armis_inte_armis_device_table" sizeclass="261673" type="collection">
         <element label="Access switch" max_length="64" name="access_switch" type="string"/>
         <element display="true" label="Armis Device ID" mandatory="true" max_length="40" name="armis_device_id" type="integer"/>
         <element label="Armis Risk Level" max_length="40" name="armis_risk_level" type="integer"/>
@@ -11,6 +11,7 @@
         </element>
         <element label="Digest" max_length="40" name="digest" type="integer"/>
         <element label="First seen" max_length="40" name="first_seen" type="glide_date_time"/>
+        <element label="Has Pushed All Properties To Armis" max_length="40" name="has_pushed_all_properties_to_armis" type="boolean"/>
         <element label="IP Address" max_length="45" name="ip_address" type="string"/>
         <element label="Last seen" max_length="40" name="last_seen" type="glide_date_time"/>
         <element label="Linked SNOW Computer" max_length="32" name="linked_snow_computer" reference="cmdb_ci_computer" type="reference"/>
@@ -18,6 +19,7 @@
         <element label="Manufacturer" max_length="128" name="manufacturer" type="string"/>
         <element label="Model" max_length="128" name="model" type="string"/>
         <element display="true" label="Name" max_length="128" name="name" type="string"/>
+        <element default="FALSE" label="Novel Link Attempted" max_length="40" name="novel_link_attempted" type="boolean"/>
         <element label="OS" max_length="128" name="os" type="string"/>
         <element label="OS Version" max_length="128" name="os_version" type="string"/>
         <element label="Sensor Name" max_length="64" name="sensor_name" type="string"/>
@@ -29,10 +31,10 @@
         <element label="User" max_length="64" name="user" type="string"/>
         <element label="Visibility" max_length="20" name="visibility" type="string"/>
         <index name="index">
-            <element name="armis_device_id"/>
+            <element name="linked_snow_computer"/>
         </index>
         <index name="index2">
-            <element name="linked_snow_computer"/>
+            <element name="armis_device_id"/>
         </index>
     </element>
 </database>

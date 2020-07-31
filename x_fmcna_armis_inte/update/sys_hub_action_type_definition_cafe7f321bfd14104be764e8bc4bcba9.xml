@@ -13,21 +13,21 @@
         <ih_action>false</ih_action>
         <internal_name>arp_buildarpcsvfromoperationrecords</internal_name>
         <label_cache>[{"name":"{{action.records}}","label":"action➛records","type":"action","ref":""},{"name":"{{action._}}","label":"action➛","type":"action","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].csv}}","label":"step➛Script step➛csv","type":"step","ref":""},{"name":"{{step[8e5a5bb6-9a9b-45bb-ac20-c1dc0b97603c].records}}","label":"step➛Look Up Records step➛Armis Operation Queue records","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].operation_sys_ids}}","label":"step➛Script step➛operation_sys_ids","type":"step","ref":""},{"name":"{{step[5b9c3512-fce6-4a43-8d9c-efa48720347e].operation_count}}","label":"step➛Script step➛operation_count","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>4f5a8a131bf914104ca7edf9bc4bcb26</latest_snapshot>
+        <latest_snapshot>641f1a011b9a14104ca7edf9bc4bcb5c</latest_snapshot>
         <master_snapshot>74ffb7b21bfd14104be764e8bc4bcb93</master_snapshot>
-        <name>ARP_BuildARPCSVFromOperationRecords</name>
+        <name>(OLD) ARP_BuildARPCSVFromOperationRecords</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <state>published</state>
+        <state>draft</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-08 14:36:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>cafe7f321bfd14104be764e8bc4bcba9</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>ARP_BuildARPCSVFromOperationRecords</sys_name>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>(OLD) ARP_BuildARPCSVFromOperationRecords</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_cafe7f321bfd14104be764e8bc4bcba9</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 19:24:17</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:14</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -93,7 +93,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=cafe7f321bfd14104be764e8bc4bcba9^sys_idNOT IN4afe7f321bfd14104be764e8bc4bcbb0,c6fe7f321bfd14104be764e8bc4bcbc5"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
+        <action display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
         <cid>8e5a5bb6-9a9b-45bb-ac20-c1dc0b97603c</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -177,7 +177,7 @@
         <variable display_value="">2df79dd187003300663ca1bb36cb0b33</variable>
     </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
+        <action display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
         <cid>5b9c3512-fce6-4a43-8d9c-efa48720347e</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -460,7 +460,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=2b9e7e4f-f15b-42ce-aedc-baa7ff6ad159,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=c45ea954-4176-49fb-a832-ecaa7f0e3756,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -519,7 +519,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_created_on>2020-07-08 14:36:46</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>52fe7f321bfd14104be764e8bc4bcbda</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -527,7 +527,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 19:24:13</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -664,7 +664,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <label>operation_count</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</model>
+        <model display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</model>
         <model_id>cafe7f321bfd14104be764e8bc4bcba9</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_cafe7f321bfd14104be764e8bc4bcba9</name>
@@ -712,7 +712,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=366cd147-8f70-4bcd-ae6e-8aada0031a76,co_type_name=FD22a8ea520db91010189e81d8d6bac3a8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
+        <attributes>child_label=operation_sys_id_child0,child_name=operation_sys_id_child0,child_type=string,child_type_label=String,child_uiUniqueId=69d9228f-c40e-4631-baa2-43ddaa0a21b0,co_type_name=FD22a8ea520db91010189e81d8d6bac3a8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=65cef4ee-0a11-4927-8d24-5693f4791d42</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -749,7 +749,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <label>operation_sys_id</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</model>
+        <model display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</model>
         <model_id>cafe7f321bfd14104be764e8bc4bcba9</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_cafe7f321bfd14104be764e8bc4bcba9</name>
@@ -773,7 +773,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_created_on>2020-07-08 14:36:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a6febf321bfd14104be764e8bc4bcb03</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -781,7 +781,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 19:24:13</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -834,7 +834,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <label>csv</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</model>
+        <model display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</model>
         <model_id>cafe7f321bfd14104be764e8bc4bcba9</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_cafe7f321bfd14104be764e8bc4bcba9</name>
@@ -880,7 +880,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=cafe7f321bfd14104be764e8bc4bcba9^sys_idNOT IN4afe7f321bfd14104be764e8bc4bcbb0,c6fe7f321bfd14104be764e8bc4bcbc5"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
+        <action display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
         <cid>8e5a5bb6-9a9b-45bb-ac20-c1dc0b97603c</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -964,7 +964,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <variable display_value="">2df79dd187003300663ca1bb36cb0b33</variable>
     </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
+        <action display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action>
         <cid>5b9c3512-fce6-4a43-8d9c-efa48720347e</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1247,7 +1247,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=2b9e7e4f-f15b-42ce-aedc-baa7ff6ad159,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
+        <attributes>child_label=operation_sys_ids_child0,child_name=operation_sys_ids_child0,child_type=string,child_type_label=String,child_uiUniqueId=c45ea954-4176-49fb-a832-ecaa7f0e3756,co_type_name=FDa6a8ea52b4b91010e19e79ff7a17aa98,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=fcd5e5e5-2b63-4c02-9f88-e5be4706e751</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1306,7 +1306,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_created_on>2020-07-08 14:36:46</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>52fe7f321bfd14104be764e8bc4bcbda</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1314,7 +1314,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-09 19:24:13</sys_updated_on>
+        <sys_updated_on>2020-07-30 21:34:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1487,7 +1487,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=cafe7f321bfd14104be764e8bc4bcba9^sys_idNOT INd1fff7b21bfd14104be764e8bc4bcb7d"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action_id>
+        <action_id display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"d1fff7b21bfd14104be764e8bc4bcb7d","name":"plan"}}</plan>
         <snapshot>4f5a8a131bf914104ca7edf9bc4bcb26</snapshot>
         <sys_created_by>3244578</sys_created_by>
@@ -1517,7 +1517,7 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</parent_action>
+        <parent_action display_value="(OLD) ARP_BuildARPCSVFromOperationRecords">cafe7f321bfd14104be764e8bc4bcba9</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-08 14:41:02</sys_created_on>
@@ -2922,12 +2922,12 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_customer_update>false</sys_customer_update>
         <sys_id>05fff7b21bfd14104be764e8bc4bcb05</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>csv</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_74ffb7b21bfd14104be764e8bc4bcb93_csv_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 14:41:03</sys_updated_on>
         <url/>
@@ -2947,12 +2947,12 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_customer_update>false</sys_customer_update>
         <sys_id>09fff7b21bfd14104be764e8bc4bcb2a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>operation_count</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_74ffb7b21bfd14104be764e8bc4bcb93_operation_count_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 14:41:04</sys_updated_on>
         <url/>
@@ -2972,12 +2972,12 @@ outputs.operation_count = outputs.operation_sys_ids.length
         <sys_customer_update>false</sys_customer_update>
         <sys_id>89fff7b21bfd14104be764e8bc4bcb0b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>operation_sys_id</sys_name>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_74ffb7b21bfd14104be764e8bc4bcb93_operation_sys_id_en</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
         <sys_updated_on>2020-07-08 14:41:03</sys_updated_on>
         <url/>
