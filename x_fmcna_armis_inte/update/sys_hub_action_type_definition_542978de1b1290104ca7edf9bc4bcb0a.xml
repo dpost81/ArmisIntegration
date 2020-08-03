@@ -13,9 +13,9 @@
         <ih_action>true</ih_action>
         <internal_name>old_csv_upload3</internal_name>
         <label_cache>[{"name":"{{action.record_sys_id}}","label":"action➛record_sysid","type":"action","ref":""},{"name":"{{action.rec_id}}","label":"action➛rec_id","type":"action","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].start_time}}","label":"step➛Script step➛start_time","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].start_datetime}}","label":"step➛Script step➛start_datetime","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].access_token}}","label":"step➛Script step➛access_token","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].endpoint}}","label":"step➛Script step➛endpoint","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].api_log_type}}","label":"step➛Script step➛api_log_type","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].record}}","label":"step➛Script step➛record","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].record.attachment}}","label":"step➛Script step➛record➛Attachment","type":"step","ref":"sys_attachment"},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].type}}","label":"step➛Script step➛type","type":"step","ref":""},{"name":"{{step[7be39b2e-6b99-4322-8edb-fc020f9dd687].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[7be39b2e-6b99-4322-8edb-fc020f9dd687].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[7be39b2e-6b99-4322-8edb-fc020f9dd687].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].record.attachment.sys_id}}","label":"step➛Script step➛record➛Attachment➛Sys ID","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].attachmentid}}","label":"step➛Script step➛attachmentid","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>12a2c19a1b5690104ca7edf9bc4bcb10</latest_snapshot>
+        <latest_snapshot>46e7a57e1b9e50104be764e8bc4bcbc4</latest_snapshot>
         <master_snapshot>7f6bfc121b9290104ca7edf9bc4bcbc9</master_snapshot>
-        <name>CSV_Upload3 (v2.1)</name>
+        <name>CSVtoREST (v2.1)</name>
         <natlang/>
         <outputs/>
         <state>published</state>
@@ -25,8 +25,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>542978de1b1290104ca7edf9bc4bcb0a</sys_id>
-        <sys_mod_count>68</sys_mod_count>
-        <sys_name>CSV_Upload3 (v2.1)</sys_name>
+        <sys_mod_count>81</sys_mod_count>
+        <sys_name>CSVtoREST (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -34,14 +34,14 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_542978de1b1290104ca7edf9bc4bcb0a</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 08:08:32</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:14</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
     <sys_variable_value action="delete_multiple" query="document_key=542978de1b1290104ca7edf9bc4bcb0a"/>
     <sys_hub_step_instance action="delete_multiple" query="action=542978de1b1290104ca7edf9bc4bcb0a^sys_idNOT IN96d9fc561b5290104ca7edf9bc4bcb88,de6bf8121b9290104ca7edf9bc4bcb90,f23978521b5290104ca7edf9bc4bcb02"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
+        <action display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
         <cid>7be39b2e-6b99-4322-8edb-fc020f9dd687</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -331,7 +331,7 @@
         <value>{{step[cf998625-ec71-4d37-b71b-b92bd8488496].endpoint}}</value>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
+        <action display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
         <cid>68fe21c3-713b-4f8a-985c-5c17a8638735</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -348,7 +348,7 @@
         <sys_created_on>2020-07-31 07:36:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>de6bf8121b9290104ca7edf9bc4bcb90</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -356,7 +356,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:40:54</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=de6bf8121b9290104ca7edf9bc4bcb90"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -367,9 +367,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 07:36:48</sys_created_on>
         <sys_id>6a6b3c121b9290104ca7edf9bc4bcb3f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:40:54</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:07</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
@@ -396,8 +396,8 @@ function writeToAPILog(p)
   
   //Write result to API log no matter what
   writeToAPILog({id: execution_id, endpoint: inputs.api_log_type, payload: '' + inputs.record.content, response_code: inputs.code, response_body: '' + inputs.body, start_time: inputs.start_datetime, time_delta_ms: total_time})
-  var report = inputs.code + ": " + inputs.error_message + inputs.body
-  writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches(' + inputs.record.type.toLowerCase() + ')', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
+  var report = 'Uploaded ' + inputs.api_log_type + '. ' + inputs.code + ": " + (''+inputs.error_message) + inputs.body
+  writeToActionLog({id: execution_id, action_type: 'trigger_attachment_table', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
   
   if(inputs.code == 200)
   {
@@ -1115,7 +1115,7 @@ function writeToAPILog(p)
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
+        <action display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
         <cid>cf998625-ec71-4d37-b71b-b92bd8488496</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -2049,7 +2049,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <label>rec_id</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</model>
+        <model display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</model>
         <model_id>542978de1b1290104ca7edf9bc4bcb0a</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_542978de1b1290104ca7edf9bc4bcb0a</name>
@@ -2095,7 +2095,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
     </sys_hub_action_input>
     <sys_hub_step_instance action="delete_multiple" query="action=542978de1b1290104ca7edf9bc4bcb0a^sys_idNOT IN96d9fc561b5290104ca7edf9bc4bcb88,de6bf8121b9290104ca7edf9bc4bcb90,f23978521b5290104ca7edf9bc4bcb02"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
+        <action display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
         <cid>7be39b2e-6b99-4322-8edb-fc020f9dd687</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -2385,7 +2385,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <value>{{step[cf998625-ec71-4d37-b71b-b92bd8488496].endpoint}}</value>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
+        <action display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
         <cid>68fe21c3-713b-4f8a-985c-5c17a8638735</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -2402,7 +2402,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_created_on>2020-07-31 07:36:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>de6bf8121b9290104ca7edf9bc4bcb90</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2410,7 +2410,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:40:54</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=de6bf8121b9290104ca7edf9bc4bcb90"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2421,9 +2421,9 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 07:36:48</sys_created_on>
         <sys_id>6a6b3c121b9290104ca7edf9bc4bcb3f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:40:54</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:07</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
@@ -2450,8 +2450,8 @@ function writeToAPILog(p)
   
   //Write result to API log no matter what
   writeToAPILog({id: execution_id, endpoint: inputs.api_log_type, payload: '' + inputs.record.content, response_code: inputs.code, response_body: '' + inputs.body, start_time: inputs.start_datetime, time_delta_ms: total_time})
-  var report = inputs.code + ": " + inputs.error_message + inputs.body
-  writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches(' + inputs.record.type.toLowerCase() + ')', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
+  var report = 'Uploaded ' + inputs.api_log_type + '. ' + inputs.code + ": " + (''+inputs.error_message) + inputs.body
+  writeToActionLog({id: execution_id, action_type: 'trigger_attachment_table', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
   
   if(inputs.code == 200)
   {
@@ -3169,7 +3169,7 @@ function writeToAPILog(p)
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
+        <action display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action>
         <cid>cf998625-ec71-4d37-b71b-b92bd8488496</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -4091,18 +4091,18 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=542978de1b1290104ca7edf9bc4bcb0a^sys_idNOT IN597bf0521b9290104ca7edf9bc4bcb84"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action_id>
+        <action_id display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"597bf0521b9290104ca7edf9bc4bcb84","name":"plan"}}</plan>
-        <snapshot>12a2c19a1b5690104ca7edf9bc4bcb10</snapshot>
+        <snapshot>46e7a57e1b9e50104be764e8bc4bcbc4</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 07:36:59</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>597bf0521b9290104ca7edf9bc4bcb84</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 08:08:34</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:17</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -4117,17 +4117,17 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <internal_name>csv_upload3_v21</internal_name>
         <label_cache>[{"name":"{{action.record_sys_id}}","label":"action➛record_sysid","type":"action","ref":""},{"name":"{{action.rec_id}}","label":"action➛rec_id","type":"action","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].start_time}}","label":"step➛Script step➛start_time","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].start_datetime}}","label":"step➛Script step➛start_datetime","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].access_token}}","label":"step➛Script step➛access_token","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].endpoint}}","label":"step➛Script step➛endpoint","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].api_log_type}}","label":"step➛Script step➛api_log_type","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].record}}","label":"step➛Script step➛record","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].record.attachment}}","label":"step➛Script step➛record➛Attachment","type":"step","ref":"sys_attachment"},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].type}}","label":"step➛Script step➛type","type":"step","ref":""},{"name":"{{step[7be39b2e-6b99-4322-8edb-fc020f9dd687].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[7be39b2e-6b99-4322-8edb-fc020f9dd687].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[7be39b2e-6b99-4322-8edb-fc020f9dd687].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].record.attachment.sys_id}}","label":"step➛Script step➛record➛Attachment➛Sys ID","type":"step","ref":""},{"name":"{{step[cf998625-ec71-4d37-b71b-b92bd8488496].attachmentid}}","label":"step➛Script step➛attachmentid","type":"step","ref":""}]</label_cache>
         <master>true</master>
-        <name>CSV_Upload3 (v2.1)</name>
+        <name>CSVtoREST (v2.1)</name>
         <natlang/>
         <outputs/>
-        <parent_action display_value="CSV_Upload3 (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</parent_action>
+        <parent_action display_value="CSVtoREST (v2.1)">542978de1b1290104ca7edf9bc4bcb0a</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 07:36:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>7f6bfc121b9290104ca7edf9bc4bcbc9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -4136,14 +4136,14 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:58:23</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:05:01</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=7f6bfc121b9290104ca7edf9bc4bcbc9"/>
     <sys_hub_step_instance action="delete_multiple" query="action=7f6bfc121b9290104ca7edf9bc4bcbc9^sys_idNOT IN2c7b30521b9290104ca7edf9bc4bcbfd,587b30521b9290104ca7edf9bc4bcbe0,847bfc121b9290104ca7edf9bc4bcbeb"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
+        <action display_value="CSVtoREST (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
         <cid>68fe21c3-713b-4f8a-985c-5c17a8638735</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -4160,7 +4160,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_created_on>2020-07-31 07:36:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2c7b30521b9290104ca7edf9bc4bcbfd</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -4168,7 +4168,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:41:25</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2c7b30521b9290104ca7edf9bc4bcbfd"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4179,9 +4179,9 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 07:36:57</sys_created_on>
         <sys_id>7c7b70521b9290104ca7edf9bc4bcbaa</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:41:25</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:14</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
@@ -4208,8 +4208,8 @@ function writeToAPILog(p)
   
   //Write result to API log no matter what
   writeToAPILog({id: execution_id, endpoint: inputs.api_log_type, payload: '' + inputs.record.content, response_code: inputs.code, response_body: '' + inputs.body, start_time: inputs.start_datetime, time_delta_ms: total_time})
-  var report = inputs.code + ": " + inputs.error_message + inputs.body
-  writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches(' + inputs.record.type.toLowerCase() + ')', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
+  var report = 'Uploaded ' + inputs.api_log_type + '. ' + inputs.code + ": " + (''+inputs.error_message) + inputs.body
+  writeToActionLog({id: execution_id, action_type: 'trigger_attachment_table', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
   
   if(inputs.code == 200)
   {
@@ -4927,7 +4927,7 @@ function writeToAPILog(p)
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
+        <action display_value="CSVtoREST (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
         <cid>7be39b2e-6b99-4322-8edb-fc020f9dd687</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -5217,7 +5217,7 @@ function writeToAPILog(p)
         <value>{{step[cf998625-ec71-4d37-b71b-b92bd8488496].endpoint}}</value>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
+        <action display_value="CSVtoREST (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
         <cid>cf998625-ec71-4d37-b71b-b92bd8488496</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -6151,7 +6151,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <label>rec_id</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="CSV_Upload3 (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</model>
+        <model display_value="CSVtoREST (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</model>
         <model_id>7f6bfc121b9290104ca7edf9bc4bcbc9</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_7f6bfc121b9290104ca7edf9bc4bcbc9</name>
@@ -6197,7 +6197,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
     </sys_hub_action_input>
     <sys_hub_step_instance action="delete_multiple" query="action=7f6bfc121b9290104ca7edf9bc4bcbc9^sys_idNOT IN2c7b30521b9290104ca7edf9bc4bcbfd,587b30521b9290104ca7edf9bc4bcbe0,847bfc121b9290104ca7edf9bc4bcbeb"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
+        <action display_value="CSVtoREST (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
         <cid>68fe21c3-713b-4f8a-985c-5c17a8638735</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -6214,7 +6214,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_created_on>2020-07-31 07:36:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2c7b30521b9290104ca7edf9bc4bcbfd</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -6222,7 +6222,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:41:25</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2c7b30521b9290104ca7edf9bc4bcbfd"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -6233,9 +6233,9 @@ function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 07:36:57</sys_created_on>
         <sys_id>7c7b70521b9290104ca7edf9bc4bcbaa</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 07:41:25</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:08:14</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.8 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var a=0;a&lt;e.length;a++)if(e[a]==t)return!0;return!1}function digest(e){for(var t=5381,a=e.length;a;)t=33*t^e.charCodeAt(--a);return t&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},a=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var r=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)r.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);r.query()}if(0==r.getRowCount()){r.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)r[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)r[e.update_pairs[i][0]]=e.update_pairs[i][1];r.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-a,t}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var a=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(a.addQuery("key",e),a.query(),0==a.getRowCount())return null;switch(a.next(),t){case"str":return a.getValue("value_string");case"int":return a.getValue("value_int");case"datetime":return a.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,a){var r={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(r.unique_pairs=[["key",e]],a){case"str":r.update_pairs=[["value_string",t]];break;case"int":r.update_pairs=[["value_int",t]];break;case"datetime":r.update_pairs=[["value_datetime",t]]}return insertOrUpdate(r)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
@@ -6262,8 +6262,8 @@ function writeToAPILog(p)
   
   //Write result to API log no matter what
   writeToAPILog({id: execution_id, endpoint: inputs.api_log_type, payload: '' + inputs.record.content, response_code: inputs.code, response_body: '' + inputs.body, start_time: inputs.start_datetime, time_delta_ms: total_time})
-  var report = inputs.code + ": " + inputs.error_message + inputs.body
-  writeToActionLog({id: execution_id, action_type: 'UP_UploadBatches(' + inputs.record.type.toLowerCase() + ')', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
+  var report = 'Uploaded ' + inputs.api_log_type + '. ' + inputs.code + ": " + (''+inputs.error_message) + inputs.body
+  writeToActionLog({id: execution_id, action_type: 'trigger_attachment_table', total_time: total_time, api_time: total_time, heavy_processing_time: 0, report: report, debug_string: '' + inputs.record.content})
   
   if(inputs.code == 200)
   {
@@ -6981,7 +6981,7 @@ function writeToAPILog(p)
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
+        <action display_value="CSVtoREST (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
         <cid>7be39b2e-6b99-4322-8edb-fc020f9dd687</cid>
         <extended_inputs/>
         <extended_outputs/>
@@ -7271,7 +7271,7 @@ function writeToAPILog(p)
         <value>{{step[cf998625-ec71-4d37-b71b-b92bd8488496].endpoint}}</value>
     </sys_element_mapping>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CSV_Upload3 (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
+        <action display_value="CSVtoREST (v2.1)">7f6bfc121b9290104ca7edf9bc4bcbc9</action>
         <cid>cf998625-ec71-4d37-b71b-b92bd8488496</cid>
         <extended_inputs/>
         <extended_inputs/>

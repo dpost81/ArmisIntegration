@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>link_armistosnowlink</internal_name>
         <label_cache>[{"name":"{{action.max_processing_seconds}}","label":"action➛max_processing_seconds","type":"action","ref":""},{"name":"{{step[6d4610d2-7aa0-423e-b15e-9c339aa0dd4c].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[6d4610d2-7aa0-423e-b15e-9c339aa0dd4c].debug}}","label":"step➛Script step➛debug","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>9bb1559a1b5a90104ca7edf9bc4bcb0b</latest_snapshot>
+        <latest_snapshot>351369321b9e50104be764e8bc4bcb51</latest_snapshot>
         <master_snapshot>2035bac21b1a58104be764e8bc4bcb09</master_snapshot>
         <name>LINK_AttemptAllArmisLinks (v2.1)</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>6e6ef88e1bda18104be764e8bc4bcb87</sys_id>
-        <sys_mod_count>81</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>LINK_AttemptAllArmisLinks (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_6e6ef88e1bda18104be764e8bc4bcb87</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:21</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:07</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -72,7 +72,7 @@
         <sys_created_on>2020-07-30 15:11:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f8d91d0e1b9e18104be764e8bc4bcb59</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -80,7 +80,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:18</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:05</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f8d91d0e1b9e18104be764e8bc4bcb59"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -91,9 +91,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-30 15:11:12</sys_created_on>
         <sys_id>05d91d0e1b9e18104be764e8bc4bcb6f</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:18</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:05</sys_updated_on>
         <value>/* This script attempts to link:
 
 1. Any Armis Device Table devices that have not yet attempted to link to a SNOW device
@@ -105,9 +105,41 @@ Once an Armis device attempts to link, the column "Novel Link Attempted" will be
 */
 
 
-//FUNCTION LIBRARY (v0.6) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}function getPendingRecordsEndSysID(e,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(r.force_field,r.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,r,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var i=new GlideRecord(t);return i.addQuery(a.force_field,a.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",r),i.query(),i}function executeStandardREST(e){try{var t=new GlideDateTime,r=new sn_ws.RESTMessageV2("Armis API",e.endpoint);r.setRequestHeader("Authorization",getCurrentToken()),r.setRequestHeader("accept","application/json"),r.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)r.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);r.setRequestBody(e.payload);var i,n=now(),u={};return 1==e.async?i=r.executeAsync():(i=r.execute(),u.response_code=i.getStatusCode(),u.response_body=i.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),r=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=r,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.insert()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
+//From the TABLE function library
+
+function getPendingRecordsEndSysID(n,table,other_params)
+{
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.query()
+  var last_id;
+  while(q.next()) { if(q.hasNext() == false) { return q.getValue('sys_id') } } 
+  return null
+}
+
+function getNumPendingRecords(n,table,end_sys_id,other_params)
+{  
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.addQuery('sys_id','&lt;=',end_sys_id)
+  q.query()
+  return q
+}
 
 
 // *********************************
@@ -143,11 +175,12 @@ function getMACs(snow_computer_query)
 function attemptGoldenMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   //If the name is '', we can't golden match.
   if(armis_computer_query.name == '') { ret.debug = "Name is empty, unable to attempt golden match.";return ret }
   var debug = []
-  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   
   //Model is tricky, so need to sanitize
@@ -159,7 +192,7 @@ function attemptGoldenMatch(armis_computer_query)
   snow_device.addQuery('sys_class_name','!=','u_cmdb_ci_computers_from_armis')
   snow_device.addQuery('name','=',armis_computer_query.name)
   snow_device.query()
-  debug.push("--Matches found for name only: " + snow_device.getRowCount())
+  debug.push("--Matches found for name only: " + snow_device.getRowCount() + " "  +lapReport(lap));lap=now()
   
   while(snow_device.next())
   {
@@ -168,22 +201,22 @@ function attemptGoldenMatch(armis_computer_query)
     if( snow_device.model_id != null ) { if( snow_device.model_id.name != null) { snow_model = snow_device.model_id.name } }
     
     //Golden match condition: model matches
-    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "'")
+    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "' " +lapReport(lap));lap=now()
     if(snow_model == armis_model)
     {
       //Golden match condition: at least one MAC matches.
       var macs = getMACs(snow_device)
-      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "]")
+      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "] " +lapReport(lap));lap=now()
       if(includes(macs,('' + armis_computer_query.mac_address).toUpperCase()))
       {
-        debug.push("--Golden match found.")
+        debug.push("--Golden match found. " +lapReport(lap));lap=now()
         ret.matched_device_sys_id = '' + snow_device.sys_id
         ret.match = true
         break
       }
-      else { debug.push("--Failed to find MAC in array.") }
+      else { debug.push("--Failed to find MAC in array. "  +lapReport(lap));lap=now() }
     }
-    else { debug.push("--Failed model match.") }
+    else { debug.push("--Failed model match. " +lapReport(lap));lap=now() }
   }
   
   ret.debug = debug.join('\n')
@@ -197,12 +230,13 @@ function attemptGoldenMatch(armis_computer_query)
 function attemptMACMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   var debug = []
-  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   var vmac_threshold = parseInt(getConfigValue('vmac_threshold'))
-  debug.push("--VMAC Threshold: " + vmac_threshold)
+  debug.push("--VMAC Threshold: " + vmac_threshold + " "  +lapReport(lap));lap=now()
   
   //Count number of time MAC occurs.
   var tables = ['cmdb_ci_network_adapter','cmdb_ci_computer']
@@ -216,7 +250,7 @@ function attemptMACMatch(armis_computer_query)
     q.query()
     if(q.next()) { mac_count += parseInt(q.getAggregate('COUNT')) }
   }
-  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count)
+  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count+ " "  +lapReport(lap));lap=now()
   
   //Only continue if we are under the vmac threshold.
   if (mac_count &lt; vmac_threshold)
@@ -249,7 +283,7 @@ function attemptMACMatch(armis_computer_query)
       counts[q.cmdb_ci.sys_id]++
       if (counts[q.cmdb_ci.sys_id] &gt; top_count) { top_count = counts[q.cmdb_ci.sys_id]; top_sys_id = q.cmdb_ci.sys_id }
     }
-    debug.push("--Counts: " + JSON.stringify(counts))
+    debug.push("--Counts: " + JSON.stringify(counts) + " "  +lapReport(lap));lap=now()
     debug.push("--Top count: " + top_sys_id + " (" + debug_lookup[top_sys_id] + ")")
     
     if (top_sys_id != '')
@@ -276,6 +310,9 @@ function attemptMACMatch(armis_computer_query)
   var api_total = 0
   var heavy_total = 0
   var debug = ['BEGIN LINK_AttemptAllArmisLinks']
+  var error_message = ''
+  var lap = now()
+  var execution_id = generateID()
   
   var armis_attempts_count = 0
   var armis_successes_count = 0
@@ -285,55 +322,77 @@ function attemptMACMatch(armis_computer_query)
   var loop_counter = 0
   var max_processing_seconds = parseInt(inputs.max_processing_seconds)
   if(isNaN(max_processing_seconds)) { max_processing_seconds = 240 }
-  while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
-  {
-    loop_counter++
-    debug.push("LOOP " + loop_counter )
-    //Pull 100 records.
-    var n = 100
-    var table = 'x_fmcna_armis_inte_armis_device_table'
-    var other_params = {force_field: 'novel_link_attempted',force_pending: false}
-    
-    //See documentation for how this works.
-    var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
-    debug.push("End sys_id (for record pull): " + end_sys_id)
-    
-    var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    
-    while(rec1.next())
+  
+  try {
+
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
     {
-     
-      armis_attempts_count++
-      var result = attemptGoldenMatch(rec1)
-      debug.push(result.debug)
-      
-      if (result.match == false)
+      loop_counter++
+      debug.push("LOOP " + loop_counter + " "  +lapReport(lap));lap=now()
+      //Pull 100 records.
+      var n = 100
+      var table = 'x_fmcna_armis_inte_armis_device_table'
+      var other_params = {force_field: 'novel_link_attempted',force_pending: false}
+
+      //See documentation for how this works.
+      var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
+      debug.push("End sys_id (for record pull): " + end_sys_id + " "  +lapReport(lap));lap=now()
+      if (end_sys_id == null)
       {
-        result = attemptMACMatch(rec1)
+        //No more records, this process is done.
+        debug.push("No records remaining to attempt match. Ending routine. " +lapReport(lap));lap=now()
+        break
+      }
+
+      var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
+      var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
+
+      while(rec1.next())
+      {
+
+        armis_attempts_count++
+        var result = attemptGoldenMatch(rec1)
+        var link_strength = 'GOLDEN'
+        lap=now()
         debug.push(result.debug)
+
+        if (result.match == false)
+        {
+          result = attemptMACMatch(rec1)
+          link_strength = 'MAC ONLY'
+          lap=now()
+          debug.push(result.debug)
+        }
+
+        //By now we have exhausted all opportunities for matching.
+        //If we have a match, store it, otherwise we're done.
+        if(result.match == true)
+        {
+          armis_successes_count++
+          rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
+          rec1.setValue('link_strength',link_strength)
+          if (rec1.linked_snow_computer != result.matched_device_sys_id) { rec1.has_pushed_all_properties_to_armis = false }
+          rec1.update()
+          debug.push("Assigned matching SNOW computer.  "+lapReport(lap) + "\n");lap=now()
+        }
+        else { debug.push("No match found. "  +lapReport(lap)+"\n");lap=now() }
       }
-      
-      //By now we have exhausted all opportunities for matching.
-      //If we have a match, store it, otherwise we're done.
-      if(result.match == true)
-      {
-        armis_successes_count++
-        rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
-        rec1.update()
-        debug.push("Assigned matching SNOW computer. \n")
-      }
-      else { debug.push("No match found.\n") }
+
+      //All updates have been completed, set attempted flags.
+      rec2.setValue('novel_link_attempted',true)
+      rec2.updateMultiple()
     }
-    
-    //All updates have been completed, set attempted flags.
-    rec2.setValue('novel_link_attempted',true)
-    rec2.updateMultiple()
   }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + '] '
+    debug.push(error_message)
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug.join('\n')})
+  }    
   
   outputs.debug = debug.join('\n')
-  var report_string = "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
-  writeToActionLog({id: generateID(), action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug})
+  var report_string = error_message + "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
+  if(armis_attempts_count &gt; 0) { writeToActionLog({id: execution_id, action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug}) }
   
   outputs.debug = debug.join('\n')
 })(inputs, outputs);
@@ -760,7 +819,7 @@ function attemptMACMatch(armis_computer_query)
         <sys_created_on>2020-07-30 15:11:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f8d91d0e1b9e18104be764e8bc4bcb59</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -768,7 +827,7 @@ function attemptMACMatch(armis_computer_query)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:18</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:05</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f8d91d0e1b9e18104be764e8bc4bcb59"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -779,9 +838,9 @@ function attemptMACMatch(armis_computer_query)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-30 15:11:12</sys_created_on>
         <sys_id>05d91d0e1b9e18104be764e8bc4bcb6f</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:18</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:05</sys_updated_on>
         <value>/* This script attempts to link:
 
 1. Any Armis Device Table devices that have not yet attempted to link to a SNOW device
@@ -793,9 +852,41 @@ Once an Armis device attempts to link, the column "Novel Link Attempted" will be
 */
 
 
-//FUNCTION LIBRARY (v0.6) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}function getPendingRecordsEndSysID(e,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(r.force_field,r.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,r,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var i=new GlideRecord(t);return i.addQuery(a.force_field,a.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",r),i.query(),i}function executeStandardREST(e){try{var t=new GlideDateTime,r=new sn_ws.RESTMessageV2("Armis API",e.endpoint);r.setRequestHeader("Authorization",getCurrentToken()),r.setRequestHeader("accept","application/json"),r.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)r.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);r.setRequestBody(e.payload);var i,n=now(),u={};return 1==e.async?i=r.executeAsync():(i=r.execute(),u.response_code=i.getStatusCode(),u.response_body=i.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),r=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=r,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.insert()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
+//From the TABLE function library
+
+function getPendingRecordsEndSysID(n,table,other_params)
+{
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.query()
+  var last_id;
+  while(q.next()) { if(q.hasNext() == false) { return q.getValue('sys_id') } } 
+  return null
+}
+
+function getNumPendingRecords(n,table,end_sys_id,other_params)
+{  
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.addQuery('sys_id','&lt;=',end_sys_id)
+  q.query()
+  return q
+}
 
 
 // *********************************
@@ -831,11 +922,12 @@ function getMACs(snow_computer_query)
 function attemptGoldenMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   //If the name is '', we can't golden match.
   if(armis_computer_query.name == '') { ret.debug = "Name is empty, unable to attempt golden match.";return ret }
   var debug = []
-  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   
   //Model is tricky, so need to sanitize
@@ -847,7 +939,7 @@ function attemptGoldenMatch(armis_computer_query)
   snow_device.addQuery('sys_class_name','!=','u_cmdb_ci_computers_from_armis')
   snow_device.addQuery('name','=',armis_computer_query.name)
   snow_device.query()
-  debug.push("--Matches found for name only: " + snow_device.getRowCount())
+  debug.push("--Matches found for name only: " + snow_device.getRowCount() + " "  +lapReport(lap));lap=now()
   
   while(snow_device.next())
   {
@@ -856,22 +948,22 @@ function attemptGoldenMatch(armis_computer_query)
     if( snow_device.model_id != null ) { if( snow_device.model_id.name != null) { snow_model = snow_device.model_id.name } }
     
     //Golden match condition: model matches
-    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "'")
+    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "' " +lapReport(lap));lap=now()
     if(snow_model == armis_model)
     {
       //Golden match condition: at least one MAC matches.
       var macs = getMACs(snow_device)
-      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "]")
+      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "] " +lapReport(lap));lap=now()
       if(includes(macs,('' + armis_computer_query.mac_address).toUpperCase()))
       {
-        debug.push("--Golden match found.")
+        debug.push("--Golden match found. " +lapReport(lap));lap=now()
         ret.matched_device_sys_id = '' + snow_device.sys_id
         ret.match = true
         break
       }
-      else { debug.push("--Failed to find MAC in array.") }
+      else { debug.push("--Failed to find MAC in array. "  +lapReport(lap));lap=now() }
     }
-    else { debug.push("--Failed model match.") }
+    else { debug.push("--Failed model match. " +lapReport(lap));lap=now() }
   }
   
   ret.debug = debug.join('\n')
@@ -885,12 +977,13 @@ function attemptGoldenMatch(armis_computer_query)
 function attemptMACMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   var debug = []
-  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   var vmac_threshold = parseInt(getConfigValue('vmac_threshold'))
-  debug.push("--VMAC Threshold: " + vmac_threshold)
+  debug.push("--VMAC Threshold: " + vmac_threshold + " "  +lapReport(lap));lap=now()
   
   //Count number of time MAC occurs.
   var tables = ['cmdb_ci_network_adapter','cmdb_ci_computer']
@@ -904,7 +997,7 @@ function attemptMACMatch(armis_computer_query)
     q.query()
     if(q.next()) { mac_count += parseInt(q.getAggregate('COUNT')) }
   }
-  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count)
+  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count+ " "  +lapReport(lap));lap=now()
   
   //Only continue if we are under the vmac threshold.
   if (mac_count &lt; vmac_threshold)
@@ -937,7 +1030,7 @@ function attemptMACMatch(armis_computer_query)
       counts[q.cmdb_ci.sys_id]++
       if (counts[q.cmdb_ci.sys_id] &gt; top_count) { top_count = counts[q.cmdb_ci.sys_id]; top_sys_id = q.cmdb_ci.sys_id }
     }
-    debug.push("--Counts: " + JSON.stringify(counts))
+    debug.push("--Counts: " + JSON.stringify(counts) + " "  +lapReport(lap));lap=now()
     debug.push("--Top count: " + top_sys_id + " (" + debug_lookup[top_sys_id] + ")")
     
     if (top_sys_id != '')
@@ -964,6 +1057,9 @@ function attemptMACMatch(armis_computer_query)
   var api_total = 0
   var heavy_total = 0
   var debug = ['BEGIN LINK_AttemptAllArmisLinks']
+  var error_message = ''
+  var lap = now()
+  var execution_id = generateID()
   
   var armis_attempts_count = 0
   var armis_successes_count = 0
@@ -973,55 +1069,77 @@ function attemptMACMatch(armis_computer_query)
   var loop_counter = 0
   var max_processing_seconds = parseInt(inputs.max_processing_seconds)
   if(isNaN(max_processing_seconds)) { max_processing_seconds = 240 }
-  while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
-  {
-    loop_counter++
-    debug.push("LOOP " + loop_counter )
-    //Pull 100 records.
-    var n = 100
-    var table = 'x_fmcna_armis_inte_armis_device_table'
-    var other_params = {force_field: 'novel_link_attempted',force_pending: false}
-    
-    //See documentation for how this works.
-    var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
-    debug.push("End sys_id (for record pull): " + end_sys_id)
-    
-    var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    
-    while(rec1.next())
+  
+  try {
+
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
     {
-     
-      armis_attempts_count++
-      var result = attemptGoldenMatch(rec1)
-      debug.push(result.debug)
-      
-      if (result.match == false)
+      loop_counter++
+      debug.push("LOOP " + loop_counter + " "  +lapReport(lap));lap=now()
+      //Pull 100 records.
+      var n = 100
+      var table = 'x_fmcna_armis_inte_armis_device_table'
+      var other_params = {force_field: 'novel_link_attempted',force_pending: false}
+
+      //See documentation for how this works.
+      var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
+      debug.push("End sys_id (for record pull): " + end_sys_id + " "  +lapReport(lap));lap=now()
+      if (end_sys_id == null)
       {
-        result = attemptMACMatch(rec1)
+        //No more records, this process is done.
+        debug.push("No records remaining to attempt match. Ending routine. " +lapReport(lap));lap=now()
+        break
+      }
+
+      var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
+      var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
+
+      while(rec1.next())
+      {
+
+        armis_attempts_count++
+        var result = attemptGoldenMatch(rec1)
+        var link_strength = 'GOLDEN'
+        lap=now()
         debug.push(result.debug)
+
+        if (result.match == false)
+        {
+          result = attemptMACMatch(rec1)
+          link_strength = 'MAC ONLY'
+          lap=now()
+          debug.push(result.debug)
+        }
+
+        //By now we have exhausted all opportunities for matching.
+        //If we have a match, store it, otherwise we're done.
+        if(result.match == true)
+        {
+          armis_successes_count++
+          rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
+          rec1.setValue('link_strength',link_strength)
+          if (rec1.linked_snow_computer != result.matched_device_sys_id) { rec1.has_pushed_all_properties_to_armis = false }
+          rec1.update()
+          debug.push("Assigned matching SNOW computer.  "+lapReport(lap) + "\n");lap=now()
+        }
+        else { debug.push("No match found. "  +lapReport(lap)+"\n");lap=now() }
       }
-      
-      //By now we have exhausted all opportunities for matching.
-      //If we have a match, store it, otherwise we're done.
-      if(result.match == true)
-      {
-        armis_successes_count++
-        rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
-        rec1.update()
-        debug.push("Assigned matching SNOW computer. \n")
-      }
-      else { debug.push("No match found.\n") }
+
+      //All updates have been completed, set attempted flags.
+      rec2.setValue('novel_link_attempted',true)
+      rec2.updateMultiple()
     }
-    
-    //All updates have been completed, set attempted flags.
-    rec2.setValue('novel_link_attempted',true)
-    rec2.updateMultiple()
   }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + '] '
+    debug.push(error_message)
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug.join('\n')})
+  }    
   
   outputs.debug = debug.join('\n')
-  var report_string = "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
-  writeToActionLog({id: generateID(), action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug})
+  var report_string = error_message + "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
+  if(armis_attempts_count &gt; 0) { writeToActionLog({id: execution_id, action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug}) }
   
   outputs.debug = debug.join('\n')
 })(inputs, outputs);
@@ -1315,16 +1433,16 @@ function attemptMACMatch(armis_computer_query)
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="LINK_AttemptAllArmisLinks (v2.1)">6e6ef88e1bda18104be764e8bc4bcb87</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"4135bac21b1a58104be764e8bc4bcbaf","name":"plan"}}</plan>
-        <snapshot>9bb1559a1b5a90104ca7edf9bc4bcb0b</snapshot>
+        <snapshot>351369321b9e50104be764e8bc4bcb51</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-30 21:50:25</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>4135bac21b1a58104be764e8bc4bcbaf</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:21</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:08</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1396,7 +1514,7 @@ function attemptMACMatch(armis_computer_query)
         <sys_created_on>2020-07-30 21:50:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f035bac21b1a58104be764e8bc4bcb15</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1404,7 +1522,7 @@ function attemptMACMatch(armis_computer_query)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:21</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f035bac21b1a58104be764e8bc4bcb15"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1415,9 +1533,9 @@ function attemptMACMatch(armis_computer_query)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-30 21:50:24</sys_created_on>
         <sys_id>7835bac21b1a58104be764e8bc4bcb41</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:21</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:07</sys_updated_on>
         <value>/* This script attempts to link:
 
 1. Any Armis Device Table devices that have not yet attempted to link to a SNOW device
@@ -1429,9 +1547,41 @@ Once an Armis device attempts to link, the column "Novel Link Attempted" will be
 */
 
 
-//FUNCTION LIBRARY (v0.6) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}function getPendingRecordsEndSysID(e,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(r.force_field,r.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,r,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var i=new GlideRecord(t);return i.addQuery(a.force_field,a.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",r),i.query(),i}function executeStandardREST(e){try{var t=new GlideDateTime,r=new sn_ws.RESTMessageV2("Armis API",e.endpoint);r.setRequestHeader("Authorization",getCurrentToken()),r.setRequestHeader("accept","application/json"),r.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)r.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);r.setRequestBody(e.payload);var i,n=now(),u={};return 1==e.async?i=r.executeAsync():(i=r.execute(),u.response_code=i.getStatusCode(),u.response_body=i.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),r=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=r,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.insert()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
+//From the TABLE function library
+
+function getPendingRecordsEndSysID(n,table,other_params)
+{
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.query()
+  var last_id;
+  while(q.next()) { if(q.hasNext() == false) { return q.getValue('sys_id') } } 
+  return null
+}
+
+function getNumPendingRecords(n,table,end_sys_id,other_params)
+{  
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.addQuery('sys_id','&lt;=',end_sys_id)
+  q.query()
+  return q
+}
 
 
 // *********************************
@@ -1467,11 +1617,12 @@ function getMACs(snow_computer_query)
 function attemptGoldenMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   //If the name is '', we can't golden match.
   if(armis_computer_query.name == '') { ret.debug = "Name is empty, unable to attempt golden match.";return ret }
   var debug = []
-  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   
   //Model is tricky, so need to sanitize
@@ -1483,7 +1634,7 @@ function attemptGoldenMatch(armis_computer_query)
   snow_device.addQuery('sys_class_name','!=','u_cmdb_ci_computers_from_armis')
   snow_device.addQuery('name','=',armis_computer_query.name)
   snow_device.query()
-  debug.push("--Matches found for name only: " + snow_device.getRowCount())
+  debug.push("--Matches found for name only: " + snow_device.getRowCount() + " "  +lapReport(lap));lap=now()
   
   while(snow_device.next())
   {
@@ -1492,22 +1643,22 @@ function attemptGoldenMatch(armis_computer_query)
     if( snow_device.model_id != null ) { if( snow_device.model_id.name != null) { snow_model = snow_device.model_id.name } }
     
     //Golden match condition: model matches
-    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "'")
+    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "' " +lapReport(lap));lap=now()
     if(snow_model == armis_model)
     {
       //Golden match condition: at least one MAC matches.
       var macs = getMACs(snow_device)
-      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "]")
+      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "] " +lapReport(lap));lap=now()
       if(includes(macs,('' + armis_computer_query.mac_address).toUpperCase()))
       {
-        debug.push("--Golden match found.")
+        debug.push("--Golden match found. " +lapReport(lap));lap=now()
         ret.matched_device_sys_id = '' + snow_device.sys_id
         ret.match = true
         break
       }
-      else { debug.push("--Failed to find MAC in array.") }
+      else { debug.push("--Failed to find MAC in array. "  +lapReport(lap));lap=now() }
     }
-    else { debug.push("--Failed model match.") }
+    else { debug.push("--Failed model match. " +lapReport(lap));lap=now() }
   }
   
   ret.debug = debug.join('\n')
@@ -1521,12 +1672,13 @@ function attemptGoldenMatch(armis_computer_query)
 function attemptMACMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   var debug = []
-  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   var vmac_threshold = parseInt(getConfigValue('vmac_threshold'))
-  debug.push("--VMAC Threshold: " + vmac_threshold)
+  debug.push("--VMAC Threshold: " + vmac_threshold + " "  +lapReport(lap));lap=now()
   
   //Count number of time MAC occurs.
   var tables = ['cmdb_ci_network_adapter','cmdb_ci_computer']
@@ -1540,7 +1692,7 @@ function attemptMACMatch(armis_computer_query)
     q.query()
     if(q.next()) { mac_count += parseInt(q.getAggregate('COUNT')) }
   }
-  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count)
+  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count+ " "  +lapReport(lap));lap=now()
   
   //Only continue if we are under the vmac threshold.
   if (mac_count &lt; vmac_threshold)
@@ -1573,7 +1725,7 @@ function attemptMACMatch(armis_computer_query)
       counts[q.cmdb_ci.sys_id]++
       if (counts[q.cmdb_ci.sys_id] &gt; top_count) { top_count = counts[q.cmdb_ci.sys_id]; top_sys_id = q.cmdb_ci.sys_id }
     }
-    debug.push("--Counts: " + JSON.stringify(counts))
+    debug.push("--Counts: " + JSON.stringify(counts) + " "  +lapReport(lap));lap=now()
     debug.push("--Top count: " + top_sys_id + " (" + debug_lookup[top_sys_id] + ")")
     
     if (top_sys_id != '')
@@ -1600,6 +1752,9 @@ function attemptMACMatch(armis_computer_query)
   var api_total = 0
   var heavy_total = 0
   var debug = ['BEGIN LINK_AttemptAllArmisLinks']
+  var error_message = ''
+  var lap = now()
+  var execution_id = generateID()
   
   var armis_attempts_count = 0
   var armis_successes_count = 0
@@ -1609,55 +1764,77 @@ function attemptMACMatch(armis_computer_query)
   var loop_counter = 0
   var max_processing_seconds = parseInt(inputs.max_processing_seconds)
   if(isNaN(max_processing_seconds)) { max_processing_seconds = 240 }
-  while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
-  {
-    loop_counter++
-    debug.push("LOOP " + loop_counter )
-    //Pull 100 records.
-    var n = 100
-    var table = 'x_fmcna_armis_inte_armis_device_table'
-    var other_params = {force_field: 'novel_link_attempted',force_pending: false}
-    
-    //See documentation for how this works.
-    var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
-    debug.push("End sys_id (for record pull): " + end_sys_id)
-    
-    var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    
-    while(rec1.next())
+  
+  try {
+
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
     {
-     
-      armis_attempts_count++
-      var result = attemptGoldenMatch(rec1)
-      debug.push(result.debug)
-      
-      if (result.match == false)
+      loop_counter++
+      debug.push("LOOP " + loop_counter + " "  +lapReport(lap));lap=now()
+      //Pull 100 records.
+      var n = 100
+      var table = 'x_fmcna_armis_inte_armis_device_table'
+      var other_params = {force_field: 'novel_link_attempted',force_pending: false}
+
+      //See documentation for how this works.
+      var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
+      debug.push("End sys_id (for record pull): " + end_sys_id + " "  +lapReport(lap));lap=now()
+      if (end_sys_id == null)
       {
-        result = attemptMACMatch(rec1)
+        //No more records, this process is done.
+        debug.push("No records remaining to attempt match. Ending routine. " +lapReport(lap));lap=now()
+        break
+      }
+
+      var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
+      var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
+
+      while(rec1.next())
+      {
+
+        armis_attempts_count++
+        var result = attemptGoldenMatch(rec1)
+        var link_strength = 'GOLDEN'
+        lap=now()
         debug.push(result.debug)
+
+        if (result.match == false)
+        {
+          result = attemptMACMatch(rec1)
+          link_strength = 'MAC ONLY'
+          lap=now()
+          debug.push(result.debug)
+        }
+
+        //By now we have exhausted all opportunities for matching.
+        //If we have a match, store it, otherwise we're done.
+        if(result.match == true)
+        {
+          armis_successes_count++
+          rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
+          rec1.setValue('link_strength',link_strength)
+          if (rec1.linked_snow_computer != result.matched_device_sys_id) { rec1.has_pushed_all_properties_to_armis = false }
+          rec1.update()
+          debug.push("Assigned matching SNOW computer.  "+lapReport(lap) + "\n");lap=now()
+        }
+        else { debug.push("No match found. "  +lapReport(lap)+"\n");lap=now() }
       }
-      
-      //By now we have exhausted all opportunities for matching.
-      //If we have a match, store it, otherwise we're done.
-      if(result.match == true)
-      {
-        armis_successes_count++
-        rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
-        rec1.update()
-        debug.push("Assigned matching SNOW computer. \n")
-      }
-      else { debug.push("No match found.\n") }
+
+      //All updates have been completed, set attempted flags.
+      rec2.setValue('novel_link_attempted',true)
+      rec2.updateMultiple()
     }
-    
-    //All updates have been completed, set attempted flags.
-    rec2.setValue('novel_link_attempted',true)
-    rec2.updateMultiple()
   }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + '] '
+    debug.push(error_message)
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug.join('\n')})
+  }    
   
   outputs.debug = debug.join('\n')
-  var report_string = "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
-  writeToActionLog({id: generateID(), action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug})
+  var report_string = error_message + "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
+  if(armis_attempts_count &gt; 0) { writeToActionLog({id: execution_id, action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug}) }
   
   outputs.debug = debug.join('\n')
 })(inputs, outputs);
@@ -2072,7 +2249,7 @@ function attemptMACMatch(armis_computer_query)
         <sys_created_on>2020-07-30 21:50:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f035bac21b1a58104be764e8bc4bcb15</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2080,7 +2257,7 @@ function attemptMACMatch(armis_computer_query)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:21</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f035bac21b1a58104be764e8bc4bcb15"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2091,9 +2268,9 @@ function attemptMACMatch(armis_computer_query)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-30 21:50:24</sys_created_on>
         <sys_id>7835bac21b1a58104be764e8bc4bcb41</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 09:14:21</sys_updated_on>
+        <sys_updated_on>2020-08-01 23:47:07</sys_updated_on>
         <value>/* This script attempts to link:
 
 1. Any Armis Device Table devices that have not yet attempted to link to a SNOW device
@@ -2105,9 +2282,41 @@ Once an Armis device attempts to link, the column "Novel Link Attempted" will be
 */
 
 
-//FUNCTION LIBRARY (v0.6) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}function getPendingRecordsEndSysID(e,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(r.force_field,r.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id")}function getNumPendingRecords(e,t,r,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var i=new GlideRecord(t);return i.addQuery(a.force_field,a.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",r),i.query(),i}function executeStandardREST(e){try{var t=new GlideDateTime,r=new sn_ws.RESTMessageV2("Armis API",e.endpoint);r.setRequestHeader("Authorization",getCurrentToken()),r.setRequestHeader("accept","application/json"),r.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)r.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);r.setRequestBody(e.payload);var i,n=now(),u={};return 1==e.async?i=r.executeAsync():(i=r.execute(),u.response_code=i.getStatusCode(),u.response_body=i.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),r=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=r,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.insert()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
+//From the TABLE function library
+
+function getPendingRecordsEndSysID(n,table,other_params)
+{
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.query()
+  var last_id;
+  while(q.next()) { if(q.hasNext() == false) { return q.getValue('sys_id') } } 
+  return null
+}
+
+function getNumPendingRecords(n,table,end_sys_id,other_params)
+{  
+  if(other_params == null) { other_params = {} }
+  if(other_params.force_field == null) { other_params.force_field = 'status'}
+  if(other_params.force_pending == null) { other_params.force_pending = 'PENDING'}
+  var q = new GlideRecord(table)
+  q.addQuery(other_params.force_field,other_params.force_pending)
+  q.setLimit(n)
+  q.orderBy('sys_id')
+  q.addQuery('sys_id','&lt;=',end_sys_id)
+  q.query()
+  return q
+}
 
 
 // *********************************
@@ -2143,11 +2352,12 @@ function getMACs(snow_computer_query)
 function attemptGoldenMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   //If the name is '', we can't golden match.
   if(armis_computer_query.name == '') { ret.debug = "Name is empty, unable to attempt golden match.";return ret }
   var debug = []
-  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting golden link for link Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   
   //Model is tricky, so need to sanitize
@@ -2159,7 +2369,7 @@ function attemptGoldenMatch(armis_computer_query)
   snow_device.addQuery('sys_class_name','!=','u_cmdb_ci_computers_from_armis')
   snow_device.addQuery('name','=',armis_computer_query.name)
   snow_device.query()
-  debug.push("--Matches found for name only: " + snow_device.getRowCount())
+  debug.push("--Matches found for name only: " + snow_device.getRowCount() + " "  +lapReport(lap));lap=now()
   
   while(snow_device.next())
   {
@@ -2168,22 +2378,22 @@ function attemptGoldenMatch(armis_computer_query)
     if( snow_device.model_id != null ) { if( snow_device.model_id.name != null) { snow_model = snow_device.model_id.name } }
     
     //Golden match condition: model matches
-    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "'")
+    debug.push("--Comparing models: '" + snow_model + "' == '" + armis_model + "' " +lapReport(lap));lap=now()
     if(snow_model == armis_model)
     {
       //Golden match condition: at least one MAC matches.
       var macs = getMACs(snow_device)
-      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "]")
+      debug.push("--Evaluating MACs vs Armis MAC " + ('' + armis_computer_query.mac_address).toUpperCase() + " : [" + macs + "] " +lapReport(lap));lap=now()
       if(includes(macs,('' + armis_computer_query.mac_address).toUpperCase()))
       {
-        debug.push("--Golden match found.")
+        debug.push("--Golden match found. " +lapReport(lap));lap=now()
         ret.matched_device_sys_id = '' + snow_device.sys_id
         ret.match = true
         break
       }
-      else { debug.push("--Failed to find MAC in array.") }
+      else { debug.push("--Failed to find MAC in array. "  +lapReport(lap));lap=now() }
     }
-    else { debug.push("--Failed model match.") }
+    else { debug.push("--Failed model match. " +lapReport(lap));lap=now() }
   }
   
   ret.debug = debug.join('\n')
@@ -2197,12 +2407,13 @@ function attemptGoldenMatch(armis_computer_query)
 function attemptMACMatch(armis_computer_query)
 {
   var ret = {}
+  var lap = now()
   ret.match = false
   var debug = []
-  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "'")
+  debug.push("Attempting MAC link for Armis device '" + armis_computer_query.name + "' " +lapReport(lap));lap=now()
   
   var vmac_threshold = parseInt(getConfigValue('vmac_threshold'))
-  debug.push("--VMAC Threshold: " + vmac_threshold)
+  debug.push("--VMAC Threshold: " + vmac_threshold + " "  +lapReport(lap));lap=now()
   
   //Count number of time MAC occurs.
   var tables = ['cmdb_ci_network_adapter','cmdb_ci_computer']
@@ -2216,7 +2427,7 @@ function attemptMACMatch(armis_computer_query)
     q.query()
     if(q.next()) { mac_count += parseInt(q.getAggregate('COUNT')) }
   }
-  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count)
+  debug.push("--Occurrences of MAC '" + armis_computer_query.mac_address + "': " + mac_count+ " "  +lapReport(lap));lap=now()
   
   //Only continue if we are under the vmac threshold.
   if (mac_count &lt; vmac_threshold)
@@ -2249,7 +2460,7 @@ function attemptMACMatch(armis_computer_query)
       counts[q.cmdb_ci.sys_id]++
       if (counts[q.cmdb_ci.sys_id] &gt; top_count) { top_count = counts[q.cmdb_ci.sys_id]; top_sys_id = q.cmdb_ci.sys_id }
     }
-    debug.push("--Counts: " + JSON.stringify(counts))
+    debug.push("--Counts: " + JSON.stringify(counts) + " "  +lapReport(lap));lap=now()
     debug.push("--Top count: " + top_sys_id + " (" + debug_lookup[top_sys_id] + ")")
     
     if (top_sys_id != '')
@@ -2276,6 +2487,9 @@ function attemptMACMatch(armis_computer_query)
   var api_total = 0
   var heavy_total = 0
   var debug = ['BEGIN LINK_AttemptAllArmisLinks']
+  var error_message = ''
+  var lap = now()
+  var execution_id = generateID()
   
   var armis_attempts_count = 0
   var armis_successes_count = 0
@@ -2285,55 +2499,77 @@ function attemptMACMatch(armis_computer_query)
   var loop_counter = 0
   var max_processing_seconds = parseInt(inputs.max_processing_seconds)
   if(isNaN(max_processing_seconds)) { max_processing_seconds = 240 }
-  while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
-  {
-    loop_counter++
-    debug.push("LOOP " + loop_counter )
-    //Pull 100 records.
-    var n = 100
-    var table = 'x_fmcna_armis_inte_armis_device_table'
-    var other_params = {force_field: 'novel_link_attempted',force_pending: false}
-    
-    //See documentation for how this works.
-    var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
-    debug.push("End sys_id (for record pull): " + end_sys_id)
-    
-    var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
-    
-    while(rec1.next())
+  
+  try {
+
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_processing_seconds*1000)
     {
-     
-      armis_attempts_count++
-      var result = attemptGoldenMatch(rec1)
-      debug.push(result.debug)
-      
-      if (result.match == false)
+      loop_counter++
+      debug.push("LOOP " + loop_counter + " "  +lapReport(lap));lap=now()
+      //Pull 100 records.
+      var n = 100
+      var table = 'x_fmcna_armis_inte_armis_device_table'
+      var other_params = {force_field: 'novel_link_attempted',force_pending: false}
+
+      //See documentation for how this works.
+      var end_sys_id = getPendingRecordsEndSysID(n,table,other_params)
+      debug.push("End sys_id (for record pull): " + end_sys_id + " "  +lapReport(lap));lap=now()
+      if (end_sys_id == null)
       {
-        result = attemptMACMatch(rec1)
+        //No more records, this process is done.
+        debug.push("No records remaining to attempt match. Ending routine. " +lapReport(lap));lap=now()
+        break
+      }
+
+      var rec1 = getNumPendingRecords(n,table,end_sys_id,other_params)
+      var rec2 = getNumPendingRecords(n,table,end_sys_id,other_params)
+
+      while(rec1.next())
+      {
+
+        armis_attempts_count++
+        var result = attemptGoldenMatch(rec1)
+        var link_strength = 'GOLDEN'
+        lap=now()
         debug.push(result.debug)
+
+        if (result.match == false)
+        {
+          result = attemptMACMatch(rec1)
+          link_strength = 'MAC ONLY'
+          lap=now()
+          debug.push(result.debug)
+        }
+
+        //By now we have exhausted all opportunities for matching.
+        //If we have a match, store it, otherwise we're done.
+        if(result.match == true)
+        {
+          armis_successes_count++
+          rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
+          rec1.setValue('link_strength',link_strength)
+          if (rec1.linked_snow_computer != result.matched_device_sys_id) { rec1.has_pushed_all_properties_to_armis = false }
+          rec1.update()
+          debug.push("Assigned matching SNOW computer.  "+lapReport(lap) + "\n");lap=now()
+        }
+        else { debug.push("No match found. "  +lapReport(lap)+"\n");lap=now() }
       }
-      
-      //By now we have exhausted all opportunities for matching.
-      //If we have a match, store it, otherwise we're done.
-      if(result.match == true)
-      {
-        armis_successes_count++
-        rec1.setValue('linked_snow_computer',result.matched_device_sys_id)
-        rec1.update()
-        debug.push("Assigned matching SNOW computer. \n")
-      }
-      else { debug.push("No match found.\n") }
+
+      //All updates have been completed, set attempted flags.
+      rec2.setValue('novel_link_attempted',true)
+      rec2.updateMultiple()
     }
-    
-    //All updates have been completed, set attempted flags.
-    rec2.setValue('novel_link_attempted',true)
-    rec2.updateMultiple()
   }
+  catch(ex)
+  {
+    error_message = '[ERROR: ' + ex + '] '
+    debug.push(error_message)
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug.join('\n')})
+  }    
   
   outputs.debug = debug.join('\n')
-  var report_string = "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
-  writeToActionLog({id: generateID(), action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug})
+  var report_string = error_message + "Attempted " + armis_attempts_count + " armis-to-snow links, " + armis_successes_count + " successful."
+  if(armis_attempts_count &gt; 0) { writeToActionLog({id: execution_id, action_type: 'LINK_AttemptAllArmisLinks', total_time: (now() - start_time), api_time: 0, heavy_processing_time: (now() - start_time), report: report_string, debug_string: outputs.debug}) }
   
   outputs.debug = debug.join('\n')
 })(inputs, outputs);

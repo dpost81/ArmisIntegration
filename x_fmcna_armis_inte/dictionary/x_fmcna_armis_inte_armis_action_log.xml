@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Armis Action Log" max_length="40" name="x_fmcna_armis_inte_armis_action_log" sizeclass="686" type="collection">
+    <element label="Armis Action Log" max_length="40" name="x_fmcna_armis_inte_armis_action_log" sizeclass="6221" type="collection">
         <element choice="1" label="Action Type" max_length="40" name="action_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="CLEANUP_AllTables" value="CLEANUP_AllTables"/>
@@ -8,10 +8,14 @@
                 <element inactive_on_update="false" label="MAIN_QueueAllDevicePropertiesEtc" value="MAIN_QueueAllDevicePropertiesEtc"/>
                 <element inactive_on_update="false" label="STRESS_TEST" value="STRESS_TEST"/>
                 <element inactive_on_update="false" label="TEST" value="TEST"/>
+                <element inactive_on_update="false" label="trigger_attachment_table" value="trigger_attachment_table"/>
+                <element inactive_on_update="false" label="trigger_computer_update" value="trigger_computer_update"/>
+                <element inactive_on_update="false" label="trigger_software" value="trigger_software"/>
                 <element inactive_on_update="false" label="UP_UploadBatches(app)" value="UP_UploadBatches(app)"/>
                 <element inactive_on_update="false" label="UP_UploadBatches(arp)" value="UP_UploadBatches(arp)"/>
                 <element inactive_on_update="false" label="UP_UploadBatches(csv)" value="UP_UploadBatches(csv)"/>
                 <element inactive_on_update="false" label="UP_UploadBatches(prop)" value="UP_UploadBatches(prop)"/>
+                <element inactive_on_update="false" label="weekly_refresh" value="weekly_refresh"/>
             </choice>
         </element>
         <element label="API time" max_length="40" name="api_time" type="integer"/>

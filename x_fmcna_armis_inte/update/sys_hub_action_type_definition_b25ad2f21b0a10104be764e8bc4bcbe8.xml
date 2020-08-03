@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>getd_getbulkarmisdata</internal_name>
         <label_cache>[{"name":"{{action.mode}}","label":"action➛mode","type":"action","ref":""},{"name":"{{action.max_runtime}}","label":"action➛max_runtime","type":"action","ref":""},{"name":"{{action.query}}","label":"action➛query","type":"action","ref":""},{"name":"{{action.tags_to_table}}","label":"action➛tags_to_table","type":"action","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug1}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug2}}","label":"step➛Script step➛debug2","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug3}}","label":"step➛Script step➛debug3","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].time_left_s}}","label":"step➛Script step➛time_left_s","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>7c0d6fca1b9e58104be764e8bc4bcb02</latest_snapshot>
+        <latest_snapshot>0f77adfa1b9e50104be764e8bc4bcbc0</latest_snapshot>
         <master_snapshot>d4181bf61b8294104ca7edf9bc4bcb8f</master_snapshot>
         <name>GETD_GetBulkArmisData (v2.1)</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>b25ad2f21b0a10104be764e8bc4bcbe8</sys_id>
-        <sys_mod_count>190</sys_mod_count>
+        <sys_mod_count>208</sys_mod_count>
         <sys_name>GETD_GetBulkArmisData (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b25ad2f21b0a10104be764e8bc4bcbe8</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:21</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -86,7 +86,7 @@
         <sys_created_on>2020-07-20 18:08:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>728266fe1b0a10104be764e8bc4bcb36</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>74</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -94,7 +94,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:17</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=728266fe1b0a10104be764e8bc4bcb36"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -119,9 +119,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 18:08:39</sys_created_on>
         <sys_id>3e82e6321b4a10104be764e8bc4bcbe7</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:17</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -138,9 +138,11 @@
   
   */
 
-//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
 
 //UPDATE ARMIS DEVICE (v0.2)
 //MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
@@ -150,40 +152,23 @@ function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={}
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
-//This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0
-// 2. The time since the last reset is measured
-// 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
-//The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
-//set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
-function recalculateRefreshHours()
-  {
-    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
-    //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
-    //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
-    var debug = []
-    var last_refresh_str = getCacheValue('getd_refresh_last_reset','datetime')
-    var last_refresh_time = new GlideDateTime(last_refresh_str)
-    debug.push("last_refresh_time=" + last_refresh_time)
-    
-    var num_refreshes_for_query = getConfigValue('getd_refresh_passes')
-    if (num_refreshes_for_query == '') { num_refreshes_for_query = 5 }
-    debug.push("num_refreshes_for_query=" + num_refreshes_for_query)
-    
-    var elapsed_hours_since_last_reset = (now() - last_refresh_time.getNumericValue()) / 3600000
-    debug.push("elapsed_hours_since_last_reset=" + elapsed_hours_since_last_reset)
+function calculateTimeLeft(start_time,max_runtime_seconds)
+{
+ var elapsed_ms = now() - start_time
+ return max_runtime_seconds - elapsed_ms/1000
+}
 
-    var new_query_hours = Math.ceil(num_refreshes_for_query * elapsed_hours_since_last_reset)
-    if (new_query_hours &gt; 24) { new_query_hours = 24 }
-    if (new_query_hours &lt; 1) { new_query_hours = 1 } 
-    debug.push("new_query_hours=" + new_query_hours)
+function writeToAPILog(p)
+{
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',('' + p.payload).substring(0,1999)],['response_code',p.response_code],
+    ['response_body',('' + p.response_body).substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
+}
 
-    //Set the new cache query hours and reset the timer.
-    setCacheValue('getd_refresh_calculated_hours',new_query_hours,'int')
-    setCacheValue('getd_refresh_last_reset',new GlideDateTime(),'datetime')
-    return debug
-  }
-    
 
 // **********************
 // *** IMPLEMENTATION ***
@@ -199,54 +184,47 @@ function recalculateRefreshHours()
   //Init
   var execution_id = generateID()
   var debug = []
-
-  //Start overall timer. We will use this to find out when to stop the loop, as well as return back the leftover time (so a refresh run can be executed after a master run)
   var start_time = now()
-  function calculateTimeLeft(inputs) { return inputs.max_runtime_seconds - ( now() - start_time)/1000 }
-  outputs.time_left_s = 0 //Just in case
-  
-  //Set up query
-  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
-  //If we have ### in the query (refresh query), make sure to use the cached value.
-  if (inputs.mode == 'refresh')
-  {
-    var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
-    armis_query = armis_query.replace("###",cached_hours)
-  }
-  debug.push("QUERY= '" + armis_query + "'.")
-  
-  //Ending counters/report
-  var total_time = 0
-  var api_time = 0
-  var heavy_processing_time = 0
+  var api_total = 0
+  var heavy_total = 0
+  var lap = now()
   var num_api_calls = 0
   var num_armis_devices = 0
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
   var total_mode_records = 0
-  var end_script_report = "";
-  var original_getd_n = 0
-  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
+  var error_report = '';
+  var report = '';
+  var original_getd_n = -1
+  outputs.time_left_s = 0 // just in case.
+  var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
-  //LOOP - until we are out of time.
-  // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
-  var end_loop_early = false // Is flagged manually if the query fails outright
-  while(end_loop_early == false &amp;&amp; calculateTimeLeft(inputs) &gt; 0)
-  {
-    debug.push("LOOP " + num_api_calls + " BEGIN")
+  //Set up query
+  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
+  var cache_key = "getd_" + inputs.mode + "_current_n"
+  
+  debug.push("QUERY= '" + armis_query + "'." + lapReport(lap));lap=now()
+  
+  //Ending counters/report
+  
+  try {
     
-    //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
-    var cache_key = "getd_" + inputs.mode + "_current_n"
-    var getd_n = getCacheValue(cache_key,'int')
-    if (getd_n == null) { getd_n = 0 }
-    debug.push("getd_n: " + getd_n)
-    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
-    
-    //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
-    try {
-      
+    //LOOP - until we are out of time.
+    // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
+    var end_loop_early = false // Is flagged manually if the query fails outright
+    var max_runtime_seconds = parseInt(inputs.max_runtime_seconds)
+    if(isNaN(max_runtime_seconds)) { max_runtime_seconds = 240 }
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_runtime_seconds*1000)
+    {
+      debug.push("LOOP " + num_api_calls + " BEGIN "+ lapReport(lap));lap=now()
+
+      //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
+      var getd_n = parseInt(getCacheValue(cache_key,'int'))
+      if (isNaN(getd_n)) { getd_n = 0 }
+      debug.push("getd_n: " + getd_n + " " + lapReport(lap));lap=now()
+      if(original_getd_n == -1) { original_getd_n = getd_n} // used for reporting.
+
       //We want 100 devices, starting at device N
       //Using Armis API endpoint GET /api/v1/search/
       var request = new sn_ws.RESTMessageV2('Armis API','GET Search')
@@ -258,131 +236,129 @@ function recalculateRefreshHours()
 
       //Execute query, but sandwich .execute() with a time check to document how long it took.
       var glide_start_time = new GlideDateTime()
-      var api_start_time = now()
+      var t = now()
       var response = request.execute()
-      var api_time_delta = now() - api_start_time
-      api_time += api_time_delta //Track the total for reporting purposes
-      debug.push("Query time: " + api_time_delta + " ms, response " + response.getStatusCode())
+      api_total += now() - t
+      
+      debug.push("Queried 100 devices, response: " + response.getStatusCode() + " " + lapReport(lap));lap=now()
       if (response.getStatusCode() != 200) { debug.push(response.getBody()) }
-      
+
       //Log the query results
-      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: inputs.query, response_code: response.getStatusCode(), 
-         response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: api_time_delta})
+      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: armis_query, response_code: response.getStatusCode(), 
+                     response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: (now() - t)})
+      debug.push("Logged results to Armis API Log. "  + lapReport(lap));lap=now()
       num_api_calls += 1
-      
+
       //Extract data!
-      switch(response.getStatusCode())
+      if(response.getStatusCode() == 200)
       {
-        case 200: //Success
-          
-          //Parse!
-          var data = JSON.parse(response.getBody()).data
-          total_mode_records = data.total
-          debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
-          
-          num_armis_devices += data.count
-          
-          //Note that if we're at the end of the list of devices, next will be null.
-          //What happens next depends on the mode:
-          // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
-          // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
-          if (data.next == null) {
-            switch (inputs.mode) {
-              case 'master':
-                setCacheValue(cache_key, data.total, 'int')
-                break;
-              case 'refresh':
-                setCacheValue(cache_key, 0, 'int');
-                end_script_report += '[MAXED,RESET TO 0] '
-                //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                //recalculateRefreshHours()
-                break;
-            }
+        //Parse!
+        var data = JSON.parse(response.getBody()).data
+        total_mode_records = data.total
+        debug.push("Parsed data. count=" + data.count + ", next=" + data.next + ", total=" + data.total + " "  + lapReport(lap));lap=now()
+
+        num_armis_devices += data.count
+        if(inputs.mode == 'refresh') { num_armis_devices -= num_refresh_threshold } //we want to be able to accurately track that we're backing up each step by X records.
+
+        //Note that if we're at the end of the list of devices, next will be null.
+        //What happens next depends on the mode:
+        // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
+        // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
+        if (data.next == null) {
+          switch (inputs.mode) {
+            case 'master':
+              setCacheValue(cache_key, data.total, 'int')
+              break;
+            case 'refresh':
+              setCacheValue(cache_key, 0, 'int');
+              report += '[MAXED,RESET TO 0] '
+              break;
           }
-          else { 
-            //Update the cache so the next run starts where we left off.
-            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
-            //This won't be perfect but should go a long way toward improving consistency.
-            switch (inputs.mode) {
-              case 'master': setCacheValue(cache_key, data.next, 'int');break
-              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
-            }
+        }
+        else { 
+          //Update the cache so the next run starts where we left off.
+          //Note that for refresh, we want to go a few steps backward (num_refresh_threshold) so that we can try to catch any new devices that may have been added since we last checked.
+          //This won't be perfect but should go a long way toward improving consistency.
+          switch (inputs.mode) {
+            case 'master': setCacheValue(cache_key, data.next, 'int');break
+            case 'refresh': setCacheValue(cache_key, data.next - num_refresh_threshold, 'int');break
           }
-          
-          //Set the total too, just for reference.
-          setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
-          
-          //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
-          var heavy_processing_start = now()
-          
-          if (data.count &gt; 0) {
-            for (var i=0;i&lt;data.count;i++)
-            {
-              //Alllllll the fields in the query need to be pushed to the Armis Device Table.
-              var entry = data.results[i]
-              
-              //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
-              var results = updateArmisDevice(entry,inputs.tags_to_table)
-              debug.push(results.action + ":" + entry.id + " (" + entry.name + "). (" + results.time_delta + "ms)")
-              switch (results.action) {
-                case 'insert': num_records_inserted += 1; break
-                case 'update': num_records_updated += 1; break
-                case 'no_update_needed': num_records_skipped += 1; break
-              }
-            }
-          }
-          else
+        }
+
+        //Set the total too, just for reference.
+        setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
+
+        //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
+        var t = now()
+
+        if (data.count &gt; 0) {
+          for (var i=0;i&lt;data.count;i++)
           {
-            //We have 0 records.
-            //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
-            
-            if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
-              outputs.debug = "0 records, killed script."
-              outputs.time_left_s = calculateTimeLeft(inputs)
-              return
+            //Alllllll the fields in the query need to be pushed to the Armis Device Table.
+            var entry = data.results[i]
+
+            //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
+            var results = updateArmisDevice(entry,inputs.tags_to_table)
+            debug.push(results.action + ":" + entry.id + " (" + entry.name + "). " + lapReport(lap));lap=now()
+            switch (results.action) {
+              case 'insert': num_records_inserted += 1; break
+              case 'update': num_records_updated += 1; break
+              case 'no_update_needed': num_records_skipped += 1; break
             }
-            //If we're in master mode, we still want to report, but we're done looping.
-            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
-            if (inputs.mode == 'master')
-            {
-              setCacheValue('master_complete', 1, 'int')
-              end_loop_early = true
-            }
-            //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
-          
-          //Document our heavy processing time
-          heavy_processing_time += now() - heavy_processing_start
-          break
-        default:
-          //Not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
-          end_script_report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
-          end_loop_early = true
+        }
+        else
+        {
+          //We have 0 records.
+          //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+
+          if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
+            outputs.debug = "0 records, killed script."
+            outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
+            return
+          }
+          //If we're in master mode, we have processed some records so we still want to report, but we're done looping.
+          //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+          if (inputs.mode == 'master')
+          {
+            setCacheValue('master_complete', 1, 'int')
+            end_loop_early = true
+          }
+          //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
+        }
+
+        //Document our heavy processing time
+        heavy_total += now() - t
       }
-    
+      else
+      {
+        //API call was not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
+        report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
+        end_loop_early = true 
+      }
     }
-    catch(ex) {
-      debug.push("ERROR IN QUERY: " + ex)
-      end_script_report += "Query error: " + ex + " "
-      end_loop_early = true
-    }
+  }
+  catch(ex)
+  {
+    error_report = '[ERROR: ' + ex + '] '
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug_string.join('\n')})
   }
   
   //Percentage reporting, to get a good idea of how far we've come along.
   var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
-  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices + num_refresh_threshold) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
   var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
-  total_time = now() - start_time
-  var flattened_debug = debug.join('\n')
-  writeToActionLog(
-    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: total_time, api_time: api_time, 
-     heavy_processing_time: heavy_processing_time, report: end_script_report, debug_string: flattened_debug})
+  report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + "/" + total_mode_records + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ", updated:" + num_records_updated + ", skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(start_time,max_runtime_seconds)) + "s."
+  debug = debug.join('\n')
   
-  outputs.debug = flattened_debug
-  outputs.time_left_s = calculateTimeLeft(inputs)
+  writeToActionLog(
+    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: (now() - start_time), api_time: api_total, 
+     heavy_processing_time: heavy_total, report: report, debug_string: debug})
+  
+  outputs.debug = debug
+  outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -1246,7 +1222,7 @@ function recalculateRefreshHours()
         <sys_created_on>2020-07-20 18:08:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>728266fe1b0a10104be764e8bc4bcb36</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>74</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1254,7 +1230,7 @@ function recalculateRefreshHours()
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:17</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=728266fe1b0a10104be764e8bc4bcb36"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1279,9 +1255,9 @@ function recalculateRefreshHours()
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 18:08:39</sys_created_on>
         <sys_id>3e82e6321b4a10104be764e8bc4bcbe7</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:14</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:17</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -1298,9 +1274,11 @@ function recalculateRefreshHours()
   
   */
 
-//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
 
 //UPDATE ARMIS DEVICE (v0.2)
 //MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
@@ -1310,40 +1288,23 @@ function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={}
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
-//This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0
-// 2. The time since the last reset is measured
-// 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
-//The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
-//set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
-function recalculateRefreshHours()
-  {
-    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
-    //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
-    //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
-    var debug = []
-    var last_refresh_str = getCacheValue('getd_refresh_last_reset','datetime')
-    var last_refresh_time = new GlideDateTime(last_refresh_str)
-    debug.push("last_refresh_time=" + last_refresh_time)
-    
-    var num_refreshes_for_query = getConfigValue('getd_refresh_passes')
-    if (num_refreshes_for_query == '') { num_refreshes_for_query = 5 }
-    debug.push("num_refreshes_for_query=" + num_refreshes_for_query)
-    
-    var elapsed_hours_since_last_reset = (now() - last_refresh_time.getNumericValue()) / 3600000
-    debug.push("elapsed_hours_since_last_reset=" + elapsed_hours_since_last_reset)
+function calculateTimeLeft(start_time,max_runtime_seconds)
+{
+ var elapsed_ms = now() - start_time
+ return max_runtime_seconds - elapsed_ms/1000
+}
 
-    var new_query_hours = Math.ceil(num_refreshes_for_query * elapsed_hours_since_last_reset)
-    if (new_query_hours &gt; 24) { new_query_hours = 24 }
-    if (new_query_hours &lt; 1) { new_query_hours = 1 } 
-    debug.push("new_query_hours=" + new_query_hours)
+function writeToAPILog(p)
+{
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',('' + p.payload).substring(0,1999)],['response_code',p.response_code],
+    ['response_body',('' + p.response_body).substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
+}
 
-    //Set the new cache query hours and reset the timer.
-    setCacheValue('getd_refresh_calculated_hours',new_query_hours,'int')
-    setCacheValue('getd_refresh_last_reset',new GlideDateTime(),'datetime')
-    return debug
-  }
-    
 
 // **********************
 // *** IMPLEMENTATION ***
@@ -1359,54 +1320,47 @@ function recalculateRefreshHours()
   //Init
   var execution_id = generateID()
   var debug = []
-
-  //Start overall timer. We will use this to find out when to stop the loop, as well as return back the leftover time (so a refresh run can be executed after a master run)
   var start_time = now()
-  function calculateTimeLeft(inputs) { return inputs.max_runtime_seconds - ( now() - start_time)/1000 }
-  outputs.time_left_s = 0 //Just in case
-  
-  //Set up query
-  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
-  //If we have ### in the query (refresh query), make sure to use the cached value.
-  if (inputs.mode == 'refresh')
-  {
-    var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
-    armis_query = armis_query.replace("###",cached_hours)
-  }
-  debug.push("QUERY= '" + armis_query + "'.")
-  
-  //Ending counters/report
-  var total_time = 0
-  var api_time = 0
-  var heavy_processing_time = 0
+  var api_total = 0
+  var heavy_total = 0
+  var lap = now()
   var num_api_calls = 0
   var num_armis_devices = 0
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
   var total_mode_records = 0
-  var end_script_report = "";
-  var original_getd_n = 0
-  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
+  var error_report = '';
+  var report = '';
+  var original_getd_n = -1
+  outputs.time_left_s = 0 // just in case.
+  var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
-  //LOOP - until we are out of time.
-  // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
-  var end_loop_early = false // Is flagged manually if the query fails outright
-  while(end_loop_early == false &amp;&amp; calculateTimeLeft(inputs) &gt; 0)
-  {
-    debug.push("LOOP " + num_api_calls + " BEGIN")
+  //Set up query
+  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
+  var cache_key = "getd_" + inputs.mode + "_current_n"
+  
+  debug.push("QUERY= '" + armis_query + "'." + lapReport(lap));lap=now()
+  
+  //Ending counters/report
+  
+  try {
     
-    //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
-    var cache_key = "getd_" + inputs.mode + "_current_n"
-    var getd_n = getCacheValue(cache_key,'int')
-    if (getd_n == null) { getd_n = 0 }
-    debug.push("getd_n: " + getd_n)
-    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
-    
-    //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
-    try {
-      
+    //LOOP - until we are out of time.
+    // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
+    var end_loop_early = false // Is flagged manually if the query fails outright
+    var max_runtime_seconds = parseInt(inputs.max_runtime_seconds)
+    if(isNaN(max_runtime_seconds)) { max_runtime_seconds = 240 }
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_runtime_seconds*1000)
+    {
+      debug.push("LOOP " + num_api_calls + " BEGIN "+ lapReport(lap));lap=now()
+
+      //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
+      var getd_n = parseInt(getCacheValue(cache_key,'int'))
+      if (isNaN(getd_n)) { getd_n = 0 }
+      debug.push("getd_n: " + getd_n + " " + lapReport(lap));lap=now()
+      if(original_getd_n == -1) { original_getd_n = getd_n} // used for reporting.
+
       //We want 100 devices, starting at device N
       //Using Armis API endpoint GET /api/v1/search/
       var request = new sn_ws.RESTMessageV2('Armis API','GET Search')
@@ -1418,131 +1372,129 @@ function recalculateRefreshHours()
 
       //Execute query, but sandwich .execute() with a time check to document how long it took.
       var glide_start_time = new GlideDateTime()
-      var api_start_time = now()
+      var t = now()
       var response = request.execute()
-      var api_time_delta = now() - api_start_time
-      api_time += api_time_delta //Track the total for reporting purposes
-      debug.push("Query time: " + api_time_delta + " ms, response " + response.getStatusCode())
+      api_total += now() - t
+      
+      debug.push("Queried 100 devices, response: " + response.getStatusCode() + " " + lapReport(lap));lap=now()
       if (response.getStatusCode() != 200) { debug.push(response.getBody()) }
-      
+
       //Log the query results
-      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: inputs.query, response_code: response.getStatusCode(), 
-         response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: api_time_delta})
+      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: armis_query, response_code: response.getStatusCode(), 
+                     response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: (now() - t)})
+      debug.push("Logged results to Armis API Log. "  + lapReport(lap));lap=now()
       num_api_calls += 1
-      
+
       //Extract data!
-      switch(response.getStatusCode())
+      if(response.getStatusCode() == 200)
       {
-        case 200: //Success
-          
-          //Parse!
-          var data = JSON.parse(response.getBody()).data
-          total_mode_records = data.total
-          debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
-          
-          num_armis_devices += data.count
-          
-          //Note that if we're at the end of the list of devices, next will be null.
-          //What happens next depends on the mode:
-          // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
-          // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
-          if (data.next == null) {
-            switch (inputs.mode) {
-              case 'master':
-                setCacheValue(cache_key, data.total, 'int')
-                break;
-              case 'refresh':
-                setCacheValue(cache_key, 0, 'int');
-                end_script_report += '[MAXED,RESET TO 0] '
-                //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                //recalculateRefreshHours()
-                break;
-            }
+        //Parse!
+        var data = JSON.parse(response.getBody()).data
+        total_mode_records = data.total
+        debug.push("Parsed data. count=" + data.count + ", next=" + data.next + ", total=" + data.total + " "  + lapReport(lap));lap=now()
+
+        num_armis_devices += data.count
+        if(inputs.mode == 'refresh') { num_armis_devices -= num_refresh_threshold } //we want to be able to accurately track that we're backing up each step by X records.
+
+        //Note that if we're at the end of the list of devices, next will be null.
+        //What happens next depends on the mode:
+        // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
+        // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
+        if (data.next == null) {
+          switch (inputs.mode) {
+            case 'master':
+              setCacheValue(cache_key, data.total, 'int')
+              break;
+            case 'refresh':
+              setCacheValue(cache_key, 0, 'int');
+              report += '[MAXED,RESET TO 0] '
+              break;
           }
-          else { 
-            //Update the cache so the next run starts where we left off.
-            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
-            //This won't be perfect but should go a long way toward improving consistency.
-            switch (inputs.mode) {
-              case 'master': setCacheValue(cache_key, data.next, 'int');break
-              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
-            }
+        }
+        else { 
+          //Update the cache so the next run starts where we left off.
+          //Note that for refresh, we want to go a few steps backward (num_refresh_threshold) so that we can try to catch any new devices that may have been added since we last checked.
+          //This won't be perfect but should go a long way toward improving consistency.
+          switch (inputs.mode) {
+            case 'master': setCacheValue(cache_key, data.next, 'int');break
+            case 'refresh': setCacheValue(cache_key, data.next - num_refresh_threshold, 'int');break
           }
-          
-          //Set the total too, just for reference.
-          setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
-          
-          //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
-          var heavy_processing_start = now()
-          
-          if (data.count &gt; 0) {
-            for (var i=0;i&lt;data.count;i++)
-            {
-              //Alllllll the fields in the query need to be pushed to the Armis Device Table.
-              var entry = data.results[i]
-              
-              //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
-              var results = updateArmisDevice(entry,inputs.tags_to_table)
-              debug.push(results.action + ":" + entry.id + " (" + entry.name + "). (" + results.time_delta + "ms)")
-              switch (results.action) {
-                case 'insert': num_records_inserted += 1; break
-                case 'update': num_records_updated += 1; break
-                case 'no_update_needed': num_records_skipped += 1; break
-              }
-            }
-          }
-          else
+        }
+
+        //Set the total too, just for reference.
+        setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
+
+        //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
+        var t = now()
+
+        if (data.count &gt; 0) {
+          for (var i=0;i&lt;data.count;i++)
           {
-            //We have 0 records.
-            //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
-            
-            if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
-              outputs.debug = "0 records, killed script."
-              outputs.time_left_s = calculateTimeLeft(inputs)
-              return
+            //Alllllll the fields in the query need to be pushed to the Armis Device Table.
+            var entry = data.results[i]
+
+            //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
+            var results = updateArmisDevice(entry,inputs.tags_to_table)
+            debug.push(results.action + ":" + entry.id + " (" + entry.name + "). " + lapReport(lap));lap=now()
+            switch (results.action) {
+              case 'insert': num_records_inserted += 1; break
+              case 'update': num_records_updated += 1; break
+              case 'no_update_needed': num_records_skipped += 1; break
             }
-            //If we're in master mode, we still want to report, but we're done looping.
-            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
-            if (inputs.mode == 'master')
-            {
-              setCacheValue('master_complete', 1, 'int')
-              end_loop_early = true
-            }
-            //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
-          
-          //Document our heavy processing time
-          heavy_processing_time += now() - heavy_processing_start
-          break
-        default:
-          //Not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
-          end_script_report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
-          end_loop_early = true
+        }
+        else
+        {
+          //We have 0 records.
+          //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+
+          if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
+            outputs.debug = "0 records, killed script."
+            outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
+            return
+          }
+          //If we're in master mode, we have processed some records so we still want to report, but we're done looping.
+          //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+          if (inputs.mode == 'master')
+          {
+            setCacheValue('master_complete', 1, 'int')
+            end_loop_early = true
+          }
+          //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
+        }
+
+        //Document our heavy processing time
+        heavy_total += now() - t
       }
-    
+      else
+      {
+        //API call was not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
+        report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
+        end_loop_early = true 
+      }
     }
-    catch(ex) {
-      debug.push("ERROR IN QUERY: " + ex)
-      end_script_report += "Query error: " + ex + " "
-      end_loop_early = true
-    }
+  }
+  catch(ex)
+  {
+    error_report = '[ERROR: ' + ex + '] '
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug_string.join('\n')})
   }
   
   //Percentage reporting, to get a good idea of how far we've come along.
   var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
-  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices + num_refresh_threshold) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
   var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
-  total_time = now() - start_time
-  var flattened_debug = debug.join('\n')
-  writeToActionLog(
-    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: total_time, api_time: api_time, 
-     heavy_processing_time: heavy_processing_time, report: end_script_report, debug_string: flattened_debug})
+  report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + "/" + total_mode_records + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ", updated:" + num_records_updated + ", skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(start_time,max_runtime_seconds)) + "s."
+  debug = debug.join('\n')
   
-  outputs.debug = flattened_debug
-  outputs.time_left_s = calculateTimeLeft(inputs)
+  writeToActionLog(
+    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: (now() - start_time), api_time: api_total, 
+     heavy_processing_time: heavy_total, report: report, debug_string: debug})
+  
+  outputs.debug = debug
+  outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -2214,16 +2166,16 @@ function recalculateRefreshHours()
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="GETD_GetBulkArmisData (v2.1)">b25ad2f21b0a10104be764e8bc4bcbe8</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f8185bf61b8294104ca7edf9bc4bcb1d","name":"plan"}}</plan>
-        <snapshot>7c0d6fca1b9e58104be764e8bc4bcb02</snapshot>
+        <snapshot>0f77adfa1b9e50104be764e8bc4bcbc0</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>f8185bf61b8294104ca7edf9bc4bcb1d</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:19</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:22</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2309,7 +2261,7 @@ function recalculateRefreshHours()
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>60181bf61b8294104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2317,7 +2269,7 @@ function recalculateRefreshHours()
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:21</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=60181bf61b8294104ca7edf9bc4bcb9d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2328,9 +2280,9 @@ function recalculateRefreshHours()
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_id>20181bf61b8294104ca7edf9bc4bcbdc</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:21</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -2347,9 +2299,11 @@ function recalculateRefreshHours()
   
   */
 
-//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
 
 //UPDATE ARMIS DEVICE (v0.2)
 //MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
@@ -2359,40 +2313,23 @@ function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={}
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
-//This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0
-// 2. The time since the last reset is measured
-// 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
-//The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
-//set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
-function recalculateRefreshHours()
-  {
-    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
-    //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
-    //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
-    var debug = []
-    var last_refresh_str = getCacheValue('getd_refresh_last_reset','datetime')
-    var last_refresh_time = new GlideDateTime(last_refresh_str)
-    debug.push("last_refresh_time=" + last_refresh_time)
-    
-    var num_refreshes_for_query = getConfigValue('getd_refresh_passes')
-    if (num_refreshes_for_query == '') { num_refreshes_for_query = 5 }
-    debug.push("num_refreshes_for_query=" + num_refreshes_for_query)
-    
-    var elapsed_hours_since_last_reset = (now() - last_refresh_time.getNumericValue()) / 3600000
-    debug.push("elapsed_hours_since_last_reset=" + elapsed_hours_since_last_reset)
+function calculateTimeLeft(start_time,max_runtime_seconds)
+{
+ var elapsed_ms = now() - start_time
+ return max_runtime_seconds - elapsed_ms/1000
+}
 
-    var new_query_hours = Math.ceil(num_refreshes_for_query * elapsed_hours_since_last_reset)
-    if (new_query_hours &gt; 24) { new_query_hours = 24 }
-    if (new_query_hours &lt; 1) { new_query_hours = 1 } 
-    debug.push("new_query_hours=" + new_query_hours)
+function writeToAPILog(p)
+{
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',('' + p.payload).substring(0,1999)],['response_code',p.response_code],
+    ['response_body',('' + p.response_body).substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
+}
 
-    //Set the new cache query hours and reset the timer.
-    setCacheValue('getd_refresh_calculated_hours',new_query_hours,'int')
-    setCacheValue('getd_refresh_last_reset',new GlideDateTime(),'datetime')
-    return debug
-  }
-    
 
 // **********************
 // *** IMPLEMENTATION ***
@@ -2408,54 +2345,47 @@ function recalculateRefreshHours()
   //Init
   var execution_id = generateID()
   var debug = []
-
-  //Start overall timer. We will use this to find out when to stop the loop, as well as return back the leftover time (so a refresh run can be executed after a master run)
   var start_time = now()
-  function calculateTimeLeft(inputs) { return inputs.max_runtime_seconds - ( now() - start_time)/1000 }
-  outputs.time_left_s = 0 //Just in case
-  
-  //Set up query
-  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
-  //If we have ### in the query (refresh query), make sure to use the cached value.
-  if (inputs.mode == 'refresh')
-  {
-    var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
-    armis_query = armis_query.replace("###",cached_hours)
-  }
-  debug.push("QUERY= '" + armis_query + "'.")
-  
-  //Ending counters/report
-  var total_time = 0
-  var api_time = 0
-  var heavy_processing_time = 0
+  var api_total = 0
+  var heavy_total = 0
+  var lap = now()
   var num_api_calls = 0
   var num_armis_devices = 0
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
   var total_mode_records = 0
-  var end_script_report = "";
-  var original_getd_n = 0
-  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
+  var error_report = '';
+  var report = '';
+  var original_getd_n = -1
+  outputs.time_left_s = 0 // just in case.
+  var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
-  //LOOP - until we are out of time.
-  // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
-  var end_loop_early = false // Is flagged manually if the query fails outright
-  while(end_loop_early == false &amp;&amp; calculateTimeLeft(inputs) &gt; 0)
-  {
-    debug.push("LOOP " + num_api_calls + " BEGIN")
+  //Set up query
+  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
+  var cache_key = "getd_" + inputs.mode + "_current_n"
+  
+  debug.push("QUERY= '" + armis_query + "'." + lapReport(lap));lap=now()
+  
+  //Ending counters/report
+  
+  try {
     
-    //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
-    var cache_key = "getd_" + inputs.mode + "_current_n"
-    var getd_n = getCacheValue(cache_key,'int')
-    if (getd_n == null) { getd_n = 0 }
-    debug.push("getd_n: " + getd_n)
-    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
-    
-    //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
-    try {
-      
+    //LOOP - until we are out of time.
+    // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
+    var end_loop_early = false // Is flagged manually if the query fails outright
+    var max_runtime_seconds = parseInt(inputs.max_runtime_seconds)
+    if(isNaN(max_runtime_seconds)) { max_runtime_seconds = 240 }
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_runtime_seconds*1000)
+    {
+      debug.push("LOOP " + num_api_calls + " BEGIN "+ lapReport(lap));lap=now()
+
+      //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
+      var getd_n = parseInt(getCacheValue(cache_key,'int'))
+      if (isNaN(getd_n)) { getd_n = 0 }
+      debug.push("getd_n: " + getd_n + " " + lapReport(lap));lap=now()
+      if(original_getd_n == -1) { original_getd_n = getd_n} // used for reporting.
+
       //We want 100 devices, starting at device N
       //Using Armis API endpoint GET /api/v1/search/
       var request = new sn_ws.RESTMessageV2('Armis API','GET Search')
@@ -2467,131 +2397,129 @@ function recalculateRefreshHours()
 
       //Execute query, but sandwich .execute() with a time check to document how long it took.
       var glide_start_time = new GlideDateTime()
-      var api_start_time = now()
+      var t = now()
       var response = request.execute()
-      var api_time_delta = now() - api_start_time
-      api_time += api_time_delta //Track the total for reporting purposes
-      debug.push("Query time: " + api_time_delta + " ms, response " + response.getStatusCode())
+      api_total += now() - t
+      
+      debug.push("Queried 100 devices, response: " + response.getStatusCode() + " " + lapReport(lap));lap=now()
       if (response.getStatusCode() != 200) { debug.push(response.getBody()) }
-      
+
       //Log the query results
-      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: inputs.query, response_code: response.getStatusCode(), 
-         response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: api_time_delta})
+      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: armis_query, response_code: response.getStatusCode(), 
+                     response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: (now() - t)})
+      debug.push("Logged results to Armis API Log. "  + lapReport(lap));lap=now()
       num_api_calls += 1
-      
+
       //Extract data!
-      switch(response.getStatusCode())
+      if(response.getStatusCode() == 200)
       {
-        case 200: //Success
-          
-          //Parse!
-          var data = JSON.parse(response.getBody()).data
-          total_mode_records = data.total
-          debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
-          
-          num_armis_devices += data.count
-          
-          //Note that if we're at the end of the list of devices, next will be null.
-          //What happens next depends on the mode:
-          // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
-          // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
-          if (data.next == null) {
-            switch (inputs.mode) {
-              case 'master':
-                setCacheValue(cache_key, data.total, 'int')
-                break;
-              case 'refresh':
-                setCacheValue(cache_key, 0, 'int');
-                end_script_report += '[MAXED,RESET TO 0] '
-                //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                //recalculateRefreshHours()
-                break;
-            }
+        //Parse!
+        var data = JSON.parse(response.getBody()).data
+        total_mode_records = data.total
+        debug.push("Parsed data. count=" + data.count + ", next=" + data.next + ", total=" + data.total + " "  + lapReport(lap));lap=now()
+
+        num_armis_devices += data.count
+        if(inputs.mode == 'refresh') { num_armis_devices -= num_refresh_threshold } //we want to be able to accurately track that we're backing up each step by X records.
+
+        //Note that if we're at the end of the list of devices, next will be null.
+        //What happens next depends on the mode:
+        // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
+        // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
+        if (data.next == null) {
+          switch (inputs.mode) {
+            case 'master':
+              setCacheValue(cache_key, data.total, 'int')
+              break;
+            case 'refresh':
+              setCacheValue(cache_key, 0, 'int');
+              report += '[MAXED,RESET TO 0] '
+              break;
           }
-          else { 
-            //Update the cache so the next run starts where we left off.
-            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
-            //This won't be perfect but should go a long way toward improving consistency.
-            switch (inputs.mode) {
-              case 'master': setCacheValue(cache_key, data.next, 'int');break
-              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
-            }
+        }
+        else { 
+          //Update the cache so the next run starts where we left off.
+          //Note that for refresh, we want to go a few steps backward (num_refresh_threshold) so that we can try to catch any new devices that may have been added since we last checked.
+          //This won't be perfect but should go a long way toward improving consistency.
+          switch (inputs.mode) {
+            case 'master': setCacheValue(cache_key, data.next, 'int');break
+            case 'refresh': setCacheValue(cache_key, data.next - num_refresh_threshold, 'int');break
           }
-          
-          //Set the total too, just for reference.
-          setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
-          
-          //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
-          var heavy_processing_start = now()
-          
-          if (data.count &gt; 0) {
-            for (var i=0;i&lt;data.count;i++)
-            {
-              //Alllllll the fields in the query need to be pushed to the Armis Device Table.
-              var entry = data.results[i]
-              
-              //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
-              var results = updateArmisDevice(entry,inputs.tags_to_table)
-              debug.push(results.action + ":" + entry.id + " (" + entry.name + "). (" + results.time_delta + "ms)")
-              switch (results.action) {
-                case 'insert': num_records_inserted += 1; break
-                case 'update': num_records_updated += 1; break
-                case 'no_update_needed': num_records_skipped += 1; break
-              }
-            }
-          }
-          else
+        }
+
+        //Set the total too, just for reference.
+        setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
+
+        //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
+        var t = now()
+
+        if (data.count &gt; 0) {
+          for (var i=0;i&lt;data.count;i++)
           {
-            //We have 0 records.
-            //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
-            
-            if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
-              outputs.debug = "0 records, killed script."
-              outputs.time_left_s = calculateTimeLeft(inputs)
-              return
+            //Alllllll the fields in the query need to be pushed to the Armis Device Table.
+            var entry = data.results[i]
+
+            //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
+            var results = updateArmisDevice(entry,inputs.tags_to_table)
+            debug.push(results.action + ":" + entry.id + " (" + entry.name + "). " + lapReport(lap));lap=now()
+            switch (results.action) {
+              case 'insert': num_records_inserted += 1; break
+              case 'update': num_records_updated += 1; break
+              case 'no_update_needed': num_records_skipped += 1; break
             }
-            //If we're in master mode, we still want to report, but we're done looping.
-            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
-            if (inputs.mode == 'master')
-            {
-              setCacheValue('master_complete', 1, 'int')
-              end_loop_early = true
-            }
-            //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
-          
-          //Document our heavy processing time
-          heavy_processing_time += now() - heavy_processing_start
-          break
-        default:
-          //Not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
-          end_script_report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
-          end_loop_early = true
+        }
+        else
+        {
+          //We have 0 records.
+          //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+
+          if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
+            outputs.debug = "0 records, killed script."
+            outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
+            return
+          }
+          //If we're in master mode, we have processed some records so we still want to report, but we're done looping.
+          //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+          if (inputs.mode == 'master')
+          {
+            setCacheValue('master_complete', 1, 'int')
+            end_loop_early = true
+          }
+          //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
+        }
+
+        //Document our heavy processing time
+        heavy_total += now() - t
       }
-    
+      else
+      {
+        //API call was not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
+        report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
+        end_loop_early = true 
+      }
     }
-    catch(ex) {
-      debug.push("ERROR IN QUERY: " + ex)
-      end_script_report += "Query error: " + ex + " "
-      end_loop_early = true
-    }
+  }
+  catch(ex)
+  {
+    error_report = '[ERROR: ' + ex + '] '
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug_string.join('\n')})
   }
   
   //Percentage reporting, to get a good idea of how far we've come along.
   var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
-  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices + num_refresh_threshold) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
   var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
-  total_time = now() - start_time
-  var flattened_debug = debug.join('\n')
-  writeToActionLog(
-    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: total_time, api_time: api_time, 
-     heavy_processing_time: heavy_processing_time, report: end_script_report, debug_string: flattened_debug})
+  report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + "/" + total_mode_records + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ", updated:" + num_records_updated + ", skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(start_time,max_runtime_seconds)) + "s."
+  debug = debug.join('\n')
   
-  outputs.debug = flattened_debug
-  outputs.time_left_s = calculateTimeLeft(inputs)
+  writeToActionLog(
+    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: (now() - start_time), api_time: api_total, 
+     heavy_processing_time: heavy_total, report: report, debug_string: debug})
+  
+  outputs.debug = debug
+  outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -3469,7 +3397,7 @@ function recalculateRefreshHours()
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>60181bf61b8294104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3477,7 +3405,7 @@ function recalculateRefreshHours()
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:21</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=60181bf61b8294104ca7edf9bc4bcb9d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3488,9 +3416,9 @@ function recalculateRefreshHours()
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_id>20181bf61b8294104ca7edf9bc4bcbdc</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 01:54:18</sys_updated_on>
+        <sys_updated_on>2020-08-02 00:06:21</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -3507,9 +3435,11 @@ function recalculateRefreshHours()
   
   */
 
-//FUNCTION LIBRARY (v0.4) -- THESE FUNCTIONS HAVE BEEN MINIFIED.
-//FOR FULL DOCUMENTAITON AND A CURRENT COPY, SEE THE ACTION "(vX.X) FUNCTION_LIBRARY"
-function now(){return(new GlideDateTime).getNumericValue()}function includes(e,t){for(var r=0;r&lt;e.length;r++)if(e[r]==t)return!0;return!1}function digest(e){for(var t=5381,r=e.length;r;)t=33*t^e.charCodeAt(--r);return t&gt;&gt;&gt;0}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var t=6;t&gt;0;t--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var t={},r=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),t.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),t.operation="update"}}catch(e){t.operation="error: "+e}return t.time_delta=now()-r,t}function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",e.payload.substring(0,1999)],["response_code",e.response_code],["response_body",e.response_body.substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.update_pairs=[["armis_device_id",e.armis_id],["property_name",e.name],["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["armis_mac",e.mac],["attribute",e.attribute],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.mac],["application_name",e.name],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function writeToActionLog(e){var t={table:"x_fmcna_armis_inte_armis_action_log"};return t.unique_pairs=[["execution_id",e.id]],t.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",e.report.substring(0,199)],["debug_string",e.debug_string.substring(0,1999)]],insertOrUpdate(t)}function getConfigValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return t.addQuery("key",e),t.query(),0==t.getRowCount()?"":(t.next(),t.getValue("value"))}function getCacheValue(e,t){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(r.addQuery("key",e),r.query(),0==r.getRowCount())return null;switch(r.next(),t){case"str":return r.getValue("value_string");case"int":return r.getValue("value_int");case"datetime":return r.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,t,r){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],r){case"str":a.update_pairs=[["value_string",t]];break;case"int":a.update_pairs=[["value_int",t]];break;case"datetime":a.update_pairs=[["value_datetime",t]]}return insertOrUpdate(a)}function deleteCacheValue(e){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");t.addQuery("key",e),t.query(),t.deleteMultiple()}
+//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+
 
 //UPDATE ARMIS DEVICE (v0.2)
 //MINIFIED -- FIND THE FULL VERSION IN THE FUNCTION_LIBRARY ACTION
@@ -3519,40 +3449,23 @@ function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={}
 // *** ACTION-SPECIFIC FUNCTIONS ***
 // *********************************
 
-//This occurs if a refresh pass maxes out. When this occurs, a few things need to happen:
-// 1. The n counter resets to 0
-// 2. The time since the last reset is measured
-// 3. We adjust the query to make sure we go over recent data X times, where X is set by the config value.
-//The reason we adjust the query is because we want to make sure that we give several chances for a device to get updated, since we don't have a fixed
-//set of data, the set of data will fluctuate as devices drop off and show up between queries, so if we only did a single pass we would definitely miss devices.
-function recalculateRefreshHours()
-  {
-    //We always want to be able to do several (let's say 5) refresh runs before an updated device drops off of the query parameters,
-    //to maximize the chance that we'll capture all devices. We want a minimum of 1 hour.
-    //This value may fluctuate up and down, but we don't want it to be more than 24 hours. 
-    var debug = []
-    var last_refresh_str = getCacheValue('getd_refresh_last_reset','datetime')
-    var last_refresh_time = new GlideDateTime(last_refresh_str)
-    debug.push("last_refresh_time=" + last_refresh_time)
-    
-    var num_refreshes_for_query = getConfigValue('getd_refresh_passes')
-    if (num_refreshes_for_query == '') { num_refreshes_for_query = 5 }
-    debug.push("num_refreshes_for_query=" + num_refreshes_for_query)
-    
-    var elapsed_hours_since_last_reset = (now() - last_refresh_time.getNumericValue()) / 3600000
-    debug.push("elapsed_hours_since_last_reset=" + elapsed_hours_since_last_reset)
+function calculateTimeLeft(start_time,max_runtime_seconds)
+{
+ var elapsed_ms = now() - start_time
+ return max_runtime_seconds - elapsed_ms/1000
+}
 
-    var new_query_hours = Math.ceil(num_refreshes_for_query * elapsed_hours_since_last_reset)
-    if (new_query_hours &gt; 24) { new_query_hours = 24 }
-    if (new_query_hours &lt; 1) { new_query_hours = 1 } 
-    debug.push("new_query_hours=" + new_query_hours)
+function writeToAPILog(p)
+{
+  if (p.payload == null) { p.payload = "" }
+  if (p.response_body == null) { p.response_body = "" }
+  var q = {}
+  q.table = 'x_fmcna_armis_inte_armis_rest_api_log'
+  q.update_pairs = [['execution_id',p.id],['api_endpoint',p.endpoint],['payload',('' + p.payload).substring(0,1999)],['response_code',p.response_code],
+    ['response_body',('' + p.response_body).substring(0,1999)],['query_submitted_at',p.start_time],['query_response_time_ms',p.time_delta_ms]]
+  return insertOrUpdate(q)
+}
 
-    //Set the new cache query hours and reset the timer.
-    setCacheValue('getd_refresh_calculated_hours',new_query_hours,'int')
-    setCacheValue('getd_refresh_last_reset',new GlideDateTime(),'datetime')
-    return debug
-  }
-    
 
 // **********************
 // *** IMPLEMENTATION ***
@@ -3568,54 +3481,47 @@ function recalculateRefreshHours()
   //Init
   var execution_id = generateID()
   var debug = []
-
-  //Start overall timer. We will use this to find out when to stop the loop, as well as return back the leftover time (so a refresh run can be executed after a master run)
   var start_time = now()
-  function calculateTimeLeft(inputs) { return inputs.max_runtime_seconds - ( now() - start_time)/1000 }
-  outputs.time_left_s = 0 //Just in case
-  
-  //Set up query
-  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
-  //If we have ### in the query (refresh query), make sure to use the cached value.
-  if (inputs.mode == 'refresh')
-  {
-    var cached_hours = getCacheValue('getd_refresh_calculated_hours','int')
-    if (cached_hours == '' || cached_hours == null) { cached_hours = 1 }
-    armis_query = armis_query.replace("###",cached_hours)
-  }
-  debug.push("QUERY= '" + armis_query + "'.")
-  
-  //Ending counters/report
-  var total_time = 0
-  var api_time = 0
-  var heavy_processing_time = 0
+  var api_total = 0
+  var heavy_total = 0
+  var lap = now()
   var num_api_calls = 0
   var num_armis_devices = 0
   var num_records_updated = 0
   var num_records_inserted = 0
   var num_records_skipped = 0
   var total_mode_records = 0
-  var end_script_report = "";
-  var original_getd_n = 0
-  var num_refresh_threshold = -20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
+  var error_report = '';
+  var report = '';
+  var original_getd_n = -1
+  outputs.time_left_s = 0 // just in case.
+  var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
-  //LOOP - until we are out of time.
-  // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
-  var end_loop_early = false // Is flagged manually if the query fails outright
-  while(end_loop_early == false &amp;&amp; calculateTimeLeft(inputs) &gt; 0)
-  {
-    debug.push("LOOP " + num_api_calls + " BEGIN")
+  //Set up query
+  var armis_query = getConfigValue('armis_' + inputs.mode + '_query')  
+  var cache_key = "getd_" + inputs.mode + "_current_n"
+  
+  debug.push("QUERY= '" + armis_query + "'." + lapReport(lap));lap=now()
+  
+  //Ending counters/report
+  
+  try {
     
-    //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
-    var cache_key = "getd_" + inputs.mode + "_current_n"
-    var getd_n = getCacheValue(cache_key,'int')
-    if (getd_n == null) { getd_n = 0 }
-    debug.push("getd_n: " + getd_n)
-    if(original_getd_n == 0) { original_getd_n = getd_n} // used for reporting.
-    
-    //REST QUERY TO ARMIS FOR ALL APPLICABLE DATA
-    try {
-      
+    //LOOP - until we are out of time.
+    // [current time] - [start_time] is in milliseconds, divide to get seconds elapsed.
+    var end_loop_early = false // Is flagged manually if the query fails outright
+    var max_runtime_seconds = parseInt(inputs.max_runtime_seconds)
+    if(isNaN(max_runtime_seconds)) { max_runtime_seconds = 240 }
+    while(end_loop_early == false &amp;&amp; (now() - start_time) &lt; max_runtime_seconds*1000)
+    {
+      debug.push("LOOP " + num_api_calls + " BEGIN "+ lapReport(lap));lap=now()
+
+      //GET CURRENT ITERATION'S START PAGE (getd_n). This is in the cache table. If it doesn't exist, start at n=0
+      var getd_n = parseInt(getCacheValue(cache_key,'int'))
+      if (isNaN(getd_n)) { getd_n = 0 }
+      debug.push("getd_n: " + getd_n + " " + lapReport(lap));lap=now()
+      if(original_getd_n == -1) { original_getd_n = getd_n} // used for reporting.
+
       //We want 100 devices, starting at device N
       //Using Armis API endpoint GET /api/v1/search/
       var request = new sn_ws.RESTMessageV2('Armis API','GET Search')
@@ -3627,131 +3533,129 @@ function recalculateRefreshHours()
 
       //Execute query, but sandwich .execute() with a time check to document how long it took.
       var glide_start_time = new GlideDateTime()
-      var api_start_time = now()
+      var t = now()
       var response = request.execute()
-      var api_time_delta = now() - api_start_time
-      api_time += api_time_delta //Track the total for reporting purposes
-      debug.push("Query time: " + api_time_delta + " ms, response " + response.getStatusCode())
+      api_total += now() - t
+      
+      debug.push("Queried 100 devices, response: " + response.getStatusCode() + " " + lapReport(lap));lap=now()
       if (response.getStatusCode() != 200) { debug.push(response.getBody()) }
-      
+
       //Log the query results
-      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: inputs.query, response_code: response.getStatusCode(), 
-         response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: api_time_delta})
+      writeToAPILog({id: execution_id, endpoint: 'get_search', payload: armis_query, response_code: response.getStatusCode(), 
+                     response_body: response.getBody(), start_time: glide_start_time, time_delta_ms: (now() - t)})
+      debug.push("Logged results to Armis API Log. "  + lapReport(lap));lap=now()
       num_api_calls += 1
-      
+
       //Extract data!
-      switch(response.getStatusCode())
+      if(response.getStatusCode() == 200)
       {
-        case 200: //Success
-          
-          //Parse!
-          var data = JSON.parse(response.getBody()).data
-          total_mode_records = data.total
-          debug.push("DATA: count: " + data.count + ", next: " + data.next + ", total: " + data.total)
-          
-          num_armis_devices += data.count
-          
-          //Note that if we're at the end of the list of devices, next will be null.
-          //What happens next depends on the mode:
-          // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
-          // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
-          if (data.next == null) {
-            switch (inputs.mode) {
-              case 'master':
-                setCacheValue(cache_key, data.total, 'int')
-                break;
-              case 'refresh':
-                setCacheValue(cache_key, 0, 'int');
-                end_script_report += '[MAXED,RESET TO 0] '
-                //In addition, when we reset the refresh, we need to do an extra step: update the refresh query.
-                //recalculateRefreshHours()
-                break;
-            }
+        //Parse!
+        var data = JSON.parse(response.getBody()).data
+        total_mode_records = data.total
+        debug.push("Parsed data. count=" + data.count + ", next=" + data.next + ", total=" + data.total + " "  + lapReport(lap));lap=now()
+
+        num_armis_devices += data.count
+        if(inputs.mode == 'refresh') { num_armis_devices -= num_refresh_threshold } //we want to be able to accurately track that we're backing up each step by X records.
+
+        //Note that if we're at the end of the list of devices, next will be null.
+        //What happens next depends on the mode:
+        // - if mode==master, we want to just keep the current "next" at the total so that when we check again, we're checking for NEW devices.
+        // - if mode==refresh, we want to loop back around to 0 and start again when we've finished the refresh stack.
+        if (data.next == null) {
+          switch (inputs.mode) {
+            case 'master':
+              setCacheValue(cache_key, data.total, 'int')
+              break;
+            case 'refresh':
+              setCacheValue(cache_key, 0, 'int');
+              report += '[MAXED,RESET TO 0] '
+              break;
           }
-          else { 
-            //Update the cache so the next run starts where we left off.
-            //Note that for refresh, we want to go a few steps backward so that we can try to catch any new devices that may have been added since we last checked.
-            //This won't be perfect but should go a long way toward improving consistency.
-            switch (inputs.mode) {
-              case 'master': setCacheValue(cache_key, data.next, 'int');break
-              case 'refresh': setCacheValue(cache_key, data.next + num_refresh_threshold, 'int');break
-            }
+        }
+        else { 
+          //Update the cache so the next run starts where we left off.
+          //Note that for refresh, we want to go a few steps backward (num_refresh_threshold) so that we can try to catch any new devices that may have been added since we last checked.
+          //This won't be perfect but should go a long way toward improving consistency.
+          switch (inputs.mode) {
+            case 'master': setCacheValue(cache_key, data.next, 'int');break
+            case 'refresh': setCacheValue(cache_key, data.next - num_refresh_threshold, 'int');break
           }
-          
-          //Set the total too, just for reference.
-          setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
-          
-          //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
-          var heavy_processing_start = now()
-          
-          if (data.count &gt; 0) {
-            for (var i=0;i&lt;data.count;i++)
-            {
-              //Alllllll the fields in the query need to be pushed to the Armis Device Table.
-              var entry = data.results[i]
-              
-              //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
-              var results = updateArmisDevice(entry,inputs.tags_to_table)
-              debug.push(results.action + ":" + entry.id + " (" + entry.name + "). (" + results.time_delta + "ms)")
-              switch (results.action) {
-                case 'insert': num_records_inserted += 1; break
-                case 'update': num_records_updated += 1; break
-                case 'no_update_needed': num_records_skipped += 1; break
-              }
-            }
-          }
-          else
+        }
+
+        //Set the total too, just for reference.
+        setCacheValue("getd_" + inputs.mode + "_total", data.total, 'int')
+
+        //Next, loop through all 100-ish returns. First, we expect this will be heavy processing, so let's mark it out separately.
+        var t = now()
+
+        if (data.count &gt; 0) {
+          for (var i=0;i&lt;data.count;i++)
           {
-            //We have 0 records.
-            //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
-            
-            if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
-              outputs.debug = "0 records, killed script."
-              outputs.time_left_s = calculateTimeLeft(inputs)
-              return
+            //Alllllll the fields in the query need to be pushed to the Armis Device Table.
+            var entry = data.results[i]
+
+            //I've abstracted this functionality into the function library since I'll be using it in more than one action, see FUNCTION_LIBRARY documentation
+            var results = updateArmisDevice(entry,inputs.tags_to_table)
+            debug.push(results.action + ":" + entry.id + " (" + entry.name + "). " + lapReport(lap));lap=now()
+            switch (results.action) {
+              case 'insert': num_records_inserted += 1; break
+              case 'update': num_records_updated += 1; break
+              case 'no_update_needed': num_records_skipped += 1; break
             }
-            //If we're in master mode, we still want to report, but we're done looping.
-            //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
-            if (inputs.mode == 'master')
-            {
-              setCacheValue('master_complete', 1, 'int')
-              end_loop_early = true
-            }
-            //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
           }
-          
-          //Document our heavy processing time
-          heavy_processing_time += now() - heavy_processing_start
-          break
-        default:
-          //Not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
-          end_script_report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
-          end_loop_early = true
+        }
+        else
+        {
+          //We have 0 records.
+          //If this is our first query in MASTER mode, that means we're maxed out. We don't even want to log anything, just drop the script.
+
+          if (num_api_calls == 1 &amp;&amp; inputs.mode == 'master') {
+            outputs.debug = "0 records, killed script."
+            outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
+            return
+          }
+          //If we're in master mode, we have processed some records so we still want to report, but we're done looping.
+          //(We do want to set a flag in the cache that the master is maxed out, so triggers can start processing.)
+          if (inputs.mode == 'master')
+          {
+            setCacheValue('master_complete', 1, 'int')
+            end_loop_early = true
+          }
+          //Any other case (i.e. refresh mode), we have just reset the counter to 0 and we want to keep looping.
+        }
+
+        //Document our heavy processing time
+        heavy_total += now() - t
       }
-    
+      else
+      {
+        //API call was not successful. Not really anything to be done, but end the loop--perhaps we had a bad token?
+        report += "API failed: (" + response.getStatusCode() + ") " + response.getBody() + " "
+        end_loop_early = true 
+      }
     }
-    catch(ex) {
-      debug.push("ERROR IN QUERY: " + ex)
-      end_script_report += "Query error: " + ex + " "
-      end_loop_early = true
-    }
+  }
+  catch(ex)
+  {
+    error_report = '[ERROR: ' + ex + '] '
+    writeToErrorLog({id: execution_id, error_message: ex, debug_string: debug_string.join('\n')})
   }
   
   //Percentage reporting, to get a good idea of how far we've come along.
   var start_pct = ( 100 * (original_getd_n) / total_mode_records ).toFixed(1)
-  var done_pct = ( 100 * (parseInt(num_armis_devices) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
+  var done_pct = ( 100 * (parseInt(num_armis_devices + num_refresh_threshold) + parseInt(original_getd_n)) / total_mode_records ).toFixed(1)
   var percentage_insert = " (" + start_pct + "%-&gt;" + done_pct + "%)"
     
   //Build and store the action's results to the action log.
-  end_script_report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ",updated:" + num_records_updated + "skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(inputs)) + "s."
-  total_time = now() - start_time
-  var flattened_debug = debug.join('\n')
-  writeToActionLog(
-    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: total_time, api_time: api_time, 
-     heavy_processing_time: heavy_processing_time, report: end_script_report, debug_string: flattened_debug})
+  report += "[" + inputs.mode.toUpperCase() + "]" + percentage_insert + " From n=" + original_getd_n + "/" + total_mode_records + ", made " + num_api_calls + " API calls, total " + num_armis_devices + " devices (inserted:" + num_records_inserted + ", updated:" + num_records_updated + ", skipped:" + num_records_skipped + "). Time left:" + Math.round(calculateTimeLeft(start_time,max_runtime_seconds)) + "s."
+  debug = debug.join('\n')
   
-  outputs.debug = flattened_debug
-  outputs.time_left_s = calculateTimeLeft(inputs)
+  writeToActionLog(
+    {id: execution_id, action_type: 'GETD_GetBulkArmisData', total_time: (now() - start_time), api_time: api_total, 
+     heavy_processing_time: heavy_total, report: report, debug_string: debug})
+  
+  outputs.debug = debug
+  outputs.time_left_s = calculateTimeLeft(start_time,max_runtime_seconds)
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
