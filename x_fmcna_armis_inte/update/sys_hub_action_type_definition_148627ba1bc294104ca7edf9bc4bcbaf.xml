@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>148627ba1bc294104ca7edf9bc4bcbaf</sys_id>
-        <sys_mod_count>76</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name>FUNCTION_LIBRARY (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_148627ba1bc294104ca7edf9bc4bcbaf</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 21:34:03</sys_updated_on>
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -71,7 +71,7 @@
         <sys_created_on>2020-07-23 18:02:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>050ef1bf1b0ed8104ca7edf9bc4bcb8f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -79,7 +79,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 21:34:03</sys_updated_on>
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=050ef1bf1b0ed8104ca7edf9bc4bcb8f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -104,36 +104,80 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 18:02:58</sys_created_on>
         <sys_id>8d0ef1bf1b0ed8104ca7edf9bc4bcb95</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 21:34:03</sys_updated_on>
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
 
+//Check validity of MAC
+//Regex stolen from https://www.geeksforgeeks.org/how-to-validate-mac-address-using-regular-expression/#:~:text=Get%20the%20String.,fA%2DF%5D%7B4%7D%5C%5C.
+function isValidMACAddress(mac_str) { return RegExp('^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$').test(mac_str) }
 
 
+//This identifies the best MAC to use for uploading to Armis based on a secret sauce matching algorithm:
+// 1. If the computer itself is assigned a MAC, that's the MAC to use.
+// 2. Otherwise, check the network adapters and weight them:
+//    a. 1000 points if the IP is a 10.x.x.x address
+//    b. 900 points if the name starts with "Local Area"
+//    c. Loses 1 point for each occurrence of the MAC in all of the network adapters.
+//    d. Disqualified if the MAC ends in "00:00:01" (a very common dummy MAC)
+function getBestMAC(snow_computer,debug)
+{
+  if(isValidMACAddress(snow_computer.mac_address)) { if(!snow_computer.mac_address.endsWith("00:00:01")) { return snow_computer.mac_address } }
+
+  var q = new GlideRecord('cmdb_ci_network_adapter')
+  q.addQuery('cmdb_ci',snow_computer.sys_id)
+  q.query()
+  debug.push('count: ' + q.getRowCount())
+
+  var return_mac = null
+  var return_weight = -1000
+  while(q.next())
+  {
+    if(!isValidMACAddress(q.mac_address)) { continue }
+    if(q.mac_address.endsWith("00:00:01")) { continue }
+
+    var current_weight = 0
+    if(q.ip_address.startsWith('10.') ) { current_weight += 1000 }
+    if(q.name.startsWith('Local Area')) { current_weight += 900 }
+
+    //Count occurrences of this MAC
+    var agg = new GlideAggregate('cmdb_ci_network_adapter')
+    agg.addAggregate('COUNT')
+    agg.addQuery('mac_address',q.mac_address)
+    agg.query()
+    
+    if(agg.next()) { current_weight -= agg.getAggregate('COUNT') }
+    debug.push('MAC ' + q.mac_address + ', ' + current_weight )
+    
+    if (current_weight &gt; return_weight &amp;&amp; current_weight &gt; 0)
+    {
+      return_mac = '' + q.mac_address
+      return_weight = current_weight
+    }
+  }
+
+  return return_mac
+}
 
 (function execute(inputs, outputs) {
   
   var debug = []
-  var timer = now()
+  var q = new GlideRecord('cmdb_ci_computer')
+  q.addQuery('sys_id','000028b11b76b3005f4b0d01cd4bcbde')
+  q.query()
+  q.next()
   
-  while(now() &lt; timer + 100) {}
+  debug.push('start: ' + q.name)
   
-  debug.push("Test " + timer + " " + lapReport(timer));timer=now()
+  var a = getBestMAC(q,debug)
+  debug.push(a)
+
+  debug = debug.join('\n')
+  outputs.debug = debug
   
-  while(now() &lt; timer + 100) {}
-  
-  debug.push("Test " + timer + " " + lapReport(timer));timer=now()
-  
-  while(now() &lt; timer + 100) {}
-  
-  debug.push("Test " + timer + " " + lapReport(timer));timer=now()
-  
-  outputs.debug = debug.join('\n')
-  
-  writeToErrorLog({id: generateID(), error_message: 'Test error message', debug_string: 'Test debug string'})
   
 })(inputs, outputs);
 </value>
@@ -588,7 +632,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_on>2020-07-31 04:16:02</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a57d849e1b9650104ca7edf9bc4bcb04</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -596,7 +640,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 05:11:16</sys_updated_on>
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a57d849e1b9650104ca7edf9bc4bcb04"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -607,16 +651,15 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 04:16:02</sys_created_on>
         <sys_id>317d849e1b9650104ca7edf9bc4bcb0b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 05:11:16</sys_updated_on>
-        <value>//'TABLES AND REST' FUNCTION LIBRARY v0.12 MINIFIED
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
+        <value>//'TABLES AND REST' FUNCTION LIBRARY v0.13 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),u={};return 1==e.async?r=i.executeAsync():(r=i.execute(),u.response_code=r.getStatusCode(),u.response_body=r.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function queueInitialARPandCSV(e,t){var i=e.mac_address,a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
-
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),s={};return 1==e.async?r=i.executeAsync():(r=i.execute(),s.response_code=r.getStatusCode(),s.response_body=r.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:t,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var t=new GlideRecord("cmdb_ci_network_adapter");t.addQuery("cmdb_ci",e.sys_id),t.query();for(var i=null,a=-1e3;t.next();)if(isValidMACAddress(t.mac_address)&amp;&amp;!t.mac_address.endsWith("00:00:01")){var r=0;t.ip_address.startsWith("10.")&amp;&amp;(r+=1e3),t.name.startsWith("Local Area")&amp;&amp;(r+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",t.mac_address),n.query(),n.next()&amp;&amp;(r-=n.getAggregate("COUNT")),r&gt;a&amp;&amp;r&gt;0&amp;&amp;(i=""+t.mac_address,a=r)}return i}function queueInitialARPandCSV(e,t){var i=getBestMAC(e),a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
 
 // **************************************
-// **** TABLES AND REST LIBRARY v0.12 ***
+// **** TABLES AND REST LIBRARY v0.13 ***
 // **************************************
 
 //Param template: writeToAPILog({id: , endpoint: , payload: , response_code: , response_body: , start_time: , time_delta_ms: })
@@ -789,10 +832,55 @@ function queueAttachmentREST(p)
   q.insert()
 }
 
+
+//This identifies the best MAC to use for uploading to Armis based on a secret sauce matching algorithm:
+// 1. If the computer itself is assigned a MAC, that's the MAC to use.
+// 2. Otherwise, check the network adapters and weight them:
+//    a. 1000 points if the IP is a 10.x.x.x address
+//    b. 900 points if the name starts with "Local Area"
+//    c. Loses 1 point for each occurrence of the MAC in all of the network adapters.
+//    d. Disqualified if the MAC ends in "00:00:01" (a very common dummy MAC)
+function getBestMAC(snow_computer)
+{
+  if(isValidMACAddress(snow_computer.mac_address)) { if(!snow_computer.mac_address.endsWith("00:00:01")) { return snow_computer.mac_address } }
+
+  var q = new GlideRecord('cmdb_ci_network_adapter')
+  q.addQuery('cmdb_ci',snow_computer.sys_id)
+  q.query()
+
+  var return_mac = null
+  var return_weight = -1000
+  while(q.next())
+  {
+    if(!isValidMACAddress(q.mac_address)) { continue }
+    if(q.mac_address.endsWith("00:00:01")) { continue }
+
+    var current_weight = 0
+    if(q.ip_address.startsWith('10.') ) { current_weight += 1000 }
+    if(q.name.startsWith('Local Area')) { current_weight += 900 }
+
+    //Count occurrences of this MAC
+    var agg = new GlideAggregate('cmdb_ci_network_adapter')
+    agg.addAggregate('COUNT')
+    agg.addQuery('mac_address',q.mac_address)
+    agg.query()
+    
+    if(agg.next()) { current_weight -= agg.getAggregate('COUNT') }
+    
+    if (current_weight &gt; return_weight &amp;&amp; current_weight &gt; 0)
+    {
+      return_mac = '' + q.mac_address
+      return_weight = current_weight
+    }
+  }
+
+  return return_mac
+}
+
 //This accepts a SNOW computer and queues all 'initial' uploads. This means an ARP entry and all key value entries.
 function queueInitialARPandCSV(snow_computer,execution_id)
 {
-  var snow_mac = snow_computer.mac_address
+  var snow_mac = getBestMAC(snow_computer)
   var snow_ip = snow_computer.ip_address
   if(isValidMACAddress(snow_mac) &amp;&amp; isValidIPAddress(snow_ip))
     {
@@ -1160,7 +1248,7 @@ function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={}
         <sys_created_on>2020-07-23 18:02:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>050ef1bf1b0ed8104ca7edf9bc4bcb8f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1168,7 +1256,7 @@ function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={}
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 21:34:03</sys_updated_on>
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=050ef1bf1b0ed8104ca7edf9bc4bcb8f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1193,36 +1281,80 @@ function updateArmisDevice(e,i){var s=(new GlideDateTime).getNumericValue(),a={}
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 18:02:58</sys_created_on>
         <sys_id>8d0ef1bf1b0ed8104ca7edf9bc4bcb95</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 21:34:03</sys_updated_on>
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
 
+//Check validity of MAC
+//Regex stolen from https://www.geeksforgeeks.org/how-to-validate-mac-address-using-regular-expression/#:~:text=Get%20the%20String.,fA%2DF%5D%7B4%7D%5C%5C.
+function isValidMACAddress(mac_str) { return RegExp('^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$').test(mac_str) }
 
 
+//This identifies the best MAC to use for uploading to Armis based on a secret sauce matching algorithm:
+// 1. If the computer itself is assigned a MAC, that's the MAC to use.
+// 2. Otherwise, check the network adapters and weight them:
+//    a. 1000 points if the IP is a 10.x.x.x address
+//    b. 900 points if the name starts with "Local Area"
+//    c. Loses 1 point for each occurrence of the MAC in all of the network adapters.
+//    d. Disqualified if the MAC ends in "00:00:01" (a very common dummy MAC)
+function getBestMAC(snow_computer,debug)
+{
+  if(isValidMACAddress(snow_computer.mac_address)) { if(!snow_computer.mac_address.endsWith("00:00:01")) { return snow_computer.mac_address } }
+
+  var q = new GlideRecord('cmdb_ci_network_adapter')
+  q.addQuery('cmdb_ci',snow_computer.sys_id)
+  q.query()
+  debug.push('count: ' + q.getRowCount())
+
+  var return_mac = null
+  var return_weight = -1000
+  while(q.next())
+  {
+    if(!isValidMACAddress(q.mac_address)) { continue }
+    if(q.mac_address.endsWith("00:00:01")) { continue }
+
+    var current_weight = 0
+    if(q.ip_address.startsWith('10.') ) { current_weight += 1000 }
+    if(q.name.startsWith('Local Area')) { current_weight += 900 }
+
+    //Count occurrences of this MAC
+    var agg = new GlideAggregate('cmdb_ci_network_adapter')
+    agg.addAggregate('COUNT')
+    agg.addQuery('mac_address',q.mac_address)
+    agg.query()
+    
+    if(agg.next()) { current_weight -= agg.getAggregate('COUNT') }
+    debug.push('MAC ' + q.mac_address + ', ' + current_weight )
+    
+    if (current_weight &gt; return_weight &amp;&amp; current_weight &gt; 0)
+    {
+      return_mac = '' + q.mac_address
+      return_weight = current_weight
+    }
+  }
+
+  return return_mac
+}
 
 (function execute(inputs, outputs) {
   
   var debug = []
-  var timer = now()
+  var q = new GlideRecord('cmdb_ci_computer')
+  q.addQuery('sys_id','000028b11b76b3005f4b0d01cd4bcbde')
+  q.query()
+  q.next()
   
-  while(now() &lt; timer + 100) {}
+  debug.push('start: ' + q.name)
   
-  debug.push("Test " + timer + " " + lapReport(timer));timer=now()
+  var a = getBestMAC(q,debug)
+  debug.push(a)
+
+  debug = debug.join('\n')
+  outputs.debug = debug
   
-  while(now() &lt; timer + 100) {}
-  
-  debug.push("Test " + timer + " " + lapReport(timer));timer=now()
-  
-  while(now() &lt; timer + 100) {}
-  
-  debug.push("Test " + timer + " " + lapReport(timer));timer=now()
-  
-  outputs.debug = debug.join('\n')
-  
-  writeToErrorLog({id: generateID(), error_message: 'Test error message', debug_string: 'Test debug string'})
   
 })(inputs, outputs);
 </value>
@@ -1677,7 +1809,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_on>2020-07-31 04:16:02</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a57d849e1b9650104ca7edf9bc4bcb04</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1685,7 +1817,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 05:11:16</sys_updated_on>
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a57d849e1b9650104ca7edf9bc4bcb04"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1696,16 +1828,15 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 04:16:02</sys_created_on>
         <sys_id>317d849e1b9650104ca7edf9bc4bcb0b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 05:11:16</sys_updated_on>
-        <value>//'TABLES AND REST' FUNCTION LIBRARY v0.12 MINIFIED
+        <sys_updated_on>2020-08-05 15:25:28</sys_updated_on>
+        <value>//'TABLES AND REST' FUNCTION LIBRARY v0.13 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),u={};return 1==e.async?r=i.executeAsync():(r=i.execute(),u.response_code=r.getStatusCode(),u.response_body=r.getBody()),u.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:u.response_code,response_body:u.response_body,start_time:t,time_delta_ms:u.api_time}),u}catch(e){return(u={response_code:"xx"}).response_body="Failed to build query. "+e,u.api_time=0,u}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function queueInitialARPandCSV(e,t){var i=e.mac_address,a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
-
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),s={};return 1==e.async?r=i.executeAsync():(r=i.execute(),s.response_code=r.getStatusCode(),s.response_body=r.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:t,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var t=new GlideRecord("cmdb_ci_network_adapter");t.addQuery("cmdb_ci",e.sys_id),t.query();for(var i=null,a=-1e3;t.next();)if(isValidMACAddress(t.mac_address)&amp;&amp;!t.mac_address.endsWith("00:00:01")){var r=0;t.ip_address.startsWith("10.")&amp;&amp;(r+=1e3),t.name.startsWith("Local Area")&amp;&amp;(r+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",t.mac_address),n.query(),n.next()&amp;&amp;(r-=n.getAggregate("COUNT")),r&gt;a&amp;&amp;r&gt;0&amp;&amp;(i=""+t.mac_address,a=r)}return i}function queueInitialARPandCSV(e,t){var i=getBestMAC(e),a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
 
 // **************************************
-// **** TABLES AND REST LIBRARY v0.12 ***
+// **** TABLES AND REST LIBRARY v0.13 ***
 // **************************************
 
 //Param template: writeToAPILog({id: , endpoint: , payload: , response_code: , response_body: , start_time: , time_delta_ms: })
@@ -1878,10 +2009,55 @@ function queueAttachmentREST(p)
   q.insert()
 }
 
+
+//This identifies the best MAC to use for uploading to Armis based on a secret sauce matching algorithm:
+// 1. If the computer itself is assigned a MAC, that's the MAC to use.
+// 2. Otherwise, check the network adapters and weight them:
+//    a. 1000 points if the IP is a 10.x.x.x address
+//    b. 900 points if the name starts with "Local Area"
+//    c. Loses 1 point for each occurrence of the MAC in all of the network adapters.
+//    d. Disqualified if the MAC ends in "00:00:01" (a very common dummy MAC)
+function getBestMAC(snow_computer)
+{
+  if(isValidMACAddress(snow_computer.mac_address)) { if(!snow_computer.mac_address.endsWith("00:00:01")) { return snow_computer.mac_address } }
+
+  var q = new GlideRecord('cmdb_ci_network_adapter')
+  q.addQuery('cmdb_ci',snow_computer.sys_id)
+  q.query()
+
+  var return_mac = null
+  var return_weight = -1000
+  while(q.next())
+  {
+    if(!isValidMACAddress(q.mac_address)) { continue }
+    if(q.mac_address.endsWith("00:00:01")) { continue }
+
+    var current_weight = 0
+    if(q.ip_address.startsWith('10.') ) { current_weight += 1000 }
+    if(q.name.startsWith('Local Area')) { current_weight += 900 }
+
+    //Count occurrences of this MAC
+    var agg = new GlideAggregate('cmdb_ci_network_adapter')
+    agg.addAggregate('COUNT')
+    agg.addQuery('mac_address',q.mac_address)
+    agg.query()
+    
+    if(agg.next()) { current_weight -= agg.getAggregate('COUNT') }
+    
+    if (current_weight &gt; return_weight &amp;&amp; current_weight &gt; 0)
+    {
+      return_mac = '' + q.mac_address
+      return_weight = current_weight
+    }
+  }
+
+  return return_mac
+}
+
 //This accepts a SNOW computer and queues all 'initial' uploads. This means an ARP entry and all key value entries.
 function queueInitialARPandCSV(snow_computer,execution_id)
 {
-  var snow_mac = snow_computer.mac_address
+  var snow_mac = getBestMAC(snow_computer)
   var snow_ip = snow_computer.ip_address
   if(isValidMACAddress(snow_mac) &amp;&amp; isValidIPAddress(snow_ip))
     {

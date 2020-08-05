@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>main_processallattributeuploads_v21</internal_name>
         <label_cache>[{"name":"{{action.max_seconds}}","label":"action➛max_seconds","type":"action","ref":""},{"name":"{{action.record_age_hours}}","label":"action➛record_age_hours","type":"action","ref":""},{"name":"{{step[7fbff9ef-a229-40fe-9adc-c00495a0f3e9].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[7fbff9ef-a229-40fe-9adc-c00495a0f3e9].debug}}","label":"step➛Script step➛debug","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>ede5fc9f1bd698104ca7edf9bc4bcb27</latest_snapshot>
+        <latest_snapshot>77450c881be210104ca7edf9bc4bcb67</latest_snapshot>
         <master_snapshot>958d41921b5a90104ca7edf9bc4bcb0f</master_snapshot>
         <name>MAIN_QueueAllDevicePropertiesEtc (v2.1)</name>
         <natlang/>
@@ -25,7 +25,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>e5ab49da1b1a90104ca7edf9bc4bcbd1</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>MAIN_QueueAllDevicePropertiesEtc (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_e5ab49da1b1a90104ca7edf9bc4bcbd1</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:39</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:48</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -58,7 +58,7 @@
         <sys_created_on>2020-07-31 08:55:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>598dc9521b5a90104ca7edf9bc4bcb15</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -66,7 +66,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:37</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=598dc9521b5a90104ca7edf9bc4bcb15"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -77,9 +77,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_id>118d01921b5a90104ca7edf9bc4bcbf1</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:37</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:45</sys_updated_on>
         <value>/*
 
 This script iterates through all devices that have a link and haven't pushed all properties up to Armis yet, and pushes those properties up to Armis.
@@ -238,7 +238,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
   var time_diff = now() - start_time
   debug = debug.join('\n')
   outputs.debug = debug
-  writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug})
+  if(q.getRowCount() &gt; 0) { writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug}) }
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -565,7 +565,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 08:55:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>598dc9521b5a90104ca7edf9bc4bcb15</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -573,7 +573,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:37</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=598dc9521b5a90104ca7edf9bc4bcb15"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -584,9 +584,9 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_id>118d01921b5a90104ca7edf9bc4bcbf1</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:37</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:45</sys_updated_on>
         <value>/*
 
 This script iterates through all devices that have a link and haven't pushed all properties up to Armis yet, and pushes those properties up to Armis.
@@ -745,7 +745,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
   var time_diff = now() - start_time
   debug = debug.join('\n')
   outputs.debug = debug
-  writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug})
+  if(q.getRowCount() &gt; 0) { writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug}) }
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -999,16 +999,16 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="MAIN_QueueAllDevicePropertiesEtc (v2.1)">e5ab49da1b1a90104ca7edf9bc4bcbd1</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"6d8d41921b5a90104ca7edf9bc4bcb38","name":"plan"}}</plan>
-        <snapshot>ede5fc9f1bd698104ca7edf9bc4bcb27</snapshot>
+        <snapshot>77450c881be210104ca7edf9bc4bcb67</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 08:55:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>6d8d41921b5a90104ca7edf9bc4bcb38</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:39</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:49</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1066,7 +1066,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dd8d41921b5a90104ca7edf9bc4bcb10</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1074,7 +1074,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:38</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:47</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=dd8d41921b5a90104ca7edf9bc4bcb10"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1085,9 +1085,9 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_id>998d41921b5a90104ca7edf9bc4bcb16</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:38</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:47</sys_updated_on>
         <value>/*
 
 This script iterates through all devices that have a link and haven't pushed all properties up to Armis yet, and pushes those properties up to Armis.
@@ -1246,7 +1246,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
   var time_diff = now() - start_time
   debug = debug.join('\n')
   outputs.debug = debug
-  writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug})
+  if(q.getRowCount() &gt; 0) { writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug}) }
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -1573,7 +1573,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dd8d41921b5a90104ca7edf9bc4bcb10</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1581,7 +1581,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:38</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:47</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=dd8d41921b5a90104ca7edf9bc4bcb10"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1592,9 +1592,9 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_id>998d41921b5a90104ca7edf9bc4bcb16</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-03 09:46:38</sys_updated_on>
+        <sys_updated_on>2020-08-05 14:09:47</sys_updated_on>
         <value>/*
 
 This script iterates through all devices that have a link and haven't pushed all properties up to Armis yet, and pushes those properties up to Armis.
@@ -1753,7 +1753,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
   var time_diff = now() - start_time
   debug = debug.join('\n')
   outputs.debug = debug
-  writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug})
+  if(q.getRowCount() &gt; 0) { writeToActionLog({id: execution_id, action_type: 'MAIN_QueueAllDevicePropertiesEtc', total_time: time_diff, api_time: 0, heavy_processing_time: time_diff, report: report, debug_string: debug}) }
 })(inputs, outputs);
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
