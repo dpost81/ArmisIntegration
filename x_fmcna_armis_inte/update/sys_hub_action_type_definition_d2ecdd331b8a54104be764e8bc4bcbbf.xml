@@ -13,9 +13,9 @@
         <ih_action>false</ih_action>
         <internal_name>cleanup_cleanalltables</internal_name>
         <label_cache>[{"name":"{{action.how_old_milliseconds}}","label":"action➛how_old_milliseconds","type":"action","ref":""},{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":""},{"name":"{{action.tables_to_clean}}","label":"action➛tables_to_clean","type":"action","ref":""},{"name":"{{action.tables_to_clean.table_to_clean}}","label":"action➛tables_to_clean➛table_to_clean","type":"action","ref":""},{"name":"{{action.tables_to_clean.table_to_clean.table_name}}","label":"action➛tables_to_clean➛table_to_clean➛table_name","type":"action","ref":""},{"name":"{{action.tables_to_clean.table_to_clean.num_hours_old}}","label":"action➛tables_to_clean➛table_to_clean➛num_hours_old","type":"action","ref":""},{"name":"{{step[6f87afe7-bd2d-498e-acda-f475702d6cba].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[6f87afe7-bd2d-498e-acda-f475702d6cba].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[6f87afe7-bd2d-498e-acda-f475702d6cba]._}}","label":"step➛Script step➛","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>7c7c8dfa1b5a50104be764e8bc4bcbd3</latest_snapshot>
+        <latest_snapshot>aaff9e591b4790104ca7edf9bc4bcbe7</latest_snapshot>
         <master_snapshot>7d3a36b71b421c104ca7edf9bc4bcb20</master_snapshot>
-        <name>CLEANUP_CleanAllTables (v2.1)</name>
+        <name>CLEANUP_CleanAllTables (v2.2)</name>
         <natlang/>
         <outputs/>
         <state>published</state>
@@ -25,8 +25,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>d2ecdd331b8a54104be764e8bc4bcbbf</sys_id>
-        <sys_mod_count>61</sys_mod_count>
-        <sys_name>CLEANUP_CleanAllTables (v2.1)</sys_name>
+        <sys_mod_count>74</sys_mod_count>
+        <sys_name>CLEANUP_CleanAllTables (v2.2)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -34,14 +34,14 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_d2ecdd331b8a54104be764e8bc4bcbbf</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:12</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:20</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
     <sys_variable_value action="delete_multiple" query="document_key=d2ecdd331b8a54104be764e8bc4bcbbf"/>
     <sys_hub_step_instance action="delete_multiple" query="action=d2ecdd331b8a54104be764e8bc4bcbbf^sys_idNOT IN4fa0393f1bca54104be764e8bc4bcbda"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CLEANUP_CleanAllTables (v2.1)">d2ecdd331b8a54104be764e8bc4bcbbf</action>
+        <action display_value="CLEANUP_CleanAllTables (v2.2)">d2ecdd331b8a54104be764e8bc4bcbbf</action>
         <cid>6f87afe7-bd2d-498e-acda-f475702d6cba</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -58,7 +58,7 @@
         <sys_created_on>2020-07-23 17:04:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4fa0393f1bca54104be764e8bc4bcbda</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -66,7 +66,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:10</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:19</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4fa0393f1bca54104be764e8bc4bcbda"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -77,9 +77,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 17:04:41</sys_created_on>
         <sys_id>5ba071331b0e54104be764e8bc4bcb2c</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:10</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:19</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
@@ -105,13 +105,17 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
     
   try
   {
-    for(i=0;i&lt;tables_to_clean.length;i++)
+    var tables_length = 0
+    if(tables_to_clean != null) { tables_length = tables_to_clean.length }
+    for(i=0;i&lt;tables_length;i++)
     {
       var table_name = tables_to_clean[i].table_name
       var num_hours_old = tables_to_clean[i].num_hours_old
       debug.push("Cleaning up '" + table_name + "' (records older than '" + num_hours_old + "') "  + lapReport(lap));lap=now()
 
-      var cleanup_time = (new GlideDateTime()).addSeconds( -1 * 3600 * num_hours_old)
+      var cleanup_time = new GlideDateTime()
+      cleanup_time.addSeconds( -1 * 3600 * num_hours_old)
+      debug.push("Cleanup cutoff: " + cleanup_time.getDisplayValue())
 
       var q = new GlideRecord(table_name)
       q.addQuery('sys_updated_on','&lt;',cleanup_time)
@@ -136,6 +140,19 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         debug.push("    No records to delete. "  + lapReport(lap));lap=now()
       }
     }
+    
+    //Next, populate the cache with a list of fields we are interested in during updates.
+    
+    var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
+    q.query()
+    var list = []
+    while(q.next())
+    {
+      list.push(q.getValue('snow_field'))
+    }
+    setCacheValue('snow_field_list',list.join(','),'str')
+    debug.push("Populating SNOW field list: " + list.join(',')  + lapReport(lap));lap=now()
+    
   }
   catch(ex)
   {
@@ -364,7 +381,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=table_to_clean,child_name=table_to_clean,child_type=object,child_type_label=Object,child_uiUniqueId=12abcc80-796c-4d62-bab0-1e5c5a485f97,co_type_name=FDd935683afed25010045d82e278686627,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=015f6598-3a8b-4072-9774-b9ca7170bfba</attributes>
+        <attributes>child_label=table_to_clean,child_name=table_to_clean,child_type=object,child_type_label=Object,child_uiUniqueId=404db93c-2482-4ecb-b390-5f42d9ea783f,co_type_name=FDd935683afed25010045d82e278686627,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=015f6598-3a8b-4072-9774-b9ca7170bfba</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -399,7 +416,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <label>tables_to_clean</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="CLEANUP_CleanAllTables (v2.1)">d2ecdd331b8a54104be764e8bc4bcbbf</model>
+        <model display_value="CLEANUP_CleanAllTables (v2.2)">d2ecdd331b8a54104be764e8bc4bcbbf</model>
         <model_id>d2ecdd331b8a54104be764e8bc4bcbbf</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_d2ecdd331b8a54104be764e8bc4bcbbf</name>
@@ -423,7 +440,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_on>2020-08-01 19:16:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d135683a1bd250104be764e8bc4bcb2b</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -431,7 +448,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:10</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -445,7 +462,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
     </sys_hub_action_input>
     <sys_hub_step_instance action="delete_multiple" query="action=d2ecdd331b8a54104be764e8bc4bcbbf^sys_idNOT IN4fa0393f1bca54104be764e8bc4bcbda"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CLEANUP_CleanAllTables (v2.1)">d2ecdd331b8a54104be764e8bc4bcbbf</action>
+        <action display_value="CLEANUP_CleanAllTables (v2.2)">d2ecdd331b8a54104be764e8bc4bcbbf</action>
         <cid>6f87afe7-bd2d-498e-acda-f475702d6cba</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -462,7 +479,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_on>2020-07-23 17:04:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4fa0393f1bca54104be764e8bc4bcbda</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -470,7 +487,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:10</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:19</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4fa0393f1bca54104be764e8bc4bcbda"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -481,9 +498,9 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 17:04:41</sys_created_on>
         <sys_id>5ba071331b0e54104be764e8bc4bcb2c</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:10</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:19</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
@@ -509,13 +526,17 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
     
   try
   {
-    for(i=0;i&lt;tables_to_clean.length;i++)
+    var tables_length = 0
+    if(tables_to_clean != null) { tables_length = tables_to_clean.length }
+    for(i=0;i&lt;tables_length;i++)
     {
       var table_name = tables_to_clean[i].table_name
       var num_hours_old = tables_to_clean[i].num_hours_old
       debug.push("Cleaning up '" + table_name + "' (records older than '" + num_hours_old + "') "  + lapReport(lap));lap=now()
 
-      var cleanup_time = (new GlideDateTime()).addSeconds( -1 * 3600 * num_hours_old)
+      var cleanup_time = new GlideDateTime()
+      cleanup_time.addSeconds( -1 * 3600 * num_hours_old)
+      debug.push("Cleanup cutoff: " + cleanup_time.getDisplayValue())
 
       var q = new GlideRecord(table_name)
       q.addQuery('sys_updated_on','&lt;',cleanup_time)
@@ -540,6 +561,19 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         debug.push("    No records to delete. "  + lapReport(lap));lap=now()
       }
     }
+    
+    //Next, populate the cache with a list of fields we are interested in during updates.
+    
+    var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
+    q.query()
+    var list = []
+    while(q.next())
+    {
+      list.push(q.getValue('snow_field'))
+    }
+    setCacheValue('snow_field_list',list.join(','),'str')
+    debug.push("Populating SNOW field list: " + list.join(',')  + lapReport(lap));lap=now()
+    
   }
   catch(ex)
   {
@@ -791,18 +825,18 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=d2ecdd331b8a54104be764e8bc4bcbbf^sys_idNOT INc23a36b71b421c104ca7edf9bc4bcb55"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="CLEANUP_CleanAllTables (v2.1)">d2ecdd331b8a54104be764e8bc4bcbbf</action_id>
+        <action_id display_value="CLEANUP_CleanAllTables (v2.2)">d2ecdd331b8a54104be764e8bc4bcbbf</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"c23a36b71b421c104ca7edf9bc4bcb55","name":"plan"}}</plan>
-        <snapshot>7c7c8dfa1b5a50104be764e8bc4bcbd3</snapshot>
+        <snapshot>aaff9e591b4790104ca7edf9bc4bcbe7</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 22:26:00</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>c23a36b71b421c104ca7edf9bc4bcb55</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:13</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:21</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -817,17 +851,17 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <internal_name>cleanup_cleanalltables</internal_name>
         <label_cache>[{"name":"{{action.how_old_milliseconds}}","label":"action➛how_old_milliseconds","type":"action","ref":""},{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":""},{"name":"{{action.tables_to_clean}}","label":"action➛tables_to_clean","type":"action","ref":""},{"name":"{{action.tables_to_clean.table_to_clean}}","label":"action➛tables_to_clean➛table_to_clean","type":"action","ref":""},{"name":"{{action.tables_to_clean.table_to_clean.table_name}}","label":"action➛tables_to_clean➛table_to_clean➛table_name","type":"action","ref":""},{"name":"{{action.tables_to_clean.table_to_clean.num_hours_old}}","label":"action➛tables_to_clean➛table_to_clean➛num_hours_old","type":"action","ref":""},{"name":"{{step[6f87afe7-bd2d-498e-acda-f475702d6cba].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[6f87afe7-bd2d-498e-acda-f475702d6cba].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[6f87afe7-bd2d-498e-acda-f475702d6cba]._}}","label":"step➛Script step➛","type":"step","ref":""}]</label_cache>
         <master>true</master>
-        <name>CLEANUP_CleanAllTables (v2.1)</name>
+        <name>CLEANUP_CleanAllTables (v2.2)</name>
         <natlang/>
         <outputs/>
-        <parent_action display_value="CLEANUP_CleanAllTables (v2.1)">d2ecdd331b8a54104be764e8bc4bcbbf</parent_action>
+        <parent_action display_value="CLEANUP_CleanAllTables (v2.2)">d2ecdd331b8a54104be764e8bc4bcbbf</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 22:25:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>7d3a36b71b421c104ca7edf9bc4bcb20</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -836,14 +870,14 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 19:17:13</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:20</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=7d3a36b71b421c104ca7edf9bc4bcb20"/>
     <sys_hub_step_instance action="delete_multiple" query="action=7d3a36b71b421c104ca7edf9bc4bcb20^sys_idNOT INb53a36b71b421c104ca7edf9bc4bcb22"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CLEANUP_CleanAllTables (v2.1)">7d3a36b71b421c104ca7edf9bc4bcb20</action>
+        <action display_value="CLEANUP_CleanAllTables (v2.2)">7d3a36b71b421c104ca7edf9bc4bcb20</action>
         <cid>6f87afe7-bd2d-498e-acda-f475702d6cba</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -860,7 +894,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_on>2020-07-23 22:25:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b53a36b71b421c104ca7edf9bc4bcb22</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -868,7 +902,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:12</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:20</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b53a36b71b421c104ca7edf9bc4bcb22"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -879,9 +913,9 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 22:26:00</sys_created_on>
         <sys_id>b13a36b71b421c104ca7edf9bc4bcb2f</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:12</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:20</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
@@ -907,13 +941,17 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
     
   try
   {
-    for(i=0;i&lt;tables_to_clean.length;i++)
+    var tables_length = 0
+    if(tables_to_clean != null) { tables_length = tables_to_clean.length }
+    for(i=0;i&lt;tables_length;i++)
     {
       var table_name = tables_to_clean[i].table_name
       var num_hours_old = tables_to_clean[i].num_hours_old
       debug.push("Cleaning up '" + table_name + "' (records older than '" + num_hours_old + "') "  + lapReport(lap));lap=now()
 
-      var cleanup_time = (new GlideDateTime()).addSeconds( -1 * 3600 * num_hours_old)
+      var cleanup_time = new GlideDateTime()
+      cleanup_time.addSeconds( -1 * 3600 * num_hours_old)
+      debug.push("Cleanup cutoff: " + cleanup_time.getDisplayValue())
 
       var q = new GlideRecord(table_name)
       q.addQuery('sys_updated_on','&lt;',cleanup_time)
@@ -938,6 +976,19 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         debug.push("    No records to delete. "  + lapReport(lap));lap=now()
       }
     }
+    
+    //Next, populate the cache with a list of fields we are interested in during updates.
+    
+    var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
+    q.query()
+    var list = []
+    while(q.next())
+    {
+      list.push(q.getValue('snow_field'))
+    }
+    setCacheValue('snow_field_list',list.join(','),'str')
+    debug.push("Populating SNOW field list: " + list.join(',')  + lapReport(lap));lap=now()
+    
   }
   catch(ex)
   {
@@ -1166,7 +1217,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=table_to_clean,child_name=table_to_clean,child_type=object,child_type_label=Object,child_uiUniqueId=12abcc80-796c-4d62-bab0-1e5c5a485f97,co_type_name=FD497ccdfa495a50108189c1922e015037,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=015f6598-3a8b-4072-9774-b9ca7170bfba</attributes>
+        <attributes>child_label=table_to_clean,child_name=table_to_clean,child_type=object,child_type_label=Object,child_uiUniqueId=404db93c-2482-4ecb-b390-5f42d9ea783f,co_type_name=FD3effde590b479010bc52b7bb0ad48c18,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=015f6598-3a8b-4072-9774-b9ca7170bfba</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1201,7 +1252,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <label>tables_to_clean</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="CLEANUP_CleanAllTables (v2.1)">7d3a36b71b421c104ca7edf9bc4bcb20</model>
+        <model display_value="CLEANUP_CleanAllTables (v2.2)">7d3a36b71b421c104ca7edf9bc4bcb20</model>
         <model_id>7d3a36b71b421c104ca7edf9bc4bcb20</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_7d3a36b71b421c104ca7edf9bc4bcb20</name>
@@ -1225,7 +1276,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_on>2020-08-01 19:17:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>dc55a47e1bd250104be764e8bc4bcb05</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1233,7 +1284,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:12</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1247,7 +1298,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
     </sys_hub_action_input>
     <sys_hub_step_instance action="delete_multiple" query="action=7d3a36b71b421c104ca7edf9bc4bcb20^sys_idNOT INb53a36b71b421c104ca7edf9bc4bcb22"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="CLEANUP_CleanAllTables (v2.1)">7d3a36b71b421c104ca7edf9bc4bcb20</action>
+        <action display_value="CLEANUP_CleanAllTables (v2.2)">7d3a36b71b421c104ca7edf9bc4bcb20</action>
         <cid>6f87afe7-bd2d-498e-acda-f475702d6cba</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1264,7 +1315,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_on>2020-07-23 22:25:59</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b53a36b71b421c104ca7edf9bc4bcb22</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1272,7 +1323,7 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:12</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:20</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b53a36b71b421c104ca7edf9bc4bcb22"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1283,9 +1334,9 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-23 22:26:00</sys_created_on>
         <sys_id>b13a36b71b421c104ca7edf9bc4bcb2f</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 22:08:12</sys_updated_on>
+        <sys_updated_on>2020-09-03 19:09:20</sys_updated_on>
         <value>//GENERAL FUNCTION LIBRARY v0.9 MINIFIED
 //SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
 function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isValidIPAddress(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)||!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
@@ -1311,13 +1362,17 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
     
   try
   {
-    for(i=0;i&lt;tables_to_clean.length;i++)
+    var tables_length = 0
+    if(tables_to_clean != null) { tables_length = tables_to_clean.length }
+    for(i=0;i&lt;tables_length;i++)
     {
       var table_name = tables_to_clean[i].table_name
       var num_hours_old = tables_to_clean[i].num_hours_old
       debug.push("Cleaning up '" + table_name + "' (records older than '" + num_hours_old + "') "  + lapReport(lap));lap=now()
 
-      var cleanup_time = (new GlideDateTime()).addSeconds( -1 * 3600 * num_hours_old)
+      var cleanup_time = new GlideDateTime()
+      cleanup_time.addSeconds( -1 * 3600 * num_hours_old)
+      debug.push("Cleanup cutoff: " + cleanup_time.getDisplayValue())
 
       var q = new GlideRecord(table_name)
       q.addQuery('sys_updated_on','&lt;',cleanup_time)
@@ -1342,6 +1397,19 @@ function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e)
         debug.push("    No records to delete. "  + lapReport(lap));lap=now()
       }
     }
+    
+    //Next, populate the cache with a list of fields we are interested in during updates.
+    
+    var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
+    q.query()
+    var list = []
+    while(q.next())
+    {
+      list.push(q.getValue('snow_field'))
+    }
+    setCacheValue('snow_field_list',list.join(','),'str')
+    debug.push("Populating SNOW field list: " + list.join(',')  + lapReport(lap));lap=now()
+    
   }
   catch(ex)
   {

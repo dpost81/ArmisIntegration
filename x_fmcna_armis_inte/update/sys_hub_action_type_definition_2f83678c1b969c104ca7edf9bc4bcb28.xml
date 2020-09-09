@@ -13,9 +13,9 @@
         <ih_action>false</ih_action>
         <internal_name>up_uploadarpbatch_v21</internal_name>
         <label_cache>[{"name":"{{action.max_seconds}}","label":"action➛max_seconds","type":"action","ref":""},{"name":"{{action.operation}}","label":"action➛operation","type":"action","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].report}}","label":"step➛Script step➛report","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>baef55b61b5e50104be764e8bc4bcbb5</latest_snapshot>
+        <latest_snapshot>d95426211b8bd0104ca7edf9bc4bcb19</latest_snapshot>
         <master_snapshot>c6debdf11b1ad4104be764e8bc4bcbd7</master_snapshot>
-        <name>UP_UploadBatches (v2.1)</name>
+        <name>UP_UploadBatches (v2.2)</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -26,8 +26,8 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>2f83678c1b969c104ca7edf9bc4bcb28</sys_id>
-        <sys_mod_count>90</sys_mod_count>
-        <sys_name>UP_UploadBatches (v2.1)</sys_name>
+        <sys_mod_count>95</sys_mod_count>
+        <sys_name>UP_UploadBatches (v2.2)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
         <sys_policy/>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_2f83678c1b969c104ca7edf9bc4bcb28</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:17</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:53</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -55,7 +55,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</action>
+        <action display_value="UP_UploadBatches (v2.2)">2f83678c1b969c104ca7edf9bc4bcb28</action>
         <cid>9c44111f-3494-4908-9eca-f8468b3064d0</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -72,7 +72,7 @@
         <sys_created_on>2020-07-24 21:08:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>67123b081b1a9c104ca7edf9bc4bcb17</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -80,7 +80,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:13</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:44</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -105,9 +105,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-24 21:08:43</sys_created_on>
         <sys_id>e7123b081b1a9c104ca7edf9bc4bcb25</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:13</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:44</sys_updated_on>
         <value>/* 
 
 This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
@@ -262,7 +262,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
               'deviceId': parseInt(rec1.getValue('armis_device_id')),
               'lastSeen': lastSeenString,
               'description': rec1.getValue('property_name'),
-              'type': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_key'),
               'value': rec1.getValue('property_value') } } )
             break;  
           default: return
@@ -754,7 +754,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <label>operation</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</model>
+        <model display_value="UP_UploadBatches (v2.2)">2f83678c1b969c104ca7edf9bc4bcb28</model>
         <model_id>2f83678c1b969c104ca7edf9bc4bcb28</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
@@ -837,7 +837,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <label>max_seconds</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</model>
+        <model display_value="UP_UploadBatches (v2.2)">2f83678c1b969c104ca7edf9bc4bcb28</model>
         <model_id>2f83678c1b969c104ca7edf9bc4bcb28</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_2f83678c1b969c104ca7edf9bc4bcb28</name>
@@ -923,7 +923,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <label>debug</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</model>
+        <model display_value="UP_UploadBatches (v2.2)">2f83678c1b969c104ca7edf9bc4bcb28</model>
         <model_id>2f83678c1b969c104ca7edf9bc4bcb28</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_2f83678c1b969c104ca7edf9bc4bcb28</name>
@@ -969,7 +969,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT IN67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</action>
+        <action display_value="UP_UploadBatches (v2.2)">2f83678c1b969c104ca7edf9bc4bcb28</action>
         <cid>9c44111f-3494-4908-9eca-f8468b3064d0</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -986,7 +986,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_created_on>2020-07-24 21:08:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>67123b081b1a9c104ca7edf9bc4bcb17</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -994,7 +994,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:13</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:44</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=67123b081b1a9c104ca7edf9bc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1019,9 +1019,9 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-24 21:08:43</sys_created_on>
         <sys_id>e7123b081b1a9c104ca7edf9bc4bcb25</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:13</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:44</sys_updated_on>
         <value>/* 
 
 This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
@@ -1176,7 +1176,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
               'deviceId': parseInt(rec1.getValue('armis_device_id')),
               'lastSeen': lastSeenString,
               'description': rec1.getValue('property_name'),
-              'type': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_key'),
               'value': rec1.getValue('property_value') } } )
             break;  
           default: return
@@ -1782,18 +1782,18 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
     </sys_documentation>
     <sys_hub_action_plan action="delete_multiple" query="action_id=2f83678c1b969c104ca7edf9bc4bcb28^sys_idNOT INb2defdf11b1ad4104be764e8bc4bcba4"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</action_id>
+        <action_id display_value="UP_UploadBatches (v2.2)">2f83678c1b969c104ca7edf9bc4bcb28</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"b2defdf11b1ad4104be764e8bc4bcba4","name":"plan"}}</plan>
-        <snapshot>baef55b61b5e50104be764e8bc4bcbb5</snapshot>
+        <snapshot>d95426211b8bd0104ca7edf9bc4bcb19</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-29 23:14:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>b2defdf11b1ad4104be764e8bc4bcba4</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:18</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:54</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1808,18 +1808,18 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <internal_name>up_uploadbatches_v21</internal_name>
         <label_cache>[{"name":"{{action.max_seconds}}","label":"action➛max_seconds","type":"action","ref":""},{"name":"{{action.operation}}","label":"action➛operation","type":"action","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[9c44111f-3494-4908-9eca-f8468b3064d0].report}}","label":"step➛Script step➛report","type":"step","ref":""}]</label_cache>
         <master>true</master>
-        <name>UP_UploadBatches (v2.1)</name>
+        <name>UP_UploadBatches (v2.2)</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="UP_UploadBatches (v2.1)">2f83678c1b969c104ca7edf9bc4bcb28</parent_action>
+        <parent_action display_value="UP_UploadBatches (v2.2)">2f83678c1b969c104ca7edf9bc4bcb28</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-29 23:14:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>c6debdf11b1ad4104be764e8bc4bcbd7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1828,7 +1828,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-07-31 11:11:47</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:52</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1848,7 +1848,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT IN92debdf11b1ad4104be764e8bc4bcbf0"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</action>
+        <action display_value="UP_UploadBatches (v2.2)">c6debdf11b1ad4104be764e8bc4bcbd7</action>
         <cid>9c44111f-3494-4908-9eca-f8468b3064d0</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -1865,7 +1865,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_created_on>2020-07-29 23:14:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>92debdf11b1ad4104be764e8bc4bcbf0</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1873,7 +1873,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:17</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:52</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=92debdf11b1ad4104be764e8bc4bcbf0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1884,9 +1884,9 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-29 23:14:28</sys_created_on>
         <sys_id>5edefdf11b1ad4104be764e8bc4bcb22</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:17</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:52</sys_updated_on>
         <value>/* 
 
 This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
@@ -2041,7 +2041,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
               'deviceId': parseInt(rec1.getValue('armis_device_id')),
               'lastSeen': lastSeenString,
               'description': rec1.getValue('property_name'),
-              'type': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_key'),
               'value': rec1.getValue('property_value') } } )
             break;  
           default: return
@@ -2547,7 +2547,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <label>max_seconds</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
+        <model display_value="UP_UploadBatches (v2.2)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
         <model_id>c6debdf11b1ad4104be764e8bc4bcbd7</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
@@ -2630,7 +2630,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <label>operation</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
+        <model display_value="UP_UploadBatches (v2.2)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
         <model_id>c6debdf11b1ad4104be764e8bc4bcbd7</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_c6debdf11b1ad4104be764e8bc4bcbd7</name>
@@ -2716,7 +2716,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <label>debug</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
+        <model display_value="UP_UploadBatches (v2.2)">c6debdf11b1ad4104be764e8bc4bcbd7</model>
         <model_id>c6debdf11b1ad4104be764e8bc4bcbd7</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_c6debdf11b1ad4104be764e8bc4bcbd7</name>
@@ -2762,7 +2762,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
     </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=c6debdf11b1ad4104be764e8bc4bcbd7^sys_idNOT IN92debdf11b1ad4104be764e8bc4bcbf0"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="UP_UploadBatches (v2.1)">c6debdf11b1ad4104be764e8bc4bcbd7</action>
+        <action display_value="UP_UploadBatches (v2.2)">c6debdf11b1ad4104be764e8bc4bcbd7</action>
         <cid>9c44111f-3494-4908-9eca-f8468b3064d0</cid>
         <extended_inputs/>
         <extended_inputs/>
@@ -2779,7 +2779,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_created_on>2020-07-29 23:14:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>92debdf11b1ad4104be764e8bc4bcbf0</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2787,7 +2787,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:17</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:52</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=92debdf11b1ad4104be764e8bc4bcbf0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2798,9 +2798,9 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-29 23:14:28</sys_created_on>
         <sys_id>5edefdf11b1ad4104be764e8bc4bcb22</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-08-01 23:33:17</sys_updated_on>
+        <sys_updated_on>2020-09-04 14:06:52</sys_updated_on>
         <value>/* 
 
 This function uploads batches from the ARP, Key Attribute, Property, and Application tables. (In that order.)
@@ -2955,7 +2955,7 @@ function csv_encapsulate(str) { return '"' + ('' + str).replace('"','""') + '"' 
               'deviceId': parseInt(rec1.getValue('armis_device_id')),
               'lastSeen': lastSeenString,
               'description': rec1.getValue('property_name'),
-              'type': rec1.getValue('property_name'),
+              'type': rec1.getValue('property_key'),
               'value': rec1.getValue('property_value') } } )
             break;  
           default: return

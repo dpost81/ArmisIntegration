@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis SNOW Upload Value Map" max_length="40" name="x_fmcna_armis_inte_armis_snow_upload_value_map" sizeclass="52" type="collection">
+        <element label="Armis Display Values" max_length="50" name="armis_display_values" type="string"/>
+        <element label="Armis Keys" max_length="50" name="armis_keys" type="string"/>
+        <element label="Armis Types" max_length="50" name="armis_types" type="string"/>
+        <element label="Armis Values" max_length="200" name="armis_values" type="string"/>
+        <element label="SNOW Field" max_length="50" name="snow_field" type="string"/>
+        <element label="SNOW Value" max_length="50" name="snow_value" type="string"/>
+        <index name="index">
+            <element name="snow_field"/>
+            <element name="snow_value"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis SNOW Attribute Map" max_length="40" name="x_fmcna_armis_inte_armis_snow_attribute_map" sizeclass="21" type="collection">
+        <element label="Armis Attribute Description" max_length="50" name="armis_attribute_description" type="string"/>
+        <element label="Armis Property Key" max_length="50" name="armis_property_key" type="string"/>
+        <element label="Format As UTC" max_length="40" name="format_as_utc" type="boolean"/>
+        <element label="Is Mapped Upload" max_length="40" name="is_mapped_upload" type="boolean"/>
+        <element label="SNOW Field" max_length="50" name="snow_field" type="string"/>
+        <element choice="1" label="Upload Type" max_length="40" name="upload_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="key_attribute" value="key_attribute"/>
+                <element inactive_on_update="false" label="property" value="property"/>
+                <element inactive_on_update="false" label="tag" value="tag"/>
+            </choice>
+        </element>
+    </element>
+</database>
