@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>update_processupdate_v21</internal_name>
         <label_cache>[{"name":"{{action.fields}}","label":"action➛fields","type":"action","ref":""},{"name":"{{action.computer}}","label":"action➛computer","type":"action","ref":""},{"name":"{{action.computer_sys_id}}","label":"action➛computer_sys_id","type":"action","ref":""},{"name":"{{step[32ab521e-c2c5-4424-8abd-c8997be99e74].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[32ab521e-c2c5-4424-8abd-c8997be99e74].debug}}","label":"step➛Script step➛debug","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>13179f991b4b90104ca7edf9bc4bcb73</latest_snapshot>
+        <latest_snapshot>eb344ee31b8b50104ca7edf9bc4bcb3e</latest_snapshot>
         <master_snapshot>8344bb0a1bde58104be764e8bc4bcbee</master_snapshot>
         <name>UPDATE_ProcessUpdate (v2.1)</name>
         <natlang/>
@@ -25,7 +25,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>65431bc21b1e58104be764e8bc4bcb5a</sys_id>
-        <sys_mod_count>78</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>UPDATE_ProcessUpdate (v2.1)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -34,12 +34,81 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_65431bc21b1e58104be764e8bc4bcb5a</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:15</sys_updated_on>
+        <sys_updated_on>2020-09-10 16:54:31</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
     <sys_variable_value action="delete_multiple" query="document_key=65431bc21b1e58104be764e8bc4bcb5a"/>
-    <sys_hub_step_instance action="delete_multiple" query="action=65431bc21b1e58104be764e8bc4bcb5a^sys_idNOT IN837b53421b5e58104be764e8bc4bcbb3"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=65431bc21b1e58104be764e8bc4bcb5a^sys_idNOT IN350579ef1b0b50104ca7edf9bc4bcb6b,837b53421b5e58104be764e8bc4bcbb3"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="UPDATE_ProcessUpdate (v2.1)">65431bc21b1e58104be764e8bc4bcb5a</action>
+        <cid>e3282d50-3eeb-4c52-ab40-cd01e3920930</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>LIBRARIES</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>350579ef1b0b50104ca7edf9bc4bcb6b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:28</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=350579ef1b0b50104ca7edf9bc4bcb6b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>350579ef1b0b50104ca7edf9bc4bcb6b</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:00</sys_created_on>
+        <sys_id>390579ef1b0b50104ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:28</sys_updated_on>
+        <value>
+//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.16 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var a={table:"x_fmcna_armis_inte_armis_rest_api_log"};return a.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(a)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var a={table:"x_fmcna_armis_inte_armis_op_property_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],a.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(a)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_arp_table"};return a.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(a)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return a.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],a.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(a)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_application_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],a.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(a)}function queueAnyAttribute(e){var a=now(),t=[];if(1==e.format_as_utc&amp;&amp;(e.value=e.value.replace(" ","T"),t.push("Converted value to UTC: "+e.value+lapReport(a)),a=now()),1!=e.is_mapped_upload){switch(e.upload_type){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:e.armis_property_key,value:e.value});break;case"property":queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:e.armis_attribute_description,key:e.armis_property_key,value:e.value});break;case"tag":e.armis_attribute_description=e.armis_attribute_description.replace("###",e.value),queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:e.armis_attribute_description})}t.push("Queued upload. key="+e.armis_property_key+",desc="+e.armis_attribute_description+",type="+e.upload_type+",value="+e.value+lapReport(a)),a=now()}else{var r=new GlideRecord("x_fmcna_armis_inte_armis_snow_upload_value_map");if(r.addQuery("snow_field",e.snow_field),r.addQuery("snow_value",e.value),r.query(),r.next()){t.push("Processing mapped upload for value '"+e.value+"'"+lapReport(a)),a=now();for(var i=JSON.parse(r.getValue("armis_types")),n=JSON.parse(r.getValue("armis_keys")),s=JSON.parse(r.getValue("armis_values")),u=0;u&lt;i.length;u++)if(null!=s[u]&amp;&amp;""!=s[u]){switch(i[u]){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:n[u],value:s[u]});break;case"tag":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:s[u]});break;case"property":var d=n[u].split(",");queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:d[1],key:d[0],value:s[u]})}t.push("Queued "+i[u]+" '"+n[u]+"':"+s[u]+lapReport(a)),a=now()}}else t.push("Value '"+e.value+"' not found in Armis SNOW Upload Value Map."+lapReport(a)),a=now(),writeToErrorLog({id:e.execution_id,error_message:"Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+e.snow_field+"'. Property was not uploaded due to missing corresponding snow_value entry.",debug_string:t.join("\n")})}return t.join("\n")}function executeStandardREST(e){try{var a=new GlideDateTime,t=new sn_ws.RESTMessageV2("Armis API",e.endpoint);t.setRequestHeader("Authorization",getCurrentToken()),t.setRequestHeader("accept","application/json"),t.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var r=0;r&lt;e.query_params.length;r++)t.setQueryParameter(e.query_params[r][0],e.query_params[r][1]);t.setRequestBody(e.payload);var i,n=now(),s={};return 1==e.async?i=t.executeAsync():(i=t.execute(),s.response_code=i.getStatusCode(),s.response_body=i.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:a,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var a=new GlideRecord("sys_attachment"),t=(new GlideSysAttachment).write(a,e.id+".csv","text/plain",e.payload),r=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");r.initialize(),r.attachment=t,r.execution_id=e.id,r.status="PENDING",r.type=e.type,r.content=e.payload,r.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var a=new GlideRecord("cmdb_ci_network_adapter");a.addQuery("cmdb_ci",e.sys_id),a.query();for(var t=null,r=-1e3;a.next();)if(isValidMACAddress(a.mac_address)&amp;&amp;!a.mac_address.endsWith("00:00:01")){var i=0;(""+a.ip_address).startsWith("10.")&amp;&amp;(i+=1e3),(""+a.name).startsWith("Local Area")&amp;&amp;(i+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",a.mac_address),n.query(),n.next()&amp;&amp;(i-=n.getAggregate("COUNT")),i&gt;r&amp;&amp;i&gt;0&amp;&amp;(t=""+a.mac_address,r=i)}return t}function queueInitialARPandCSV(e,a){var t=getBestMAC(e),r=e.ip_address;isValidMACAddress(t)&amp;&amp;isValidIPAddress(r)&amp;&amp;(queueARP({execution_id:a,mac:t,ip:r}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"IP",value:r}))}function getPendingRecordsEndSysID(e,a,t){null==t&amp;&amp;(t={}),null==t.force_field&amp;&amp;(t.force_field="status"),null==t.force_pending&amp;&amp;(t.force_pending="PENDING");var r=new GlideRecord(a);for(r.addQuery(t.force_field,t.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.query();r.next();)if(0==r.hasNext())return r.getValue("sys_id");return null}function getNumPendingRecords(e,a,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var i=new GlideRecord(a);return i.addQuery(r.force_field,r.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",t),i.query(),i}
+
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>350579ef1b0b50104ca7edf9bc4bcb6b</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:00</sys_created_on>
+        <sys_id>750579ef1b0b50104ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 15:48:00</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UPDATE_ProcessUpdate (v2.1)">65431bc21b1e58104be764e8bc4bcb5a</action>
         <cid>32ab521e-c2c5-4424-8abd-c8997be99e74</cid>
@@ -49,7 +118,7 @@
         <icon/>
         <inputs/>
         <label>Script step</label>
-        <order>1</order>
+        <order>2</order>
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
@@ -58,7 +127,7 @@
         <sys_created_on>2020-07-31 00:37:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>837b53421b5e58104be764e8bc4bcbb3</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -66,7 +135,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:06</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:24</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=837b53421b5e58104be764e8bc4bcbb3"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -91,9 +160,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 00:37:41</sys_created_on>
         <sys_id>877b53421b5e58104be764e8bc4bcbc7</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:06</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:24</sys_updated_on>
         <value>/*
 
 This should be called every time a computer gets an update.
@@ -106,21 +175,6 @@ This script does the following:
 3. If any fields updated, queue an arp entry as well.
 
 */
-
-
-//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
-
-
-
-
-//'TABLES AND REST' FUNCTION LIBRARY v0.15 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),s={};return 1==e.async?r=i.executeAsync():(r=i.execute(),s.response_code=r.getStatusCode(),s.response_body=r.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:t,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var t=new GlideRecord("cmdb_ci_network_adapter");t.addQuery("cmdb_ci",e.sys_id),t.query();for(var i=null,a=-1e3;t.next();)if(isValidMACAddress(t.mac_address)&amp;&amp;!t.mac_address.endsWith("00:00:01")){var r=0;(""+t.ip_address).startsWith("10.")&amp;&amp;(r+=1e3),(""+t.name).startsWith("Local Area")&amp;&amp;(r+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",t.mac_address),n.query(),n.next()&amp;&amp;(r-=n.getAggregate("COUNT")),r&gt;a&amp;&amp;r&gt;0&amp;&amp;(i=""+t.mac_address,a=r)}return i}function queueInitialARPandCSV(e,t){var i=getBestMAC(e),a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
-
-
-
 
 
 
@@ -200,73 +254,18 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
           var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
           q.addQuery('snow_field',field_name)
           q.query()
-          while(q.next())
-          {
-            var armis_attribute_description = q.getValue('armis_attribute_description')
-            var armis_property_key = q.getValue('armis_property_key')
-            var format_as_utc = q.getValue('format_as_utc')
-            var is_mapped_upload = q.getValue('is_mapped_upload')
-            var upload_type = q.getValue('upload_type')
-            
-            
-         	//Convert to UTC format if needed
-            if(format_as_utc == true)
-            {
-              //UTC format is just a "T" in the place of a space.
-              value = value.replace(' ','T')
-              debug.push("Converted value to UTC: " + value + lapReport(lap));lap=now()
-            }
-            
-            if(is_mapped_upload != true)
-            {
-              switch(upload_type)
-              {
-                case 'key_attribute':
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: armis_property_key, value: value});break;
-                case 'property':
-                  queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: armis_attribute_description, key: armis_property_key, value: value})
-                case 'tag':
-                  armis_attribute_description = armis_attribute_description.replace("###",value)
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: armis_attribute_description});break;
-              }
-              debug.push("Queued upload. key=" + armis_property_key + ",desc=" + armis_attribute_description + ",type=" + upload_type + ",value=" + value + lapReport(lap));lap=now()
-            }
-            else
-            {
-              //We need to process this using the table  Armis SNOW Upload Value Map
-              var m = new GlideRecord('x_fmcna_armis_inte_armis_snow_upload_value_map')
-              m.addQuery('snow_field',field_name)
-              m.addQuery('snow_value',value)
-              m.query()
-              if(m.next())
-              {
-                debug.push("Processing mapped upload for value '"+value+"'" + lapReport(lap));lap=now()
-                var types = JSON.parse(m.getValue('armis_types'))
-                var keys = JSON.parse(m.getValue('armis_keys'))
-                var values = JSON.parse(m.getValue('armis_values'))
-                for(var j=0;j&lt;types.length;j++)
-                {
-                  if(values[j] == null || values[j] == "") { continue }
-                  switch(types[j])
-                  {
-                    case 'key_attribute':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: keys[j], value: values[j]});break;
-                    case 'tag':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: values[j]});break;
-                    case 'property':
-                      var keys_split = keys[j].split(",")
-                      queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: keys_split[1], key: keys_split[0], value: values[j]});
-                  }
-                  debug.push("Queued " + types[j] + " '" + keys[j] + "':" + values[j] + lapReport(lap));lap=now()
-                }
-              }
-              else
-              {
-                debug.push("Value '" + value + "' not found in Armis SNOW Upload Value Map." + lapReport(lap));lap=now()
-                writeToErrorLog({id: eid, error_message: "Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+field_name+"'. Property was not uploaded due to missing corresponding snow_value entry.", debug_string: debug.join('\n')})
-              }
-            }
-            
+          if(q.next()){            
+            debug.push(queueAnyAttribute({
+                       execution_id: eid,
+                       armis_id: armis_device.getValue('armis_device_id'),
+                       mac: armis_device.getValue('mac_address'),
+                       snow_field: field_name,
+                       value: value,
+                       upload_type: q.getValue('upload_type'),
+                       is_mapped_upload: q.getValue('is_mapped_upload'),
+                       format_as_utc: q.getValue('format_as_utc'),
+                       armis_attribute_description: q.getValue('armis_attribute_description'),
+                       armis_property_key: q.getValue('armis_property_key')}))
           }
         }
         else
@@ -605,7 +604,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=fields_child0,child_name=fields_child0,child_type=object,child_type_label=Object,child_uiUniqueId=9eb40ef5-5525-498b-8272-b8beb1d52f91,co_type_name=FD3e7bd7023e5e5810e6f73c32ee8bc591,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=e20c0e47-a3e4-4f8e-b9b7-9c10dcaf0945</attributes>
+        <attributes>child_label=fields_child0,child_name=fields_child0,child_type=object,child_type_label=Object,child_uiUniqueId=53d68398-f26a-49ba-8b34-56c3b07b4cfb,co_type_name=FD3e7bd7023e5e5810e6f73c32ee8bc591,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=e20c0e47-a3e4-4f8e-b9b7-9c10dcaf0945</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -664,7 +663,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 00:37:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3a7bd7021b5e58104be764e8bc4bcb94</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -672,7 +671,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:13</sys_updated_on>
+        <sys_updated_on>2020-09-10 16:54:28</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -767,7 +766,76 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
-    <sys_hub_step_instance action="delete_multiple" query="action=65431bc21b1e58104be764e8bc4bcb5a^sys_idNOT IN837b53421b5e58104be764e8bc4bcbb3"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=65431bc21b1e58104be764e8bc4bcb5a^sys_idNOT IN350579ef1b0b50104ca7edf9bc4bcb6b,837b53421b5e58104be764e8bc4bcbb3"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="UPDATE_ProcessUpdate (v2.1)">65431bc21b1e58104be764e8bc4bcb5a</action>
+        <cid>e3282d50-3eeb-4c52-ab40-cd01e3920930</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>LIBRARIES</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>350579ef1b0b50104ca7edf9bc4bcb6b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:28</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=350579ef1b0b50104ca7edf9bc4bcb6b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>350579ef1b0b50104ca7edf9bc4bcb6b</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:00</sys_created_on>
+        <sys_id>390579ef1b0b50104ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:28</sys_updated_on>
+        <value>
+//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.16 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var a={table:"x_fmcna_armis_inte_armis_rest_api_log"};return a.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(a)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var a={table:"x_fmcna_armis_inte_armis_op_property_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],a.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(a)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_arp_table"};return a.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(a)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return a.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],a.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(a)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_application_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],a.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(a)}function queueAnyAttribute(e){var a=now(),t=[];if(1==e.format_as_utc&amp;&amp;(e.value=e.value.replace(" ","T"),t.push("Converted value to UTC: "+e.value+lapReport(a)),a=now()),1!=e.is_mapped_upload){switch(e.upload_type){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:e.armis_property_key,value:e.value});break;case"property":queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:e.armis_attribute_description,key:e.armis_property_key,value:e.value});break;case"tag":e.armis_attribute_description=e.armis_attribute_description.replace("###",e.value),queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:e.armis_attribute_description})}t.push("Queued upload. key="+e.armis_property_key+",desc="+e.armis_attribute_description+",type="+e.upload_type+",value="+e.value+lapReport(a)),a=now()}else{var r=new GlideRecord("x_fmcna_armis_inte_armis_snow_upload_value_map");if(r.addQuery("snow_field",e.snow_field),r.addQuery("snow_value",e.value),r.query(),r.next()){t.push("Processing mapped upload for value '"+e.value+"'"+lapReport(a)),a=now();for(var i=JSON.parse(r.getValue("armis_types")),n=JSON.parse(r.getValue("armis_keys")),s=JSON.parse(r.getValue("armis_values")),u=0;u&lt;i.length;u++)if(null!=s[u]&amp;&amp;""!=s[u]){switch(i[u]){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:n[u],value:s[u]});break;case"tag":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:s[u]});break;case"property":var d=n[u].split(",");queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:d[1],key:d[0],value:s[u]})}t.push("Queued "+i[u]+" '"+n[u]+"':"+s[u]+lapReport(a)),a=now()}}else t.push("Value '"+e.value+"' not found in Armis SNOW Upload Value Map."+lapReport(a)),a=now(),writeToErrorLog({id:e.execution_id,error_message:"Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+e.snow_field+"'. Property was not uploaded due to missing corresponding snow_value entry.",debug_string:t.join("\n")})}return t.join("\n")}function executeStandardREST(e){try{var a=new GlideDateTime,t=new sn_ws.RESTMessageV2("Armis API",e.endpoint);t.setRequestHeader("Authorization",getCurrentToken()),t.setRequestHeader("accept","application/json"),t.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var r=0;r&lt;e.query_params.length;r++)t.setQueryParameter(e.query_params[r][0],e.query_params[r][1]);t.setRequestBody(e.payload);var i,n=now(),s={};return 1==e.async?i=t.executeAsync():(i=t.execute(),s.response_code=i.getStatusCode(),s.response_body=i.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:a,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var a=new GlideRecord("sys_attachment"),t=(new GlideSysAttachment).write(a,e.id+".csv","text/plain",e.payload),r=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");r.initialize(),r.attachment=t,r.execution_id=e.id,r.status="PENDING",r.type=e.type,r.content=e.payload,r.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var a=new GlideRecord("cmdb_ci_network_adapter");a.addQuery("cmdb_ci",e.sys_id),a.query();for(var t=null,r=-1e3;a.next();)if(isValidMACAddress(a.mac_address)&amp;&amp;!a.mac_address.endsWith("00:00:01")){var i=0;(""+a.ip_address).startsWith("10.")&amp;&amp;(i+=1e3),(""+a.name).startsWith("Local Area")&amp;&amp;(i+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",a.mac_address),n.query(),n.next()&amp;&amp;(i-=n.getAggregate("COUNT")),i&gt;r&amp;&amp;i&gt;0&amp;&amp;(t=""+a.mac_address,r=i)}return t}function queueInitialARPandCSV(e,a){var t=getBestMAC(e),r=e.ip_address;isValidMACAddress(t)&amp;&amp;isValidIPAddress(r)&amp;&amp;(queueARP({execution_id:a,mac:t,ip:r}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"IP",value:r}))}function getPendingRecordsEndSysID(e,a,t){null==t&amp;&amp;(t={}),null==t.force_field&amp;&amp;(t.force_field="status"),null==t.force_pending&amp;&amp;(t.force_pending="PENDING");var r=new GlideRecord(a);for(r.addQuery(t.force_field,t.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.query();r.next();)if(0==r.hasNext())return r.getValue("sys_id");return null}function getNumPendingRecords(e,a,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var i=new GlideRecord(a);return i.addQuery(r.force_field,r.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",t),i.query(),i}
+
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>350579ef1b0b50104ca7edf9bc4bcb6b</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:00</sys_created_on>
+        <sys_id>750579ef1b0b50104ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 15:48:00</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UPDATE_ProcessUpdate (v2.1)">65431bc21b1e58104be764e8bc4bcb5a</action>
         <cid>32ab521e-c2c5-4424-8abd-c8997be99e74</cid>
@@ -777,7 +845,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <icon/>
         <inputs/>
         <label>Script step</label>
-        <order>1</order>
+        <order>2</order>
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
@@ -786,7 +854,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 00:37:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>837b53421b5e58104be764e8bc4bcbb3</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -794,7 +862,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:06</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:24</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=837b53421b5e58104be764e8bc4bcbb3"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -819,9 +887,9 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 00:37:41</sys_created_on>
         <sys_id>877b53421b5e58104be764e8bc4bcbc7</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:06</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:24</sys_updated_on>
         <value>/*
 
 This should be called every time a computer gets an update.
@@ -834,21 +902,6 @@ This script does the following:
 3. If any fields updated, queue an arp entry as well.
 
 */
-
-
-//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
-
-
-
-
-//'TABLES AND REST' FUNCTION LIBRARY v0.15 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),s={};return 1==e.async?r=i.executeAsync():(r=i.execute(),s.response_code=r.getStatusCode(),s.response_body=r.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:t,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var t=new GlideRecord("cmdb_ci_network_adapter");t.addQuery("cmdb_ci",e.sys_id),t.query();for(var i=null,a=-1e3;t.next();)if(isValidMACAddress(t.mac_address)&amp;&amp;!t.mac_address.endsWith("00:00:01")){var r=0;(""+t.ip_address).startsWith("10.")&amp;&amp;(r+=1e3),(""+t.name).startsWith("Local Area")&amp;&amp;(r+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",t.mac_address),n.query(),n.next()&amp;&amp;(r-=n.getAggregate("COUNT")),r&gt;a&amp;&amp;r&gt;0&amp;&amp;(i=""+t.mac_address,a=r)}return i}function queueInitialARPandCSV(e,t){var i=getBestMAC(e),a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
-
-
-
 
 
 
@@ -928,73 +981,18 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
           var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
           q.addQuery('snow_field',field_name)
           q.query()
-          while(q.next())
-          {
-            var armis_attribute_description = q.getValue('armis_attribute_description')
-            var armis_property_key = q.getValue('armis_property_key')
-            var format_as_utc = q.getValue('format_as_utc')
-            var is_mapped_upload = q.getValue('is_mapped_upload')
-            var upload_type = q.getValue('upload_type')
-            
-            
-         	//Convert to UTC format if needed
-            if(format_as_utc == true)
-            {
-              //UTC format is just a "T" in the place of a space.
-              value = value.replace(' ','T')
-              debug.push("Converted value to UTC: " + value + lapReport(lap));lap=now()
-            }
-            
-            if(is_mapped_upload != true)
-            {
-              switch(upload_type)
-              {
-                case 'key_attribute':
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: armis_property_key, value: value});break;
-                case 'property':
-                  queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: armis_attribute_description, key: armis_property_key, value: value})
-                case 'tag':
-                  armis_attribute_description = armis_attribute_description.replace("###",value)
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: armis_attribute_description});break;
-              }
-              debug.push("Queued upload. key=" + armis_property_key + ",desc=" + armis_attribute_description + ",type=" + upload_type + ",value=" + value + lapReport(lap));lap=now()
-            }
-            else
-            {
-              //We need to process this using the table  Armis SNOW Upload Value Map
-              var m = new GlideRecord('x_fmcna_armis_inte_armis_snow_upload_value_map')
-              m.addQuery('snow_field',field_name)
-              m.addQuery('snow_value',value)
-              m.query()
-              if(m.next())
-              {
-                debug.push("Processing mapped upload for value '"+value+"'" + lapReport(lap));lap=now()
-                var types = JSON.parse(m.getValue('armis_types'))
-                var keys = JSON.parse(m.getValue('armis_keys'))
-                var values = JSON.parse(m.getValue('armis_values'))
-                for(var j=0;j&lt;types.length;j++)
-                {
-                  if(values[j] == null || values[j] == "") { continue }
-                  switch(types[j])
-                  {
-                    case 'key_attribute':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: keys[j], value: values[j]});break;
-                    case 'tag':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: values[j]});break;
-                    case 'property':
-                      var keys_split = keys[j].split(",")
-                      queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: keys_split[1], key: keys_split[0], value: values[j]});
-                  }
-                  debug.push("Queued " + types[j] + " '" + keys[j] + "':" + values[j] + lapReport(lap));lap=now()
-                }
-              }
-              else
-              {
-                debug.push("Value '" + value + "' not found in Armis SNOW Upload Value Map." + lapReport(lap));lap=now()
-                writeToErrorLog({id: eid, error_message: "Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+field_name+"'. Property was not uploaded due to missing corresponding snow_value entry.", debug_string: debug.join('\n')})
-              }
-            }
-            
+          if(q.next()){            
+            debug.push(queueAnyAttribute({
+                       execution_id: eid,
+                       armis_id: armis_device.getValue('armis_device_id'),
+                       mac: armis_device.getValue('mac_address'),
+                       snow_field: field_name,
+                       value: value,
+                       upload_type: q.getValue('upload_type'),
+                       is_mapped_upload: q.getValue('is_mapped_upload'),
+                       format_as_utc: q.getValue('format_as_utc'),
+                       armis_attribute_description: q.getValue('armis_attribute_description'),
+                       armis_property_key: q.getValue('armis_property_key')}))
           }
         }
         else
@@ -1383,16 +1381,16 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="UPDATE_ProcessUpdate (v2.1)">65431bc21b1e58104be764e8bc4bcb5a</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"af44fb0a1bde58104be764e8bc4bcb98","name":"plan"}}</plan>
-        <snapshot>13179f991b4b90104ca7edf9bc4bcb73</snapshot>
+        <snapshot>eb344ee31b8b50104ca7edf9bc4bcb3e</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 02:26:07</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>af44fb0a1bde58104be764e8bc4bcb98</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:16</sys_updated_on>
+        <sys_updated_on>2020-09-10 16:54:33</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1431,7 +1429,76 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <type/>
     </sys_hub_action_type_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=8344bb0a1bde58104be764e8bc4bcbee"/>
-    <sys_hub_step_instance action="delete_multiple" query="action=8344bb0a1bde58104be764e8bc4bcbee^sys_idNOT INdf44bb0a1bde58104be764e8bc4bcbff"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=8344bb0a1bde58104be764e8bc4bcbee^sys_idNOT IN6a05b9ef1b0b50104ca7edf9bc4bcb4c,df44bb0a1bde58104be764e8bc4bcbff"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="UPDATE_ProcessUpdate (v2.1)">8344bb0a1bde58104be764e8bc4bcbee</action>
+        <cid>e3282d50-3eeb-4c52-ab40-cd01e3920930</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>LIBRARIES</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6a05b9ef1b0b50104ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:31</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6a05b9ef1b0b50104ca7edf9bc4bcb4c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a05b9ef1b0b50104ca7edf9bc4bcb4c</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:03</sys_created_on>
+        <sys_id>a605b9ef1b0b50104ca7edf9bc4bcb52</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:31</sys_updated_on>
+        <value>
+//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.16 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var a={table:"x_fmcna_armis_inte_armis_rest_api_log"};return a.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(a)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var a={table:"x_fmcna_armis_inte_armis_op_property_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],a.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(a)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_arp_table"};return a.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(a)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return a.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],a.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(a)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_application_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],a.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(a)}function queueAnyAttribute(e){var a=now(),t=[];if(1==e.format_as_utc&amp;&amp;(e.value=e.value.replace(" ","T"),t.push("Converted value to UTC: "+e.value+lapReport(a)),a=now()),1!=e.is_mapped_upload){switch(e.upload_type){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:e.armis_property_key,value:e.value});break;case"property":queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:e.armis_attribute_description,key:e.armis_property_key,value:e.value});break;case"tag":e.armis_attribute_description=e.armis_attribute_description.replace("###",e.value),queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:e.armis_attribute_description})}t.push("Queued upload. key="+e.armis_property_key+",desc="+e.armis_attribute_description+",type="+e.upload_type+",value="+e.value+lapReport(a)),a=now()}else{var r=new GlideRecord("x_fmcna_armis_inte_armis_snow_upload_value_map");if(r.addQuery("snow_field",e.snow_field),r.addQuery("snow_value",e.value),r.query(),r.next()){t.push("Processing mapped upload for value '"+e.value+"'"+lapReport(a)),a=now();for(var i=JSON.parse(r.getValue("armis_types")),n=JSON.parse(r.getValue("armis_keys")),s=JSON.parse(r.getValue("armis_values")),u=0;u&lt;i.length;u++)if(null!=s[u]&amp;&amp;""!=s[u]){switch(i[u]){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:n[u],value:s[u]});break;case"tag":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:s[u]});break;case"property":var d=n[u].split(",");queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:d[1],key:d[0],value:s[u]})}t.push("Queued "+i[u]+" '"+n[u]+"':"+s[u]+lapReport(a)),a=now()}}else t.push("Value '"+e.value+"' not found in Armis SNOW Upload Value Map."+lapReport(a)),a=now(),writeToErrorLog({id:e.execution_id,error_message:"Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+e.snow_field+"'. Property was not uploaded due to missing corresponding snow_value entry.",debug_string:t.join("\n")})}return t.join("\n")}function executeStandardREST(e){try{var a=new GlideDateTime,t=new sn_ws.RESTMessageV2("Armis API",e.endpoint);t.setRequestHeader("Authorization",getCurrentToken()),t.setRequestHeader("accept","application/json"),t.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var r=0;r&lt;e.query_params.length;r++)t.setQueryParameter(e.query_params[r][0],e.query_params[r][1]);t.setRequestBody(e.payload);var i,n=now(),s={};return 1==e.async?i=t.executeAsync():(i=t.execute(),s.response_code=i.getStatusCode(),s.response_body=i.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:a,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var a=new GlideRecord("sys_attachment"),t=(new GlideSysAttachment).write(a,e.id+".csv","text/plain",e.payload),r=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");r.initialize(),r.attachment=t,r.execution_id=e.id,r.status="PENDING",r.type=e.type,r.content=e.payload,r.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var a=new GlideRecord("cmdb_ci_network_adapter");a.addQuery("cmdb_ci",e.sys_id),a.query();for(var t=null,r=-1e3;a.next();)if(isValidMACAddress(a.mac_address)&amp;&amp;!a.mac_address.endsWith("00:00:01")){var i=0;(""+a.ip_address).startsWith("10.")&amp;&amp;(i+=1e3),(""+a.name).startsWith("Local Area")&amp;&amp;(i+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",a.mac_address),n.query(),n.next()&amp;&amp;(i-=n.getAggregate("COUNT")),i&gt;r&amp;&amp;i&gt;0&amp;&amp;(t=""+a.mac_address,r=i)}return t}function queueInitialARPandCSV(e,a){var t=getBestMAC(e),r=e.ip_address;isValidMACAddress(t)&amp;&amp;isValidIPAddress(r)&amp;&amp;(queueARP({execution_id:a,mac:t,ip:r}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"IP",value:r}))}function getPendingRecordsEndSysID(e,a,t){null==t&amp;&amp;(t={}),null==t.force_field&amp;&amp;(t.force_field="status"),null==t.force_pending&amp;&amp;(t.force_pending="PENDING");var r=new GlideRecord(a);for(r.addQuery(t.force_field,t.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.query();r.next();)if(0==r.hasNext())return r.getValue("sys_id");return null}function getNumPendingRecords(e,a,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var i=new GlideRecord(a);return i.addQuery(r.force_field,r.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",t),i.query(),i}
+
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a05b9ef1b0b50104ca7edf9bc4bcb4c</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:03</sys_created_on>
+        <sys_id>e205b9ef1b0b50104ca7edf9bc4bcb52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 15:48:03</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UPDATE_ProcessUpdate (v2.1)">8344bb0a1bde58104be764e8bc4bcbee</action>
         <cid>32ab521e-c2c5-4424-8abd-c8997be99e74</cid>
@@ -1441,7 +1508,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <icon/>
         <inputs/>
         <label>Script step</label>
-        <order>1</order>
+        <order>2</order>
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
@@ -1450,7 +1517,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 02:26:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>df44bb0a1bde58104be764e8bc4bcbff</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1458,7 +1525,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:15</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:27</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=df44bb0a1bde58104be764e8bc4bcbff"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1469,9 +1536,9 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 02:26:06</sys_created_on>
         <sys_id>5344fb0a1bde58104be764e8bc4bcb3f</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:15</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:27</sys_updated_on>
         <value>/*
 
 This should be called every time a computer gets an update.
@@ -1484,21 +1551,6 @@ This script does the following:
 3. If any fields updated, queue an arp entry as well.
 
 */
-
-
-//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
-
-
-
-
-//'TABLES AND REST' FUNCTION LIBRARY v0.15 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),s={};return 1==e.async?r=i.executeAsync():(r=i.execute(),s.response_code=r.getStatusCode(),s.response_body=r.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:t,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var t=new GlideRecord("cmdb_ci_network_adapter");t.addQuery("cmdb_ci",e.sys_id),t.query();for(var i=null,a=-1e3;t.next();)if(isValidMACAddress(t.mac_address)&amp;&amp;!t.mac_address.endsWith("00:00:01")){var r=0;(""+t.ip_address).startsWith("10.")&amp;&amp;(r+=1e3),(""+t.name).startsWith("Local Area")&amp;&amp;(r+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",t.mac_address),n.query(),n.next()&amp;&amp;(r-=n.getAggregate("COUNT")),r&gt;a&amp;&amp;r&gt;0&amp;&amp;(i=""+t.mac_address,a=r)}return i}function queueInitialARPandCSV(e,t){var i=getBestMAC(e),a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
-
-
-
 
 
 
@@ -1578,73 +1630,18 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
           var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
           q.addQuery('snow_field',field_name)
           q.query()
-          while(q.next())
-          {
-            var armis_attribute_description = q.getValue('armis_attribute_description')
-            var armis_property_key = q.getValue('armis_property_key')
-            var format_as_utc = q.getValue('format_as_utc')
-            var is_mapped_upload = q.getValue('is_mapped_upload')
-            var upload_type = q.getValue('upload_type')
-            
-            
-         	//Convert to UTC format if needed
-            if(format_as_utc == true)
-            {
-              //UTC format is just a "T" in the place of a space.
-              value = value.replace(' ','T')
-              debug.push("Converted value to UTC: " + value + lapReport(lap));lap=now()
-            }
-            
-            if(is_mapped_upload != true)
-            {
-              switch(upload_type)
-              {
-                case 'key_attribute':
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: armis_property_key, value: value});break;
-                case 'property':
-                  queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: armis_attribute_description, key: armis_property_key, value: value})
-                case 'tag':
-                  armis_attribute_description = armis_attribute_description.replace("###",value)
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: armis_attribute_description});break;
-              }
-              debug.push("Queued upload. key=" + armis_property_key + ",desc=" + armis_attribute_description + ",type=" + upload_type + ",value=" + value + lapReport(lap));lap=now()
-            }
-            else
-            {
-              //We need to process this using the table  Armis SNOW Upload Value Map
-              var m = new GlideRecord('x_fmcna_armis_inte_armis_snow_upload_value_map')
-              m.addQuery('snow_field',field_name)
-              m.addQuery('snow_value',value)
-              m.query()
-              if(m.next())
-              {
-                debug.push("Processing mapped upload for value '"+value+"'" + lapReport(lap));lap=now()
-                var types = JSON.parse(m.getValue('armis_types'))
-                var keys = JSON.parse(m.getValue('armis_keys'))
-                var values = JSON.parse(m.getValue('armis_values'))
-                for(var j=0;j&lt;types.length;j++)
-                {
-                  if(values[j] == null || values[j] == "") { continue }
-                  switch(types[j])
-                  {
-                    case 'key_attribute':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: keys[j], value: values[j]});break;
-                    case 'tag':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: values[j]});break;
-                    case 'property':
-                      var keys_split = keys[j].split(",")
-                      queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: keys_split[1], key: keys_split[0], value: values[j]});
-                  }
-                  debug.push("Queued " + types[j] + " '" + keys[j] + "':" + values[j] + lapReport(lap));lap=now()
-                }
-              }
-              else
-              {
-                debug.push("Value '" + value + "' not found in Armis SNOW Upload Value Map." + lapReport(lap));lap=now()
-                writeToErrorLog({id: eid, error_message: "Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+field_name+"'. Property was not uploaded due to missing corresponding snow_value entry.", debug_string: debug.join('\n')})
-              }
-            }
-            
+          if(q.next()){            
+            debug.push(queueAnyAttribute({
+                       execution_id: eid,
+                       armis_id: armis_device.getValue('armis_device_id'),
+                       mac: armis_device.getValue('mac_address'),
+                       snow_field: field_name,
+                       value: value,
+                       upload_type: q.getValue('upload_type'),
+                       is_mapped_upload: q.getValue('is_mapped_upload'),
+                       format_as_utc: q.getValue('format_as_utc'),
+                       armis_attribute_description: q.getValue('armis_attribute_description'),
+                       armis_property_key: q.getValue('armis_property_key')}))
           }
         }
         else
@@ -1997,7 +1994,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=fields_child0,child_name=fields_child0,child_type=object,child_type_label=Object,child_uiUniqueId=9eb40ef5-5525-498b-8272-b8beb1d52f91,co_type_name=FD73179f99794b9010f0897cd6f5aed5b4,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=e20c0e47-a3e4-4f8e-b9b7-9c10dcaf0945</attributes>
+        <attributes>child_label=fields_child0,child_name=fields_child0,child_type=object,child_type_label=Object,child_uiUniqueId=53d68398-f26a-49ba-8b34-56c3b07b4cfb,co_type_name=FD08444ee3be8b5010281c24719a065f79,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=e20c0e47-a3e4-4f8e-b9b7-9c10dcaf0945</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2056,7 +2053,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 02:26:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9344bb0a1bde58104be764e8bc4bcbf1</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2064,7 +2061,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:15</sys_updated_on>
+        <sys_updated_on>2020-09-10 16:54:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2159,7 +2156,76 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
-    <sys_hub_step_instance action="delete_multiple" query="action=8344bb0a1bde58104be764e8bc4bcbee^sys_idNOT INdf44bb0a1bde58104be764e8bc4bcbff"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=8344bb0a1bde58104be764e8bc4bcbee^sys_idNOT IN6a05b9ef1b0b50104ca7edf9bc4bcb4c,df44bb0a1bde58104be764e8bc4bcbff"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="UPDATE_ProcessUpdate (v2.1)">8344bb0a1bde58104be764e8bc4bcbee</action>
+        <cid>e3282d50-3eeb-4c52-ab40-cd01e3920930</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>LIBRARIES</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6a05b9ef1b0b50104ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:31</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6a05b9ef1b0b50104ca7edf9bc4bcb4c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a05b9ef1b0b50104ca7edf9bc4bcb4c</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:03</sys_created_on>
+        <sys_id>a605b9ef1b0b50104ca7edf9bc4bcb52</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 16:54:31</sys_updated_on>
+        <value>
+//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
+
+//'TABLES AND REST' FUNCTION LIBRARY v0.16 MINIFIED
+//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
+function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var a={table:"x_fmcna_armis_inte_armis_rest_api_log"};return a.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(a)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var a={table:"x_fmcna_armis_inte_armis_op_property_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],a.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(a)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_arp_table"};return a.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(a)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return a.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],a.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(a)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var a={table:"x_fmcna_armis_inte_armis_op_application_upload"};return a.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],a.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(a)}function queueAnyAttribute(e){var a=now(),t=[];if(1==e.format_as_utc&amp;&amp;(e.value=e.value.replace(" ","T"),t.push("Converted value to UTC: "+e.value+lapReport(a)),a=now()),1!=e.is_mapped_upload){switch(e.upload_type){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:e.armis_property_key,value:e.value});break;case"property":queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:e.armis_attribute_description,key:e.armis_property_key,value:e.value});break;case"tag":e.armis_attribute_description=e.armis_attribute_description.replace("###",e.value),queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:e.armis_attribute_description})}t.push("Queued upload. key="+e.armis_property_key+",desc="+e.armis_attribute_description+",type="+e.upload_type+",value="+e.value+lapReport(a)),a=now()}else{var r=new GlideRecord("x_fmcna_armis_inte_armis_snow_upload_value_map");if(r.addQuery("snow_field",e.snow_field),r.addQuery("snow_value",e.value),r.query(),r.next()){t.push("Processing mapped upload for value '"+e.value+"'"+lapReport(a)),a=now();for(var i=JSON.parse(r.getValue("armis_types")),n=JSON.parse(r.getValue("armis_keys")),s=JSON.parse(r.getValue("armis_values")),u=0;u&lt;i.length;u++)if(null!=s[u]&amp;&amp;""!=s[u]){switch(i[u]){case"key_attribute":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:n[u],value:s[u]});break;case"tag":queueKeyAttribute({execution_id:e.execution_id,armis_id:e.armis_id,mac:e.mac,attribute:"TAG",value:s[u]});break;case"property":var d=n[u].split(",");queueProperty({armis_id:e.armis_id,execution_id:e.execution_id,name:d[1],key:d[0],value:s[u]})}t.push("Queued "+i[u]+" '"+n[u]+"':"+s[u]+lapReport(a)),a=now()}}else t.push("Value '"+e.value+"' not found in Armis SNOW Upload Value Map."+lapReport(a)),a=now(),writeToErrorLog({id:e.execution_id,error_message:"Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+e.snow_field+"'. Property was not uploaded due to missing corresponding snow_value entry.",debug_string:t.join("\n")})}return t.join("\n")}function executeStandardREST(e){try{var a=new GlideDateTime,t=new sn_ws.RESTMessageV2("Armis API",e.endpoint);t.setRequestHeader("Authorization",getCurrentToken()),t.setRequestHeader("accept","application/json"),t.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var r=0;r&lt;e.query_params.length;r++)t.setQueryParameter(e.query_params[r][0],e.query_params[r][1]);t.setRequestBody(e.payload);var i,n=now(),s={};return 1==e.async?i=t.executeAsync():(i=t.execute(),s.response_code=i.getStatusCode(),s.response_body=i.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:a,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var a=new GlideRecord("sys_attachment"),t=(new GlideSysAttachment).write(a,e.id+".csv","text/plain",e.payload),r=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");r.initialize(),r.attachment=t,r.execution_id=e.id,r.status="PENDING",r.type=e.type,r.content=e.payload,r.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var a=new GlideRecord("cmdb_ci_network_adapter");a.addQuery("cmdb_ci",e.sys_id),a.query();for(var t=null,r=-1e3;a.next();)if(isValidMACAddress(a.mac_address)&amp;&amp;!a.mac_address.endsWith("00:00:01")){var i=0;(""+a.ip_address).startsWith("10.")&amp;&amp;(i+=1e3),(""+a.name).startsWith("Local Area")&amp;&amp;(i+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",a.mac_address),n.query(),n.next()&amp;&amp;(i-=n.getAggregate("COUNT")),i&gt;r&amp;&amp;i&gt;0&amp;&amp;(t=""+a.mac_address,r=i)}return t}function queueInitialARPandCSV(e,a){var t=getBestMAC(e),r=e.ip_address;isValidMACAddress(t)&amp;&amp;isValidIPAddress(r)&amp;&amp;(queueARP({execution_id:a,mac:t,ip:r}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:a,armis_id:"",mac:t,attribute:"IP",value:r}))}function getPendingRecordsEndSysID(e,a,t){null==t&amp;&amp;(t={}),null==t.force_field&amp;&amp;(t.force_field="status"),null==t.force_pending&amp;&amp;(t.force_pending="PENDING");var r=new GlideRecord(a);for(r.addQuery(t.force_field,t.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.query();r.next();)if(0==r.hasNext())return r.getValue("sys_id");return null}function getNumPendingRecords(e,a,t,r){null==r&amp;&amp;(r={}),null==r.force_field&amp;&amp;(r.force_field="status"),null==r.force_pending&amp;&amp;(r.force_pending="PENDING");var i=new GlideRecord(a);return i.addQuery(r.force_field,r.force_pending),i.setLimit(e),i.orderBy("sys_id"),i.addQuery("sys_id","&lt;=",t),i.query(),i}
+
+
+(function execute(inputs, outputs) {
+// ... code ...
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a05b9ef1b0b50104ca7edf9bc4bcb4c</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-09-10 15:48:03</sys_created_on>
+        <sys_id>e205b9ef1b0b50104ca7edf9bc4bcb52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-09-10 15:48:03</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="UPDATE_ProcessUpdate (v2.1)">8344bb0a1bde58104be764e8bc4bcbee</action>
         <cid>32ab521e-c2c5-4424-8abd-c8997be99e74</cid>
@@ -2169,7 +2235,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <icon/>
         <inputs/>
         <label>Script step</label>
-        <order>1</order>
+        <order>2</order>
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
@@ -2178,7 +2244,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 02:26:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>df44bb0a1bde58104be764e8bc4bcbff</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2186,7 +2252,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:15</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:27</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=df44bb0a1bde58104be764e8bc4bcbff"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2197,9 +2263,9 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 02:26:06</sys_created_on>
         <sys_id>5344fb0a1bde58104be764e8bc4bcb3f</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-03 23:10:15</sys_updated_on>
+        <sys_updated_on>2020-09-10 15:56:27</sys_updated_on>
         <value>/*
 
 This should be called every time a computer gets an update.
@@ -2212,21 +2278,6 @@ This script does the following:
 3. If any fields updated, queue an arp entry as well.
 
 */
-
-
-//GENERAL FUNCTION LIBRARY v0.10 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function now(){return(new GlideDateTime).getNumericValue()}function lapReport(e){var r="("+(now()-e)+"ms)";return e=now(),r}function includes(e,r){for(var t=0;t&lt;e.length;t++)if(e[t]==r)return!0;return!1}function digest(e){for(var r=5381,t=e.length;t;)r=33*r^e.charCodeAt(--t);return r&gt;&gt;&gt;0}function isIPv6(e){return!!RegExp("^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$").test(e)}function isIPv4(e){return!!RegExp("^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$").test(e)}function isValidIPAddress(e){return isIPv4(e)||isIPV6(e)}function isValidMACAddress(e){return RegExp("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$").test(e)}function generateID(){var e="";arr="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";for(var r=6;r&gt;0;r--)e+=arr[Math.floor(Math.random()*arr.length)];return e}function insertOrUpdate(e){var r={},t=now();null==e.unique_pairs&amp;&amp;(e.unique_pairs=[]);try{var a=new GlideRecord(e.table);if(0!=e.unique_pairs.length){for(var i=0;i&lt;e.unique_pairs.length;i++)a.addQuery(e.unique_pairs[i][0],e.unique_pairs[i][1]);a.query()}if(0==a.getRowCount()){a.initialize();for(i=0;i&lt;e.unique_pairs.length;i++)a[e.unique_pairs[i][0]]=e.unique_pairs[i][1];for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.insert(),r.operation="insert"}else{for(i=0;i&lt;e.update_pairs.length;i++)a[e.update_pairs[i][0]]=e.update_pairs[i][1];a.updateMultiple(),r.operation="update"}}catch(e){r.operation="error: "+e}return r.time_delta=now()-t,r}function writeToActionLog(e){var r={table:"x_fmcna_armis_inte_armis_action_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["action_type",e.action_type],["api_time",e.api_time],["heavy_processing_time",e.heavy_processing_time],["total_time",e.total_time],["report",(""+e.report).substring(0,199)],["debug_string",(""+e.debug_string).substring(0,1999)]],insertOrUpdate(r)}function writeToErrorLog(e){var r={table:"x_fmcna_armis_inte_armis_error_log"};return r.unique_pairs=[["execution_id",e.id]],r.update_pairs=[["error_message",e.error_message],["debug_string",e.debug_string]],insertOrUpdate(r)}function getConfigValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_configuration");return r.addQuery("key",e),r.query(),0==r.getRowCount()?"":(r.next(),r.getValue("value"))}function getCacheValue(e,r){var t=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");if(t.addQuery("key",e),t.query(),0==t.getRowCount())return null;switch(t.next(),r){case"str":return t.getValue("value_string");case"int":return t.getValue("value_int");case"datetime":return t.getValue("value_datetime")}}function getCurrentToken(){return getCacheValue("token","str")}function setCacheValue(e,r,t){var a={table:"x_fmcna_armis_inte_armis_integration_cache"};switch(a.unique_pairs=[["key",e]],t){case"str":a.update_pairs=[["value_string",r]];break;case"int":a.update_pairs=[["value_int",r]];break;case"datetime":a.update_pairs=[["value_datetime",r]]}return insertOrUpdate(a)}function deleteCacheValue(e){var r=new GlideRecord("x_fmcna_armis_inte_armis_integration_cache");r.addQuery("key",e),r.query(),r.deleteMultiple()}
-
-
-
-
-//'TABLES AND REST' FUNCTION LIBRARY v0.15 MINIFIED
-//SEE FUNCTION_LIBRARY ACTION FOR DOCUMENTATION AND FULL VERSION
-function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.response_body&amp;&amp;(e.response_body="");var t={table:"x_fmcna_armis_inte_armis_rest_api_log"};return t.update_pairs=[["execution_id",e.id],["api_endpoint",e.endpoint],["payload",(""+e.payload).substring(0,1999)],["response_code",e.response_code],["response_body",(""+e.response_body).substring(0,1999)],["query_submitted_at",e.start_time],["query_response_time_ms",e.time_delta_ms]],insertOrUpdate(t)}function queueProperty(e){if(null==e.name||""==e.name)return{operation:"error: empty name",time_delta:0};if(null==e.value||""==e.value)return{operation:"error: empty value",time_delta:0};null!=e.key&amp;&amp;""!=e.key||(e.key=e.name);var t={table:"x_fmcna_armis_inte_armis_op_property_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["property_name",e.name]],t.update_pairs=[["property_value",e.value],["property_key",e.key],["execution_id",e.execution_id],["status","PENDING"]],insertOrUpdate(t)}function queueARP(e){if(null==e.mac||""==e.mac)return{operation:"error: empty mac",time_delta:0};if(null==e.ip||""==e.ip)return{operation:"error: empty ip",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_arp_table"};return t.update_pairs=[["execution_id",e.execution_id],["mac",e.mac],["ip",e.ip],["status","PENDING"]],insertOrUpdate(t)}function queueKeyAttribute(e){if(!(null!=e.armis_id&amp;&amp;""!=e.armis_id||null!=e.mac&amp;&amp;""!=e.mac))return{operation:"error: must have either a MAC or an Armis ID",time_delta:0};if(allowed_attributes=["CATEGORY","IP","LAST_SEEN","MODEL","NAME","OS","OS_VERSION","TAG","TYPE","USER"],0==includes(allowed_attributes,e.attribute))return{operation:"error: attribute '"+e.attribute+"' is not valid.",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_key_attribute"};return t.unique_pairs=[["armis_mac",e.mac],["attribute",e.attribute]],t.update_pairs=[["execution_id",e.execution_id],["armis_device_id",e.armis_id],["value",e.value],["status","PENDING"]],insertOrUpdate(t)}function queueApplication(e){if(null==e.armis_id||""==e.armis_id)return{operation:"error: Armis ID cannot be empty",time_delta:0};if(null==e.name||""==e.name)return{operation:"error: Software name cannot be empty",time_delta:0};var t={table:"x_fmcna_armis_inte_armis_op_application_upload"};return t.unique_pairs=[["armis_device_id",e.armis_id],["application_name",e.name]],t.update_pairs=[["execution_id",e.execution_id],["application_version",e.version],["status","PENDING"]],insertOrUpdate(t)}function executeStandardREST(e){try{var t=new GlideDateTime,i=new sn_ws.RESTMessageV2("Armis API",e.endpoint);i.setRequestHeader("Authorization",getCurrentToken()),i.setRequestHeader("accept","application/json"),i.setRequestHeader("content-type","application/json"),null==e.query_params&amp;&amp;(e.query_params=[]);for(var a=0;a&lt;e.query_params.length;a++)i.setQueryParameter(e.query_params[a][0],e.query_params[a][1]);i.setRequestBody(e.payload);var r,n=now(),s={};return 1==e.async?r=i.executeAsync():(r=i.execute(),s.response_code=r.getStatusCode(),s.response_body=r.getBody()),s.api_time=now()-n,writeToAPILog({id:e.id,endpoint:e.endpoint,payload:e.payload,response_code:s.response_code,response_body:s.response_body,start_time:t,time_delta_ms:s.api_time}),s}catch(e){return(s={response_code:"xx"}).response_body="Failed to build query. "+e,s.api_time=0,s}}function queueAttachmentREST(e){var t=new GlideRecord("sys_attachment"),i=(new GlideSysAttachment).write(t,e.id+".csv","text/plain",e.payload),a=new GlideRecord("x_fmcna_armis_inte_armis_attachment_upload");a.initialize(),a.attachment=i,a.execution_id=e.id,a.status="PENDING",a.type=e.type,a.content=e.payload,a.insert()}function getBestMAC(e){if(isValidMACAddress(e.mac_address)&amp;&amp;!e.mac_address.endsWith("00:00:01"))return e.mac_address;var t=new GlideRecord("cmdb_ci_network_adapter");t.addQuery("cmdb_ci",e.sys_id),t.query();for(var i=null,a=-1e3;t.next();)if(isValidMACAddress(t.mac_address)&amp;&amp;!t.mac_address.endsWith("00:00:01")){var r=0;(""+t.ip_address).startsWith("10.")&amp;&amp;(r+=1e3),(""+t.name).startsWith("Local Area")&amp;&amp;(r+=900);var n=new GlideAggregate("cmdb_ci_network_adapter");n.addAggregate("COUNT"),n.addQuery("mac_address",t.mac_address),n.query(),n.next()&amp;&amp;(r-=n.getAggregate("COUNT")),r&gt;a&amp;&amp;r&gt;0&amp;&amp;(i=""+t.mac_address,a=r)}return i}function queueInitialARPandCSV(e,t){var i=getBestMAC(e),a=e.ip_address;isValidMACAddress(i)&amp;&amp;isValidIPAddress(a)&amp;&amp;(queueARP({execution_id:t,mac:i,ip:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"NAME",value:""+e.name}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"IP",value:a}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"TAG",value:getConfigValue("armis_import_universal_tag")}),queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"LAST_SEEN",value:(new GlideDateTime).getDisplayValue().replace(" ","T")}),null!=e.model_id&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"MODEL",value:e.model_id.getDisplayValue()}),null!=e.os&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS",value:e.os.getDisplayValue()}),null!=e.os_version&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"OS_VERSION",value:e.os_version}),null!=e.users&amp;&amp;queueKeyAttribute({execution_id:t,armis_id:"",mac:i,attribute:"USER",value:e.users}))}function getPendingRecordsEndSysID(e,t,i){null==i&amp;&amp;(i={}),null==i.force_field&amp;&amp;(i.force_field="status"),null==i.force_pending&amp;&amp;(i.force_pending="PENDING");var a=new GlideRecord(t);for(a.addQuery(i.force_field,i.force_pending),a.setLimit(e),a.orderBy("sys_id"),a.query();a.next();)if(0==a.hasNext())return a.getValue("sys_id");return null}function getNumPendingRecords(e,t,i,a){null==a&amp;&amp;(a={}),null==a.force_field&amp;&amp;(a.force_field="status"),null==a.force_pending&amp;&amp;(a.force_pending="PENDING");var r=new GlideRecord(t);return r.addQuery(a.force_field,a.force_pending),r.setLimit(e),r.orderBy("sys_id"),r.addQuery("sys_id","&lt;=",i),r.query(),r}
-
-
-
 
 
 
@@ -2306,73 +2357,18 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
           var q = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
           q.addQuery('snow_field',field_name)
           q.query()
-          while(q.next())
-          {
-            var armis_attribute_description = q.getValue('armis_attribute_description')
-            var armis_property_key = q.getValue('armis_property_key')
-            var format_as_utc = q.getValue('format_as_utc')
-            var is_mapped_upload = q.getValue('is_mapped_upload')
-            var upload_type = q.getValue('upload_type')
-            
-            
-         	//Convert to UTC format if needed
-            if(format_as_utc == true)
-            {
-              //UTC format is just a "T" in the place of a space.
-              value = value.replace(' ','T')
-              debug.push("Converted value to UTC: " + value + lapReport(lap));lap=now()
-            }
-            
-            if(is_mapped_upload != true)
-            {
-              switch(upload_type)
-              {
-                case 'key_attribute':
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: armis_property_key, value: value});break;
-                case 'property':
-                  queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: armis_attribute_description, key: armis_property_key, value: value})
-                case 'tag':
-                  armis_attribute_description = armis_attribute_description.replace("###",value)
-                  queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: armis_attribute_description});break;
-              }
-              debug.push("Queued upload. key=" + armis_property_key + ",desc=" + armis_attribute_description + ",type=" + upload_type + ",value=" + value + lapReport(lap));lap=now()
-            }
-            else
-            {
-              //We need to process this using the table  Armis SNOW Upload Value Map
-              var m = new GlideRecord('x_fmcna_armis_inte_armis_snow_upload_value_map')
-              m.addQuery('snow_field',field_name)
-              m.addQuery('snow_value',value)
-              m.query()
-              if(m.next())
-              {
-                debug.push("Processing mapped upload for value '"+value+"'" + lapReport(lap));lap=now()
-                var types = JSON.parse(m.getValue('armis_types'))
-                var keys = JSON.parse(m.getValue('armis_keys'))
-                var values = JSON.parse(m.getValue('armis_values'))
-                for(var j=0;j&lt;types.length;j++)
-                {
-                  if(values[j] == null || values[j] == "") { continue }
-                  switch(types[j])
-                  {
-                    case 'key_attribute':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: keys[j], value: values[j]});break;
-                    case 'tag':
-                      queueKeyAttribute({execution_id:eid, armis_id: armis_device.armis_device_id, mac: armis_device.mac_address, attribute: 'TAG', value: values[j]});break;
-                    case 'property':
-                      var keys_split = keys[j].split(",")
-                      queueProperty({armis_id: armis_device.armis_device_id, execution_id: eid, name: keys_split[1], key: keys_split[0], value: values[j]});
-                  }
-                  debug.push("Queued " + types[j] + " '" + keys[j] + "':" + values[j] + lapReport(lap));lap=now()
-                }
-              }
-              else
-              {
-                debug.push("Value '" + value + "' not found in Armis SNOW Upload Value Map." + lapReport(lap));lap=now()
-                writeToErrorLog({id: eid, error_message: "Armis SNOW Upload Value Map must contain all possible values found in SNOW CMDB for field '"+field_name+"'. Property was not uploaded due to missing corresponding snow_value entry.", debug_string: debug.join('\n')})
-              }
-            }
-            
+          if(q.next()){            
+            debug.push(queueAnyAttribute({
+                       execution_id: eid,
+                       armis_id: armis_device.getValue('armis_device_id'),
+                       mac: armis_device.getValue('mac_address'),
+                       snow_field: field_name,
+                       value: value,
+                       upload_type: q.getValue('upload_type'),
+                       is_mapped_upload: q.getValue('is_mapped_upload'),
+                       format_as_utc: q.getValue('format_as_utc'),
+                       armis_attribute_description: q.getValue('armis_attribute_description'),
+                       armis_property_key: q.getValue('armis_property_key')}))
           }
         }
         else
