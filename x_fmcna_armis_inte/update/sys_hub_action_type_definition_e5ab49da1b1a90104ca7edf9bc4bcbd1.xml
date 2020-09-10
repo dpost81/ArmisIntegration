@@ -25,7 +25,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>e5ab49da1b1a90104ca7edf9bc4bcbd1</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>65</sys_mod_count>
         <sys_name>MAIN_QueueAllDevicePropertiesEtc (v2.2)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_e5ab49da1b1a90104ca7edf9bc4bcbd1</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-04 21:50:17</sys_updated_on>
+        <sys_updated_on>2020-09-10 14:32:10</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -58,7 +58,7 @@
         <sys_created_on>2020-07-31 08:55:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>598dc9521b5a90104ca7edf9bc4bcb15</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -66,7 +66,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-04 21:50:17</sys_updated_on>
+        <sys_updated_on>2020-09-10 14:32:10</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=598dc9521b5a90104ca7edf9bc4bcb15"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -77,9 +77,9 @@
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_id>118d01921b5a90104ca7edf9bc4bcbf1</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-04 21:50:17</sys_updated_on>
+        <sys_updated_on>2020-09-10 14:32:10</sys_updated_on>
         <value>/*
 
 This script iterates through all devices that have a link and haven't pushed all properties up to Armis yet, and pushes those properties up to Armis.
@@ -118,23 +118,22 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
     var p = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
     p.query()
     
-    var field_dictionary = {}
+    var field_dictionary = []
     while(p.next())
     {
       var entry =  {}
+      entry.field_name = p.getValue('snow_field')
       entry.upload_type = p.getValue('upload_type')
       entry.armis_attribute_description = p.getValue('armis_attribute_description')
       entry.armis_property_key = p.getValue('armis_property_key')
       entry.format_as_utc = p.getValue('format_as_utc')
       entry.is_mapped_upload = p.getValue('is_mapped_upload')
-      field_dictionary[p.snow_field] = entry
+      field_dictionary.push(entry)
     }
+    debug.push(JSON.stringify(field_dictionary));return
     
     debug.push("Loaded property dictionary."+ lapReport(lap));lap=now()
     
-    //##########
-    outputs.debug = JSON.stringify(field_dictionary)
-    return
 
     //Clear the COMPLETE entries off the Properties and Applications tables. (This is truly necessary, these tables get HUGE very quickly.)
     var tables_to_clear = [
@@ -190,11 +189,12 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
 
       //Push properties
       var local_property_count = 0
-      for(var i=0;i&lt;property_dictionary.length;i++)
+      for(var i=0;i&lt;field_dictionary.keys.length;i++)
       {
-        var field_name = property_dictionary[i][0]
-        var field_name_display_value = property_dictionary[i][1]
-
+        var field_name = property_dictionary.keys[i]
+        var field_name_display_value = property_dictionary[field_name]["armis_attribute_description"]
+		outputs.debug = field_name + field_name_display_value
+        return
         //Does this actually have a value?
         if(snow_device.getValue(field_name) != null)
         {
@@ -577,7 +577,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_on>2020-07-31 08:55:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>598dc9521b5a90104ca7edf9bc4bcb15</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -585,7 +585,7 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-04 21:50:17</sys_updated_on>
+        <sys_updated_on>2020-09-10 14:32:10</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=598dc9521b5a90104ca7edf9bc4bcb15"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -596,9 +596,9 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-31 08:55:54</sys_created_on>
         <sys_id>118d01921b5a90104ca7edf9bc4bcbf1</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-04 21:50:17</sys_updated_on>
+        <sys_updated_on>2020-09-10 14:32:10</sys_updated_on>
         <value>/*
 
 This script iterates through all devices that have a link and haven't pushed all properties up to Armis yet, and pushes those properties up to Armis.
@@ -637,23 +637,22 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
     var p = new GlideRecord('x_fmcna_armis_inte_armis_snow_attribute_map')
     p.query()
     
-    var field_dictionary = {}
+    var field_dictionary = []
     while(p.next())
     {
       var entry =  {}
+      entry.field_name = p.getValue('snow_field')
       entry.upload_type = p.getValue('upload_type')
       entry.armis_attribute_description = p.getValue('armis_attribute_description')
       entry.armis_property_key = p.getValue('armis_property_key')
       entry.format_as_utc = p.getValue('format_as_utc')
       entry.is_mapped_upload = p.getValue('is_mapped_upload')
-      field_dictionary[p.snow_field] = entry
+      field_dictionary.push(entry)
     }
+    debug.push(JSON.stringify(field_dictionary));return
     
     debug.push("Loaded property dictionary."+ lapReport(lap));lap=now()
     
-    //##########
-    outputs.debug = JSON.stringify(field_dictionary)
-    return
 
     //Clear the COMPLETE entries off the Properties and Applications tables. (This is truly necessary, these tables get HUGE very quickly.)
     var tables_to_clear = [
@@ -709,11 +708,12 @@ function writeToAPILog(e){null==e.payload&amp;&amp;(e.payload=""),null==e.respon
 
       //Push properties
       var local_property_count = 0
-      for(var i=0;i&lt;property_dictionary.length;i++)
+      for(var i=0;i&lt;field_dictionary.keys.length;i++)
       {
-        var field_name = property_dictionary[i][0]
-        var field_name_display_value = property_dictionary[i][1]
-
+        var field_name = property_dictionary.keys[i]
+        var field_name_display_value = property_dictionary[field_name]["armis_attribute_description"]
+		outputs.debug = field_name + field_name_display_value
+        return
         //Does this actually have a value?
         if(snow_device.getValue(field_name) != null)
         {
