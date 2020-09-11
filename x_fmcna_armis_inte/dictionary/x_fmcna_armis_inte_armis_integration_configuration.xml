@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis Integration Configuration" max_length="40" name="x_fmcna_armis_inte_armis_integration_configuration" type="collection">
+        <element choice="1" label="Key" mandatory="true" max_length="64" name="key" type="choice">
+            <choice>
+                <element hint="Get this from Armis -&gt; Integrations -&gt; API. Needs to be a separate secret for each instance, because refreshing the token revokes the last one." inactive_on_update="false" label="api_secret" value="api_secret"/>
+                <element hint="This tag is attached to every export/update to Armis." inactive_on_update="false" label="armis_import_universal_tag" value="armis_import_universal_tag"/>
+                <element hint="This defines the end of the &quot;cooldown period&quot; during which updates cannot be sent to Armis. The cooldown period is used to prevent loopback responses from Armis from re-uploading and causing an infinite loop." inactive_on_update="false" label="cooldown_end_seconds" value="cooldown_end_seconds"/>
+                <element hint="Maximum number of records pulled from query." inactive_on_update="false" label="getd_max_records" value="getd_max_records"/>
+                <element hint="Start number for REST query for GETD. Iterates each time the query is run." inactive_on_update="false" label="getd_record_i" value="getd_record_i"/>
+                <element hint="This defines the beginning of the &quot;grace period&quot; during which updates can be sent to Armis before the cooldown period. The cooldown period is used to prevent loopback responses from Armis from re-uploading and causing an infinite loop." inactive_on_update="false" label="grace_period_cooldown_seconds" value="grace_period_cooldown_seconds"/>
+                <element inactive_on_update="false" label="max_main_queue_executions" value="max_main_queue_executions"/>
+                <element hint="This is the % of time (max value 1) that queue processing will occur. Every minute, processing will occur until this % of a minute has elapsed. For example, if set to 50%, then every minute it will do 30 seconds of processing and then stop." inactive_on_update="false" label="runtime_percent" value="runtime_percent"/>
+                <element hint="This is the number of occurrences of a MAC that can exist within the entire CMDB before this integration assumes that it's a &quot;virtual MAC&quot;. Virtual MACs are ineligible for linking to Armis." inactive_on_update="false" label="vmac_threshold" value="vmac_threshold"/>
+            </choice>
+        </element>
+        <element label="value" max_length="256" name="value" type="string"/>
+    </element>
+</database>

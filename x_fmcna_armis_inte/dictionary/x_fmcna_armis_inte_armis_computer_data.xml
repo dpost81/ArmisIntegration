@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis Computer Data" max_length="40" name="x_fmcna_armis_inte_armis_computer_data" type="collection">
+        <element label="API query body" max_length="2000" name="api_query_body" type="string"/>
+        <element label="Armis Device ID" max_length="40" name="armis_device_id" type="integer"/>
+        <element label="Armis MAC Address" max_length="20" name="armis_mac_address" type="string"/>
+        <element display="true" label="Computer" mandatory="true" max_length="32" name="computer" reference="cmdb_ci_computer" type="reference"/>
+        <element label="Last Pull From Armis" max_length="40" name="last_pull_from_armis" type="glide_date_time"/>
+        <element label="Last Push To Armis" max_length="40" name="last_push_to_armis" type="glide_date_time"/>
+        <element label="Query Body" max_length="10000" name="query_body" type="string"/>
+        <element choice="1" label="Source" max_length="40" name="source" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Armis" value="Armis"/>
+                <element inactive_on_update="false" label="ServiceNow" value="ServiceNow"/>
+            </choice>
+        </element>
+    </element>
+</database>

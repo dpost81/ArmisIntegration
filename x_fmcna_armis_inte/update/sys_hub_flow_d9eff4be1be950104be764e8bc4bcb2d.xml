@@ -1,0 +1,3303 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-orlando-12-11-2019__patch4-05-20-2020</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Queues a sync of the device in the Computers_From_Armis table</description>
+        <internal_name>trigger_onupdate_computers_from_armis</internal_name>
+        <label_cache>[{"name":"ce3b274b-1989-4f5c-9eac-3c306928bf9f.operation_sys_id","label":"3.1➛operation_sys_id","reference_display":"operation_sys_id","type":"GUID","base_type":"GUID","attributes":{"uiType":"GUID","uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b17cf7a7-4ae8-4cfe-abf7-2e655b2414f3"}},{"name":"b3dcebf9-0841-4027-a26d-8775c8ff5d38.item.mac_address","label":"2.1➛Armis Device Table Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_armis_device_table","column_name":"mac_address"},{"name":"982dbbc0-d815-40a1-ae91-b8937ea298e2.operation_sys_id","label":"2.1.2.1➛operation_sys_id","reference_display":"operation_sys_id","type":"GUID","base_type":"GUID","attributes":{"uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"GUID","uiUniqueId":"b17cf7a7-4ae8-4cfe-abf7-2e655b2414f3"}},{"name":"e168535c-889d-444a-b24b-51011a6139fb.cooldown_status","label":"2.1.1➛cooldown_status","reference_display":"cooldown_status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"58714dd6-070a-465d-b3ce-b017fa0ae0ab"}},{"name":"b3dcebf9-0841-4027-a26d-8775c8ff5d38.item","label":"2.1➛Armis Device Table Record","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Table","label":"1➛Armis Device Table Table","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Records","label":"1➛Armis Device Table Records","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current","label":"Trigger➛Computers from Armis Record","reference":"u_cmdb_ci_computers_from_armis","reference_display":"Computers from Armis","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.mac_address","label":"Trigger➛Computers from Armis Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"u_cmdb_ci_computers_from_armis","column_name":"mac_address"},{"name":"89db8fa6-161d-4cce-ae8b-cb30185d540a.operation_sys_id","label":"2.1.2.1➛operation_sys_id","reference_display":"operation_sys_id","type":"GUID","base_type":"GUID","attributes":{"uiType":"GUID","uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b17cf7a7-4ae8-4cfe-abf7-2e655b2414f3"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"table_name"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"document_id"}}]</label_cache>
+        <latest_snapshot>d93c9889dbce5810d2c2af6d139619ee</latest_snapshot>
+        <master_snapshot>3a7d55721bad50104be764e8bc4bcba9</master_snapshot>
+        <name>TRIGGER_OnUpdate_Computers_From_Armis</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>cf7d95721bad50104be764e8bc4bcb2d</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 14:26:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>d9eff4be1be950104be764e8bc4bcb2d</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>TRIGGER_OnUpdate_Computers_From_Armis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name>sys_hub_flow_d9eff4be1be950104be764e8bc4bcb2d</sys_update_name>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=d9eff4be1be950104be764e8bc4bcb2d"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="u_cmdb_ci_computers_from_armis">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>cf7d95721bad50104be764e8bc4bcb2d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:32</sys_updated_on>
+        <table>u_cmdb_ci_computers_from_armis</table>
+    </sys_flow_record_trigger>
+    <sys_hub_flow_component action="delete_multiple" query="flow=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT IN0a93622b1b3d10504ca7edf9bc4bcb1f,0c3901ba1b2d50104be764e8bc4bcba0,0e4c16031bf194104be764e8bc4bcb0e,15e16e271bf910504ca7edf9bc4bcb70,17fbd8c91b825010f50cfe25cc4bcbd1,4e4c16031bf194104be764e8bc4bcb11,8e4c16031bf194104be764e8bc4bcb01,c64c16031bf194104be764e8bc4bcb04,c64c16031bf194104be764e8bc4bcb0b"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <order>3.1</order>
+        <parent_ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0a93622b1b3d10504ca7edf9bc4bcb1f</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>22482777-ef1f-4d0f-8c14-c8d139e7240f</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0a93622b1b3d10504ca7edf9bc4bcb1f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>0a93622b1b3d10504ca7edf9bc4bcb1f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_id>0293622b1b3d10504ca7edf9bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:52:59</sys_updated_on>
+        <value>1000</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>0a93622b1b3d10504ca7edf9bc4bcb1f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_id>c293622b1b3d10504ca7edf9bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:52:59</sys_updated_on>
+        <value>novel_device_link</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>0a93622b1b3d10504ca7edf9bc4bcb1f</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_id>c693622b1b3d10504ca7edf9bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:52:59</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Record">c3e09916c31332002841b63b12d3aedf</action_type>
+        <action_type_parent/>
+        <comment>Once we're done processing the record, we don't need it anymore.</comment>
+        <compiled_snapshot>c3e09916c31332002841b63b12d3aedf</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0c3901ba1b2d50104be764e8bc4bcba0</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>svc_armis_sn</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:27</sys_updated_on>
+        <ui_id>df758d89-b2ea-4453-8df6-a27e9c1858a3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0c3901ba1b2d50104be764e8bc4bcba0"/>
+    <sys_element_mapping action="delete_multiple" query="id=0c3901ba1b2d50104be764e8bc4bcba0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>0c3901ba1b2d50104be764e8bc4bcba0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_id>803901ba1b2d50104be764e8bc4bcba2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5bfbd8c91b825010f50cfe25cc4bcbc7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2.1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0e4c16031bf194104be764e8bc4bcb0e</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0e4c16031bf194104be764e8bc4bcb0e"/>
+    <sys_element_mapping action="delete_multiple" query="id=0e4c16031bf194104be764e8bc4bcb0e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>0e4c16031bf194104be764e8bc4bcb0e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>424c16031bf194104be764e8bc4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.2.1</order>
+        <parent_ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>15e16e271bf910504ca7edf9bc4bcb70</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <ui_id>b552e231-1195-4698-af4f-e421ec75fd0a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=15e16e271bf910504ca7edf9bc4bcb70"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>15e16e271bf910504ca7edf9bc4bcb70</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>11e16e271bf910504ca7edf9bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>15e16e271bf910504ca7edf9bc4bcb70</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>19e16e271bf910504ca7edf9bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <value>200</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>15e16e271bf910504ca7edf9bc4bcb70</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>d9e16e271bf910504ca7edf9bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <value>pull_mac_from_armis</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=15e16e271bf910504ca7edf9bc4bcb70"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>arguments</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:33</sys_created_on>
+        <sys_id>51e16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>delay_seconds</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>19e16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>9de16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>priority</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>d9e16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5ffbd8c91b825010f50cfe25cc4bcbd0</block>
+        <comment/>
+        <connected_to>cf84516f-ef95-45a6-8aef-68774cf7f84d</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>17fbd8c91b825010f50cfe25cc4bcbd1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=17fbd8c91b825010f50cfe25cc4bcbd1"/>
+    <sys_element_mapping action="delete_multiple" query="id=17fbd8c91b825010f50cfe25cc4bcbd1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>17fbd8c91b825010f50cfe25cc4bcbd1</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:24</sys_created_on>
+        <sys_id>9ffbd8c91b825010f50cfe25cc4bcbd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:24</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Created or Updated_1.current}}!=</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9bfbd8c91b825010f50cfe25cc4bcbcc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4e4c16031bf194104be764e8bc4bcb11</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4e4c16031bf194104be764e8bc4bcb11"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4e4c16031bf194104be764e8bc4bcb11</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>c64c16031bf194104be764e8bc4bcb14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <value>we have a matching Armis Device Table record</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4e4c16031bf194104be764e8bc4bcb11"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>4e4c16031bf194104be764e8bc4bcb11</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>464c16031bf194104be764e8bc4bcb14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Count}}&gt;0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>4e4c16031bf194104be764e8bc4bcb11</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>824c16031bf194104be764e8bc4bcb14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment>Armis identifies devices by MAC only, so it can be used as a primary key to check whether we already have a device with the same MAC.</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8e4c16031bf194104be764e8bc4bcb01</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>svc_armis_sn</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:27</sys_updated_on>
+        <ui_id>c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8e4c16031bf194104be764e8bc4bcb01"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8e4c16031bf194104be764e8bc4bcb01</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>824c16031bf194104be764e8bc4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_device_table</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8e4c16031bf194104be764e8bc4bcb01</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>ce4c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8e4c16031bf194104be764e8bc4bcb01"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>8e4c16031bf194104be764e8bc4bcb01</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>8a4c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>mac_address={{Created or Updated_1.current.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>8e4c16031bf194104be764e8bc4bcb01</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>c64c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>8e4c16031bf194104be764e8bc4bcb01</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>4e4c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment>First, check to make sure we're not in a cooldown period. The cooldown period is invoked because when this integration sends information up to Armis, Armis will send an update back down to ServiceNow.</comment>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.1</order>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <subflow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c64c16031bf194104be764e8bc4bcb04</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <ui_id>e168535c-889d-444a-b24b-51011a6139fb</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c64c16031bf194104be764e8bc4bcb04"/>
+    <sys_element_mapping action="delete_multiple" query="id=c64c16031bf194104be764e8bc4bcb04"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c64c16031bf194104be764e8bc4bcb04</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>8e4c16031bf194104be764e8bc4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8c801ecf1b7194104be764e8bc4bcbdf</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">13fbd8c91b825010f50cfe25cc4bcba9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2.1.2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c64c16031bf194104be764e8bc4bcb0b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c64c16031bf194104be764e8bc4bcb0b"/>
+    <sys_element_mapping action="delete_multiple" query="id=c64c16031bf194104be764e8bc4bcb0b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c64c16031bf194104be764e8bc4bcb0b</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>024c16031bf194104be764e8bc4bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{e168535c-889d-444a-b24b-51011a6139fb.cooldown_status}}!=during_cooldown</value>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT INb32901ba1b2d50104be764e8bc4bcb93"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b32901ba1b2d50104be764e8bc4bcb93</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b32901ba1b2d50104be764e8bc4bcb93"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>b32901ba1b2d50104be764e8bc4bcb93</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_id>3b2901ba1b2d50104be764e8bc4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:51</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>b32901ba1b2d50104be764e8bc4bcb93</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_id>fb2901ba1b2d50104be764e8bc4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:51</sys_updated_on>
+        <value>u_cmdb_ci_computers_from_armis</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>b32901ba1b2d50104be764e8bc4bcb93</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_id>ff2901ba1b2d50104be764e8bc4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:51</sys_updated_on>
+        <value>every</value>
+        <variable display_value="">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT IN15eff4be1be950104be764e8bc4bcb30"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d9eff4be1be950104be764e8bc4bcb2d</id>
+        <name>TRIGGER_OnUpdate_Computers_From_Armis</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 14:26:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>15eff4be1be950104be764e8bc4bcb30</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 14:26:15</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT IN3b2901ba1b2d50104be764e8bc4bcb7a,f72901ba1b2d50104be764e8bc4bcb7f,ff2901ba1b2d50104be764e8bc4bcb6f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD2b1c940d4082501002e3b521d42f6bed,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</model>
+        <model_id>d9eff4be1be950104be764e8bc4bcb2d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d9eff4be1be950104be764e8bc4bcb2d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3b2901ba1b2d50104be764e8bc4bcb7a</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</model>
+        <model_id>d9eff4be1be950104be764e8bc4bcb2d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d9eff4be1be950104be764e8bc4bcb2d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f72901ba1b2d50104be764e8bc4bcb7f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</model>
+        <model_id>d9eff4be1be950104be764e8bc4bcb2d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d9eff4be1be950104be764e8bc4bcb2d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ff2901ba1b2d50104be764e8bc4bcb6f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT IN0c3901ba1b2d50104be764e8bc4bcba0,8e4c16031bf194104be764e8bc4bcb01"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Record">c3e09916c31332002841b63b12d3aedf</action_type>
+        <action_type_parent/>
+        <comment>Once we're done processing the record, we don't need it anymore.</comment>
+        <compiled_snapshot>c3e09916c31332002841b63b12d3aedf</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0c3901ba1b2d50104be764e8bc4bcba0</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>svc_armis_sn</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:27</sys_updated_on>
+        <ui_id>df758d89-b2ea-4453-8df6-a27e9c1858a3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0c3901ba1b2d50104be764e8bc4bcba0"/>
+    <sys_element_mapping action="delete_multiple" query="id=0c3901ba1b2d50104be764e8bc4bcba0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>0c3901ba1b2d50104be764e8bc4bcba0</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:51</sys_created_on>
+        <sys_id>803901ba1b2d50104be764e8bc4bcba2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment>Armis identifies devices by MAC only, so it can be used as a primary key to check whether we already have a device with the same MAC.</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8e4c16031bf194104be764e8bc4bcb01</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>svc_armis_sn</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:27</sys_updated_on>
+        <ui_id>c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8e4c16031bf194104be764e8bc4bcb01"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8e4c16031bf194104be764e8bc4bcb01</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>824c16031bf194104be764e8bc4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_device_table</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8e4c16031bf194104be764e8bc4bcb01</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>ce4c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8e4c16031bf194104be764e8bc4bcb01"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>8e4c16031bf194104be764e8bc4bcb01</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>8a4c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>mac_address={{Created or Updated_1.current.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>8e4c16031bf194104be764e8bc4bcb01</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>c64c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>8e4c16031bf194104be764e8bc4bcb01</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>4e4c16031bf194104be764e8bc4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT IN0a93622b1b3d10504ca7edf9bc4bcb1f,15e16e271bf910504ca7edf9bc4bcb70,c64c16031bf194104be764e8bc4bcb04"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <order>3.1</order>
+        <parent_ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0a93622b1b3d10504ca7edf9bc4bcb1f</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>22482777-ef1f-4d0f-8c14-c8d139e7240f</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0a93622b1b3d10504ca7edf9bc4bcb1f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>0a93622b1b3d10504ca7edf9bc4bcb1f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_id>0293622b1b3d10504ca7edf9bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:52:59</sys_updated_on>
+        <value>1000</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>0a93622b1b3d10504ca7edf9bc4bcb1f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_id>c293622b1b3d10504ca7edf9bc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:52:59</sys_updated_on>
+        <value>novel_device_link</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>0a93622b1b3d10504ca7edf9bc4bcb1f</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_id>c693622b1b3d10504ca7edf9bc4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:52:59</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0a93622b1b3d10504ca7edf9bc4bcb1f^sys_idNOT IN8e93622b1b3d10504ca7edf9bc4bcb20"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>arguments</input_name>
+        <instance>0a93622b1b3d10504ca7edf9bc4bcb1f</instance>
+        <referenced_table>sys_hub_sub_flow_instance</referenced_table>
+        <script>{"arguments":{"scriptActive":true,"script":"var args \u003d {}\n\nargs.name \u003d fd_data.trigger.current.name\nargs.pass \u003d 1\nargs.computer \u003d fd_data.trigger.current.sys_id\n\nreturn JSON.stringify(args)"}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:52:59</sys_created_on>
+        <sys_id>8e93622b1b3d10504ca7edf9bc4bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:52:59</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.2.1</order>
+        <parent_ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>15e16e271bf910504ca7edf9bc4bcb70</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <ui_id>b552e231-1195-4698-af4f-e421ec75fd0a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=15e16e271bf910504ca7edf9bc4bcb70"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>15e16e271bf910504ca7edf9bc4bcb70</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>11e16e271bf910504ca7edf9bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>15e16e271bf910504ca7edf9bc4bcb70</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>19e16e271bf910504ca7edf9bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <value>200</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>15e16e271bf910504ca7edf9bc4bcb70</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>d9e16e271bf910504ca7edf9bc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <value>pull_mac_from_armis</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=15e16e271bf910504ca7edf9bc4bcb70"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>arguments</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:33</sys_created_on>
+        <sys_id>51e16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>delay_seconds</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>19e16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>9de16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>priority</field>
+        <id>15e16e271bf910504ca7edf9bc4bcb70</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:34</sys_created_on>
+        <sys_id>d9e16e271bf910504ca7edf9bc4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment>First, check to make sure we're not in a cooldown period. The cooldown period is invoked because when this integration sends information up to Armis, Armis will send an update back down to ServiceNow.</comment>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.1</order>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <subflow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c64c16031bf194104be764e8bc4bcb04</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <ui_id>e168535c-889d-444a-b24b-51011a6139fb</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c64c16031bf194104be764e8bc4bcb04"/>
+    <sys_element_mapping action="delete_multiple" query="id=c64c16031bf194104be764e8bc4bcb04"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c64c16031bf194104be764e8bc4bcb04</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>8e4c16031bf194104be764e8bc4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8c801ecf1b7194104be764e8bc4bcbdf</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT IN0e4c16031bf194104be764e8bc4bcb0e,17fbd8c91b825010f50cfe25cc4bcbd1,4e4c16031bf194104be764e8bc4bcb11,c64c16031bf194104be764e8bc4bcb0b"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5bfbd8c91b825010f50cfe25cc4bcbc7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2.1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0e4c16031bf194104be764e8bc4bcb0e</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0e4c16031bf194104be764e8bc4bcb0e"/>
+    <sys_element_mapping action="delete_multiple" query="id=0e4c16031bf194104be764e8bc4bcb0e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>0e4c16031bf194104be764e8bc4bcb0e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>424c16031bf194104be764e8bc4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5ffbd8c91b825010f50cfe25cc4bcbd0</block>
+        <comment/>
+        <connected_to>cf84516f-ef95-45a6-8aef-68774cf7f84d</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>17fbd8c91b825010f50cfe25cc4bcbd1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=17fbd8c91b825010f50cfe25cc4bcbd1"/>
+    <sys_element_mapping action="delete_multiple" query="id=17fbd8c91b825010f50cfe25cc4bcbd1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>17fbd8c91b825010f50cfe25cc4bcbd1</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:24</sys_created_on>
+        <sys_id>9ffbd8c91b825010f50cfe25cc4bcbd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:24</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Created or Updated_1.current}}!=</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9bfbd8c91b825010f50cfe25cc4bcbcc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4e4c16031bf194104be764e8bc4bcb11</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:03</sys_updated_on>
+        <ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4e4c16031bf194104be764e8bc4bcb11"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4e4c16031bf194104be764e8bc4bcb11</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>c64c16031bf194104be764e8bc4bcb14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <value>we have a matching Armis Device Table record</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4e4c16031bf194104be764e8bc4bcb11"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>4e4c16031bf194104be764e8bc4bcb11</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>464c16031bf194104be764e8bc4bcb14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Count}}&gt;0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>4e4c16031bf194104be764e8bc4bcb11</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>824c16031bf194104be764e8bc4bcb14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">13fbd8c91b825010f50cfe25cc4bcba9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2.1.2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c64c16031bf194104be764e8bc4bcb0b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c64c16031bf194104be764e8bc4bcb0b"/>
+    <sys_element_mapping action="delete_multiple" query="id=c64c16031bf194104be764e8bc4bcb0b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c64c16031bf194104be764e8bc4bcb0b</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:04</sys_created_on>
+        <sys_id>024c16031bf194104be764e8bc4bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{e168535c-889d-444a-b24b-51011a6139fb.cooldown_status}}!=during_cooldown</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT IN332901ba1b2d50104be764e8bc4bcb7e,732901ba1b2d50104be764e8bc4bcb8f,fb2901ba1b2d50104be764e8bc4bcb78"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d9eff4be1be950104be764e8bc4bcb2d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>332901ba1b2d50104be764e8bc4bcb7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d9eff4be1be950104be764e8bc4bcb2d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>732901ba1b2d50104be764e8bc4bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d9eff4be1be950104be764e8bc4bcb2d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 15:06:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fb2901ba1b2d50104be764e8bc4bcb78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 15:06:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d9eff4be1be950104be764e8bc4bcb2d^sys_idNOT INcb7d95721bad50104be764e8bc4bcb2e"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"cb7d95721bad50104be764e8bc4bcb2e","name":"plan"}}</plan>
+        <plan_id>d9eff4be1be950104be764e8bc4bcb2d</plan_id>
+        <snapshot>d93c9889dbce5810d2c2af6d139619ee</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>cb7d95721bad50104be764e8bc4bcb2e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:01</sys_updated_on>
+        <trigger display_value="">cf7d95721bad50104be764e8bc4bcb2d</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Queues a sync of the device in the Computers_From_Armis table</description>
+        <internal_name>trigger_onupdate_computers_from_armis</internal_name>
+        <label_cache>[{"name":"ce3b274b-1989-4f5c-9eac-3c306928bf9f.operation_sys_id","label":"3.1➛operation_sys_id","reference_display":"operation_sys_id","type":"GUID","base_type":"GUID","attributes":{"uiType":"GUID","uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b17cf7a7-4ae8-4cfe-abf7-2e655b2414f3"}},{"name":"b3dcebf9-0841-4027-a26d-8775c8ff5d38.item.mac_address","label":"2.1➛Armis Device Table Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"x_fmcna_armis_inte_armis_device_table","column_name":"mac_address"},{"name":"982dbbc0-d815-40a1-ae91-b8937ea298e2.operation_sys_id","label":"2.1.2.1➛operation_sys_id","reference_display":"operation_sys_id","type":"GUID","base_type":"GUID","attributes":{"uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"GUID","uiUniqueId":"b17cf7a7-4ae8-4cfe-abf7-2e655b2414f3"}},{"name":"e168535c-889d-444a-b24b-51011a6139fb.cooldown_status","label":"2.1.1➛cooldown_status","reference_display":"cooldown_status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"58714dd6-070a-465d-b3ce-b017fa0ae0ab"}},{"name":"b3dcebf9-0841-4027-a26d-8775c8ff5d38.item","label":"2.1➛Armis Device Table Record","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Table","label":"1➛Armis Device Table Table","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Records","label":"1➛Armis Device Table Records","reference":"x_fmcna_armis_inte_armis_device_table","reference_display":"Armis Device Table","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current","label":"Trigger➛Computers from Armis Record","reference":"u_cmdb_ci_computers_from_armis","reference_display":"Computers from Armis","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.mac_address","label":"Trigger➛Computers from Armis Record➛MAC Address","reference":"","reference_display":"MAC Address","type":"string","base_type":"string","parent_table_name":"u_cmdb_ci_computers_from_armis","column_name":"mac_address"},{"name":"89db8fa6-161d-4cce-ae8b-cb30185d540a.operation_sys_id","label":"2.1.2.1➛operation_sys_id","reference_display":"operation_sys_id","type":"GUID","base_type":"GUID","attributes":{"uiType":"GUID","uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b17cf7a7-4ae8-4cfe-abf7-2e655b2414f3"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"table_name"}},{"name":"c7325c76-20aa-48f9-8ade-089eff0e7c97.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"document_id"}}]</label_cache>
+        <master>true</master>
+        <name>TRIGGER_OnUpdate_Computers_From_Armis</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">d9eff4be1be950104be764e8bc4bcb2d</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>3a7d55721bad50104be764e8bc4bcba9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:59</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=3a7d55721bad50104be764e8bc4bcba9"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=3a7d55721bad50104be764e8bc4bcba9^sys_idNOT IN035cd6031bf194104be764e8bc4bcb7c,131c940d1b825010f50cfe25cc4bcbe5,3ee1e2671bf910504ca7edf9bc4bcb4a,575cd6031bf194104be764e8bc4bcb88,9f5cd6031bf194104be764e8bc4bcb82,ab93662b1b3d10504ca7edf9bc4bcbd8,cb5cd6031bf194104be764e8bc4bcb7f,cf5cd6031bf194104be764e8bc4bcb6e,cf7d95721bad50104be764e8bc4bcb19"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">13fbd8c91b825010f50cfe25cc4bcba9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2.1.2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>035cd6031bf194104be764e8bc4bcb7c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=035cd6031bf194104be764e8bc4bcb7c"/>
+    <sys_element_mapping action="delete_multiple" query="id=035cd6031bf194104be764e8bc4bcb7c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>035cd6031bf194104be764e8bc4bcb7c</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>cf5cd6031bf194104be764e8bc4bcb7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{e168535c-889d-444a-b24b-51011a6139fb.cooldown_status}}!=during_cooldown</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5ffbd8c91b825010f50cfe25cc4bcbd0</block>
+        <comment/>
+        <connected_to>cf84516f-ef95-45a6-8aef-68774cf7f84d</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>131c940d1b825010f50cfe25cc4bcbe5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=131c940d1b825010f50cfe25cc4bcbe5"/>
+    <sys_element_mapping action="delete_multiple" query="id=131c940d1b825010f50cfe25cc4bcbe5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>131c940d1b825010f50cfe25cc4bcbe5</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:57</sys_created_on>
+        <sys_id>231c940d1b825010f50cfe25cc4bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Created or Updated_1.current}}!=</value>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.2.1</order>
+        <parent_ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3ee1e2671bf910504ca7edf9bc4bcb4a</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>b552e231-1195-4698-af4f-e421ec75fd0a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3ee1e2671bf910504ca7edf9bc4bcb4a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>3ee1e2671bf910504ca7edf9bc4bcb4a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>3ae1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <value>pull_mac_from_armis</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>3ee1e2671bf910504ca7edf9bc4bcb4a</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>76e1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <value>200</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>3ee1e2671bf910504ca7edf9bc4bcb4a</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>b2e1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3ee1e2671bf910504ca7edf9bc4bcb4a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>arguments</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>f6e1e2671bf910504ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>delay_seconds</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>bae1e2671bf910504ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>32e1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>priority</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>7ee1e2671bf910504ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment>First, check to make sure we're not in a cooldown period. The cooldown period is invoked because when this integration sends information up to Armis, Armis will send an update back down to ServiceNow.</comment>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.1</order>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <subflow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>575cd6031bf194104be764e8bc4bcb88</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>e168535c-889d-444a-b24b-51011a6139fb</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=575cd6031bf194104be764e8bc4bcb88"/>
+    <sys_element_mapping action="delete_multiple" query="id=575cd6031bf194104be764e8bc4bcb88"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>575cd6031bf194104be764e8bc4bcb88</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>1b5cd6031bf194104be764e8bc4bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8c801ecf1b7194104be764e8bc4bcbdf</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9bfbd8c91b825010f50cfe25cc4bcbcc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9f5cd6031bf194104be764e8bc4bcb82</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9f5cd6031bf194104be764e8bc4bcb82"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>9f5cd6031bf194104be764e8bc4bcb82</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>1b5cd6031bf194104be764e8bc4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <value>we have a matching Armis Device Table record</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9f5cd6031bf194104be764e8bc4bcb82"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>9f5cd6031bf194104be764e8bc4bcb82</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>975cd6031bf194104be764e8bc4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Count}}&gt;0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>9f5cd6031bf194104be764e8bc4bcb82</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>d35cd6031bf194104be764e8bc4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <order>3.1</order>
+        <parent_ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ab93662b1b3d10504ca7edf9bc4bcbd8</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>22482777-ef1f-4d0f-8c14-c8d139e7240f</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ab93662b1b3d10504ca7edf9bc4bcbd8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>ab93662b1b3d10504ca7edf9bc4bcbd8</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_id>2b93662b1b3d10504ca7edf9bc4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:53:05</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>ab93662b1b3d10504ca7edf9bc4bcbd8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_id>af93662b1b3d10504ca7edf9bc4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:53:05</sys_updated_on>
+        <value>novel_device_link</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>ab93662b1b3d10504ca7edf9bc4bcbd8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_id>eb93662b1b3d10504ca7edf9bc4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:53:05</sys_updated_on>
+        <value>1000</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5bfbd8c91b825010f50cfe25cc4bcbc7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2.1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cb5cd6031bf194104be764e8bc4bcb7f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=cb5cd6031bf194104be764e8bc4bcb7f"/>
+    <sys_element_mapping action="delete_multiple" query="id=cb5cd6031bf194104be764e8bc4bcb7f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>cb5cd6031bf194104be764e8bc4bcb7f</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>935cd6031bf194104be764e8bc4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment>Armis identifies devices by MAC only, so it can be used as a primary key to check whether we already have a device with the same MAC.</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf5cd6031bf194104be764e8bc4bcb6e</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cf5cd6031bf194104be764e8bc4bcb6e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cf5cd6031bf194104be764e8bc4bcb6e</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>0f5cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cf5cd6031bf194104be764e8bc4bcb6e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>cf5cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_device_table</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=cf5cd6031bf194104be764e8bc4bcb6e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>cf5cd6031bf194104be764e8bc4bcb6e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>c75cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>mac_address={{Created or Updated_1.current.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>cf5cd6031bf194104be764e8bc4bcb6e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>075cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>cf5cd6031bf194104be764e8bc4bcb6e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>8b5cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Record">c3e09916c31332002841b63b12d3aedf</action_type>
+        <action_type_parent display_value="Delete Record">a8f274c8c3c232002841b63b12d3aee9</action_type_parent>
+        <comment>Once we're done processing the record, we don't need it anymore.</comment>
+        <compiled_snapshot>c3e09916c31332002841b63b12d3aedf</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf7d95721bad50104be764e8bc4bcb19</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>df758d89-b2ea-4453-8df6-a27e9c1858a3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cf7d95721bad50104be764e8bc4bcb19"/>
+    <sys_element_mapping action="delete_multiple" query="id=cf7d95721bad50104be764e8bc4bcb19"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>cf7d95721bad50104be764e8bc4bcb19</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_id>837d95721bad50104be764e8bc4bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=3a7d55721bad50104be764e8bc4bcba9^sys_idNOT INc77d95721bad50104be764e8bc4bcb1b"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c77d95721bad50104be764e8bc4bcb1b</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:52:02</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c77d95721bad50104be764e8bc4bcb1b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>c77d95721bad50104be764e8bc4bcb1b</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_id>037d95721bad50104be764e8bc4bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:32</sys_updated_on>
+        <value>every</value>
+        <variable display_value="">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>c77d95721bad50104be764e8bc4bcb1b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_id>877d95721bad50104be764e8bc4bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:32</sys_updated_on>
+        <value>u_cmdb_ci_computers_from_armis</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>c77d95721bad50104be764e8bc4bcb1b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_id>c37d95721bad50104be764e8bc4bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:32</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3a7d55721bad50104be764e8bc4bcba9^sys_idNOT INb67d55721bad50104be764e8bc4bcbaa"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3a7d55721bad50104be764e8bc4bcba9</id>
+        <name>TRIGGER_OnUpdate_Computers_From_Armis</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b67d55721bad50104be764e8bc4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:31</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=3a7d55721bad50104be764e8bc4bcba9^sys_idNOT IN3a7d55721bad50104be764e8bc4bcbfa,727d55721bad50104be764e8bc4bcbd9,b67d55721bad50104be764e8bc4bcbad"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</model>
+        <model_id>3a7d55721bad50104be764e8bc4bcba9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3a7d55721bad50104be764e8bc4bcba9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a7d55721bad50104be764e8bc4bcbfa</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD2b1c940d4082501002e3b521d42f6bed,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</model>
+        <model_id>3a7d55721bad50104be764e8bc4bcba9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3a7d55721bad50104be764e8bc4bcba9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>727d55721bad50104be764e8bc4bcbd9</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</model>
+        <model_id>3a7d55721bad50104be764e8bc4bcba9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3a7d55721bad50104be764e8bc4bcba9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b67d55721bad50104be764e8bc4bcbad</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=3a7d55721bad50104be764e8bc4bcba9^sys_idNOT INcf5cd6031bf194104be764e8bc4bcb6e,cf7d95721bad50104be764e8bc4bcb19"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment>Armis identifies devices by MAC only, so it can be used as a primary key to check whether we already have a device with the same MAC.</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf5cd6031bf194104be764e8bc4bcb6e</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cf5cd6031bf194104be764e8bc4bcb6e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cf5cd6031bf194104be764e8bc4bcb6e</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>0f5cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cf5cd6031bf194104be764e8bc4bcb6e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>cf5cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <value>x_fmcna_armis_inte_armis_device_table</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=cf5cd6031bf194104be764e8bc4bcb6e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>cf5cd6031bf194104be764e8bc4bcb6e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>c75cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>mac_address={{Created or Updated_1.current.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>cf5cd6031bf194104be764e8bc4bcb6e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>075cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>cf5cd6031bf194104be764e8bc4bcb6e</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:24</sys_created_on>
+        <sys_id>8b5cd6031bf194104be764e8bc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Record">c3e09916c31332002841b63b12d3aedf</action_type>
+        <action_type_parent display_value="Delete Record">a8f274c8c3c232002841b63b12d3aee9</action_type_parent>
+        <comment>Once we're done processing the record, we don't need it anymore.</comment>
+        <compiled_snapshot>c3e09916c31332002841b63b12d3aedf</compiled_snapshot>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cf7d95721bad50104be764e8bc4bcb19</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>df758d89-b2ea-4453-8df6-a27e9c1858a3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cf7d95721bad50104be764e8bc4bcb19"/>
+    <sys_element_mapping action="delete_multiple" query="id=cf7d95721bad50104be764e8bc4bcb19"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>cf7d95721bad50104be764e8bc4bcb19</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:32</sys_created_on>
+        <sys_id>837d95721bad50104be764e8bc4bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=3a7d55721bad50104be764e8bc4bcba9^sys_idNOT IN3ee1e2671bf910504ca7edf9bc4bcb4a,575cd6031bf194104be764e8bc4bcb88,ab93662b1b3d10504ca7edf9bc4bcbd8"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.2.1</order>
+        <parent_ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3ee1e2671bf910504ca7edf9bc4bcb4a</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>b552e231-1195-4698-af4f-e421ec75fd0a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3ee1e2671bf910504ca7edf9bc4bcb4a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>3ee1e2671bf910504ca7edf9bc4bcb4a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>3ae1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <value>pull_mac_from_armis</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>3ee1e2671bf910504ca7edf9bc4bcb4a</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>76e1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <value>200</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>3ee1e2671bf910504ca7edf9bc4bcb4a</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>b2e1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3ee1e2671bf910504ca7edf9bc4bcb4a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>arguments</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>f6e1e2671bf910504ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item.mac_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>delay_seconds</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>bae1e2671bf910504ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operation</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>32e1e2671bf910504ca7edf9bc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>priority</field>
+        <id>3ee1e2671bf910504ca7edf9bc4bcb4a</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:45:39</sys_created_on>
+        <sys_id>7ee1e2671bf910504ca7edf9bc4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:45:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_3ee49e9f1bf198104be764e8bc4bcbb3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment>First, check to make sure we're not in a cooldown period. The cooldown period is invoked because when this integration sends information up to Armis, Armis will send an update back down to ServiceNow.</comment>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <order>2.1.1</order>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <subflow display_value="MAIN_CheckCooldown">8c801ecf1b7194104be764e8bc4bcbdf</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>575cd6031bf194104be764e8bc4bcb88</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>e168535c-889d-444a-b24b-51011a6139fb</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=575cd6031bf194104be764e8bc4bcb88"/>
+    <sys_element_mapping action="delete_multiple" query="id=575cd6031bf194104be764e8bc4bcb88"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>575cd6031bf194104be764e8bc4bcb88</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>1b5cd6031bf194104be764e8bc4bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_8c801ecf1b7194104be764e8bc4bcbdf</table>
+        <value>{{b3dcebf9-0841-4027-a26d-8775c8ff5d38.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <order>3.1</order>
+        <parent_ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</parent_ui_id>
+        <subflow display_value="QUEUE_QueueNewItem2">3ee49e9f1bf198104be764e8bc4bcbb3</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ab93662b1b3d10504ca7edf9bc4bcbd8</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>22482777-ef1f-4d0f-8c14-c8d139e7240f</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ab93662b1b3d10504ca7edf9bc4bcbd8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>ab93662b1b3d10504ca7edf9bc4bcbd8</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_id>2b93662b1b3d10504ca7edf9bc4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:53:05</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">b6e4de9f1bf198104be764e8bc4bcb38</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>ab93662b1b3d10504ca7edf9bc4bcbd8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_id>af93662b1b3d10504ca7edf9bc4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:53:05</sys_updated_on>
+        <value>novel_device_link</value>
+        <variable display_value="">32e49e9f1bf198104be764e8bc4bcbb6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>ab93662b1b3d10504ca7edf9bc4bcbd8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_id>eb93662b1b3d10504ca7edf9bc4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:53:05</sys_updated_on>
+        <value>1000</value>
+        <variable display_value="">76e4de9f1bf198104be764e8bc4bcb01</variable>
+    </sys_variable_value>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ab93662b1b3d10504ca7edf9bc4bcbd8^sys_idNOT IN6b93662b1b3d10504ca7edf9bc4bcbd9"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>arguments</input_name>
+        <instance>ab93662b1b3d10504ca7edf9bc4bcbd8</instance>
+        <referenced_table>sys_hub_sub_flow_instance</referenced_table>
+        <script>{"arguments":{"scriptActive":true,"script":"var args \u003d {}\n\nargs.name \u003d fd_data.trigger.current.name\nargs.pass \u003d 1\nargs.computer \u003d fd_data.trigger.current.sys_id\n\nreturn JSON.stringify(args)"}}</script>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-10 15:53:05</sys_created_on>
+        <sys_id>6b93662b1b3d10504ca7edf9bc4bcbd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-10 15:53:05</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=3a7d55721bad50104be764e8bc4bcba9^sys_idNOT IN035cd6031bf194104be764e8bc4bcb7c,131c940d1b825010f50cfe25cc4bcbe5,9f5cd6031bf194104be764e8bc4bcb82,cb5cd6031bf194104be764e8bc4bcb7f"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">13fbd8c91b825010f50cfe25cc4bcba9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2.1.2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>035cd6031bf194104be764e8bc4bcb7c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>49a3fe01-0813-4ea9-9248-1d443bbcc418</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=035cd6031bf194104be764e8bc4bcb7c"/>
+    <sys_element_mapping action="delete_multiple" query="id=035cd6031bf194104be764e8bc4bcb7c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>035cd6031bf194104be764e8bc4bcb7c</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>cf5cd6031bf194104be764e8bc4bcb7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{e168535c-889d-444a-b24b-51011a6139fb.cooldown_status}}!=during_cooldown</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5ffbd8c91b825010f50cfe25cc4bcbd0</block>
+        <comment/>
+        <connected_to>cf84516f-ef95-45a6-8aef-68774cf7f84d</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>131c940d1b825010f50cfe25cc4bcbe5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>a192153c-d38b-4ac0-88a6-2af137c2e704</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=131c940d1b825010f50cfe25cc4bcbe5"/>
+    <sys_element_mapping action="delete_multiple" query="id=131c940d1b825010f50cfe25cc4bcbe5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>131c940d1b825010f50cfe25cc4bcbe5</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-14 21:51:57</sys_created_on>
+        <sys_id>231c940d1b825010f50cfe25cc4bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Created or Updated_1.current}}!=</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9bfbd8c91b825010f50cfe25cc4bcbcc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9f5cd6031bf194104be764e8bc4bcb82</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9f5cd6031bf194104be764e8bc4bcb82"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>9f5cd6031bf194104be764e8bc4bcb82</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>1b5cd6031bf194104be764e8bc4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <value>we have a matching Armis Device Table record</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9f5cd6031bf194104be764e8bc4bcb82"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>9f5cd6031bf194104be764e8bc4bcb82</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>975cd6031bf194104be764e8bc4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Count}}&gt;0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>9f5cd6031bf194104be764e8bc4bcb82</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>d35cd6031bf194104be764e8bc4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5bfbd8c91b825010f50cfe25cc4bcbc7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="TRIGGER_OnUpdate_Computers_From_Armis">3a7d55721bad50104be764e8bc4bcba9</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2.1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>cf84516f-ef95-45a6-8aef-68774cf7f84d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cb5cd6031bf194104be764e8bc4bcb7f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-14 21:51:58</sys_updated_on>
+        <ui_id>b3dcebf9-0841-4027-a26d-8775c8ff5d38</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=cb5cd6031bf194104be764e8bc4bcb7f"/>
+    <sys_element_mapping action="delete_multiple" query="id=cb5cd6031bf194104be764e8bc4bcb7f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>cb5cd6031bf194104be764e8bc4bcb7f</id>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 02:04:25</sys_created_on>
+        <sys_id>935cd6031bf194104be764e8bc4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 02:04:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{c7fbdccc-cc5b-4d53-8be1-30ba7aafdca3.Records}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3a7d55721bad50104be764e8bc4bcba9^sys_idNOT IN327d55721bad50104be764e8bc4bcbff,7e7d55721bad50104be764e8bc4bcbdd,b27d55721bad50104be764e8bc4bcbb4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3a7d55721bad50104be764e8bc4bcba9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>327d55721bad50104be764e8bc4bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3a7d55721bad50104be764e8bc4bcba9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7e7d55721bad50104be764e8bc4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3a7d55721bad50104be764e8bc4bcba9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-25 16:35:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b27d55721bad50104be764e8bc4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-25 16:35:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

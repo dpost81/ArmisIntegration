@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>main_initaftermigration</internal_name>
+        <label_cache>[{"name":"855fe4c7-32fd-4cff-a89b-287350727744.variable","label":"1➛access_token","reference_display":"access_token","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"3a2e7787-b3b7-4a73-af2c-47a4b0e1a17c"}},{"name":"09abeba1-34bb-4712-a515-e1c1b747e3df.record","label":"2➛Armis Integration Configuration Record","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"09abeba1-34bb-4712-a515-e1c1b747e3df.table_name","label":"2➛Armis Integration Configuration Table","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"09abeba1-34bb-4712-a515-e1c1b747e3df.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"09abeba1-34bb-4712-a515-e1c1b747e3df.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"751ac142-fd94-4f6f-8911-111918eadad8.record","label":"2➛Armis Integration Configuration Record","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"751ac142-fd94-4f6f-8911-111918eadad8.table_name","label":"2➛Armis Integration Configuration Table","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"751ac142-fd94-4f6f-8911-111918eadad8.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"751ac142-fd94-4f6f-8911-111918eadad8.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01579883-72b6-4e91-b280-4e265476ae79.record","label":"3➛Armis Integration Configuration Record","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01579883-72b6-4e91-b280-4e265476ae79.table_name","label":"3➛Armis Integration Configuration Table","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01579883-72b6-4e91-b280-4e265476ae79.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01579883-72b6-4e91-b280-4e265476ae79.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"341ddb2b-db4a-45cb-a524-474dcfdcaaab.record","label":"4➛Armis Integration Configuration Record","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"341ddb2b-db4a-45cb-a524-474dcfdcaaab.table_name","label":"4➛Armis Integration Configuration Table","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"341ddb2b-db4a-45cb-a524-474dcfdcaaab.status","label":"4➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"341ddb2b-db4a-45cb-a524-474dcfdcaaab.error_message","label":"4➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"61284268-1aa9-462f-8809-01f09c632652.record","label":"5➛Armis Integration Configuration Record","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"61284268-1aa9-462f-8809-01f09c632652.table_name","label":"5➛Armis Integration Configuration Table","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"61284268-1aa9-462f-8809-01f09c632652.status","label":"5➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"61284268-1aa9-462f-8809-01f09c632652.error_message","label":"5➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2d882345-e36d-4c88-a983-57de77fe9ce7.record","label":"6➛Armis Integration Configuration Record","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2d882345-e36d-4c88-a983-57de77fe9ce7.table_name","label":"6➛Armis Integration Configuration Table","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2d882345-e36d-4c88-a983-57de77fe9ce7.status","label":"6➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2d882345-e36d-4c88-a983-57de77fe9ce7.error_message","label":"6➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"279b4eca-8315-4d90-89d7-57c16cb27953.record","label":"7➛Armis Integration Configuration Record","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"279b4eca-8315-4d90-89d7-57c16cb27953.table_name","label":"7➛Armis Integration Configuration Table","reference":"x_fmcna_armis_inte_armis_integration_configuration","reference_display":"Armis Integration Configuration","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"279b4eca-8315-4d90-89d7-57c16cb27953.status","label":"7➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"279b4eca-8315-4d90-89d7-57c16cb27953.error_message","label":"7➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>(OLD) InitAfterMigration</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-02 14:34:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>8345e61f1bc190107e280d43cd4bcbb7</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>(OLD) InitAfterMigration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name>sys_hub_flow_8345e61f1bc190107e280d43cd4bcbb7</sys_update_name>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 23:31:34</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=8345e61f1bc190107e280d43cd4bcbb7"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=8345e61f1bc190107e280d43cd4bcbb7^sys_idNOT IN77c6aed31b0590107e280d43cd4bcbcd,7df2cf571bf1d4104ca7edf9bc4bcb95"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="UTIL_Update Access Token">bb7c6aabdbfcd050cb24431e1396198d</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="(OLD) InitAfterMigration">8345e61f1bc190107e280d43cd4bcbb7</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-02 14:41:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>77c6aed31b0590107e280d43cd4bcbcd</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 23:31:34</sys_updated_on>
+        <ui_id>855fe4c7-32fd-4cff-a89b-287350727744</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=77c6aed31b0590107e280d43cd4bcbcd"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="(OLD) InitAfterMigration">8345e61f1bc190107e280d43cd4bcbb7</flow>
+        <inputs/>
+        <order>1</order>
+        <parent_ui_id/>
+        <subflow display_value="UTIL_SetCacheValue">939293621b7d5c504ca7edf9bc4bcb84</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 23:31:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7df2cf571bf1d4104ca7edf9bc4bcb95</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 23:31:34</sys_updated_on>
+        <ui_id>d2a933c7-2852-473d-84b5-aac3aee2c080</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7df2cf571bf1d4104ca7edf9bc4bcb95"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8345e61f1bc190107e280d43cd4bcbb7^sys_idNOT IN89e62a931b0590107e280d43cd4bcbcb"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>NOTE: BEFORE RUNNING THIS, YOU NEED TO PUT A VALUE FOR "api_secret" INTO THE CONFIG TABLE CORRESPONDING TO THE ENVIRONMENT</comment>
+        <display_text/>
+        <flow display_value="(OLD) InitAfterMigration">8345e61f1bc190107e280d43cd4bcbb7</flow>
+        <name>Run Once</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-02 14:41:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>89e62a931b0590107e280d43cd4bcbcb</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 23:31:34</sys_updated_on>
+        <trigger_definition display_value="Run Once">0a76e504c32222002841b63b12d3aeac</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>run_once</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=89e62a931b0590107e280d43cd4bcbcb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>89e62a931b0590107e280d43cd4bcbcb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-02 14:41:48</sys_created_on>
+        <sys_id>49e62a931b0590107e280d43cd4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-02 14:41:48</sys_updated_on>
+        <value>2020-06-02 09:00:00</value>
+        <variable display_value="">92afcd94c32222002841b63b12d3aee8</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8345e61f1bc190107e280d43cd4bcbb7^sys_idNOT INc345e61f1bc190107e280d43cd4bcbba"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8345e61f1bc190107e280d43cd4bcbb7</id>
+        <name>MAIN_InitAfterMigration</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-02 14:34:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c345e61f1bc190107e280d43cd4bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-06-02 14:34:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8345e61f1bc190107e280d43cd4bcbb7^sys_idNOT IN77c6aed31b0590107e280d43cd4bcbcd"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="UTIL_Update Access Token">bb7c6aabdbfcd050cb24431e1396198d</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="(OLD) InitAfterMigration">8345e61f1bc190107e280d43cd4bcbb7</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-06-02 14:41:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>77c6aed31b0590107e280d43cd4bcbcd</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 23:31:34</sys_updated_on>
+        <ui_id>855fe4c7-32fd-4cff-a89b-287350727744</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=77c6aed31b0590107e280d43cd4bcbcd"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=8345e61f1bc190107e280d43cd4bcbb7^sys_idNOT IN7df2cf571bf1d4104ca7edf9bc4bcb95"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="(OLD) InitAfterMigration">8345e61f1bc190107e280d43cd4bcbb7</flow>
+        <inputs/>
+        <order>1</order>
+        <parent_ui_id/>
+        <subflow display_value="UTIL_SetCacheValue">939293621b7d5c504ca7edf9bc4bcb84</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>3244578</sys_created_by>
+        <sys_created_on>2020-07-09 23:31:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7df2cf571bf1d4104ca7edf9bc4bcb95</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>3244578</sys_updated_by>
+        <sys_updated_on>2020-07-09 23:31:34</sys_updated_on>
+        <ui_id>d2a933c7-2852-473d-84b5-aac3aee2c080</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7df2cf571bf1d4104ca7edf9bc4bcb95"/>
+</record_update>

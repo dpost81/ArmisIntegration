@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Armis REST API Log" max_length="40" name="x_fmcna_armis_inte_armis_rest_api_log" type="collection">
+        <element choice="1" label="API Endpoint" max_length="40" name="api_endpoint" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="GET /api/v1/search/" value="get_search"/>
+                <element inactive_on_update="false" label="POST /api/v1/arp/" value="post_arp"/>
+                <element inactive_on_update="false" label="POST /api/v1/device-applications/_bulk/" value="post_applications"/>
+                <element inactive_on_update="false" label="POST /api/v1/device-properties/_bulk/" value="post_properties"/>
+                <element inactive_on_update="false" label="POST /api/v1/devices/csv/" value="post_devices_csv"/>
+                <element inactive_on_update="false" label="test" value="test"/>
+            </choice>
+        </element>
+        <element label="Payload" max_length="2000" name="payload" type="string"/>
+        <element label="Query Response Time (ms)" max_length="40" name="query_response_time_ms" type="integer"/>
+        <element label="Query Submitted At" max_length="40" name="query_submitted_at" type="glide_date_time"/>
+        <element label="Response Body" max_length="2000" name="response_body" type="string"/>
+        <element label="Response Code" max_length="1000" name="response_code" type="integer"/>
+        <element label="URL Params" max_length="100" name="url_params" type="string"/>
+    </element>
+</database>

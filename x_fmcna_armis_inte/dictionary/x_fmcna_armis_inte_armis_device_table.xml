@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="hasLabels=true" label="Armis Device Table" max_length="40" name="x_fmcna_armis_inte_armis_device_table" type="collection">
+        <element label="Access switch" max_length="64" name="access_switch" type="string"/>
+        <element display="true" label="Armis Device ID" mandatory="true" max_length="40" name="armis_device_id" type="integer"/>
+        <element label="Armis Risk Level" max_length="40" name="armis_risk_level" type="integer"/>
+        <element label="Category" max_length="64" name="category" type="string"/>
+        <element label="First seen" max_length="40" name="first_seen" type="glide_date_time"/>
+        <element label="IP Address" max_length="45" name="ip_address" type="string"/>
+        <element label="Last seen" max_length="40" name="last_seen" type="glide_date_time"/>
+        <element label="Linked SNOW Computer" max_length="32" name="linked_snow_computer" reference="cmdb_ci_computer" type="reference"/>
+        <element label="MAC Address" max_length="20" name="mac_address" type="string"/>
+        <element label="Manufacturer" max_length="128" name="manufacturer" type="string"/>
+        <element label="Model" max_length="128" name="model" type="string"/>
+        <element display="true" label="Name" max_length="128" name="name" type="string"/>
+        <element label="OS" max_length="128" name="os" type="string"/>
+        <element label="OS Version" max_length="128" name="os_version" type="string"/>
+        <element label="Sensor Name" max_length="64" name="sensor_name" type="string"/>
+        <element label="Sensor Type" max_length="64" name="sensor_type" type="string"/>
+        <element label="Site Name" max_length="64" name="site" type="string"/>
+        <element label="Site Location" max_length="64" name="site_location" type="string"/>
+        <element label="Type" max_length="64" name="type" type="string"/>
+        <element label="User" max_length="64" name="user" type="string"/>
+        <element label="Visibility" max_length="20" name="visibility" type="string"/>
+        <index name="index">
+            <element name="linked_snow_computer"/>
+        </index>
+    </element>
+</database>
