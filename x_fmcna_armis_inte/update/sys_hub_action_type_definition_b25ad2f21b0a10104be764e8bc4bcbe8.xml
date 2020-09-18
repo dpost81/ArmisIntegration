@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>getd_getbulkarmisdata</internal_name>
         <label_cache>[{"name":"{{action.mode}}","label":"action➛mode","type":"action","ref":""},{"name":"{{action.max_runtime}}","label":"action➛max_runtime","type":"action","ref":""},{"name":"{{action.query}}","label":"action➛query","type":"action","ref":""},{"name":"{{action.tags_to_table}}","label":"action➛tags_to_table","type":"action","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug1}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug2}}","label":"step➛Script step➛debug2","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug3}}","label":"step➛Script step➛debug3","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].debug}}","label":"step➛Script step➛debug","type":"step","ref":""},{"name":"{{step[96e130a7-3355-46a3-a045-f81383e2f7e3].time_left_s}}","label":"step➛Script step➛time_left_s","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>b634ae8a1b9fd0504ca7edf9bc4bcb9d</latest_snapshot>
+        <latest_snapshot>07182ece1b9fd0504ca7edf9bc4bcb40</latest_snapshot>
         <master_snapshot>d4181bf61b8294104ca7edf9bc4bcb8f</master_snapshot>
         <name>GETD_GetBulkArmisData (v2.2)</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>b25ad2f21b0a10104be764e8bc4bcbe8</sys_id>
-        <sys_mod_count>247</sys_mod_count>
+        <sys_mod_count>251</sys_mod_count>
         <sys_name>GETD_GetBulkArmisData (v2.2)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Armis Integration" source="x_fmcna_armis_inte">7574b5e3dbf4d050cb24431e13961986</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b25ad2f21b0a10104be764e8bc4bcbe8</sys_update_name>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:06</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:56:04</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -354,7 +354,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_on>2020-07-20 18:08:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>728266fe1b0a10104be764e8bc4bcb36</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -362,7 +362,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:02</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:55:58</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=728266fe1b0a10104be764e8bc4bcb36"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -387,9 +387,9 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 18:08:39</sys_created_on>
         <sys_id>3e82e6321b4a10104be764e8bc4bcbe7</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>81</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:02</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:55:58</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -456,7 +456,7 @@ function writeToAPILog(p)
   var report = '';
   var original_getd_n = -1
   outputs.time_left_s = 0 // just in case.
-  var num_records_queried = 100
+  var num_records_queried = 500
   var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //Set up query
@@ -2334,7 +2334,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_on>2020-07-20 18:08:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>728266fe1b0a10104be764e8bc4bcb36</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2342,7 +2342,7 @@ function deleteCacheValue(/*str*/ key)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:02</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:55:58</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=728266fe1b0a10104be764e8bc4bcb36"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2367,9 +2367,9 @@ function deleteCacheValue(/*str*/ key)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 18:08:39</sys_created_on>
         <sys_id>3e82e6321b4a10104be764e8bc4bcbe7</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>81</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:02</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:55:58</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -2436,7 +2436,7 @@ function writeToAPILog(p)
   var report = '';
   var original_getd_n = -1
   outputs.time_left_s = 0 // just in case.
-  var num_records_queried = 100
+  var num_records_queried = 500
   var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //Set up query
@@ -3854,16 +3854,16 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="GETD_GetBulkArmisData (v2.2)">b25ad2f21b0a10104be764e8bc4bcbe8</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f8185bf61b8294104ca7edf9bc4bcb1d","name":"plan"}}</plan>
-        <snapshot>b634ae8a1b9fd0504ca7edf9bc4bcb9d</snapshot>
+        <snapshot>07182ece1b9fd0504ca7edf9bc4bcb40</snapshot>
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>f8185bf61b8294104ca7edf9bc4bcb1d</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:08</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:56:06</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -3949,7 +3949,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>60181bf61b8294104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -3957,7 +3957,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:06</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:56:04</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=60181bf61b8294104ca7edf9bc4bcb9d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3968,9 +3968,9 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_id>20181bf61b8294104ca7edf9bc4bcbdc</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:06</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:56:04</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -4037,7 +4037,7 @@ function writeToAPILog(p)
   var report = '';
   var original_getd_n = -1
   outputs.time_left_s = 0 // just in case.
-  var num_records_queried = 100
+  var num_records_queried = 500
   var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //Set up query
@@ -5929,7 +5929,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>60181bf61b8294104ca7edf9bc4bcb9d</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -5937,7 +5937,7 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_scope display_value="Armis Integration">7574b5e3dbf4d050cb24431e13961986</sys_scope>
         <sys_update_name/>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:06</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:56:04</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=60181bf61b8294104ca7edf9bc4bcb9d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5948,9 +5948,9 @@ function updateArmisDevice(/*obj from json*/ j,/*bool*/ tags_to_table)
         <sys_created_by>3244578</sys_created_by>
         <sys_created_on>2020-07-20 22:02:30</sys_created_on>
         <sys_id>20181bf61b8294104ca7edf9bc4bcbdc</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_updated_by>3244578</sys_updated_by>
-        <sys_updated_on>2020-09-18 13:39:06</sys_updated_on>
+        <sys_updated_on>2020-09-18 13:56:04</sys_updated_on>
         <value>  /*
   
   This script repeatedly queries Armis' "GET Devices" endpoint and records its entire database of devices to the Armis Device Table.
@@ -6017,7 +6017,7 @@ function writeToAPILog(p)
   var report = '';
   var original_getd_n = -1
   outputs.time_left_s = 0 // just in case.
-  var num_records_queried = 100
+  var num_records_queried = 500
   var num_refresh_threshold = 20 //The number of devices to go back compared to the "next" value, in order to ensure that we get some degree of overlap and catch missed devices
   
   //Set up query
